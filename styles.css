@@ -458,10 +458,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-lg);
-    /* --- PERFORMANCE FIX --- */
-    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
-    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
-    /* --- END FIX --- */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
@@ -838,10 +836,8 @@ body {
     align-items: center;
     justify-content: center;
     transition: all var(--transition-fast);
-    /* --- PERFORMANCE FIX --- */
-    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
-    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
-    /* --- END FIX --- */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border: 2px solid var(--glass-border);
     color: var(--white);
     box-shadow: var(--shadow-lg);
@@ -904,10 +900,8 @@ body {
     transition: all var(--transition-fast);
     border: none;
     font-size: 1rem;
-    /* --- PERFORMANCE FIX --- */
-    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
-    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
-    /* --- END FIX --- */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border: 2px solid var(--glass-border);
     color: var(--white);
     box-shadow: var(--shadow-lg);
@@ -951,7 +945,7 @@ body {
     border: none;
     font-size: 0.9rem;
     background: rgba(245, 158, 11, 0.2);
-    /* backdrop-filter: blur(10px); */ /* --- PERFORMANCE FIX: تم حذف هذا السطر --- */
+    backdrop-filter: blur(10px);
     border: 2px solid var(--warning-yellow);
     color: var(--warning-yellow);
     box-shadow: var(--shadow-lg);
@@ -979,10 +973,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-lg);
-    /* --- PERFORMANCE FIX --- */
-    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
-    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
-    /* --- END FIX --- */
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -1014,9 +1006,9 @@ body {
     order: 2;
 }
 
-/* Force visual order for dashboard header items */
+/* **FIX: Force visual order for dashboard header items** */
 [dir="rtl"] .dashboard-header-left {
-    justify-content: flex-start !important; /* RTL visual left */
+    justify-content: flex-end !important; /* RTL visual left */
     order: 3 !important; /* Visually left (end) */
 }
 [dir="rtl"] .dashboard-title {
@@ -1026,13 +1018,14 @@ body {
     order: 1 !important; /* Visually right (start) */
 }
 
-/* Force static order of buttons inside the left div */
+/* **FIX: Force static order of buttons inside the left div** */
 #dashboard-home-btn {
     order: 1 !important;
 }
 #reset-session-btn {
     order: 2 !important;
 }
+/* **End of FIX** */
 
 
 .dashboard-main {
