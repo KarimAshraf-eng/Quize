@@ -73,11 +73,14 @@ class QuizApp {
             if (!response.ok) {
                 return null;
             }
-            const data = await response.json();
+            const data = await response.json(); // data is now an {object}
             return {
                 number: lectureNumber,
-                questions: data,
-                totalQuestions: data.length
+                // **NEW: Read titles from the JSON object**
+                title_en: data.title_en || `Lecture ${lectureNumber}`, // Fallback title
+                title_ar: data.title_ar || `محاضرة ${lectureNumber}`, // Fallback title
+                questions: data.questions, // Get questions from the object
+                totalQuestions: data.questions.length // Get length from the array
             };
         } catch (error) {
             console.warn(`Failed to load Lecture ${lectureNumber}:`, error);
