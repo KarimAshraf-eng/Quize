@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Interactive Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="floating-particles"></div>
+    </div>
+
+    <button id="global-translate-btn" class="global-translate-btn" title="Toggle Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+        </svg>
+        <span class="lang-indicator">EN</span>
+    </button>
+
+    <div id="app" class="app-container">
+
+        <div id="landing-view" class="view active">
+            <header class="app-header">
+                <div class="logo-container">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                    <h1 class="app-title">QuizMaster</h1>
+                </div>
+                <p class="app-subtitle">Interactive Learning Platform</p>
+            </header>
+
+            <main class="landing-main">
+                <div class="global-actions">
+                    <button id="global-favorites-btn" class="global-favorites-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                        <span>Review All Favorites</span>
+                    </button>
+                </div>
+
+                <div class="welcome-section">
+                    <h2 id="welcome-title" class="welcome-title">Choose Your Lecture</h2>
+                    <p id="welcome-text" class="welcome-text">Select a lecture to start your interactive quiz experience
+                    </p>
+                </div>
+
+                <div id="lecture-grid" class="lecture-grid">
+                </div>
+
+                <div id="loading-state" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Loading lectures...</p>
+                </div>
+
+                <div id="error-state" class="error-state hidden">
+                    <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p>No lectures found. Please ensure JSON files are available.</p>
+                </div>
+            </main>
+
+            <footer class="app-footer">
+                <div class="help-section">
+                    <h3>How to Use</h3>
+                    <ul class="help-list">
+                        <li>📚 Select a lecture to begin</li>
+                        <li>🌍 Toggle between English/Arabic with the translate button</li>
+                        <li>⭐ Mark important questions as favorites</li>
+                        <li>📊 Review your performance in the dashboard</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <div id="quiz-view" class="view">
+            <header class="quiz-header">
+                <button id="back-to-landing" class="icon-btn" title="Back to lectures">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </button>
+
+                <div class="quiz-info">
+                    <span id="lecture-info" class="lecture-info">Lecture 1</span>
+                    <span class="separator">•</span>
+                    <span id="question-counter" class="question-counter">Question 1 of 5</span>
+                </div>
+
+                <div class="header-actions">
+                </div>
+            </header>
+
+            <main class="quiz-main">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <span id="progress-text" class="progress-text">0%</span>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-header">
+                        <h2 id="question-number" class="question-number">Q1</h2>
+                        <button id="favorite-btn" class="favorite-btn" title="Mark as favorite">
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="question-text" class="question-text">
+                    </div>
+                </div>
+
+                <div id="choices-container" class="choices-container">
+                </div>
+
+                <div id="answer-feedback" class="answer-feedback hidden">
+                    <div class="feedback-header">
+                        <h3 id="feedback-title" class="feedback-title"></h3>
+                        <button id="toggle-explanation-lang" class="toggle-btn" title="Toggle explanation language">
+                            <span id="current-lang">EN</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="explanation-content" class="explanation-content">
+                    </div>
+                </div>
+            </main>
+
+            <div class="quiz-bottom-controls">
+                <button id="back-btn" class="arrow-btn arrow-left" disabled title="Previous Question">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <button id="next-btn" class="primary-btn next-center" disabled>
+                    <span class="next-text">Next</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <button id="ok-btn" class="arrow-btn arrow-right" disabled title="Submit Answer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <button id="return-dashboard-btn" class="return-dashboard-btn hidden" title="Return to Dashboard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 5a2 2 0 012-2h4a2 2 0 012 2v0M8 5a2 2 0 012-2h4a2 2 0 012 2v0" />
+                </svg>
+                <span class="return-text">Dashboard</span>
+            </button>
+        </div>
+
+        <div id="dashboard-view" class="view">
+            <header class="dashboard-header">
+                <div class="dashboard-header-left">
+                    <button id="dashboard-home-btn" class="icon-btn" title="Back to lectures">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </button>
+                    <button id="reset-session-btn" class="icon-btn" title="Reset session">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </button>
+                </div>
+
+                <h1 id="dashboard-title" class="dashboard-title">Quiz Results</h1>
+
+                <div class="dashboard-header-right">
+                </div>
+            </header>
+            <main class="dashboard-main">
+                <section class="summary-section">
+                    <div class="summary-cards">
+                        <div class="summary-card correct">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="card-content">
+                                <span id="correct-count" class="card-number">0</span>
+                                <span id="correct-label" class="card-label">Correct</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-card incorrect">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="card-content">
+                                <span id="incorrect-count" class="card-number">0</span>
+                                <span id="incorrect-label" class="card-label">Incorrect</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-card percentage">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div class="card-content">
+                                <span id="percentage-score" class="card-number">0%</span>
+                                <span id="score-label" class="card-label">Score</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-card favorites">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                </svg>
+                            </div>
+                            <div class="card-content">
+                                <span id="favorites-count" class="card-number">0</span>
+                                <span id="favorites-label" class="card-label">Favorites</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="actions-section">
+                    <div class="action-buttons">
+                        <button id="review-errors-btn" class="action-btn secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                            </svg>
+                            <span>Review Errors</span>
+                        </button>
+
+                        <button id="review-favorites-btn" class="action-btn secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            </svg>
+                            <span>Review Favorites</span>
+                        </button>
+
+                        <button id="retake-all-btn" class="action-btn secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                            <span>Retake All Questions</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="detailed-results">
+                    <h2 id="section-title" class="section-title">Question Review</h2>
+                    <div class="results-table-container">
+                        <table id="results-table" class="results-table">
+                            <thead>
+                                <tr>
+                                    <th id="th-qnum">Q#</th>
+                                    <th id="th-lecture">Lecture</th>
+                                    <th id="th-your-answer">Your Answer</th>
+                                    <th id="th-correct">Correct</th>
+                                    <th id="th-status">Status</th>
+                                    <th id="th-action">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="resume-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 id="resume-title" class="modal-title">Resume Quiz?</h3>
+            <p id="resume-message" class="modal-message">You have an incomplete quiz session. Would you like to continue
+                where you left off or start fresh?</p>
+            <div class="modal-buttons">
+                <button id="resume-continue-btn" class="modal-btn primary">
+                    <span>Continue</span>
+                </button>
+                <button id="resume-restart-btn" class="modal-btn secondary">
+                    <span>Restart</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="review-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 id="review-title" class="modal-title">Review Questions</h3>
+            <p id="review-message" class="modal-message">How would you like to review the questions?</p>
+            <div class="modal-buttons">
+                <button id="review-retry-btn" class="modal-btn primary">
+                    <span id="retry-text">Retry Questions</span>
+                </button>
+                <button id="review-view-btn" class="modal-btn secondary">
+                    <span id="view-text">View with Solutions</span>
+                </button>
+                <button id="review-cancel-btn" class="modal-btn cancel">
+                    <span>Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="global-favorites-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Review All Favorite Questions</h3>
+            <p class="modal-message">How would you like to review your favorite questions from all lectures?</p>
+            <div class="modal-buttons">
+                <button id="global-favorites-retry-btn" class="modal-btn primary">
+                    <span>Retry Questions</span>
+                </button>
+                <button id="global-favorites-view-btn" class="modal-btn secondary">
+                    <span>View with Solutions</span>
+                </button>
+                <button id="global-favorites-cancel-btn" class="modal-btn cancel">
+                    <span>Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

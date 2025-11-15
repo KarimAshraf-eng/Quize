@@ -1,0 +1,1564 @@
+[
+    {
+        "question_number": 1,
+        "lecture_number": 1,
+        "question_ar": "ما هي النتيجة الوحيدة ذات المعنى لعملية تحويل البرامج للعمل بشكل متوازٍ (Parallelization) كما ذُكر في المحاضرة؟",
+        "question_en": "What is the only meaningful outcome of program parallelization as stated in the lecture?",
+        "choices": {
+            "A_ar": "تقليل استهلاك الذاكرة",
+            "A_en": "Reducing memory consumption",
+            "B_ar": "إنتاج نتائج أفضل (أسرع أو أكبر)",
+            "B_en": "Producing better results (faster or bigger)",
+            "C_ar": "استخدام أجهزة أرخص",
+            "C_en": "Using cheaper hardware",
+            "D_ar": "تبسيط كود البرنامج",
+            "D_en": "Simplifying the program code"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "الهدف الأساسي هو الحصول على نتائج أفضل إما بإنجاز العمل في وقت أقل (أسرع) أو إنجاز عمل أكثر في نفس الوقت (أكبر).",
+        "explanation_correct_en": "The main goal is to produce better results by doing work in less time (faster) or doing more work in the same time (bigger).",
+        "explanation_wrong_ar": {
+            "A": "تقليل الذاكرة ليس الهدف الأساسي المذكور للنتائج ذات المعنى.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "استخدام أجهزة أرخص هو عامل اقتصادي وليس نتيجة البرنامج نفسه.",
+            "D": "البرمجة المتوازية غالبًا ما تعقد الكود ولا تبسطه."
+        },
+        "explanation_wrong_en": {
+            "A": "Reducing memory is not the stated meaningful outcome.",
+            "B": "This is the correct answer.",
+            "C": "Using cheaper hardware is an economic factor, not a program outcome.",
+            "D": "Parallel programming often complicates code, not simplifies it."
+        }
+    },
+    {
+        "question_number": 2,
+        "lecture_number": 1,
+        "question_ar": "في مثال محاكاة التنبؤ بالطقس، إذا تم تقسيم الغلاف الجوي إلى مكعبات، كم عدد عمليات الفاصلة العائمة (floating point operations) المطلوبة لكل مكعب لخطوة زمنية واحدة؟",
+        "question_en": "In the weather prediction simulation example, if the atmosphere is divided into cubes, how many floating point operations are needed per cube for one time step?",
+        "choices": {
+            "A_ar": "100 عملية",
+            "A_en": "100 operations",
+            "B_ar": "200 عملية",
+            "B_en": "200 operations",
+            "C_ar": "500 عملية",
+            "C_en": "500 operations",
+            "D_ar": "1000 عملية",
+            "D_en": "1000 operations"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "تنص المحاضرة صراحة على أنه يلزم 200 عملية فاصلة عائمة لكل مكعب لإكمال خطوة زمنية واحدة.",
+        "explanation_correct_en": "The lecture explicitly states that 200 floating point operations are needed per cube to complete one time step.",
+        "explanation_wrong_ar": {
+            "A": "الرقم المذكور في المثال هو 200 وليس 100.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "الرقم المذكور في المثال هو 200 وليس 500.",
+            "D": "الرقم المذكور في المثال هو 200 وليس 1000."
+        },
+        "explanation_wrong_en": {
+            "A": "The figure mentioned in the example is 200, not 100.",
+            "B": "This is the correct answer.",
+            "C": "The figure mentioned in the example is 200, not 500.",
+            "D": "The figure mentioned in the example is 200, not 1000."
+        }
+    },
+    {
+        "question_number": 3,
+        "lecture_number": 1,
+        "question_ar": "ما هو إجمالي عدد عمليات الفاصلة العائمة المطلوبة لتنبؤ جوي لمدة 7 أيام وفقًا للمثال المذكور؟",
+        "question_en": "What is the total number of floating point operations required for a 7-day weather forecast according to the example?",
+        "choices": {
+            "A_ar": "10 أس 12",
+            "A_en": "10 to the power of 12",
+            "B_ar": "10 أس 15",
+            "B_en": "10 to the power of 15",
+            "C_ar": "10 أس 9",
+            "C_en": "10 to the power of 9",
+            "D_ar": "10 أس 6",
+            "D_en": "10 to the power of 6"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "يتم حسابها بضرب عدد المكعبات في العمليات لكل مكعب في عدد الخطوات الزمنية: 5x10^8 * 200 * 10^4 = 10^15.",
+        "explanation_correct_en": "It is calculated by multiplying cubes by operations per cube by time steps: 5x10^8 * 200 * 10^4 = 10^15.",
+        "explanation_wrong_ar": {
+            "A": "هذا الرقم (تريليون) أقل من المطلوب وهو كوادريليون.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هذا يمثل جيجا فلوبس وهو قليل جداً.",
+            "D": "هذا يمثل ميجا فلوبس وهو رقم صغير جداً للمحاكاة."
+        },
+        "explanation_wrong_en": {
+            "A": "This number (trillion) is less than the required quadrillion.",
+            "B": "This is the correct answer.",
+            "C": "This represents GigaFLOPs which is too low.",
+            "D": "This represents MegaFLOPs which is extremely small for simulation."
+        }
+    },
+    {
+        "question_number": 4,
+        "lecture_number": 1,
+        "question_ar": "كم يستغرق إجراء عمليات الحساب الخاصة بالتنبؤ بالطقس (10 أس 15 عملية) على جهاز بقدرة 1 GFLOP؟",
+        "question_en": "How long does it take to perform the weather prediction calculations (10^15 operations) on a 1 GFLOP machine?",
+        "choices": {
+            "A_ar": "100 ثانية",
+            "A_en": "100 seconds",
+            "B_ar": "1000 ثانية",
+            "B_en": "1000 seconds",
+            "C_ar": "10 أس 6 ثانية (حوالي 10 أيام)",
+            "C_en": "10^6 seconds (approx 10 days)",
+            "D_ar": "يوم واحد",
+            "D_en": "One day"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "بقسمة 10 أس 15 عملية على 10 أس 9 (1 جيجا)، تكون النتيجة 10 أس 6 ثانية، أي ما يعادل 10 أيام.",
+        "explanation_correct_en": "Dividing 10^15 operations by 10^9 (1 Giga), the result is 10^6 seconds, which equals about 10 days.",
+        "explanation_wrong_ar": {
+            "A": "حساب غير صحيح، الوقت أطول بكثير.",
+            "B": "حساب غير صحيح.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "يوم واحد يساوي 86400 ثانية تقريباً، وهو أقل من المطلوب."
+        },
+        "explanation_wrong_en": {
+            "A": "Incorrect calculation, time is much longer.",
+            "B": "Incorrect calculation.",
+            "C": "This is the correct answer.",
+            "D": "One day is approx 86400 seconds, which is less than required."
+        }
+    },
+    {
+        "question_number": 5,
+        "lecture_number": 1,
+        "question_ar": "كيف تُعرف المحاضرة مشكلة 'التحدي الكبير' (Grand Challenge Problem)؟",
+        "question_en": "How does the lecture define a 'Grand Challenge Problem'?",
+        "choices": {
+            "A_ar": "مشكلة لا يمكن حلها في وقت معقول باستخدام أجهزة الكمبيوتر الحالية",
+            "A_en": "A problem that cannot be solved in a reasonable amount of time with today's computers",
+            "B_ar": "مشكلة تتطلب أكثر من 100 مبرمج لحلها",
+            "B_en": "A problem requiring more than 100 programmers to solve",
+            "C_ar": "أي مشكلة متعلقة بالذكاء الاصطناعي",
+            "C_en": "Any problem related to Artificial Intelligence",
+            "D_ar": "مشكلة تم حلها بالفعل في الثمانينيات",
+            "D_en": "A problem already solved in the 80s"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "التعريف الوارد في الشريحة 7 ينص على أنها مشكلة لا يمكن حلها في وقت معقول بقدرات الحواسيب الحالية.",
+        "explanation_correct_en": "The definition in slide 7 states it is a problem that cannot be solved in a reasonable amount of time with current computers.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "التعريف يتعلق بوقت الحساب وليس عدد المبرمجين.",
+            "C": "ليس كل مشاكل الذكاء الاصطناعي تعتبر تحديات كبرى.",
+            "D": "هي مشاكل لا تزال صعبة الحل اليوم وليست محلولة قديماً."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "The definition relates to computation time, not number of programmers.",
+            "C": "Not all AI problems are considered Grand Challenges.",
+            "D": "They are problems still hard to solve today, not solved long ago."
+        }
+    },
+    {
+        "question_number": 6,
+        "lecture_number": 1,
+        "question_ar": "أي مما يلي يُعد مثالاً على مشاكل 'التحدي الكبير' كما ورد في المحاضرة؟",
+        "question_en": "Which of the following is an example of 'Grand Challenge' problems as mentioned in the lecture?",
+        "choices": {
+            "A_ar": "معالجة النصوص البسيطة",
+            "A_en": "Simple word processing",
+            "B_ar": "ديناميكا الموائع التطبيقية (Applied Fluid Dynamics)",
+            "B_en": "Applied Fluid Dynamics",
+            "C_ar": "إدارة قواعد البيانات الصغيرة",
+            "C_en": "Small database management",
+            "D_ar": "تصميم مواقع الويب",
+            "D_en": "Web design"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "ديناميكا الموائع التطبيقية هي أحد الأمثلة المذكورة صراحة في الشريحة 7 للمشاكل المعقدة.",
+        "explanation_correct_en": "Applied Fluid Dynamics is one of the examples explicitly mentioned in Slide 7 for complex problems.",
+        "explanation_wrong_ar": {
+            "A": "هذه مهمة حاسوبية بسيطة.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هذه مهمة روتينية لا تتطلب قدرات فائقة.",
+            "D": "تصميم الويب ليس مشكلة حسابية معقدة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is a simple computational task.",
+            "B": "This is the correct answer.",
+            "C": "This is a routine task not requiring supercomputing.",
+            "D": "Web design is not a complex computational problem."
+        }
+    },
+    {
+        "question_number": 7,
+        "lecture_number": 1,
+        "question_ar": "وفقًا للحدود الفيزيائية المذكورة، إذا كان لدينا 3x10^12 عملية نقل ذاكرة في الثانية، ما هي أقصى مسافة (r) بين المعالج والذاكرة؟",
+        "question_en": "According to the physical limits mentioned, if we have 3x10^12 memory moves per second, what is the maximum distance (r) between CPU and memory?",
+        "choices": {
+            "A_ar": "10 أس -2 متر",
+            "A_en": "10^-2 meters",
+            "B_ar": "10 أس -4 متر",
+            "B_en": "10^-4 meters",
+            "C_ar": "1 متر",
+            "C_en": "1 meter",
+            "D_ar": "10 أس -10 متر",
+            "D_en": "10^-10 meters"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "باستخدام معادلة سرعة الضوء والزمن الموضحة في الشريحة 8، المسافة r تساوي 10 أس -4 متر.",
+        "explanation_correct_en": "Using the speed of light and time equation shown in Slide 8, the distance r equals 10^-4 meters.",
+        "explanation_wrong_ar": {
+            "A": "مسافة كبيرة جداً مقارنة بالحساب الفيزيائي.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "مسافة مستحيلة لتحقيق السرعة المطلوبة.",
+            "D": "هذا هو حجم الخلية (الذرة) وليس المسافة r.",
+            "explanation_wrong_en": {
+                "A": "Too large distance compared to the physical calculation.",
+                "B": "This is the correct answer.",
+                "C": "Impossible distance to achieve the required speed.",
+                "D": "This is the cell size (atom), not the distance r."
+            }
+        },
+        "explanation_wrong_en": {
+            "A": "Too large distance compared to the physical calculation.",
+            "B": "This is the correct answer.",
+            "C": "Impossible distance to achieve the required speed.",
+            "D": "This is the cell size (atom), not the distance r."
+        }
+    },
+    {
+        "question_number": 8,
+        "lecture_number": 1,
+        "question_ar": "ما هو التنبؤ الذي قاله المدير التقني لشركة إنتل بخصوص حرارة المعالجات بحلول عام 2010 إذا لم تتغير التقنيات؟",
+        "question_en": "What prediction did Intel's CTO make regarding CPU heat by 2010 if technologies didn't change?",
+        "choices": {
+            "A_ar": "ستكون أبرد من الجليد",
+            "A_en": "They will be colder than ice",
+            "B_ar": "ستكون ساخنة مثل سطح الشمس",
+            "B_en": "They will be hotter than the surface of the sun",
+            "C_ar": "لن تتغير درجة حرارتها",
+            "C_en": "Their temperature will not change",
+            "D_ar": "ستتوقف عن العمل",
+            "D_en": "They will stop working"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "اقتبس العرض التقديمي قول المدير التقني بأن المعالجات ستصبح أسخن من سطح الشمس (الشريحة 9).",
+        "explanation_correct_en": "The presentation quoted the CTO saying CPUs would become hotter than the surface of the sun (Slide 9).",
+        "explanation_wrong_ar": {
+            "A": "توقع غير منطقي وعكس المذكور.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "التوقع كان زيادة هائلة في الحرارة.",
+            "D": "لم يذكر أنها ستتوقف، بل ستكون ساخنة جداً."
+        },
+        "explanation_wrong_en": {
+            "A": "Illogical prediction and opposite to what was stated.",
+            "B": "This is the correct answer.",
+            "C": "The prediction was a massive increase in heat.",
+            "D": "He didn't say they would stop, but would be very hot."
+        }
+    },
+    {
+        "question_number": 9,
+        "lecture_number": 1,
+        "question_ar": "ما هي العلاقة الرياضية التي تربط استهلاك الطاقة (E) بالتردد (f) في المعالجات؟",
+        "question_en": "What is the mathematical relationship connecting Energy consumption (E) to Frequency (f) in CPUs?",
+        "choices": {
+            "A_ar": "E تتناسب طردياً مع f (E ∝ f)",
+            "A_en": "E is proportional to f (E ∝ f)",
+            "B_ar": "E تتناسب مع مربع التردد (E ∝ f²)",
+            "B_en": "E is proportional to the square of frequency (E ∝ f²)",
+            "C_ar": "E تتناسب عكسياً مع f (E ∝ 1/f)",
+            "C_en": "E is inversely proportional to f (E ∝ 1/f)",
+            "D_ar": "E ثابتة ولا تتغير بتغير f",
+            "D_en": "E is constant and does not change with f"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "توضح الشريحة 9 معادلة استهلاك الطاقة بأنها تتناسب مع مربع التردد تقريباً.",
+        "explanation_correct_en": "Slide 9 shows the energy consumption formula as being proportional to the square of the frequency approximately.",
+        "explanation_wrong_ar": {
+            "A": "العلاقة ليست خطية بل تربيعية.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "زيادة التردد تزيد الطاقة ولا تنقصها.",
+            "D": "الطاقة تعتمد بشكل كبير على التردد."
+        },
+        "explanation_wrong_en": {
+            "A": "The relationship is not linear but quadratic.",
+            "B": "This is the correct answer.",
+            "C": "Increasing frequency increases energy, doesn't decrease it.",
+            "D": "Energy depends heavily on frequency."
+        }
+    },
+    {
+        "question_number": 10,
+        "lecture_number": 1,
+        "question_ar": "كيف تساعد التوازية (Parallelism) في توفير الطاقة؟",
+        "question_en": "How does parallelism help conserve energy?",
+        "choices": {
+            "A_ar": "عن طريق زيادة تردد المعالج لأقصى حد",
+            "A_en": "By increasing CPU frequency to the max",
+            "B_ar": "عن طريق تشغيل مهام متعددة بترددات أقل",
+            "B_en": "By running multiple tasks at lower frequencies",
+            "C_ar": "عن طريق إيقاف تشغيل الذاكرة",
+            "C_en": "By turning off memory",
+            "D_ar": "التوازية تزيد دائماً من استهلاك الطاقة",
+            "D_en": "Parallelism always increases energy consumption"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "بتقليل التردد، يقل استهلاك الطاقة بشكل تربيعي، ويمكن تعويض السرعة باستخدام معالجات متعددة (الشريحة 9).",
+        "explanation_correct_en": "By reducing frequency, energy drops quadratically, and speed is compensated by using multiple processors (Slide 9).",
+        "explanation_wrong_ar": {
+            "A": "زيادة التردد تزيد استهلاك الطاقة وتولد حرارة.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "إيقاف الذاكرة ليس آلية التوازية المقصودة هنا.",
+            "D": "يمكن للتوازية توفير الطاقة إذا تم استغلال العلاقة بين الطاقة والتردد."
+        },
+        "explanation_wrong_en": {
+            "A": "Increasing frequency increases energy and heat.",
+            "B": "This is the correct answer.",
+            "C": "Turning off memory is not the intended parallelism mechanism here.",
+            "D": "Parallelism can save energy if the energy-frequency relation is exploited."
+        }
+    },
+    {
+        "question_number": 11,
+        "lecture_number": 1,
+        "question_ar": "أي مما يلي يُعتبر 'عاملاً اقتصادياً' (Economic factor) يشجع على الحوسبة المتوازية؟",
+        "question_en": "Which of the following is an 'Economic factor' encouraging parallel computing?",
+        "choices": {
+            "A_ar": "استخدام مكونات أرخص لتحقيق أداء كلي مماثل",
+            "A_en": "Using cheaper components to achieve comparable aggregate performance",
+            "B_ar": "زيادة تكلفة التبريد",
+            "B_en": "Increasing cooling costs",
+            "C_ar": "شراء أسرع معالج متوفر في السوق مهما كان سعره",
+            "C_en": "Buying the fastest available CPU regardless of price",
+            "D_ar": "تقليل عدد الموظفين",
+            "D_en": "Reducing the number of employees"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "تذكر الشريحة 10 أن استخدام مكونات رخيصة للحصول على أداء مجمع هو دافع اقتصادي مهم.",
+        "explanation_correct_en": "Slide 10 mentions that using cheaper components to get aggregate performance is a key economic driver.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "هذا عيب وليس عامل تشجيع.",
+            "C": "هذا عكس التوفير الاقتصادي.",
+            "D": "لم يتم ذكر الموظفين كعامل في سياق الأجهزة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This is a drawback, not an encouraging factor.",
+            "C": "This is opposite to economic saving.",
+            "D": "Employees were not mentioned as a factor in hardware context."
+        }
+    },
+    {
+        "question_number": 12,
+        "lecture_number": 1,
+        "question_ar": "ما هو تعريف 'القابلية للتوسع' (Scalability) في سياق العوامل المهمة للحوسبة؟",
+        "question_en": "What is the definition of 'Scalability' in the context of important computing factors?",
+        "choices": {
+            "A_ar": "القدرة على تشغيل البرنامج على أي نظام تشغيل",
+            "A_en": "Ability to run the program on any OS",
+            "B_ar": "تقسيم البيانات على المعالجات للحصول على توافق أفضل بين الخوارزميات والموارد",
+            "B_en": "Subdividing data over CPUs to obtain a better match between algorithms and resources",
+            "C_ar": "زيادة سرعة الساعة للمعالج باستمرار",
+            "C_en": "Continuously increasing CPU clock speed",
+            "D_ar": "تصغير حجم الشريحة الإلكترونية",
+            "D_en": "Shrinking the chip size"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "الشريحة 10 تعرف القابلية للتوسع بأنها القدرة على تقسيم البيانات لزيادة الأداء مع زيادة الموارد.",
+        "explanation_correct_en": "Slide 10 defines scalability as the ability to subdivide data to increase performance with increased resources.",
+        "explanation_wrong_ar": {
+            "A": "هذا تعريف القابلية للنقل (Portability).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هذا يخص الأداء التسلسلي.",
+            "D": "هذا يخص التصنيع المادي."
+        },
+        "explanation_wrong_en": {
+            "A": "This is Portability definition.",
+            "B": "This is the correct answer.",
+            "C": "This relates to sequential performance.",
+            "D": "This relates to physical manufacturing."
+        }
+    },
+    {
+        "question_number": 13,
+        "lecture_number": 1,
+        "question_ar": "لماذا قد تكون البرامج المتوازية السيئة 'أبطأ' من نظيرتها التسلسلية؟",
+        "question_en": "Why might bad parallel programs be 'slower' than their sequential counterparts?",
+        "choices": {
+            "A_ar": "بسبب قلة عدد المعالجات",
+            "A_en": "Due to low number of processors",
+            "B_ar": "بسبب عبء الاتصالات (Communication overhead)",
+            "B_en": "Because of communication overhead",
+            "C_ar": "لأن المعالجات الحديثة بطيئة",
+            "C_en": "Because modern processors are slow",
+            "D_ar": "لأن البرمجة المتوازية تستخدم لغة مختلفة",
+            "D_en": "Because parallel programming uses a different language"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "توضح الشريحة 11 أن عبء الاتصال بين المعالجات قد يجعل البرنامج المتوازي أبطأ.",
+        "explanation_correct_en": "Slide 11 explains that communication overhead between processors can make a parallel program slower.",
+        "explanation_wrong_ar": {
+            "A": "زيادة المعالجات مع برنامج سيء قد تزيد البطء.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "المعالجات ليست بطيئة، بل طريقة الاستخدام هي السبب.",
+            "D": "اللغة ليست السبب الرئيسي للبطء."
+        },
+        "explanation_wrong_en": {
+            "A": "Adding processors to a bad program might increase slowness.",
+            "B": "This is the correct answer.",
+            "C": "Processors aren't slow, the usage method is the cause.",
+            "D": "The language is not the main reason for slowness."
+        }
+    },
+    {
+        "question_number": 14,
+        "lecture_number": 1,
+        "question_ar": "ما هو المثال الذي تم استخدامه في المحاضرة لتوضيح خوارزمية 'تسلسلية بطبيعتها' (Inherently sequential)؟",
+        "question_en": "What example was used in the lecture to illustrate an 'inherently sequential' algorithm?",
+        "choices": {
+            "A_ar": "ضرب المصفوفات",
+            "A_en": "Matrix Multiplication",
+            "B_ar": "خوارزمية الترتيب السريع",
+            "B_en": "Quick Sort",
+            "C_ar": "حدسية كولاتز (Collatz conjecture)",
+            "C_en": "Collatz conjecture",
+            "D_ar": "البحث الثنائي",
+            "D_en": "Binary Search"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "تم استخدام حدسية كولاتز في الشريحة 12 كمثال لأن الخطوة التالية تعتمد كلياً على ناتج الخطوة الحالية.",
+        "explanation_correct_en": "Collatz conjecture was used in Slide 12 as an example because the next step depends entirely on the current step's output.",
+        "explanation_wrong_ar": {
+            "A": "ضرب المصفوفات قابل للتوازي بشكل كبير.",
+            "B": "خوارزميات الترتيب يمكن موازاتها.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "البحث يمكن موازاته كما ورد لاحقاً في المحاضرة."
+        },
+        "explanation_wrong_en": {
+            "A": "Matrix multiplication is highly parallelizable.",
+            "B": "Sorting algorithms can be parallelized.",
+            "C": "This is the correct answer.",
+            "D": "Search can be parallelized as mentioned later in the lecture."
+        }
+    },
+    {
+        "question_number": 15,
+        "lecture_number": 1,
+        "question_ar": "لماذا تعتبر خوارزمية كولاتز تسلسلية؟",
+        "question_en": "Why is the Collatz algorithm considered sequential?",
+        "choices": {
+            "A_ar": "لأنها تتطلب ذاكرة كبيرة",
+            "A_en": "Because it requires large memory",
+            "B_ar": "لأن قيمة الخطوة التالية تعتمد على قيمة n الحالية",
+            "B_en": "Because the next step value depends on the current n value",
+            "C_ar": "لأنها تعمل فقط على الأعداد الزوجية",
+            "C_en": "Because it works only on even numbers",
+            "D_ar": "لأن الكود مكتوب بلغة C",
+            "D_en": "Because the code is written in C"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "طبيعة الخوارزمية تتطلب معرفة نتيجة الخطوة الحالية لحساب الخطوة التالية، مما يمنع تنفيذ الخطوات معاً.",
+        "explanation_correct_en": "The nature of the algorithm requires knowing the current step's result to calculate the next, preventing concurrent execution.",
+        "explanation_wrong_ar": {
+            "A": "الذاكرة ليست سبب التسلسلية هنا.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هي تعمل على الأعداد الفردية والزوجية.",
+            "D": "لغة البرمجة لا تحدد إن كانت الخوارزمية تسلسلية جوهرياً أم لا."
+        },
+        "explanation_wrong_en": {
+            "A": "Memory is not the reason for sequentiality here.",
+            "B": "This is the correct answer.",
+            "C": "It works on both odd and even numbers.",
+            "D": "The programming language doesn't determine inherent sequentiality."
+        }
+    },
+    {
+        "question_number": 16,
+        "lecture_number": 1,
+        "question_ar": "كيف يتم تعريف التسريع (Speedup) باستخدام P من المعالجات؟",
+        "question_en": "How is Speedup defined using P processors?",
+        "choices": {
+            "A_ar": "Sp = ts / tp",
+            "A_en": "Sp = ts / tp",
+            "B_ar": "Sp = tp / ts",
+            "B_en": "Sp = tp / ts",
+            "C_ar": "Sp = ts * tp",
+            "C_en": "Sp = ts * tp",
+            "D_ar": "Sp = P * ts",
+            "D_en": "Sp = P * ts"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "التسريع هو حاصل قسمة الزمن التسلسلي (ts) على الزمن المتوازي (tp) كما هو موضح في الشريحة 14.",
+        "explanation_correct_en": "Speedup is the quotient of sequential time (ts) divided by parallel time (tp) as shown in Slide 14.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "هذا هو مقلوب التسريع.",
+            "C": "الضرب لا يعطي معامل التسريع.",
+            "D": "هذه معادلة غير صحيحة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This is the inverse of speedup.",
+            "C": "Multiplication does not yield the speedup factor.",
+            "D": "This is an incorrect equation."
+        }
+    },
+    {
+        "question_number": 17,
+        "lecture_number": 1,
+        "question_ar": "ماذا يعني أن يكون التسريع 'مثالياً' (Perfect or Ideal)؟",
+        "question_en": "What does it mean for the speedup to be 'Perfect or Ideal'?",
+        "choices": {
+            "A_ar": "Sp = 1",
+            "A_en": "Sp = 1",
+            "B_ar": "Sp = P",
+            "B_en": "Sp = P",
+            "C_ar": "Sp < P",
+            "C_en": "Sp < P",
+            "D_ar": "Sp = 0",
+            "D_en": "Sp = 0"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "التسريع المثالي يحدث عندما تتضاعف السرعة بنفس مقدار عدد المعالجات (Sp تساوي P).",
+        "explanation_correct_en": "Ideal speedup occurs when speed multiplies by the exact amount of processors (Sp equals P).",
+        "explanation_wrong_ar": {
+            "A": "هذا يعني عدم وجود تسريع (سرعة مساوية للتسلسلي).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هذا هو الوضع المعتاد (أقل من المثالي).",
+            "D": "هذا يعني توقف البرنامج."
+        },
+        "explanation_wrong_en": {
+            "A": "This means no speedup (same as sequential).",
+            "B": "This is the correct answer.",
+            "C": "This is the typical situation (sub-linear).",
+            "D": "This means the program stopped."
+        }
+    },
+    {
+        "question_number": 18,
+        "lecture_number": 1,
+        "question_ar": "ما هو المقصود بالتسريع الفائق (Superlinear speedup)؟",
+        "question_en": "What is meant by Superlinear speedup?",
+        "choices": {
+            "A_ar": "عندما Sp = P",
+            "A_en": "When Sp = P",
+            "B_ar": "عندما Sp > P",
+            "B_en": "When Sp > P",
+            "C_ar": "عندما يتوقف البرنامج عن العمل",
+            "C_en": "When the program crashes",
+            "D_ar": "عندما تكون الكفاءة 50%",
+            "D_en": "When efficiency is 50%"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "يحدث التسريع الفائق عندما يكون معامل التسريع أكبر من عدد المعالجات المستخدمة (Sp > P).",
+        "explanation_correct_en": "Superlinear speedup happens when the speedup factor is greater than the number of processors used (Sp > P).",
+        "explanation_wrong_ar": {
+            "A": "هذا تسريع مثالي (Linear).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "لا علاقة له بتوقف البرنامج.",
+            "D": "الكفاءة هنا ستكون أكبر من 100%."
+        },
+        "explanation_wrong_en": {
+            "A": "This is ideal (Linear) speedup.",
+            "B": "This is the correct answer.",
+            "C": "Unrelated to crashing.",
+            "D": "Efficiency here would be greater than 100%."
+        }
+    },
+    {
+        "question_number": 19,
+        "lecture_number": 1,
+        "question_ar": "ما هو تعريف التسريع النسبي (Relative Speedup)؟",
+        "question_en": "What is the definition of Relative Speedup?",
+        "choices": {
+            "A_ar": "مقارنة الزمن المتوازي بزمن أسرع خوارزمية تسلسلية معروفة",
+            "A_en": "Comparing parallel time to the best known sequential algorithm time",
+            "B_ar": "S^1_P = t_1 / t_P (مقارنة الزمن على معالج واحد بالزمن على P معالج)",
+            "B_en": "S^1_P = t_1 / t_P (Comparing time on 1 processor to time on P processors)",
+            "C_ar": "مقارنة سرعة البرنامج على أجهزة مختلفة",
+            "C_en": "Comparing program speed on different hardware",
+            "D_ar": "حساب سرعة الذاكرة بالنسبة للمعالج",
+            "D_en": "Calculating memory speed relative to CPU"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "التسريع النسبي يقارن خوارزمية متوازية تعمل على معالج واحد بنفس الخوارزمية تعمل على P معالج.",
+        "explanation_correct_en": "Relative speedup compares the parallel algorithm running on 1 processor to the same algorithm on P processors.",
+        "explanation_wrong_ar": {
+            "A": "هذا هو تعريف التسريع المطلق (Absolute Speedup).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "ليس هذا هو التعريف في سياق الخوارزميات.",
+            "D": "لا علاقة له بقياس سرعة الذاكرة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is Absolute Speedup definition.",
+            "B": "This is the correct answer.",
+            "C": "Not the definition in algorithmic context.",
+            "D": "Unrelated to memory speed measurement."
+        }
+    },
+    {
+        "question_number": 20,
+        "lecture_number": 1,
+        "question_ar": "في مثال البحث المتوازي، ما هي الحالة التي يكون فيها التسريع Sp = 1 (أي لا يوجد تسريع)؟",
+        "question_en": "In the parallel search example, in which case is the speedup Sp = 1 (i.e., no speedup)?",
+        "choices": {
+            "A_ar": "أسوأ حالة للبحث التسلسلي (العنصر في آخر جزء)",
+            "A_en": "Worst case for sequential search (item in last chunk)",
+            "B_ar": "أفضل حالة للبحث التسلسلي (العنصر في أول جزء)",
+            "B_en": "Best case for sequential search (item in first chunk)",
+            "C_ar": "عندما لا يتم العثور على العنصر",
+            "C_en": "When the item is not found",
+            "D_ar": "عندما تكون الدلتا t تساوي صفر",
+            "D_en": "When delta t is zero"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "إذا وجد البحث التسلسلي العنصر في البداية فوراً، فإن الزمن التسلسلي يكون قصيراً جداً ويساوي تقريباً زمن البحث المتوازي، مما يجعل Sp=1.",
+        "explanation_correct_en": "If sequential search finds the item immediately at the start, sequential time is very short and equals parallel time, making Sp=1.",
+        "explanation_wrong_ar": {
+            "A": "في أسوأ حالة للتسلسلي، يكون التسريع المتوازي كبيراً جداً (يقترب من اللانهاية).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "سيستغرق كلاهما وقتاً طويلاً لكن النسبة لن تكون بالضرورة 1.",
+            "D": "إذا كانت دلتا t صفراً، التسريع يذهب لللانهاية.",
+            "explanation_wrong_en": {
+                "A": "In sequential worst case, parallel speedup is huge (approaches infinity).",
+                "B": "This is the correct answer.",
+                "C": "Both take long, but ratio isn't necessarily 1.",
+                "D": "If delta t is zero, speedup goes to infinity."
+            }
+        },
+        "explanation_wrong_en": {
+            "A": "In sequential worst case, parallel speedup is huge (approaches infinity).",
+            "B": "This is the correct answer.",
+            "C": "Both take long, but ratio isn't necessarily 1.",
+            "D": "If delta t is zero, speedup goes to infinity."
+        }
+    },
+    {
+        "question_number": 21,
+        "lecture_number": 1,
+        "question_ar": "ما هو السبب الرئيسي لحدوث التسريع الفائق (Superlinear Speedup) كما ذُكر في المحاضرة؟",
+        "question_en": "What is the main reason for Superlinear Speedup as mentioned in the lecture?",
+        "choices": {
+            "A_ar": "تأثيرات ذاكرة التخزين المؤقت (Cache effects)",
+            "A_en": "Cache effects",
+            "B_ar": "زيادة سرعة المعالج",
+            "B_en": "Increase in processor speed",
+            "C_ar": "استخدام ذاكرة أقل",
+            "C_en": "Using less memory",
+            "D_ar": "أخطاء في نظام التشغيل",
+            "D_en": "Errors in the operating system"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "عند تقسيم البيانات على معالجات متعددة، قد يتناسب حجم البيانات المخصص لكل معالج مع ذاكرة الكاش، مما يقلل بشكل كبير من أخطاء الكاش (cache misses) ويؤدي لتسريع فائق.",
+        "explanation_correct_en": "When data is partitioned over processors, each processor's data chunk might fit entirely in its cache, drastically reducing cache misses and leading to superlinear speedup.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "سرعة المعالج ثابتة ولا تسبب تسريعاً فائقاً.",
+            "C": "استخدام ذاكرة أقل بحد ذاته ليس السبب المباشر.",
+            "D": "الأخطاء لا تسبب تسريعاً، بل تبطئ البرنامج أو توقفه."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "Processor speed is constant and doesn't cause superlinear speedup.",
+            "C": "Using less memory itself is not the direct cause.",
+            "D": "Errors don't cause speedup; they slow or crash the program."
+        }
+    },
+    {
+        "question_number": 22,
+        "lecture_number": 1,
+        "question_ar": "كيف يتم حساب الكفاءة (Efficiency) في الحوسبة المتوازية؟",
+        "question_en": "How is Efficiency calculated in parallel computing?",
+        "choices": {
+            "A_ar": "Ep = Sp * P",
+            "A_en": "Ep = Sp * P",
+            "B_ar": "Ep = P / Sp",
+            "B_en": "Ep = P / Sp",
+            "C_ar": "Ep = Sp / P",
+            "C_en": "Ep = Sp / P",
+            "D_ar": "Ep = ts / P",
+            "D_en": "Ep = ts / P"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "الكفاءة هي مقياس لمدى استفادة المعالجات، وتُحسب بقسمة التسريع (Sp) على عدد المعالجات (P).",
+        "explanation_correct_en": "Efficiency is a measure of processor utilization, calculated by dividing the speedup (Sp) by the number of processors (P).",
+        "explanation_wrong_ar": {
+            "A": "هذا حساب غير صحيح.",
+            "B": "هذا مقلوب الكفاءة.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "هذه المعادلة غير صحيحة لتعريف الكفاءة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is an incorrect calculation.",
+            "B": "This is the inverse of efficiency.",
+            "C": "This is the correct answer.",
+            "D": "This is not the correct formula for efficiency."
+        }
+    },
+    {
+        "question_number": 23,
+        "lecture_number": 1,
+        "question_ar": "ماذا تعني الكفاءة بنسبة 100% (Ep = 1)؟",
+        "question_en": "What does 100% efficiency (Ep = 1) imply?",
+        "choices": {
+            "A_ar": "تسريع فائق (Superlinear speedup)",
+            "A_en": "Superlinear speedup",
+            "B_ar": "تسريع مثالي (Ideal speedup)",
+            "B_en": "Ideal speedup",
+            "C_ar": "لا يوجد تسريع",
+            "C_en": "No speedup",
+            "D_ar": "البرنامج يعمل ببطء",
+            "D_en": "The program is running slowly"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "عندما تكون الكفاءة 100% (Ep=1)، فهذا يعني أن Sp = P، وهو ما يُعرف بالتسريع المثالي أو الخطي.",
+        "explanation_correct_en": "When efficiency is 100% (Ep=1), it means Sp = P, which is defined as ideal or linear speedup.",
+        "explanation_wrong_ar": {
+            "A": "التسريع الفائق يعني كفاءة > 100%.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "لا يوجد تسريع يعني Sp=1 و Ep=1/P.",
+            "D": "الكفاءة 100% تعني أسرع أداء ممكن."
+        },
+        "explanation_wrong_en": {
+            "A": "Superlinear speedup implies efficiency > 100%.",
+            "B": "This is the correct answer.",
+            "C": "No speedup means Sp=1 and Ep=1/P.",
+            "D": "100% efficiency means the fastest possible performance."
+        }
+    },
+    {
+        "question_number": 24,
+        "lecture_number": 1,
+        "question_ar": "كيف تُعرف المحاضرة الخوارزمية 'القابلة للتوسع' (Scalable)؟",
+        "question_en": "How does the lecture define a 'Scalable' algorithm?",
+        "choices": {
+            "A_ar": "خوارزمية تحافظ على كفاءة ثابتة (أكبر من صفر) مع زيادة حجم المشكلة N وعدد المعالجات P(N)",
+            "A_en": "An algorithm that maintains constant efficiency (greater than zero) as problem size N and processor count P(N) increase",
+            "B_ar": "خوارزمية تعمل فقط على عدد معالجات ثابت",
+            "B_en": "An algorithm that only works on a fixed number of processors",
+            "C_ar": "خوارزمية تصبح كفاءتها صفراً عندما تزيد P",
+            "C_en": "An algorithm whose efficiency approaches zero as P increases",
+            "D_ar": "خوارزمية تستخدم ذاكرة أقل كلما زاد حجم المشكلة",
+            "D_en": "An algorithm that uses less memory as the problem size grows"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "القابلية للتوسع تعني الحفاظ على مستوى كفاءة أدنى (epsilon > 0) كلما كبرت المشكلة N واستخدمنا عدداً متزايداً من المعالجات P.",
+        "explanation_correct_en": "Scalability means maintaining a minimal efficiency level (epsilon > 0) as the problem N grows and the number of processors P increases.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "هذا عكس القابلية للتوسع.",
+            "C": "هذا تعريف الخوارزمية غير القابلة للتوسع.",
+            "D": "القابلية للتوسع تتعلق بالكفاءة والأداء وليس استهلاك الذاكرة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This is the opposite of scalability.",
+            "C": "This defines an unscalable algorithm.",
+            "D": "Scalability relates to efficiency and performance, not memory usage."
+        }
+    },
+    {
+        "question_number": 25,
+        "lecture_number": 1,
+        "question_ar": "وفقًا لقانون أمدال (Amdahl's Law)، ماذا يمثل الرمز 'f'؟",
+        "question_en": "According to Amdahl's Law, what does the symbol 'f' represent?",
+        "choices": {
+            "A_ar": "الجزء القابل للموازاة من الحسابات",
+            "A_en": "The parallelizable fraction of the computation",
+            "B_ar": "الجزء التسلسلي (Sequential) من الحسابات",
+            "B_en": "The sequential fraction of the computation",
+            "C_ar": "عدد المعالجات",
+            "C_en": "The number of processors",
+            "D_ar": "تردد المعالج",
+            "D_en": "The processor frequency"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "الرمز 'f' يمثل جزء الكود الذي يجب تنفيذه بشكل تسلسلي ولا يمكن موازاته.",
+        "explanation_correct_en": "The 'f' symbol represents the fraction of code that must be executed sequentially and cannot be parallelized.",
+        "explanation_wrong_ar": {
+            "A": "الجزء القابل للموازاة يمثل (1-f).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "عدد المعالجات يمثل بـ P.",
+            "D": "التردد لا يدخل في معادلة أمدال الأساسية."
+        },
+        "explanation_wrong_en": {
+            "A": "The parallelizable fraction is represented by (1-f).",
+            "B": "This is the correct answer.",
+            "C": "The number of processors is represented by P.",
+            "D": "Frequency is not part of Amdahl's basic equation."
+        }
+    },
+    {
+        "question_number": 26,
+        "lecture_number": 1,
+        "question_ar": "ما هي معادلة التسريع (Sp) الصحيحة وفقًا لقانون أمدال؟",
+        "question_en": "What is the correct Speedup (Sp) equation according to Amdahl's Law?",
+        "choices": {
+            "A_ar": "Sp = P / (f + (1-f)P)",
+            "A_en": "Sp = P / (f + (1-f)P)",
+            "B_ar": "Sp = 1 / (f + (1-f)/P)",
+            "B_en": "Sp = 1 / (f + (1-f)/P)",
+            "C_ar": "Sp = P / (1 + (P-1)f)",
+            "C_en": "Sp = P / (1 + (P-1)f)",
+            "D_ar": "Sp = 1 / (1 + (P-1)f)",
+            "D_en": "Sp = 1 / (1 + (P-1)f)"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "المعادلة هي Sp = ts / (f*ts + (1-f)ts/P). بتبسيط ts، نحصل على 1 / (f + (1-f)/P). بضرب البسط والمقام في P، نحصل على P / (P*f + 1 - f)، وهو ما يساوي P / (1 + (P-1)f).",
+        "explanation_correct_en": "The equation is Sp = ts / (f*ts + (1-f)ts/P). Simplifying ts, we get 1 / (f + (1-f)/P). Multiplying numerator and denominator by P, we get P / (P*f + 1 - f), which equals P / (1 + (P-1)f).",
+        "explanation_wrong_ar": {
+            "A": "صيغة غير صحيحة.",
+            "B": "هذه صيغة صحيحة (مكافئة لـ C بعد توحيد مقامات المقام)، ولكن الصيغة C هي المذكورة في الشريحة 21.",
+            "C": "هذه هي الإجابة الصحيحة كما وردت في الشريحة 21.",
+            "D": "صيغة غير صحيحة."
+        },
+        "explanation_wrong_en": {
+            "A": "Incorrect formula.",
+            "B": "This is a correct formula (equivalent to C after simplification), but C is the one stated in Slide 21.",
+            "C": "This is the correct answer as stated in Slide 21.",
+            "D": "Incorrect formula."
+        }
+    },
+    {
+        "question_number": 27,
+        "lecture_number": 1,
+        "question_ar": "ما هو أقصى تسريع يمكن تحقيقه (نظرياً) عندما يزداد عدد المعالجات (P) إلى ما لا نهاية، وفقًا لقانون أمدال؟",
+        "question_en": "What is the maximum speedup achievable (theoretically) as the number of processors (P) approaches infinity, according to Amdahl's Law?",
+        "choices": {
+            "A_ar": "ما لا نهاية (Infinity)",
+            "A_en": "Infinity",
+            "B_ar": "P (عدد المعالجات)",
+            "B_en": "P (Number of processors)",
+            "C_ar": "f (الجزء التسلسلي)",
+            "C_en": "f (The sequential fraction)",
+            "D_ar": "1 / f",
+            "D_en": "1 / f"
+        },
+        "correct_choice": "D",
+        "explanation_correct_ar": "عندما P تقترب من اللانهاية، فإن الجزء (1-f)/P يقترب من الصفر. يتبقى 1/f. هذا يعني أن السرعة القصوى محكومة بالجزء التسلسلي.",
+        "explanation_correct_en": "As P approaches infinity, the (1-f)/P term approaches zero. What remains is 1/f. This means the maximum speedup is limited by the sequential part.",
+        "explanation_wrong_ar": {
+            "A": "لا يمكن الوصول لللانهاية بسبب الجزء f.",
+            "B": "هذا هو التسريع المثالي، وليس الأقصى حسب أمدال.",
+            "C": "f هو كسر أقل من 1.",
+            "D": "هذه هي الإجابة الصحيحة."
+        },
+        "explanation_wrong_en": {
+            "A": "Infinity is not reachable because of the f fraction.",
+            "B": "This is ideal speedup, not Amdahl's limit.",
+            "C": "f is a fraction less than 1.",
+            "D": "This is the correct answer."
+        }
+    },
+    {
+        "question_number": 28,
+        "lecture_number": 1,
+        "question_ar": "إذا كان الجزء التسلسلي (f) من برنامج هو 10% (0.1)، فما هو أقصى تسريع يمكن تحقيقه بغض النظر عن عدد المعالجات؟",
+        "question_en": "If the sequential fraction (f) of a program is 10% (0.1), what is the maximum possible speedup regardless of the number of processors?",
+        "choices": {
+            "A_ar": "100 مرة",
+            "A_en": "100x",
+            "B_ar": "20 مرة",
+            "B_en": "20x",
+            "C_ar": "10 مرات",
+            "C_en": "10x",
+            "D_ar": "5 مرات",
+            "D_en": "5x"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "باستخدام قانون أمدال للسرعة القصوى (1/f)، فإن أقصى تسريع هو 1 / 0.1 = 10 مرات.",
+        "explanation_correct_en": "Using Amdahl's maximum speedup limit (1/f), the max speedup is 1 / 0.1 = 10x.",
+        "explanation_wrong_ar": {
+            "A": "يتطلب f=1%.",
+            "B": "يتطلب f=5%.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "يتطلب f=20%."
+        },
+        "explanation_wrong_en": {
+            "A": "Requires f=1%.",
+            "B": "Requires f=5%.",
+            "C": "This is the correct answer.",
+            "D": "Requires f=20%."
+        }
+    },
+    {
+        "question_number": 29,
+        "lecture_number": 1,
+        "question_ar": "ما هو الافتراض الرئيسي الذي يقوم عليه قانون أمدال (Amdahl's Law)؟",
+        "question_en": "What is the main assumption of Amdahl's Law?",
+        "choices": {
+            "A_ar": "حجم المشكلة ثابت (Fixed problem size)",
+            "A_en": "Fixed problem size (Fixed workload)",
+            "B_ar": "زمن التنفيذ ثابت (Fixed execution time)",
+            "B_en": "Fixed execution time (Time-constrained scaling)",
+            "C_ar": "عدد المعالجات ثابت",
+            "C_en": "Fixed number of processors",
+            "D_ar": "الجزء التسلسلي يساوي صفر",
+            "D_en": "The sequential fraction is zero"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "يفترض قانون أمدال أن حجم العمل الكلي ثابت لا يتغير، ونحن نقسمه على عدد أكبر من المعالجات لنرى كم يقل الوقت.",
+        "explanation_correct_en": "Amdahl's law assumes the total workload is fixed, and we divide it among more processors to see how time decreases.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "هذا هو افتراض قانون غوستافسون.",
+            "C": "القانون يدرس تغير الأداء بتغير P.",
+            "D": "لو كان f=0، لكان التسريع دائماً P."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This is the assumption of Gustafson's Law.",
+            "C": "The law studies performance change as P changes.",
+            "D": "If f=0, speedup would always be P."
+        }
+    },
+    {
+        "question_number": 30,
+        "lecture_number": 1,
+        "question_ar": "ما هو الافتراض الرئيسي الذي يقوم عليه قانون غوستافسون (Gustafson's Law)؟",
+        "question_en": "What is the main assumption of Gustafson's Law?",
+        "choices": {
+            "A_ar": "حجم المشكلة ثابت",
+            "A_en": "Fixed problem size",
+            "B_ar": "زمن التنفيذ المتوازي ثابت (Time-constrained scaling)",
+            "B_en": "Fixed parallel execution time (Time-constrained scaling)",
+            "C_ar": "الكفاءة دائماً 100%",
+            "C_en": "Efficiency is always 100%",
+            "D_ar": "عدد المعالجات يساوي 1",
+            "D_en": "Number of processors equals 1"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "قانون غوستافسون يفترض أننا نحافظ على زمن التنفيذ المتوازي ثابتاً، ونرى كم يمكننا زيادة حجم المشكلة (N) عند زيادة P.",
+        "explanation_correct_en": "Gustafson's Law assumes we keep the parallel execution time constant, and see how much we can scale the problem size (N) as P increases.",
+        "explanation_wrong_ar": {
+            "A": "هذا هو افتراض قانون أمدال.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "لا يفترض كفاءة 100%.",
+            "D": "يدرس القانون سلوك P عندما P > 1."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the assumption of Amdahl's Law.",
+            "B": "This is the correct answer.",
+            "C": "It does not assume 100% efficiency.",
+            "D": "The law studies behavior for P > 1."
+        }
+    },
+    {
+        "question_number": 31,
+        "lecture_number": 1,
+        "question_ar": "ماذا يمثل الرمز α(N) في معادلة قانون غوستافسون (S_P,N = P + (1-P)α(N))؟",
+        "question_en": "What does α(N) represent in Gustafson's Law equation (S_P,N = P + (1-P)α(N))?",
+        "choices": {
+            "A_ar": "الجزء القابل للموازاة من الزمن المتوازي",
+            "A_en": "The parallelizable fraction of the parallel time",
+            "B_ar": "الجزء غير القابل للموازاة (التسلسلي) من الزمن المتوازي",
+            "B_en": "The non-parallelizable (sequential) fraction of the parallel time",
+            "C_ar": "حجم المشكلة N",
+            "C_en": "The problem size N",
+            "D_ar": "عدد المعالجات P",
+            "D_en": "The number of processors P"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "الرمز α(N) هو الجزء غير القابل للموازاة (التسلسلي) من إجمالي الزمن المتوازي (الذي يتم تثبيته عند 1).",
+        "explanation_correct_en": "α(N) is the non-parallelizable (sequential) fraction of the total parallel time (which is normalized to 1).",
+        "explanation_wrong_ar": {
+            "A": "الجزء القابل للموازاة هو β(N) = 1 - α(N).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هو دالة في N، ولكنه يمثل جزءاً من الزمن.",
+            "D": "P موجودة بشكل صريح في المعادلة."
+        },
+        "explanation_wrong_en": {
+            "A": "The parallelizable fraction is β(N) = 1 - α(N).",
+            "B": "This is the correct answer.",
+            "C": "It is a function of N, but represents a fraction of time.",
+            "D": "P is explicitly in the equation."
+        }
+    },
+    {
+        "question_number": 32,
+        "lecture_number": 1,
+        "question_ar": "ما هو العائق الرئيسي أمام موازاة حلقة تكرار كولاتز (Collatz iteration loop)؟",
+        "question_en": "What is the main limitation to parallelizing the Collatz iteration loop?",
+        "choices": {
+            "A_ar": "الاعتمادية المحمولة عبر الحلقة (Loop-carried dependence)",
+            "A_en": "Loop-carried dependence",
+            "B_ar": "استخدام عملية القسمة (%)",
+            "B_en": "Use of the modulo operator (%)",
+            "C_ar": "الحاجة إلى ذاكرة كبيرة جداً",
+            "C_en": "Need for very large memory",
+            "D_ar": "وجود جملة if-else",
+            "D_en": "Presence of an if-else statement"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "قيمة 'n' في كل تكرار تعتمد على قيمة 'n' من التكرار السابق، وهذا يسمى 'اعتمادية محمولة عبر الحلقة' ويجعل الخوارزمية تسلسلية.",
+        "explanation_correct_en": "The value of 'n' in each iteration depends on the 'n' from the previous iteration. This is a 'loop-carried dependence' and makes it sequential.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "عملية القسمة لا تمنع التوازي بحد ذاتها.",
+            "C": "الخوارزمية لا تحتاج ذاكرة كبيرة.",
+            "D": "جملة if-else لا تمنع التوازي بالضرورة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "The modulo operator doesn't prevent parallelism itself.",
+            "C": "The algorithm is not memory-intensive.",
+            "D": "An if-else statement doesn't necessarily prevent parallelism."
+        }
+    },
+    {
+        "question_number": 33,
+        "lecture_number": 1,
+        "question_ar": "في مقارنة Gauss-Seidel و Jacobi، أي خوارزمية تكرارية لا تظهر اعتمادية محمولة عبر الحلقة (loop-carried dependences)؟",
+        "question_en": "In the Gauss-Seidel vs Jacobi comparison, which iterative algorithm does not exhibit loop-carried dependences?",
+        "choices": {
+            "A_ar": "جاوس-سيدل (Gauss-Seidel)",
+            "A_en": "Gauss-Seidel",
+            "B_ar": "جاكوبي (Jacobi)",
+            "B_en": "Jacobi",
+            "C_ar": "كلاهما لا يظهر اعتمادية",
+            "C_en": "Both do not exhibit dependence",
+            "D_ar": "كلاهما يظهر اعتمادية",
+            "D_en": "Both exhibit dependence"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "تكرار Jacobi يستخدم القيم 'القديمة' (soln) لحساب كل القيم 'الجديدة' (snew) في مصفوفة منفصلة، مما يزيل الاعتمادية داخل الحلقة.",
+        "explanation_correct_en": "The Jacobi iteration uses the 'old' values (soln) to compute all 'new' values (snew) in a separate array, removing the in-loop dependence.",
+        "explanation_wrong_ar": {
+            "A": "Gauss-Seidel يستخدم القيمة المحدثة soln(i-1) لحساب soln(i)، وهذا هو الاعتمادية بعينها.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "Gauss-Seidel يظهر اعتمادية.",
+            "D": "Jacobi لا يظهر اعتمادية."
+        },
+        "explanation_wrong_en": {
+            "A": "Gauss-Seidel uses the updated value soln(i-1) to calculate soln(i), which is the dependence.",
+            "B": "This is the correct answer.",
+            "C": "Gauss-Seidel exhibits dependence.",
+            "D": "Jacobi does not exhibit dependence."
+        }
+    },
+    {
+        "question_number": 34,
+        "lecture_number": 1,
+        "question_ar": "في الشريحة 25 التي تعرض 3 حلقات تكرارية، أي حلقة (أو حلقات) لا يمكن موازاتها بسبب اعتمادية البيانات؟",
+        "question_en": "In Slide 25 showing 3 loops, which loop(s) cannot be parallelized due to data dependence?",
+        "choices": {
+            "A_ar": "الحلقة 1 فقط",
+            "A_en": "Loop 1 only",
+            "B_ar": "الحلقة 2 فقط",
+            "B_en": "Loop 2 only",
+            "C_ar": "الحلقة 3 فقط",
+            "C_en": "Loop 3 only",
+            "D_ar": "الحلقتان 1 و 3",
+            "D_en": "Loops 1 and 3"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "الحلقة 3 بها اعتمادية محمولة عبر الحلقة، حيث أن قيمة 'dxo' في التكرار الحالي i تعتمد على 'dxi' من التكرار السابق i-1 (التي أصبحت dxo).",
+        "explanation_correct_en": "Loop 3 has a loop-carried dependence, as the value of 'dxo' in the current iteration i depends on 'dxi' from the previous iteration i-1 (which became dxo).",
+        "explanation_wrong_ar": {
+            "A": "الحلقة 1 يمكن موازاتها (كل تكرار مستقل).",
+            "B": "الحلقة 2 يمكن موازاتها (كل تكرار مستقل).",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "الحلقة 1 يمكن موازاتها."
+        },
+        "explanation_wrong_en": {
+            "A": "Loop 1 can be parallelized (each iteration is independent).",
+            "B": "Loop 2 can be parallelized (each iteration is independent).",
+            "C": "This is the correct answer.",
+            "D": "Loop 1 can be parallelized."
+        }
+    },
+    {
+        "question_number": 35,
+        "lecture_number": 1,
+        "question_ar": "في الشريحة 25، أي حلقة من المرجح أن تعمل بكفاءة أكبر على جهاز تسلسلي؟",
+        "question_en": "In Slide 25, which loop probably runs more efficiently on a sequential machine?",
+        "choices": {
+            "A_ar": "الحلقة 1",
+            "A_en": "Loop 1",
+            "B_ar": "الحلقة 2",
+            "B_en": "Loop 2",
+            "C_ar": "الحلقة 3",
+            "C_en": "Loop 3",
+            "D_ar": "كلهم بنفس الكفاءة",
+            "D_en": "All are equally efficient"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "الحلقة 3 تتجنب حساب 1.0/h(i+1) مرتين (مرة كـ 'dxi' في التكرار i، ومرة كـ 'dxo' في التكرار i+1)، مما يجعلها أكثر كفاءة تسلسلياً.",
+        "explanation_correct_en": "Loop 3 avoids calculating 1.0/h(i+1) twice (once as 'dxi' in iteration i, and once as 'dxo' in iteration i+1), making it sequentially more efficient.",
+        "explanation_wrong_ar": {
+            "A": "الحلقة 1 تحسب 1.0/h(i+1) مرتين في كل تكرار تقريباً (مرة في i ومرة في i-1).",
+            "B": "الحلقة 2 تحسب 1.0/h(i+1) مرتين أيضاً.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "الحلقة 3 محسنة بشكل أفضل للتنفيذ التسلسلي."
+        },
+        "explanation_wrong_en": {
+            "A": "Loop 1 calculates 1.0/h(i+1) twice in nearly every iteration (once at i, once at i-1).",
+            "B": "Loop 2 also calculates 1.0/h(i+1) twice.",
+            "C": "This is the correct answer.",
+            "D": "Loop 3 is better optimized for sequential execution."
+        }
+    },
+    {
+        "question_number": 36,
+        "lecture_number": 1,
+        "question_ar": "ماذا يحدث لاستهلاك الطاقة عند محاولة موازاة مهام ذات اعتمادية (نقاط تزامن) بتردد أقل؟",
+        "question_en": "What happens to energy consumption when trying to parallelize tasks with dependencies (synchronization points) at a lower frequency?",
+        "choices": {
+            "A_ar": "يقل استهلاك الطاقة دائماً",
+            "A_en": "Energy consumption always decreases",
+            "B_ar": "يزداد استهلاك الطاقة بسبب وقت الخمول (Idle time)",
+            "B_en": "Energy consumption increases due to CPU idle time",
+            "C_ar": "لا يتغير استهلاك الطاقة",
+            "C_en": "Energy consumption does not change",
+            "D_ar": "يصبح استهلاك الطاقة صفراً",
+            "D_en": "Energy consumption becomes zero"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "كما هو موضح في الشريحة 27، حتى مع تردد أقل، فإن وقت الخمول الناتج عن انتظار التزامن (Delta) يزيد من إجمالي الطاقة المستهلكة وقد يتجاوز طاقة التنفيذ التسلسلي.",
+        "explanation_correct_en": "As shown in Slide 27, even with lower frequency, the idle time waiting for synchronization (Delta) increases total energy consumed, potentially exceeding sequential energy.",
+        "explanation_wrong_ar": {
+            "A": "ليس دائماً، الاعتمادية تسبب الخمول.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "يتغير بسبب الخمول والتردد.",
+            "D": "مستحيل."
+        },
+        "explanation_wrong_en": {
+            "A": "Not always; dependencies cause idle time.",
+            "B": "This is the correct answer.",
+            "C": "It changes due to idle time and frequency.",
+            "D": "Impossible."
+        }
+    },
+    {
+        "question_number": 37,
+        "lecture_number": 1,
+        "question_ar": "لماذا لا يزال من المهم تحسين (Optimize) الجزء غير المتوازي (f) من الكود؟",
+        "question_en": "Why is it still important to optimize the non-parallel fraction (f) of the code?",
+        "choices": {
+            "A_ar": "لأن قانون أمدال يوضح أن f يحدد الحد الأقصى للتسريع",
+            "A_en": "Because Amdahl's Law shows f limits the maximum speedup",
+            "B_ar": "لأنه الجزء الوحيد الذي يعمل",
+            "B_en": "Because it's the only part that runs",
+            "C_ar": "لأنه يستهلك ذاكرة أكثر",
+            "C_en": "Because it uses more memory",
+            "D_ar": "لأن تحسينه غير ممكن",
+            "D_en": "Because optimizing it is impossible"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "وفقًا لقانون أمدال، الحد الأقصى للتسريع هو 1/f. لذا، كلما قللت f (بتحسين الكود التسلسلي)، زاد الحد الأقصى الممكن للتسريع.",
+        "explanation_correct_en": "According to Amdahl's Law, the maximum speedup is 1/f. Therefore, the more you reduce f (by optimizing sequential code), the higher the potential maximum speedup.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "الجزء المتوازي يعمل أيضاً.",
+            "C": "لا علاقة مباشرة بالذاكرة.",
+            "D": "تحسينه ممكن ومهم جداً."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "The parallel part also runs.",
+            "C": "Not directly related to memory.",
+            "D": "Optimizing it is possible and very important."
+        }
+    },
+    {
+        "question_number": 38,
+        "lecture_number": 1,
+        "question_ar": "ما هو تعريف 'المحلية الزمنية' (Temporal Locality)؟",
+        "question_en": "What is the definition of 'Temporal Locality'?",
+        "choices": {
+            "A_ar": "الوصول إلى مواقع ذاكرة متجاورة (Consecutive)",
+            "A_en": "Accessing consecutive memory locations",
+            "B_ar": "الوصول إلى نفس موقع الذاكرة بشكل متكرر",
+            "B_en": "Accessing the same memory location frequently and repeatedly",
+            "C_ar": "الوصول إلى الذاكرة في نفس الوقت",
+            "C_en": "Accessing memory at the same time",
+            "D_ar": "الوصول إلى مواقع ذاكرة عشوائية",
+            "D_en": "Accessing random memory locations"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "المحلية الزمنية تعني أن موقع الذاكرة الذي تم الوصول إليه مؤخراً، من المرجح أن يتم الوصول إليه مرة أخرى قريباً.",
+        "explanation_correct_en": "Temporal locality means a memory location accessed recently is likely to be accessed again soon.",
+        "explanation_wrong_ar": {
+            "A": "هذا تعريف 'المحلية المكانية' (Spatial Locality).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "تعريف غير دقيق.",
+            "D": "هذا مثال على 'محلية ضعيفة' (Poor locality)."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the definition of 'Spatial Locality'.",
+            "B": "This is the correct answer.",
+            "C": "Incorrect definition.",
+            "D": "This is an example of 'Poor locality'."
+        }
+    },
+    {
+        "question_number": 39,
+        "lecture_number": 1,
+        "question_ar": "ما هو تعريف 'المحلية المكانية' (Spatial Locality)؟",
+        "question_en": "What is the definition of 'Spatial Locality'?",
+        "choices": {
+            "A_ar": "الوصول إلى مواقع ذاكرة متجاورة أو قريبة",
+            "A_en": "Accessing consecutive or nearby memory locations",
+            "B_ar": "الوصول إلى نفس موقع الذاكرة بشكل متكرر",
+            "B_en": "Accessing the same memory location frequently and repeatedly",
+            "C_ar": "الوصول إلى الذاكرة في أماكن مختلفة من الجهاز",
+            "C_en": "Accessing memory in different parts of the machine",
+            "D_ar": "الوصول إلى مواقع ذاكرة عشوائية",
+            "D_en": "Accessing random memory locations"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "المحلية المكانية تعني أنه إذا تم الوصول إلى موقع، فمن المرجح الوصول إلى المواقع القريبة منه قريباً.",
+        "explanation_correct_en": "Spatial locality means if a location is accessed, nearby locations are likely to be accessed soon.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "هذا تعريف 'المحلية الزمنية' (Temporal Locality).",
+            "C": "تعريف غير دقيق.",
+            "D": "هذا مثال على 'محلية مكانية ضعيفة'."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This is the definition of 'Temporal Locality'.",
+            "C": "Incorrect definition.",
+            "D": "This is an example of 'Poor spatial locality'."
+        }
+    },
+    {
+        "question_number": 40,
+        "lecture_number": 1,
+        "question_ar": "ما هو 'جدار الذاكرة' (Memory Wall)؟",
+        "question_en": "What is the 'Memory Wall'?",
+        "choices": {
+            "A_ar": "التفاوت المتزايد في السرعة بين المعالج والذاكرة",
+            "A_en": "The growing disparity of speed between CPU and memory",
+            "B_ar": "الحد الأقصى لحجم الذاكرة في الجهاز",
+            "B_en": "The maximum amount of memory in a machine",
+            "C_ar": "الجدار الناري الذي يحمي الذاكرة",
+            "C_en": "A firewall protecting the memory",
+            "D_ar": "خطأ في الذاكرة يؤدي لتوقف النظام",
+            "D_en": "A memory error that crashes the system"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "المصطلح يشير إلى الفجوة المتسعة بين سرعة المعالجات التي تزداد بسرعة، وسرعة الذاكرة التي تزداد ببطء أكثر.",
+        "explanation_correct_en": "The term refers to the widening gap between fast-increasing CPU speeds and slower-increasing memory speeds.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "هذا حد فيزيائي وليس 'جدار الذاكرة'.",
+            "C": "لا علاقة له بأمن الشبكات.",
+            "D": "هذا 'خطأ فادح' (Fatal error) وليس جدار الذاكرة."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This is a physical limit, not the 'Memory Wall'.",
+            "C": "Unrelated to network security.",
+            "D": "This is a 'Fatal error', not the Memory Wall."
+        }
+    },
+    {
+        "question_number": 41,
+        "lecture_number": 1,
+        "question_ar": "أي من تأثيرات الذاكرة التالية تُعتبر الشاغل الأكبر للتنفيذ التسلسلي الأمثل؟",
+        "question_en": "Which of the following memory effects is the greatest concern for optimal sequential execution?",
+        "choices": {
+            "A_ar": "اعتماديات التخزين-التحميل (Store-load dependences)",
+            "A_en": "Store-load dependences",
+            "B_ar": "أخطاء TLB (TLB misses)",
+            "B_en": "TLB misses",
+            "C_ar": "أخطاء الصفحة (Page faults)",
+            "C_en": "Page faults",
+            "D_ar": "كل ما سبق (تعتبر تأثيرات الذاكرة شاغلاً كبيراً)",
+            "D_en": "All of the above (Memory effects are the greatest concern)"
+        },
+        "correct_choice": "D",
+        "explanation_correct_ar": "تنص الشريحة 30 على أن \"تأثيرات الذاكرة هي الشاغل الأكبر\"، وتعدد كل من Store-load dependences, Cache misses, TLB misses, و Page faults كأمثلة.",
+        "explanation_correct_en": "Slide 30 states \"Memory effects are the greatest concern\" and lists Store-load dependences, Cache misses, TLB misses, and Page faults as examples.",
+        "explanation_wrong_ar": {
+            "A": "هذا صحيح، ولكنه جزء من قائمة شاملة.",
+            "B": "هذا صحيح، ولكنه جزء من قائمة شاملة.",
+            "C": "هذا صحيح، ولكنه جزء من قائمة شاملة.",
+            "D": "هذه هي الإجابة الصحيحة لأن الشريحة تعتبر تأثيرات الذاكرة بشكل عام هي الشاغل الأكبر."
+        },
+        "explanation_wrong_en": {
+            "A": "This is correct, but part of a comprehensive list.",
+            "B": "This is correct, but part of a comprehensive list.",
+            "C": "This is correct, but part of a comprehensive list.",
+            "D": "This is the correct answer as the slide considers memory effects in general as the greatest concern."
+        }
+    },
+    {
+        "question_number": 42,
+        "lecture_number": 1,
+        "question_ar": "أي من تأثيرات موارد المعالج (CPU resource effects) يمكن أن تحد من الأداء التسلسلي؟",
+        "question_en": "Which CPU resource effect can limit sequential performance?",
+        "choices": {
+            "A_ar": "زيادة عدد وحدات الفاصلة العائمة",
+            "A_en": "Having too many floating point units",
+            "B_ar": "التفرع غير المتوقع (Unpredictable branching)",
+            "B_en": "Unpredictable branching",
+            "C_ar": "المحلية الزمنية الجيدة",
+            "C_en": "Good temporal locality",
+            "D_ar": "استخدام محسنات المترجم (Compiler optimizations)",
+            "D_en": "Using compiler optimizations"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "تذكر الشريحة 30 أن التفرع غير المتوقع (مثل جمل if-then-else) هو من تأثيرات موارد المعالج التي تحد من الأداء.",
+        "explanation_correct_en": "Slide 30 lists unpredictable branching (like if-then-else) as a CPU resource effect that limits performance.",
+        "explanation_wrong_ar": {
+            "A": "المشكلة هي العدد المحدود (Limited number) وليس الزيادة.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "المحلية الجيدة تحسن الأداء ولا تحد منه.",
+            "D": "محسنات المترجم تساعد في تحسين الأداء."
+        },
+        "explanation_wrong_en": {
+            "A": "The problem is a limited number, not having too many.",
+            "B": "This is the correct answer.",
+            "C": "Good locality improves performance, it doesn't limit it.",
+            "D": "Compiler optimizations help improve performance."
+        }
+    },
+    {
+        "question_number": 43,
+        "lecture_number": 1,
+        "question_ar": "ما هي الأدوات التي يُنصح باستخدامها لتحليل أسباب البطء (overhead) في الكود؟",
+        "question_en": "What tools are recommended for analyzing the causes of overhead in code?",
+        "choices": {
+            "A_ar": "محررات النصوص (Text editors)",
+            "A_en": "Text editors",
+            "B_ar": "محللات الأداء (Performance analyzers)",
+            "B_en": "Performance analyzers",
+            "C_ar": "برامج مكافحة الفيروسات",
+            "C_en": "Antivirus software",
+            "D_ar": "مترجمات لغة C++ فقط",
+            "D_en": "C++ compilers only"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "تنصح الشريحة 30 باستخدام محللات الأداء (performance analyzers) لتحليل التنفيذ وفهم الأداء.",
+        "explanation_correct_en": "Slide 30 recommends using performance analyzers to analyze execution and understand performance.",
+        "explanation_wrong_ar": {
+            "A": "محررات النصوص لكتابة الكود وليست لتحليله.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "لا علاقة لها بتحليل أداء الكود.",
+            "D": "المترجمات تبني الكود، لكن المحللات تقيس أداءه."
+        },
+        "explanation_wrong_en": {
+            "A": "Text editors are for writing code, not analyzing it.",
+            "B": "This is the correct answer.",
+            "C": "Unrelated to code performance analysis.",
+            "D": "Compilers build code, analyzers measure its performance."
+        }
+    },
+    {
+        "question_number": 44,
+        "lecture_number": 1,
+        "question_ar": "ما هو الدرس المستفاد بخصوص 'الأجهزة' (Hardware) في الحوسبة عالية الأداء؟",
+        "question_en": "What is the lesson learned regarding 'Hardware' in high-performance computing?",
+        "choices": {
+            "A_ar": "الأجهزة هي المشكلة دائماً",
+            "A_en": "Hardware is always the problem",
+            "B_ar": "الأجهزة يمكن أن تُستغل بشكل ناقص (underutilized) عندما تكون البرمجيات سيئة",
+            "B_en": "Hardware can be significantly underutilized when software is suboptimal",
+            "C_ar": "يجب دائماً شراء أسرع الأجهزة",
+            "C_en": "One must always buy the fastest hardware",
+            "D_ar": "الأجهزة لا تهم على الإطلاق",
+            "D_en": "Hardware does not matter at all"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "توضح الشريحة 31 أن المشكلة ليست في الأجهزة، ولكن الأجهزة القوية يمكن أن يُساء استغلالها (underutilized) بسبب البرمجيات الضعيفة.",
+        "explanation_correct_en": "Slide 31 clarifies that the problem isn't the hardware, but that powerful hardware can be underutilized by suboptimal software.",
+        "explanation_wrong_ar": {
+            "A": "المحاضرة تقول العكس: \"المشكلة ليست الأجهزة\".",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "لم يُذكر هذا، والتركيز كان على البرمجيات.",
+            "D": "الأجهزة مهمة، لكن البرمجيات توازي أهميتها."
+        },
+        "explanation_wrong_en": {
+            "A": "The lecture states the opposite: \"The problem is not the hardware\".",
+            "B": "This is the correct answer.",
+            "C": "This was not stated; the focus was on software.",
+            "D": "Hardware matters, but software is equally important."
+        }
+    },
+    {
+        "question_number": 45,
+        "lecture_number": 1,
+        "question_ar": "ما هو الدرس المستفاد بخصوص 'نقل' التطبيقات (Porting) إلى بيئة متوازية؟",
+        "question_en": "What is the lesson learned regarding 'Porting' applications to a parallel environment?",
+        "choices": {
+            "A_ar": "السؤال دائماً هو 'هل ننقل أم لا'",
+            "A_en": "'To port or not to port' is the question",
+            "B_ar": "النقل (Porting) هو عملية سهلة دائماً",
+            "B_en": "Porting is always an easy process",
+            "C_ar": "قد تكون هناك حاجة لإعادة تصميم كاملة (complete redesign) للتطبيق",
+            "C_en": "A complete redesign of the application may be necessary",
+            "D_ar": "يجب تجنب النقل (Porting) تماماً",
+            "D_en": "Porting should be avoided entirely"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "تذكر الشريحة 31 أن السؤال ليس 'هل ننقل أم لا'، ولكن قد نحتاج لإعادة تصميم كاملة بدلاً من مجرد نقل الكود.",
+        "explanation_correct_en": "Slide 31 states 'To port or not to port is NOT the question', implying a complete redesign might be needed instead of a simple port.",
+        "explanation_wrong_ar": {
+            "A": "المحاضرة تنفي هذا قائلة \"NOT the question\".",
+            "B": "المحاضرة تلمح إلى أن الأمر معقد.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "لم يُنصح بتجنب النقل، بل بالتفكير في إعادة التصميم."
+        },
+        "explanation_wrong_en": {
+            "A": "The lecture negates this, saying \"NOT the question\".",
+            "B": "The lecture implies it is complex.",
+            "C": "This is the correct answer.",
+            "D": "It wasn't advised to avoid porting, but to consider redesign."
+        }
+    },
+    {
+        "question_number": 46,
+        "lecture_number": 1,
+        "question_ar": "ما هو الدرس المستفاد بخصوص 'قابلية النقل' (Portability) للبرمجيات المتوازية؟",
+        "question_en": "What is the lesson learned regarding 'Portability' for parallel software?",
+        "choices": {
+            "A_ar": "القابلية للنقل مضمونة دائماً",
+            "A_en": "Portability is always guaranteed",
+            "B_ar": "القابلية للنقل 'بعيدة المنال' (remains elusive)",
+            "B_en": "Portability 'remains elusive'",
+            "C_ar": "القابلية للنقل ليست مهمة",
+            "C_en": "Portability is not important",
+            "D_ar": "تم حل مشكلة القابلية للنقل بالكامل",
+            "D_en": "Portability has been completely solved"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "تذكر الشريحة 31 أن قابلية النقل (Portability) لا تزال بعيدة المنال أو صعبة التحقيق في البرمجيات المتوازية.",
+        "explanation_correct_en": "Slide 31 states that Portability remains elusive (hard to achieve) in parallel software.",
+        "explanation_wrong_ar": {
+            "A": "المحاضرة تقول العكس.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "هي مهمة، لكنها صعبة.",
+            "D": "المحاضرة تقول العكس."
+        },
+        "explanation_wrong_en": {
+            "A": "The lecture states the opposite.",
+            "B": "This is the correct answer.",
+            "C": "It is important, but difficult.",
+            "D": "The lecture states the opposite."
+        }
+    },
+    {
+        "question_number": 47,
+        "lecture_number": 1,
+        "question_ar": "ماذا تقول المحاضرة عن أهمية 'التوازية' (Parallelism)؟",
+        "question_en": "What does the lecture say about the importance of 'Parallelism'?",
+        "choices": {
+            "A_ar": "التوازية هي كل شيء (هي أهم عامل دائماً)",
+            "A_en": "Parallelism is everything (it's always the most important factor)",
+            "B_ar": "التوازية ليست كل شيء (الأداء التسلسلي مهم أيضاً)",
+            "B_en": "Parallelism isn't everything (sequential performance also matters)",
+            "C_ar": "التوازية غير مجدية",
+            "C_en": "Parallelism is useless",
+            "D_ar": "يجب أن تكون جميع البرامج متوازية 100%",
+            "D_en": "All programs must be 100% parallel"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "الدرس المستفاد هو 'التوازية ليست كل شيء'، مما يذكرنا بأهمية الأداء التسلسلي (كما في قانون أمدال) والمحلية.",
+        "explanation_correct_en": "The lesson learned is 'Parallelism isn't everything', reminding us of the importance of sequential performance (Amdahl's Law) and locality.",
+        "explanation_wrong_ar": {
+            "A": "المحاضرة تقول العكس: 'ليست كل شيء'.",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "المحاضرة توضح فوائدها الكبيرة، لكنها ليست الحل الوحيد.",
+            "D": "قانون أمدال يوضح أن هذا مستحيل غالباً."
+        },
+        "explanation_wrong_en": {
+            "A": "The lecture states the opposite: 'isn't everything'.",
+            "B": "This is the correct answer.",
+            "C": "The lecture shows its great benefits, but it's not the only solution.",
+            "D": "Amdahl's law shows this is often impossible."
+        }
+    },
+    {
+        "question_number": 48,
+        "lecture_number": 1,
+        "question_ar": "ما هو العامل الضروري لنجاح البرمجيات (Software) في الحوسبة عالية الأداء؟",
+        "question_en": "What is essential to the success of software in high-performance computing?",
+        "choices": {
+            "A_ar": "القبول المجتمعي (Community acceptance)",
+            "A_en": "Community acceptance",
+            "B_ar": "أن تكون مغلقة المصدر (Closed source)",
+            "B_en": "Being closed source",
+            "C_ar": "أن تكون مكتوبة بلغة Fortran",
+            "C_en": "Being written in Fortran",
+            "D_ar": "أن تكون باهظة الثمن",
+            "D_en": "Being very expensive"
+        },
+        "correct_choice": "A",
+        "explanation_correct_ar": "تذكر الشريحة 31 أن 'القبول المجتمعي' ضروري لنجاح البرمجيات في هذا المجال.",
+        "explanation_correct_en": "Slide 31 states that 'Community acceptance' is essential to the success of software in this field.",
+        "explanation_wrong_ar": {
+            "A": "هذه هي الإجابة الصحيحة.",
+            "B": "لم يتم ذكر ذلك كعامل نجاح.",
+            "C": "لم يتم تحديد لغة معينة.",
+            "D": "لم يتم ذكر السعر كعامل نجاح."
+        },
+        "explanation_wrong_en": {
+            "A": "This is the correct answer.",
+            "B": "This was not mentioned as a success factor.",
+            "C": "No specific language was mandated.",
+            "D": "Price was not mentioned as a success factor."
+        }
+    },
+    {
+        "question_number": 49,
+        "lecture_number": 1,
+        "question_ar": "ما هي حالة البرمجيات التجارية (Commercial software) في الفئة العليا (high end) من الحوسبة؟",
+        "question_en": "What is the state of commercial software at the 'high end' of computing?",
+        "choices": {
+            "A_ar": "متوفرة بكثرة ورخيصة",
+            "A_en": "Abundant and cheap",
+            "B_ar": "نادرة (Rare)",
+            "B_en": "Rare",
+            "C_ar": "دائماً أفضل من البرمجيات مفتوحة المصدر",
+            "C_en": "Always better than open-source software",
+            "D_ar": "سهلة الاستخدام دائماً",
+            "D_en": "Always easy to use"
+        },
+        "correct_choice": "B",
+        "explanation_correct_ar": "تختتم الشريحة 31 بالقول إن البرمجيات التجارية الجيدة 'نادرة' في الفئة العليا (high end).",
+        "explanation_correct_en": "Slide 31 concludes by stating that good commercial software is 'rare' at the high end.",
+        "explanation_wrong_ar": {
+            "A": "المحاضرة تقول العكس (نادرة).",
+            "B": "هذه هي الإجابة الصحيحة.",
+            "C": "لم تتم هذه المقارنة.",
+            "D": "لم يتم ذكر سهولة الاستخدام."
+        },
+        "explanation_wrong_en": {
+            "A": "The lecture states the opposite (rare).",
+            "B": "This is the correct answer.",
+            "C": "This comparison was not made.",
+            "D": "Ease of use was not mentioned."
+        }
+    },
+    {
+        "question_number": 50,
+        "lecture_number": 1,
+        "question_ar": "ما هو الهدف من هذا المساق الدراسي (Course) كما هو مذكور في سياق 'لماذا لا نستخدم التوازي'؟",
+        "question_en": "What is a stated focus of this course, as mentioned in the 'Why not Parallel?' context?",
+        "choices": {
+            "A_ar": "التركيز فقط على الخوارزميات المتوازية",
+            "A_en": "To focus only on parallel algorithms",
+            "B_ar": "تجنب البرمجة التسلسلية تماماً",
+            "B_en": "To avoid sequential programming entirely",
+            "C_ar": "التركيز أيضاً على التحسينات غير المتوازية (non-parallel optimizations)",
+            "C_en": "To also focus on non-parallel optimizations",
+            "D_ar": "التركيز فقط على الأجهزة (Hardware)",
+            "D_en": "To focus only on hardware"
+        },
+        "correct_choice": "C",
+        "explanation_correct_ar": "تذكر الشريحة 11 أن المساق سيركز أيضاً جزءاً كبيراً على التحسينات غير المتوازية وكيفية الحصول على أداء أفضل من البرامج التسلسلية.",
+        "explanation_correct_en": "Slide 11 states the course will also focus a significant part on non-parallel optimizations and getting better sequential performance.",
+        "explanation_wrong_ar": {
+            "A": "المحاضرة تذكر صراحة أنها ستركز على التحسينات غير المتوازية أيضاً.",
+            "B": "المحاضرة تؤكد على أهمية تحسين البرامج التسلسلية.",
+            "C": "هذه هي الإجابة الصحيحة.",
+            "D": "التركيز على البرمجيات وتحسينها."
+        },
+        "explanation_wrong_en": {
+            "A": "The lecture explicitly states it will also focus on non-parallel optimizations.",
+            "B": "The lecture emphasizes optimizing sequential programs.",
+            "C": "This is the correct answer.",
+            "D": "The focus is on software and its optimization."
+        }
+    }
+]
