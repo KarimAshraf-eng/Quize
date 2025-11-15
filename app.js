@@ -21,6 +21,8 @@ class QuizApp {
         this.answerSubmitted = false;
         this.reviewOrigin = null; // Track where review started from
 
+        // تم حذف 'isInitialLoad'
+
         this.init();
     }
 
@@ -29,8 +31,17 @@ class QuizApp {
         this.bindEvents();
         await this.loadLectures();
         this.renderLectureCards(); // Render cards
-        this.showView('landing');
+
+        // (push = false) لأننا سنضبط الحالة يدويًا
+        this.showView('landing', false);
         this.updateSiteLanguage(); // Update static text
+
+        // --- تعديل: تعيين الحالة الأولية ---
+        // (نستخدم replaceState حتى لا يتمكن المستخدم من "الرجوع" من الصفحة الأولى)
+        history.replaceState({ view: 'landing' }, '', '#landing');
+        // ---------------------------------
+
+        this.isInitialLoad = false;
     }
 
     // Data Management
@@ -264,10 +275,26 @@ class QuizApp {
         document.getElementById('global-favorites-cancel-btn').addEventListener('click', () => {
             this.hideModal('global-favorites-modal');
         });
+        window.addEventListener('popstate', (event) => this.onPopState(event));
     }
 
+    // --- تعديل: دالة جديدة للتعامل مع 'popstate' (زر الرجوع) ---
+    onPopState(event) {
+        const state = event.state;
+        if (state && state.view) {
+            // (push = false) لمنع حلقة لا نهائية
+            // نقوم فقط بإظهار الشاشة التي طلبها المتصفح
+            this.showView(state.view, false);
+        } else {
+            // (الرجوع إلى الحالة الأولية إذا كانت الحالة غير معروفة)
+            this.showView('landing', false);
+        }
+    }
+    // ----------------------------------------------------
+
     // View Management
-    showView(viewName) {
+    // --- تم تعديل هذه الدالة (لإزالة الـ animation) ---
+    showView(viewName, push = true) { // <-- (تعديل: إضافة 'push = true')
         document.querySelectorAll('.view').forEach(view => {
             view.classList.remove('active');
         });
@@ -277,13 +304,16 @@ class QuizApp {
             targetView.classList.add('active');
             this.currentView = viewName;
 
-            // Removed transform properties that break position:fixed
-            targetView.style.opacity = '0';
-
-            setTimeout(() => {
-                targetView.style.transition = 'all 0.5s ease-out';
-                targetView.style.opacity = '1';
-            }, 10);
+            // --- تعديل: إضافة حالة للتاريخ (push state) ---
+            if (push) {
+                const newHash = '#' + viewName;
+                // (نتحقق من الـ hash لتجنب إضافة نفس الصفحة مرتين إذا ضغط المستخدم على زر مرتين)
+                if (window.location.hash !== newHash) {
+                    // هذا هو السطر الذي يضيف صفحة جديدة إلى سجل المتصفح
+                    history.pushState({ view: viewName }, '', newHash);
+                }
+            }
+            // -----------------------------------------
         }
     }
 
@@ -301,10 +331,13 @@ class QuizApp {
         });
     }
 
+    // --- تم تعديل هذه الدالة (لإزالة الـ animation) ---
     createLectureCard(lecture) {
         const card = document.createElement('div');
-        card.className = 'lecture-card bounce-in';
-        card.style.animationDelay = `${lecture.number * 0.1}s`;
+
+        // تم حذف كلاس 'bounce-in'
+        card.className = 'lecture-card';
+        // تم حذف 'animationDelay'
 
         // **NEW: Use dynamic titles from the lecture object**
         const title = this.sessionData.currentLanguage === 'en' ?
@@ -603,11 +636,16 @@ class QuizApp {
         title.textContent = titleText;
         title.className = `feedback-title ${isCorrect ? 'correct' : 'incorrect'}`;
 
+        // --- السطر الجديد الذي تم إضافته هنا ---
+        // هذا يضمن أن الاتجاه صحيح عند ظهور الصندوق لأول مرة
+        content.dir = this.explanationLanguage === 'ar' ? 'rtl' : 'ltr';
+        // --- نهاية الإضافة ---
+
         // Generate explanation content
         this.renderExplanation(question, userChoice, content);
 
         // Animate in
-        feedback.classList.add('bounce-in');
+        // card.classList.add('bounce-in'); // --- تم حذف هذا السطر
     }
 
     showViewOnlyFeedback(question) {
@@ -631,6 +669,11 @@ class QuizApp {
 
             title.textContent = titleText;
             title.className = `feedback-title ${isCorrect ? 'correct' : 'incorrect'}`;
+
+            // --- السطر الجديد الذي تم إضافته هنا ---
+            // هذا يضمن أن الاتجاه صحيح عند ظهور الصندوق لأول مرة
+            content.dir = this.explanationLanguage === 'ar' ? 'rtl' : 'ltr';
+            // --- نهاية الإضافة ---
 
             this.renderExplanation(question, userAnswer.choice, content);
         }
@@ -804,9 +847,10 @@ class QuizApp {
     }
 
     // Language Management
+    // --- تم تعديل هذه الدالة (لإصلاح RTL) ---
     toggleLanguage() {
         this.sessionData.currentLanguage = this.sessionData.currentLanguage === 'en' ? 'ar' : 'en';
-        document.documentElement.dir = this.sessionData.currentLanguage === 'ar' ? 'rtl' : 'ltr';
+        // document.documentElement.dir = this.sessionData.currentLanguage === 'ar' ? 'rtl' : 'ltr'; // <-- تم حذف هذا السطر
 
         this.updateSiteLanguage(); // This updates static text
 
@@ -822,7 +866,12 @@ class QuizApp {
         this.saveSessionData();
     }
 
+    // --- تم تعديل هذه الدالة (لإصلاح RTL) ---
     updateSiteLanguage() {
+        // --- تم إضافة هذا السطر لإصلاح RTL ---
+        document.documentElement.dir = this.sessionData.currentLanguage === 'ar' ? 'rtl' : 'ltr';
+        // ----------------------------------
+
         // Update global translate button
         const langIndicator = document.querySelector('.lang-indicator');
         if (langIndicator) {
@@ -900,6 +949,11 @@ class QuizApp {
             const userChoice = this.currentSelection || (userAnswer ? userAnswer.choice : null);
 
             const content = document.getElementById('explanation-content');
+
+            // --- السطر الجديد الذي تم إضافته هنا ---
+            // هذا السطر يضبط اتجاه صندوق الشرح بشكل مستقل
+            content.dir = this.explanationLanguage === 'ar' ? 'rtl' : 'ltr';
+            // --- نهاية الإضافة ---
 
             if (userChoice) {
                 this.renderExplanation(question, userChoice, content);
