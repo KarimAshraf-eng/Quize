@@ -19,11 +19,11 @@
     --white: #FFFFFF;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
-
+    
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-arabic: 'Amiri', 'Cairo', serif;
-
+    
     /* Spacing */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
@@ -31,19 +31,19 @@
     --space-lg: 1.5rem;
     --space-xl: 2rem;
     --space-2xl: 3rem;
-
+    
     /* Border Radius */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
-
+    
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-
+    
     /* Transitions */
     --transition-fast: 0.15s ease-out;
     --transition-normal: 0.3s ease-out;
@@ -119,43 +119,25 @@ body {
 }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    25% {
-        transform: translate(50px, -30px) rotate(90deg);
-    }
-
-    50% {
-        transform: translate(-30px, 50px) rotate(180deg);
-    }
-
-    75% {
-        transform: translate(-50px, -20px) rotate(270deg);
-    }
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, -30px) rotate(90deg); }
+    50% { transform: translate(-30px, 50px) rotate(180deg); }
+    75% { transform: translate(-50px, -20px) rotate(270deg); }
 }
 
 .floating-particles {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 1px, transparent 1px),
+                      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: drift 30s linear infinite;
 }
 
 @keyframes drift {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    100% {
-        transform: translate(-50px, -50px);
-    }
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
 }
 
 /* Global Translate Button - Fixed Position */
@@ -256,13 +238,8 @@ body {
 
 /* Removed transform from animation to allow position:fixed to work */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Hidden Elements */
@@ -271,21 +248,10 @@ body {
 }
 
 /* Utility Classes */
-.text-center {
-    text-align: center;
-}
-
-.text-success {
-    color: var(--success-green);
-}
-
-.text-error {
-    color: var(--error-red);
-}
-
-.text-warning {
-    color: var(--warning-yellow);
-}
+.text-center { text-align: center; }
+.text-success { color: var(--success-green); }
+.text-error { color: var(--error-red); }
+.text-warning { color: var(--warning-yellow); }
 
 /* Landing Page Styles */
 .app-header {
@@ -310,15 +276,8 @@ body {
 }
 
 @keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 .app-title {
@@ -451,13 +410,8 @@ body {
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .error-icon {
@@ -504,8 +458,10 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-lg);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    /* --- PERFORMANCE FIX --- */
+    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
+    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
+    /* --- END FIX --- */
     border-bottom: 1px solid var(--glass-border);
     position: sticky;
     top: 0;
@@ -513,45 +469,34 @@ body {
 }
 
 /* Force visual order for header items regardless of LTR/RTL */
-#back-to-landing {
-    order: 1;
-    /* Default LTR: 1 = left */
+#back-to-landing { 
+    order: 1; /* Default LTR: 1 = left */
 }
-
-.quiz-info {
-    order: 2;
-    /* Default LTR: 2 = middle */
-    flex-grow: 1;
-    text-align: center;
+.quiz-info { 
+    order: 2; /* Default LTR: 2 = middle */
+    flex-grow: 1; 
+    text-align: center; 
 }
-
-.header-actions {
-    order: 3;
-    /* Default LTR: 3 = right */
+.header-actions { 
+    order: 3; /* Default LTR: 3 = right */
 }
 
 /* RTL-specific order to keep visual layout static */
-[dir="rtl"] #back-to-landing {
-    order: 3 !important;
-    /* In RTL: 3 = visual left (end) */
+[dir="rtl"] #back-to-landing { 
+    order: 3 !important; /* In RTL: 3 = visual left (end) */
 }
-
-[dir="rtl"] .quiz-info {
-    order: 2 !important;
-    /* In RTL: 2 = middle */
+[dir="rtl"] .quiz-info { 
+    order: 2 !important; /* In RTL: 2 = middle */
 }
-
-[dir="rtl"] .header-actions {
-    order: 1 !important;
-    /* In RTL: 1 = visual right (start) */
+[dir="rtl"] .header-actions { 
+    order: 1 !important; /* In RTL: 1 = visual right (start) */
 }
 
 
 .quiz-info {
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* Center text within its own container */
+    justify-content: center; /* Center text within its own container */
     gap: var(--space-sm);
     font-weight: 500;
     color: var(--white);
@@ -597,8 +542,7 @@ body {
     margin: 0 auto;
     width: 100%;
     position: relative;
-    padding-bottom: 120px;
-    /* Space for fixed bottom controls */
+    padding-bottom: 120px; /* Space for fixed bottom controls */
 }
 
 /* Progress Bar */
@@ -881,8 +825,7 @@ body {
     justify-content: space-between;
     max-width: 800px;
     margin: 0 auto;
-    z-index: 100;
-    /* High z-index to stay on top of all content */
+    z-index: 100; /* High z-index to stay on top of all content */
 }
 
 .arrow-btn {
@@ -895,8 +838,10 @@ body {
     align-items: center;
     justify-content: center;
     transition: all var(--transition-fast);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    /* --- PERFORMANCE FIX --- */
+    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
+    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
+    /* --- END FIX --- */
     border: 2px solid var(--glass-border);
     color: var(--white);
     box-shadow: var(--shadow-lg);
@@ -921,47 +866,27 @@ body {
 
 /* Force VISUAL order regardless of LTR/RTL */
 /* Default LTR visual order */
-.arrow-left {
-    order: 1;
-}
-
-/* Visual left */
-.next-center {
-    order: 2;
-}
-
-/* Visual middle */
-.arrow-right {
-    order: 3;
-}
-
-/* Visual right */
+.arrow-left { order: 1; }  /* Visual left */
+.next-center { order: 2; } /* Visual middle */
+.arrow-right { order: 3; } /* Visual right */
 
 /* RTL: Swap the order to maintain visual position */
 [dir="rtl"] .arrow-left {
-    order: 3 !important;
-    /* Visually left (end) */
+    order: 3 !important; /* Visually left (end) */
 }
-
 [dir="rtl"] .next-center {
-    order: 2 !important;
-    /* Visually middle */
+    order: 2 !important; /* Visually middle */
 }
-
 [dir="rtl"] .arrow-right {
-    order: 1 !important;
-    /* Visually right (start) */
+    order: 1 !important; /* Visually right (start) */
 }
 
 /* Keep icon visuals static */
 [dir="rtl"] .arrow-left svg {
-    transform: rotate(0deg);
-    /* Keep icon pointing left */
+    transform: rotate(0deg); /* Keep icon pointing left */
 }
-
 [dir="rtl"] .arrow-right svg {
-    transform: rotate(0deg);
-    /* Keep icon as a checkmark */
+    transform: rotate(0deg); /* Keep icon as a checkmark */
 }
 
 
@@ -979,8 +904,10 @@ body {
     transition: all var(--transition-fast);
     border: none;
     font-size: 1rem;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    /* --- PERFORMANCE FIX --- */
+    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
+    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
+    /* --- END FIX --- */
     border: 2px solid var(--glass-border);
     color: var(--white);
     box-shadow: var(--shadow-lg);
@@ -1024,11 +951,11 @@ body {
     border: none;
     font-size: 0.9rem;
     background: rgba(245, 158, 11, 0.2);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */ /* --- PERFORMANCE FIX: تم حذف هذا السطر --- */
     border: 2px solid var(--warning-yellow);
     color: var(--warning-yellow);
     box-shadow: var(--shadow-lg);
-    z-index: 101;
+    z-index: 101; 
 }
 
 .return-dashboard-btn:hover {
@@ -1052,30 +979,29 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-lg);
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    /* --- PERFORMANCE FIX --- */
+    background: var(--neutral-dark); /* خلفية صلبة بدلاً من الشفافة */
+    /* backdrop-filter: blur(10px); */ /* تم حذف هذا السطر */
+    /* --- END FIX --- */
     border-bottom: 1px solid var(--glass-border);
 }
 
-.dashboard-header-left,
-.dashboard-header-right {
+.dashboard-header-left, .dashboard-header-right {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    flex: 1;
-    /* Each side takes 1 part */
+    flex: 1; /* Each side takes 1 part */
 }
 
 .dashboard-header-left {
-    justify-content: flex-start;
-    /* LTR visual left */
+    justify-content: flex-start; /* LTR visual left */
     order: 1;
 }
 
 .dashboard-header-right {
     justify-content: flex-end;
     /* Set a min-width equal to the left side to keep title centered */
-    min-width: 5.5rem;
+    min-width: 5.5rem; 
     order: 3;
 }
 
@@ -1083,40 +1009,30 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
-    flex: 2;
-    /* Title takes 2 parts */
+    flex: 2; /* Title takes 2 parts */
     text-align: center;
     order: 2;
 }
 
-/* **FIX: Force visual order for dashboard header items** */
+/* Force visual order for dashboard header items */
 [dir="rtl"] .dashboard-header-left {
-    justify-content: flex-end !important;
-    /* RTL visual left */
-    order: 3 !important;
-    /* Visually left (end) */
+    justify-content: flex-start !important; /* RTL visual left */
+    order: 3 !important; /* Visually left (end) */
 }
-
 [dir="rtl"] .dashboard-title {
-    order: 2 !important;
-    /* Middle */
+    order: 2 !important; /* Middle */
 }
-
 [dir="rtl"] .dashboard-header-right {
-    order: 1 !important;
-    /* Visually right (start) */
+    order: 1 !important; /* Visually right (start) */
 }
 
-/* **FIX: Force static order of buttons inside the left div** */
+/* Force static order of buttons inside the left div */
 #dashboard-home-btn {
     order: 1 !important;
 }
-
 #reset-session-btn {
     order: 2 !important;
 }
-
-/* **End of FIX** */
 
 
 .dashboard-main {
@@ -1273,7 +1189,6 @@ body {
 [dir="ltr"] .results-table td {
     text-align: left;
 }
-
 [dir="rtl"] .results-table th,
 [dir="rtl"] .results-table td {
     text-align: right;
@@ -1440,66 +1355,66 @@ body {
         width: 50px;
         height: 50px;
     }
-
+    
     .app-title {
         font-size: 2rem;
     }
-
+    
     .landing-main {
         padding: var(--space-lg);
     }
-
+    
     .lecture-grid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
-
+    
     .quiz-main {
         padding: var(--space-lg);
         padding-bottom: 100px;
     }
-
+    
     .quiz-bottom-controls {
         left: var(--space-lg);
         right: var(--space-lg);
         bottom: var(--space-lg);
     }
-
+    
     .arrow-btn {
         width: 50px;
         height: 50px;
     }
-
+    
     .next-center {
         padding: var(--space-sm) var(--space-lg);
     }
-
+    
     .summary-cards {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .action-buttons {
         flex-direction: column;
     }
-
+    
     .action-btn {
         width: 100%;
         justify-content: center;
     }
-
+    
     .results-table {
         font-size: 0.9rem;
     }
-
+    
     .results-table th,
     .results-table td {
         padding: var(--space-sm);
     }
-
+    
     .modal-buttons {
         flex-direction: column;
     }
-
+    
     .modal-btn {
         width: 100%;
         justify-content: center;
@@ -1510,37 +1425,37 @@ body {
     .summary-cards {
         grid-template-columns: 1fr;
     }
-
+    
     .question-container {
         padding: var(--space-lg);
     }
-
+    
     .choice-item {
         padding: var(--space-md);
     }
-
+    
     .quiz-bottom-controls {
         left: var(--space-md);
         right: var(--space-md);
         bottom: var(--space-md);
     }
-
+    
     .arrow-btn {
         width: 45px;
         height: 45px;
     }
-
+    
     .next-center {
         padding: var(--space-sm) var(--space-md);
         font-size: 0.9rem;
     }
-
+    
     .return-dashboard-btn {
         bottom: var(--space-md);
         padding: var(--space-xs) var(--space-md);
         font-size: 0.8rem;
     }
-
+    
     .modal-content {
         padding: var(--space-lg);
         margin: var(--space-md);
@@ -1553,15 +1468,8 @@ body {
 }
 
 @keyframes bounceIn {
-    from {
-        transform: scale(0.3);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+    from { transform: scale(0.3); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .slide-in-right {
@@ -1569,15 +1477,8 @@ body {
 }
 
 @keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 .slide-in-left {
@@ -1585,15 +1486,8 @@ body {
 }
 
 @keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
 }
 
 /* Scrollbar Styling */
