@@ -1,0 +1,936 @@
+{
+    "title_en": "Lecture 3",
+    "title_ar": "المحاضره الثالثه",
+    "questions": [
+        {
+            "question_number": 1,
+            "lecture_number": 3,
+            "question_ar": "في نموذج معمارية PMS، الرمز 'P' يمثل ___.",
+            "question_en": "In the PMS architecture model, 'P' stands for ___.",
+            "choices": {
+                "A_ar": "المعالج (Processor)",
+                "A_en": "Processor",
+                "B_ar": "خط الأنابيب (Pipeline)",
+                "B_en": "Pipeline",
+                "C_ar": "التوازي (Parallel)",
+                "C_en": "Parallel",
+                "D_ar": "الجهاز الطرفي (Peripheral)",
+                "D_en": "Peripheral"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (المعالج). المحاضرة (صفحة 3) تعرف 'P' بأنه 'Processor' (المعالج)، وهو \"جهاز يقوم بتنفيذ عمليات على البيانات\".",
+            "explanation_correct_en": "The correct answer is (Processor). The lecture (Page 3) defines 'P' as 'Processor', which is \"A device that performs operations on data\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "خط الأنابيب هو مفهوم في تصميم المعالج (المحاضرة 2)، وليس ما يرمز إليه 'P' في نموذج PMS.",
+                "C": "التوازي هو مفهوم عام، وليس مكونًا في نموذج PMS.",
+                "D": "الأجهزة الطرفية (مثل بطاقة الرسومات) هي أمثلة على 'P' (المعالج) (صفحة 3)، ولكن 'P' نفسها ترمز إلى المعالج."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Pipeline is a processor design concept (Lecture 2), not what 'P' stands for in the PMS model.",
+                "C": "Parallel is a general concept, not a component in the PMS model.",
+                "D": "Peripherals (like a Graphics Card) are examples of a 'P' (Page 3), but 'P' itself stands for Processor."
+            }
+        },
+        {
+            "question_number": 2,
+            "lecture_number": 3,
+            "question_ar": "في نموذج معمارية PMS، الرمز 'S' يمثل ___.",
+            "question_en": "In the PMS architecture model, 'S' stands for ___.",
+            "choices": {
+                "A_ar": "المفتاح (Switch)",
+                "A_en": "Switch",
+                "B_ar": "المتماثل (Symmetric)",
+                "B_en": "Symmetric",
+                "C_ar": "المشترك (Shared)",
+                "C_en": "Shared",
+                "D_ar": "النظام (System)",
+                "D_en": "System"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (المفتاح). المحاضرة (صفحة 3) تعرف 'S' بأنه 'Switch' (المفتاح)، وهو \"جهاز يسهل نقل البيانات بين الأجهزة\".",
+            "explanation_correct_en": "The correct answer is (Switch). The lecture (Page 3) defines 'S' as 'Switch', which is \"A device that facilitates transfer of data between devices\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المتماثل (Symmetric) هو جزء من اختصار 'SMP' (صفحة 4)، وليس 'S' في PMS.",
+                "C": "المشترك (Shared) يصف نوع الذاكرة (صفحة 4)، وليس 'S' في PMS.",
+                "D": "النظام (System) عام جدًا. 'S' في PMS تعني 'Switch' (مفتاح)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Symmetric is part of the 'SMP' acronym (Page 4), not the 'S' in PMS.",
+                "C": "Shared describes a type of memory (Page 4), not the 'S' in PMS.",
+                "D": "System is too general. The 'S' in PMS stands for 'Switch'."
+            }
+        },
+        {
+            "question_number": 3,
+            "lecture_number": 3,
+            "question_ar": "في نموذج معمارية PMS، الرمز 'M' يمثل ___.",
+            "question_en": "In the PMS architecture model, 'M' stands for ___.",
+            "choices": {
+                "A_ar": "الذاكرة (Memory)",
+                "A_en": "Memory",
+                "B_ar": "المتعدد (Multi)",
+                "B_en": "Multi",
+                "C_ar": "النموذج (Model)",
+                "C_en": "Model",
+                "D_ar": "الرئيسي (Main)",
+                "D_en": "Main"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (الذاكرة). المحاضرة (صفحة 3) تعرف 'M' بأنه 'Memory' (الذاكرة)، وهو \"جهاز يخزن البيانات\".",
+            "explanation_correct_en": "The correct answer is (Memory). The lecture (Page 3) defines 'M' as 'Memory', which is \"A device that stores data\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المتعدد (Multi) هو بادئة (مثل multiprocessor)، وليس 'M' في PMS.",
+                "C": "النموذج (Model) هو جزء من اسم 'PMS model'، وليس المكون 'M'.",
+                "D": "الرئيسي (Main) يصف نوعًا من الذاكرة (Main Memory) (صفحة 3)، ولكن 'M' نفسها ترمز إلى الذاكرة بشكل عام."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Multi is a prefix (like 'multiprocessor'), not the 'M' in PMS.",
+                "C": "Model is part of the 'PMS model' name, not the 'M' component.",
+                "D": "Main describes a type of memory (Main Memory) (Page 3), but 'M' itself stands for Memory in general."
+            }
+        },
+        {
+            "question_number": 4,
+            "lecture_number": 3,
+            "question_ar": "المعالجات المتعددة ذات الذاكرة المشتركة (Shared Memory Multiprocessor) تُعرف أيضًا باسم ___.",
+            "question_en": "Shared Memory Multiprocessors are also known as ___.",
+            "choices": {
+                "A_ar": "المعالجات المتعددة المتماثلة (SMP)",
+                "A_en": "Symmetric Multiprocessors (SMP)",
+                "B_ar": "المعالجات المتوازية بشكل كبير (MPP)",
+                "B_en": "Massively Parallel Processors (MPP)",
+                "C_ar": "معمارية الذاكرة المخبئية فقط (COMA)",
+                "C_en": "Cache-Only Memory Architecture (COMA)",
+                "D_ar": "الذاكرة المشتركة الموزعة (DSM)",
+                "D_en": "Distributed Shared Memory (DSM)"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 4) تذكر صراحة أن هذه المعمارية \"تُعرف أحيانًا باسم 'المعالجات المتعددة المتماثلة - SMP'\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 4) explicitly states this architecture is \"sometimes known as a 'Symmetric Multiprocessors - SMP'\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "MPP هو نظام ذاكرة موزعة (صفحة 10).",
+                "C": "COMA هي معمارية مختلفة تستبدل الذاكرة المشتركة بذاكرة مخبئية (صفحة 9).",
+                "D": "DSM هو نظام ذاكرة موزعة يعطي \"وهم\" الذاكرة المشتركة (صفحة 11)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "MPP is a distributed memory system (Page 10).",
+                "C": "COMA is a different architecture that replaces shared memory with cache (Page 9).",
+                "D": "DSM is a distributed memory system that gives the 'illusion' of shared memory (Page 11)."
+            }
+        },
+        {
+            "question_number": 5,
+            "lecture_number": 3,
+            "question_ar": "المشكلة الرئيسية في المعالج المتعدد ذي الذاكرة المشتركة الذي يستخدم ناقلًا (bus) واحدًا مشتركًا هي ___.",
+            "question_en": "The main problem of a shared memory multiprocessor using a single common bus is ___.",
+            "choices": {
+                "A_ar": "عنق زجاجة الناقل (Bus bottleneck)",
+                "A_en": "Bus bottleneck",
+                "B_ar": "تماسك الذاكرة المخبئية (Cache coherence)",
+                "B_en": "Cache coherence",
+                "C_ar": "تمرير الرسائل (Message passing)",
+                "C_en": "Message passing",
+                "D_ar": "مساحة العنوان المنفصلة (Separate address space)",
+                "D_en": "Separate address space"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 4) تذكر بوضوح: \"المشكلة: الناقل الواحد يؤدي إلى عنق زجاجة (bottleneck)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 4) explicitly states: \"Problem: a single bus results in a bottleneck\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "مشكلة تماسك الذاكرة المخبئية (Cache coherence) تظهر عند إضافة ذاكرة مخبئية محلية (صفحة 7)، وهي ليست المشكلة الأساسية للناقل نفسه.",
+                "C": "تمرير الرسائل (Message passing) يُستخدم في أنظمة الذاكرة الموزعة (صفحة 10).",
+                "D": "أنظمة الذاكرة المشتركة لها مساحة عنوان *واحدة* (single address space) (صفحة 4)، وليست منفصلة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The cache coherence problem is introduced when local caches are added (Page 7), it's not the primary problem of the bus itself.",
+                "C": "Message passing is used in distributed memory systems (Page 10).",
+                "D": "Shared memory systems have a *single* address space (Page 4), not separate ones."
+            }
+        },
+        {
+            "question_number": 6,
+            "lecture_number": 3,
+            "question_ar": "يحدث تنازع الناقل (Bus contention) في أنظمة SMP لأن الوصول إلى الذاكرة مقيد بـ ___ في كل مرة.",
+            "question_en": "Bus contention occurs in SMPs because memory access is restricted to ___ at a time.",
+            "choices": {
+                "A_ar": "معالج واحد",
+                "A_en": "one processor",
+                "B_ar": "معالجين",
+                "B_en": "two processors",
+                "C_ar": "جميع المعالجات",
+                "C_en": "all processors",
+                "D_ar": "الذاكرة المخبئية",
+                "D_en": "the cache"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 5) تشرح أن \"الوصول إلى الذاكرة مقيد بمعالج واحد في كل مرة\"، وهذا هو سبب تنازع الناقل.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 5) explains that \"Access to memory is restricted to one processor at a time\", which is the cause of bus contention.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الناقل الواحد يسمح لمعالج واحد فقط بالوصول في أي لحظة، وليس اثنين.",
+                "C": "إذا استطاعت جميع المعالجات الوصول في نفس الوقت، فلن يكون هناك عنق زجاجة.",
+                "D": "الوصول إلى الذاكرة المخبئية المحلية (local cache) لا يستخدم الناقل المشترك (صفحة 7)، لذا فهو لا يسبب تنازعًا على الناقل."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A single bus allows only one processor access at any given moment, not two.",
+                "C": "If all processors could access simultaneously, there would be no bottleneck.",
+                "D": "Accessing a local cache (Page 7) does not use the shared bus, so it doesn't cause bus contention."
+            }
+        },
+        {
+            "question_number": 7,
+            "lecture_number": 3,
+            "question_ar": "الاختصار 'SMP' يرمز إلى ___.",
+            "question_en": "The acronym 'SMP' stands for ___.",
+            "choices": {
+                "A_ar": "المعالجات المتعددة المتماثلة (Symmetric Multiprocessors)",
+                "A_en": "Symmetric Multiprocessors",
+                "B_ar": "المعالجات المتعددة البسيطة (Simple Multiprocessors)",
+                "B_en": "Simple Multiprocessors",
+                "C_ar": "الذاكرة المشتركة للمعالج (Shared Memory Processor)",
+                "C_en": "Shared Memory Processor",
+                "D_ar": "الذاكرة المتماثلة للمعالج (Symmetric Memory Processor)",
+                "D_en": "Symmetric Memory Processor"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 4) تعرف الاختصار 'SMP' بأنه 'Symmetric Multiprocessors' (المعالجات المتعددة المتماثلة).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 4) defines the acronym 'SMP' as 'Symmetric Multiprocessors'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المصطلح المستخدم في المحاضرة هو 'Symmetric' (متماثل)، وليس 'Simple' (بسيط).",
+                "C": "هذا يخلط بين 'Shared Memory' و 'Symmetric'. SMP هو نوع من أنظمة الذاكرة المشتركة.",
+                "D": "الـ 'S' ترمز إلى 'Symmetric' (متماثل)، والـ 'M' ترمز إلى 'Multi' (متعدد)، وليس 'Memory' (ذاكرة)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The term used in the lecture is 'Symmetric', not 'Simple'.",
+                "C": "This confuses 'Shared Memory' with 'Symmetric'. An SMP is a type of shared memory system.",
+                "D": "The 'S' stands for 'Symmetric', and the 'M' stands for 'Multi', not 'Memory'."
+            }
+        },
+        {
+            "question_number": 8,
+            "lecture_number": 3,
+            "question_ar": "تُعرَّف \"نسبة العمل إلى الذاكرة\" (FP:M ratio) بأنها نسبة عمليات الفاصلة العائمة إلى عدد ___ في الحلقة الداخلية.",
+            "question_en": "The 'work-memory ratio' (FP:M ratio) is defined as the ratio of floating point operations to the number of ___ in the innermost loop.",
+            "choices": {
+                "A_ar": "مواقع الذاكرة المميزة المشار إليها",
+                "A_en": "distinct memory locations referenced",
+                "B_ar": "إجمالي عمليات الوصول للذاكرة",
+                "B_en": "total memory accesses",
+                "C_ar": "التعليمات الإجمالية",
+                "C_en": "total instructions",
+                "D_ar": "دورات الساعة",
+                "D_en": "clock cycles"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 6) تعرف النسبة بأنها \"نسبة عدد عمليات الفاصلة العائمة إلى عدد مواقع الذاكرة المميزة المشار إليها في الحلقة الداخلية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 6) defines the ratio as the \"ratio of the number of floating point operations to the number of distinct memory locations referenced in the innermost loop\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "التعريف يركز على المواقع *المميزة* (distinct)، وليس الإجمالي، بافتراض أن السجلات والذاكرة المخبئية تتعامل مع إعادة الاستخدام.",
+                "C": "النسبة تقارن الحساب (FP) بالذاكرة (M)، وليس بالتعليمات الإجمالية.",
+                "D": "دورات الساعة هي مقياس للزمن، وليست جزءًا من هذا التعريف للنسبة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The definition specifies *distinct* locations, not total, assuming registers and cache handle reuse.",
+                "C": "The ratio compares computation (FP) to memory (M), not total instructions.",
+                "D": "Clock cycles are a measure of time, not part of this ratio's definition."
+            }
+        },
+        {
+            "question_number": 9,
+            "lecture_number": 3,
+            "question_ar": "في المثال (for i=0; i<N; i++) x=x+a[i]*b[i]; ، عندما تكون N كبيرة، تكون نسبة FP:M تقريبًا ___.",
+            "question_en": "In the example (for i=0; i<N; i++) x=x+a[i]*b[i]; , when N is large, the FP:M ratio is approximately ___.",
+            "choices": {
+                "A_ar": "1",
+                "A_en": "1",
+                "B_ar": "500",
+                "B_en": "500",
+                "C_ar": "N",
+                "C_en": "N",
+                "D_ar": "0",
+                "D_en": "0"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 6) تحلل هذا المثال وتوضح أنه يحتوي على \"2N+1 مواقع ذاكرة مميزة و 2N عمليات FP\"، مما يعطي نسبة FP:M تقارب 1 عندما تكون N كبيرة.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 6) analyzes this example, stating it has \"2N+1 distinct memory locations and 2N FP operations: FP:M = 1 when N is large\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "القيمة 500 كانت للمثال الآخر (for i=0; i<1000; i++) x=x+i; (صفحة 6).",
+                "C": "النسبة تقترب من 1 (2N / 2N+1)، وليس N.",
+                "D": "النسبة هي 1، وليست صفر، لأن هناك عمليات FP وعمليات ذاكرة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The value 500 was for the other example (for i=0; i<1000; i++) x=x+i; (Page 6).",
+                "C": "The ratio approaches 1 (2N / 2N+1), not N.",
+                "D": "The ratio is 1, not zero, as there are both FP ops and memory ops."
+            }
+        },
+        {
+            "question_number": 10,
+            "lecture_number": 3,
+            "question_ar": "في المثال (for i=0; i<1000; i++) x=x+i; ، تكون نسبة FP:M هي ___.",
+            "question_en": "In the example (for i=0; i<1000; i++) x=x+i; , the FP:M ratio is ___.",
+            "choices": {
+                "A_ar": "500",
+                "A_en": "500",
+                "B_ar": "1",
+                "B_en": "1",
+                "C_ar": "1000",
+                "C_en": "1000",
+                "D_ar": "2",
+                "D_en": "2"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 6) تحلل هذا المثال وتوضح أنه يحتوي على \"موقعين مميزين للذاكرة وعملية جمع فاصلة عائمة واحدة\" (لكل تكرار، ولكنها تحسب بشكل مختلف)، وتخلص إلى أن \"FP:M = 500\". (على الأرجح 1000 عملية FP مقابل 2 موقعي ذاكرة مميزين x و i).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 6) analyzes this example, stating it has \"2 distinct memory locations and one float add\" (per iteration, but calculated differently), and concludes \"FP:M = 500\". (Likely 1000 FP ops vs 2 distinct memory locations x and i).",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "القيمة 1 كانت للمثال الآخر (a[i]*b[i]) (صفحة 6).",
+                "C": "1000 هو عدد التكرارات، وليس نسبة FP:M.",
+                "D": "2 هو عدد مواقع الذاكرة المميزة، وليس نسبة FP:M."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The value 1 was for the other example (a[i]*b[i]) (Page 6).",
+                "C": "1000 is the number of iterations, not the FP:M ratio.",
+                "D": "2 is the number of distinct memory locations, not the FP:M ratio."
+            }
+        },
+        {
+            "question_number": 11,
+            "lecture_number": 3,
+            "question_ar": "إضافة ذاكرة مخبئية محلية (local cache) لكل معالج في نظام SMP يقدم مشكلة جديدة هي ___.",
+            "question_en": "Adding a local cache to each processor in an SMP system introduces the new problem of ___.",
+            "choices": {
+                "A_ar": "تماسك الذاكرة المخبئية (Cache coherence)",
+                "A_en": "Cache coherence",
+                "B_ar": "عنق زجاجة الناقل (Bus bottleneck)",
+                "B_en": "Bus bottleneck",
+                "C_ar": "الوصول غير الموحد للذاكرة (NUMA)",
+                "C_en": "Nonuniform memory access (NUMA)",
+                "D_ar": "تمرير الرسائل (Message passing)",
+                "D_en": "Message passing"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 7) تذكر أن إضافة الذاكرة المخبئية المحلية يحسن الأداء، ثم تطرح \"المشكلة: كيف نضمن تماسك الذاكرة المخبئية؟\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 7) states that adding local cache improves performance, and then poses the \"Problem: how to ensure cache coherence?\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "إضافة الذاكرة المخبئية المحلية *يساعد في حل* عنق زجاجة الناقل، ولا يسببه.",
+                "C": "NUMA هو سمة لأنظمة الذاكرة الموزعة (صفحة 10).",
+                "D": "تمرير الرسائل يُستخدم في أنظمة الذاكرة الموزعة (صفحة 10)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Adding local cache *helps solve* the bus bottleneck, it doesn't cause it.",
+                "C": "NUMA is a characteristic of distributed memory systems (Page 10).",
+                "D": "Message passing is used in distributed memory systems (Page 10)."
+            }
+        },
+        {
+            "question_number": 12,
+            "lecture_number": 3,
+            "question_ar": "البروتوكول الذي يضمن حصول المعالجات على البيانات المعدلة حديثًا عندما يتم تعديل البيانات المشتركة بواسطة معالج آخر يسمى ___.",
+            "question_en": "The protocol that ensures processors obtain newly altered data when shared data is modified by another processor is called ___.",
+            "choices": {
+                "A_ar": "بروتوكول تماسك الذاكرة المخبئية (Cache coherence protocol)",
+                "A_en": "Cache coherence protocol",
+                "B_ar": "بروتوكول تمرير الرسائل (Message passing protocol)",
+                "B_en": "Message passing protocol",
+                "C_ar": "بروتوكول الذاكرة الموزعة (Distributed memory protocol)",
+                "C_en": "Distributed memory protocol",
+                "D_ar": "بروتوكول SMP",
+                "D_en": "SMP protocol"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 8) تعرف \"بروتوكول تماسك الذاكرة المخبئية\" بأنه \"يضمن حصول المعالجات على البيانات المعدلة حديثًا عندما يتم تعديل البيانات المشتركة بواسطة معالج آخر\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 8) defines a \"cache coherence protocol\" as one that \"ensures that processors obtain newly altered data when shared data is modified by another processor\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "تمرير الرسائل هو نموذج اتصال، وليس بروتوكولًا لضمان تماسك البيانات المشتركة تلقائيًا.",
+                "C": "الذاكرة الموزعة (Distributed memory) لا تحتوي عادةً على بيانات مشتركة تلقائيًا بهذه الطريقة.",
+                "D": "بروتوكول SMP هو مصطلح عام جدًا؛ 'تماسك الذاكرة المخبئية' هو البروتوكول المحدد المطلوب."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Message passing is a communication model, not a protocol for automatically ensuring shared data is coherent.",
+                "C": "Distributed memory doesn't typically have automatic shared data in this way.",
+                "D": "SMP protocol is too general; 'cache coherence' is the specific protocol needed."
+            }
+        },
+        {
+            "question_number": 13,
+            "lecture_number": 3,
+            "question_ar": "الاختصار 'COMA' يرمز إلى ___.",
+            "question_en": "The acronym 'COMA' stands for ___.",
+            "choices": {
+                "A_ar": "معمارية الذاكرة المخبئية فقط (Cache-only memory architecture)",
+                "A_en": "Cache-only memory architecture",
+                "B_ar": "معمارية الذاكرة الموجهة للحاسوب (Computer-oriented memory architecture)",
+                "B_en": "Computer-oriented memory architecture",
+                "C_ar": "معمارية الذاكرة المتماسكة (Coherent memory architecture)",
+                "C_en": "Coherent memory architecture",
+                "D_ar": "الذاكرة المخبئية على المعالج (Cache-on-multiprocessor architecture)",
+                "D_en": "Cache-on-multiprocessor architecture"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 9) تعرف الاختصار 'COMA' بأنه 'Cache-only memory architecture' (معمارية الذاكرة المخبئية فقط).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 9) defines the acronym 'COMA' as 'Cache-only memory architecture'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا المصطلح ليس من المحاضرة.",
+                "C": "على الرغم من أن COMA تستخدم التماسك، إلا أن هذا ليس ما يرمز إليه الاختصار.",
+                "D": "هذا المصطلح ليس من المحاضرة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This term is not from the lecture.",
+                "C": "Although COMA uses coherence, this is not what the acronym stands for.",
+                "D": "This term is not from the lecture."
+            }
+        },
+        {
+            "question_number": 14,
+            "lecture_number": 3,
+            "question_ar": "في معمارية COMA، يتم استبدال الذاكرة المشتركة بـ ___.",
+            "question_en": "In a COMA architecture, shared memory is replaced by ___.",
+            "choices": {
+                "A_ar": "ذاكرة مخبئية كبيرة لكل معالج",
+                "A_en": "Large cache per processor",
+                "B_ar": "ذاكرة موزعة",
+                "B_en": "Distributed memory",
+                "C_ar": "تمرير الرسائل",
+                "C_en": "Message passing",
+                "D_ar": "ناقل مشترك واحد",
+                "D_en": "A single shared bus"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 9) تذكر أن COMA تستخدم \"ذاكرة مخبئية كبيرة لكل معالج لتحل محل الذاكرة المشتركة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 9) states that COMA uses a \"Large cache per processor to replace shared memory\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الذاكرة الموزعة هي سمة لـ MPP أو DSM (صفحة 10-11).",
+                "C": "تمرير الرسائل يُستخدم في أنظمة الذاكرة الموزعة (صفحة 10).",
+                "D": "الناقل المشترك هو سمة لـ SMP (صفحة 4)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Distributed memory is a characteristic of MPP or DSM (Pages 10-11).",
+                "C": "Message passing is used in distributed memory systems (Page 10).",
+                "D": "A shared bus is a characteristic of SMP (Page 4)."
+            }
+        },
+        {
+            "question_number": 15,
+            "lecture_number": 3,
+            "question_ar": "الاختصار 'MPP' يرمز إلى ___.",
+            "question_en": "The acronym 'MPP' stands for ___.",
+            "choices": {
+                "A_ar": "المعالج المتوازي بشكل كبير (Massively parallel processor)",
+                "A_en": "Massively parallel processor",
+                "B_ar": "المعالج المتعدد الذاكرة (Memory parallel processor)",
+                "B_en": "Memory parallel processor",
+                "C_ar": "بروتوكول تمرير الذاكرة (Memory passing protocol)",
+                "C_en": "Memory passing protocol",
+                "D_ar": "المعالج المتعدد الأساسي (Multi-processor processor)",
+                "D_en": "Multi-processor processor"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تعرف 'MPP' بأنه 'Massively parallel processor' (المعالج المتوازي بشكل كبير).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) defines 'MPP' as 'Massively parallel processor'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا المصطلح ليس من المحاضرة.",
+                "C": "هذا يخلط بين 'Memory' و 'Message Passing' (تمرير الرسائل).",
+                "D": "هذا المصطلح به تكرار وليس هو التعريف الصحيح."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This term is not from the lecture.",
+                "C": "This confuses 'Memory' with 'Message Passing'.",
+                "D": "This term is redundant and not the correct definition."
+            }
+        },
+        {
+            "question_number": 16,
+            "lecture_number": 3,
+            "question_ar": "أنظمة الذاكرة الموزعة مثل MPP تتواصل عادةً عبر ___.",
+            "question_en": "Distributed Memory systems like MPP typically communicate via ___.",
+            "choices": {
+                "A_ar": "تمرير الرسائل (Message passing)",
+                "A_en": "Message passing",
+                "B_ar": "ناقل ذاكرة مشترك (Shared memory bus)",
+                "B_en": "Shared memory bus",
+                "C_ar": "بروتوكول تماسك (Coherence protocol)",
+                "C_en": "Coherence protocol",
+                "D_ar": "مساحة عنوان عالمية (Global address space)",
+                "D_en": "Global address space"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تذكر بوضوح أن أنظمة الذاكرة الموزعة تستخدم \"الاتصال عبر تمرير الرسائل (message passing)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) explicitly states that distributed memory systems use \"Communication via message passing\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الناقل المشترك هو لـ SMP (صفحة 4).",
+                "C": "بروتوكول التماسك هو لأنظمة الذاكرة المشتركة ذات الذاكرة المخبئية (صفحة 8).",
+                "D": "مساحة العنوان العالمية هي سمة لـ DSM (صفحة 11)، وليس لـ MPP النموذجي."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A shared bus is for SMP (Page 4).",
+                "C": "A coherence protocol is for shared memory systems with caches (Page 8).",
+                "D": "A global address space is a feature of DSM (Page 11), not a typical MPP."
+            }
+        },
+        {
+            "question_number": 17,
+            "lecture_number": 3,
+            "question_ar": "الاختصار 'NUMA' يرمز إلى ___.",
+            "question_en": "The acronym 'NUMA' stands for ___.",
+            "choices": {
+                "A_ar": "الوصول غير الموحد للذاكرة (Nonuniform memory access)",
+                "A_en": "Nonuniform memory access",
+                "B_ar": "الوصول للذاكرة الموحدة للشبكة (Network uniform memory access)",
+                "B_en": "Network uniform memory access",
+                "C_ar": "معمارية الذاكرة الموحدة للعقدة (Node uniform memory architecture)",
+                "C_en": "Node uniform memory architecture",
+                "D_ar": "الوصول الجديد للذاكرة الموحدة (New unified memory access)",
+                "D_en": "New unified memory access"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تعرف 'NUMA' بأنه 'Nonuniform memory access' (الوصول غير الموحد للذاكرة)، وهو سمة لأنظمة الذاكرة الموزعة.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) defines 'NUMA' as 'Nonuniform memory access', a characteristic of distributed memory systems.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المصطلح هو 'Nonuniform' (غير موحد)، وليس 'Network uniform' (موحد للشبكة).",
+                "C": "هذا المصطلح ليس من المحاضرة.",
+                "D": "هذا المصطلح ليس من المحاضرة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The term is 'Nonuniform', not 'Network uniform'.",
+                "C": "This term is not from the lecture.",
+                "D": "This term is not from the lecture."
+            }
+        },
+        {
+            "question_number": 18,
+            "lecture_number": 3,
+            "question_ar": "أي مما يلي *ليس* طوبولوجيا شبكة مذكورة لأنظمة الذاكرة الموزعة؟",
+            "question_en": "Which of the following is *not* a network topology mentioned for distributed memory systems?",
+            "choices": {
+                "A_ar": "الشبكة (Mesh)",
+                "A_en": "Mesh",
+                "B_ar": "المكعب الفائق (Hypercube)",
+                "B_en": "Hypercube",
+                "C_ar": "مفتاح الربط التقاطعي (Cross-bar switch)",
+                "C_en": "Cross-bar switch",
+                "D_ar": "الحلقة (Ring)",
+                "D_en": "Ring"
+            },
+            "correct_choice": "D",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (D). المحاضرة (صفحة 10) تدرج الطوبولوجيات: Mesh، Hypercube، و Cross-bar switch. لم يتم ذكر طوبولوجيا الحلقة (Ring).",
+            "explanation_correct_en": "The correct answer is (D). The lecture (Page 10) lists topologies: Mesh, Hypercube, and Cross-bar switch. 'Ring' topology is not mentioned.",
+            "explanation_wrong_ar": {
+                "A": "تم ذكر Mesh (الشبكة) (صفحة 10 وصفحة 13).",
+                "B": "تم ذكر Hypercube (المكعب الفائق) (صفحة 10 وصفحة 14).",
+                "C": "تم ذكر Cross-bar switch (مفتاح الربط التقاطعي) (صفحة 10 وصفحة 15).",
+                "D": "هذه هي الإجابة الصحيحة (لم يتم ذكرها)."
+            },
+            "explanation_wrong_en": {
+                "A": "Mesh is mentioned (Page 10 and Page 13).",
+                "B": "Hypercube is mentioned (Page 10 and Page 14).",
+                "C": "Cross-bar switch is mentioned (Page 10 and Page 15).",
+                "D": "This is the correct answer (it is not mentioned)."
+            }
+        },
+        {
+            "question_number": 19,
+            "lecture_number": 3,
+            "question_ar": "الاختصار 'DSM' يرمز إلى ___.",
+            "question_en": "The acronym 'DSM' stands for ___.",
+            "choices": {
+                "A_ar": "الذاكرة المشتركة الموزعة (Distributed shared memory)",
+                "A_en": "Distributed shared memory",
+                "B_ar": "الذاكرة المتماثلة الموزعة (Distributed symmetric memory)",
+                "B_en": "Distributed symmetric memory",
+                "C_ar": "نموذج الذاكرة الموزعة (Distributed memory model)",
+                "C_en": "Distributed memory model",
+                "D_ar": "الذاكرة البسيطة الموزعة (Distributed simple memory)",
+                "D_en": "Distributed simple memory"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 11) تعرف الاختصار 'DSM' بأنه 'Distributed shared memory' (الذاكرة المشتركة الموزعة).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 11) defines the acronym 'DSM' as 'Distributed shared memory'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المصطلح هو 'Shared' (مشتركة)، وليس 'Symmetric' (متماثلة).",
+                "C": "الـ 'S' ترمز إلى 'Shared' (مشتركة)، وليس 'Model' (نموذج).",
+                "D": "المصطلح هو 'Shared' (مشتركة)، وليس 'Simple' (بسيطة)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The term is 'Shared', not 'Symmetric'.",
+                "C": "The 'S' stands for 'Shared', not 'Model'.",
+                "D": "The term is 'Shared', not 'Simple'."
+            }
+        },
+        {
+            "question_number": 20,
+            "lecture_number": 3,
+            "question_ar": "النظام الذي يحتوي على وحدات ذاكرة موزعة ماديًا ولكنه يوفر 'وهم' الذاكرة المشتركة الافتراضية يسمى ___.",
+            "question_en": "A system with physically distributed memory modules that provides an 'illusion' of shared virtual memory is called ___.",
+            "choices": {
+                "A_ar": "الذاكرة المشتركة الموزعة (DSM)",
+                "A_en": "Distributed Shared Memory (DSM)",
+                "B_ar": "المعالج المتعدد المتماثل (SMP)",
+                "B_en": "Symmetric Multiprocessor (SMP)",
+                "C_ar": "معمارية الذاكرة المخبئية فقط (COMA)",
+                "C_en": "Cache-Only Memory Architecture (COMA)",
+                "D_ar": "المعالج المتوازي بشكل كبير (MPP)",
+                "D_en": "Massively Parallel Processor (MPP)"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 11) تعرف DSM بأنه يستخدم \"مساحة عنوان عالمية تعطي وهم الذاكرة الافتراضية المشتركة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 11) defines DSM as using a \"global address space that gives the illusion of shared virtual memory\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "SMP لديه ذاكرة مشتركة *حقيقية* ومادية، وليست وهمًا (صفحة 4).",
+                "C": "COMA تستبدل الذاكرة بذاكرة مخبئية، وهو مفهوم مختلف (صفحة 9).",
+                "D": "MPP هو نظام ذاكرة موزعة نموذجي لا يقدم وهم الذاكرة المشتركة (صفحة 10)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "SMP has *real*, physical shared memory, not an illusion (Page 4).",
+                "C": "COMA replaces memory with cache, which is a different concept (Page 9).",
+                "D": "MPP is a typical distributed memory system that does not offer the illusion of shared memory (Page 10)."
+            }
+        },
+        {
+            "question_number": 21,
+            "lecture_number": 3,
+            "question_ar": "في أنظمة DSM، يتم استخدام ___ لترجمة عنوان الذاكرة تلقائيًا إلى عنوان محلي أو عنوان ذاكرة بعيد.",
+            "question_en": "In DSM systems, ___ is used to automatically translate a memory address into a local address or a remote memory address.",
+            "choices": {
+                "A_ar": "الأجهزة (Hardware)",
+                "A_en": "Hardware",
+                "B_ar": "المترجم (Compiler)",
+                "B_en": "Compiler",
+                "C_ar": "المبرمج (Programmer)",
+                "C_en": "Programmer",
+                "D_ar": "نظام التشغيل (Operating System)",
+                "D_en": "Operating System"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 11) تذكر أنه في DSM، \"تُستخدم الأجهزة (Hardware) لترجمة عنوان الذاكرة تلقائيًا... إلى عنوان محلي أو عنوان ذاكرة بعيد\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 11) states that in DSM, \"Hardware is used to automatically translate a memory address... into a local address or a remote memory address\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المترجم لا يقوم بهذه الترجمة في وقت التشغيل.",
+                "C": "الهدف من DSM هو إخفاء هذا عن المبرمج.",
+                "D": "بينما قد تشارك البرمجيات (software approaches)، فإن الترجمة التلقائية تتم بواسطة الأجهزة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The compiler does not perform this translation at runtime.",
+                "C": "The point of DSM is to hide this from the programmer.",
+                "D": "While software approaches exist, the *automatic* translation is specified as hardware-based."
+            }
+        },
+        {
+            "question_number": 22,
+            "lecture_number": 3,
+            "question_ar": "لتحقيق تسريع (speedup) عالٍ، يجب أن تكون نسبة \"الحساب إلى الاتصال\" (t_comp / t_comm) ___.",
+            "question_en": "To achieve high speedup, the 'computation-to-communication' ratio (t_comp / t_comm) should be ___.",
+            "choices": {
+                "A_ar": "عالية قدر الإمكان",
+                "A_en": "as high as possible",
+                "B_ar": "منخفضة قدر الإمكان",
+                "B_en": "as low as possible",
+                "C_ar": "تساوي 1",
+                "C_en": "equal to 1",
+                "D_ar": "تساوي P (عدد المعالجات)",
+                "D_en": "equal to P (number of processors)"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 12) تنص على أن \"عبء الاتصال العالي يقلل من التسريع، لذا يجب أن تكون النسبة عالية قدر الإمكان\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 12) states that \"High communication overhead decreases speedup, so ratio should be as high as possible\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "النسبة المنخفضة تعني أن الاتصال (communication overhead) يهيمن على الحساب، مما يؤدي إلى تسريع ضعيف.",
+                "C": "نسبة 1 قد لا تكون كافية؛ الأفضل دائمًا هو الأعلى.",
+                "D": "المحاضرة لا تذكر أن النسبة يجب أن تساوي P."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A low ratio means communication overhead dominates the computation, leading to poor speedup.",
+                "C": "A ratio of 1 may not be sufficient; higher is always better.",
+                "D": "The lecture does not state the ratio should be equal to P."
+            }
+        },
+        {
+            "question_number": 23,
+            "lecture_number": 3,
+            "question_ar": "في الرسم البياني \"نسبة الحساب/الاتصال\" (صفحة 12)، ماذا يحدث للنسبة كلما زاد حجم البيانات n؟",
+            "question_en": "In the 'computation / communication ratio' graph (Page 12), what happens to the ratio as the data size n increases?",
+            "choices": {
+                "A_ar": "تنخفض (It decreases)",
+                "A_en": "It decreases",
+                "B_ar": "تزداد (It increases)",
+                "B_en": "It increases",
+                "C_ar": "تبقى ثابتة (It stays constant)",
+                "C_en": "It stays constant",
+                "D_ar": "تصبح صفراً (It becomes zero)",
+                "D_en": "It becomes zero"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). الرسم البياني (صفحة 12) يوضح انخفاضًا حادًا في النسبة (من 10 إلى 1) كلما زادت n من 10 إلى 100. هذا مدعوم بالصيغة (1000n / 10n^2) = (100 / n).",
+            "explanation_correct_en": "The correct answer is (A). The graph (Page 12) clearly shows the ratio dropping (from 10 down to 1) as n increases from 10 to 100. This is supported by the formula (1000n / 10n^2) = (100 / n).",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الرسم البياني يوضح انخفاضًا، وليس زيادة.",
+                "C": "الرسم البياني يوضح تغييرًا واضحًا، وليس ثباتًا.",
+                "D": "هي تقترب من الصفر (أو 1 في هذا الرسم البياني)، لكنها لا تبدأ من الصفر."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The graph shows a decrease, not an increase.",
+                "C": "The graph shows a clear change, it is not constant.",
+                "D": "It approaches zero (or 1 in this graph), but doesn't start at zero."
+            }
+        },
+        {
+            "question_number": 24,
+            "lecture_number": 3,
+            "question_ar": "طوبولوجيا الشبكة التي تحتوي على شبكة بحجم (sqrt(P) x sqrt(P)) تسمى ___.",
+            "question_en": "A network topology that has a (sqrt(P) x sqrt(P)) grid is called a ___.",
+            "choices": {
+                "A_ar": "شبكة (Mesh)",
+                "A_en": "Mesh",
+                "B_ar": "مكعب فائق (Hypercube)",
+                "B_en": "Hypercube",
+                "C_ar": "حلقة (Torus)",
+                "C_en": "Torus",
+                "D_ar": "مفتاح ربط تقاطعي (Cross-bar)",
+                "D_en": "Cross-bar"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 13) تصف طوبولوجيا Mesh (الشبكة) بأنها \"شبكة من P عقدة لها حجم (sqrt(P) x sqrt(P))\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 13) describes the Mesh topology as a \"Network of P nodes has mesh size sqrt(P) x sqrt(P)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المكعب الفائق (Hypercube) يُعرَّف بالأبعاد (d) (صفحة 14).",
+                "C": "الحلقة (Torus) هي شبكة (mesh) \"ملفوفة الأطراف\" (صفحة 13).",
+                "D": "مفتاح الربط التقاطعي (Cross-bar) هو بنية مختلفة من المفاتيح (صفحة 15)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A hypercube is defined by dimensions (d) (Page 14).",
+                "C": "A torus is a 'wrapped' mesh (Page 13).",
+                "D": "A cross-bar is a different switch architecture (Page 15)."
+            }
+        },
+        {
+            "question_number": 25,
+            "lecture_number": 3,
+            "question_ar": "ما هو قطر (diameter) شبكة من طوبولوجيا Mesh تحتوي على P عقدة (بحجم sqrt(P) x sqrt(P))؟",
+            "question_en": "What is the diameter of a mesh topology network with P nodes (size sqrt(P) x sqrt(P))?",
+            "choices": {
+                "A_ar": "2 * (sqrt(P) - 1)",
+                "A_en": "2 * (sqrt(P) - 1)",
+                "B_ar": "sqrt(P) - 1",
+                "B_en": "sqrt(P) - 1",
+                "C_ar": "log2(P)",
+                "C_en": "log2(P)",
+                "D_ar": "P - 1",
+                "D_en": "P - 1"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 13) تذكر صراحة أن قطر شبكة Mesh هو '2 * (sqrt(P) - 1)'.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 13) explicitly states the diameter for a mesh is '2 * (sqrt(P) - 1)'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه القيمة 'sqrt(P) - 1' هي قطر شبكة Torus (الحلقة) (صفحة 13).",
+                "C": "هذه القيمة 'log2(P)' هي قطر المكعب الفائق (Hypercube) (صفحة 14).",
+                "D": "هذا غير صحيح لطوبولوجيا Mesh."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This value, 'sqrt(P) - 1', is the diameter for a Torus network (Page 13).",
+                "C": "This value, 'log2(P)', is the diameter for a Hypercube (Page 14).",
+                "D": "This is incorrect for a mesh topology."
+            }
+        },
+        {
+            "question_number": 26,
+            "lecture_number": 3,
+            "question_ar": "شبكة Mesh التي \"تلف الأطراف\" (wraps the ends) تسمى ___.",
+            "question_en": "A mesh network that \"wraps the ends\" is called a ___.",
+            "choices": {
+                "A_ar": "حلقة (Torus)",
+                "A_en": "Torus",
+                "B_ar": "مكعب فائق (Hypercube)",
+                "B_en": "Hypercube",
+                "C_ar": "شبكة كاملة (Full Mesh)",
+                "C_en": "Full Mesh",
+                "D_ar": "مفتاح ربط تقاطعي (Cross-bar)",
+                "D_en": "Cross-bar"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 13) تذكر أن \"شبكة Torus (الحلقة) تلف الأطراف\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 13) states that a \"Torus network wraps the ends\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المكعب الفائق (Hypercube) هو طوبولوجيا مختلفة (صفحة 14).",
+                "C": "المحاضرة لا تستخدم مصطلح 'Full Mesh'.",
+                "D": "مفتاح الربط التقاطعي (Cross-bar) هو طوبولوجيا مختلفة (صفحة 15)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A hypercube is a different topology (Page 14).",
+                "C": "The lecture does not use the term 'Full Mesh'.",
+                "D": "A cross-bar is a different topology (Page 15)."
+            }
+        },
+        {
+            "question_number": 27,
+            "lecture_number": 3,
+            "question_ar": "في طوبولوجيا المكعب الفائق (Hypercube) ذي d-بعد، كم عدد العقد (P) التي تحتوي عليها؟",
+            "question_en": "In a d-dimensional hypercube topology, how many nodes (P) does it contain?",
+            "choices": {
+                "A_ar": "2_to_the_power_of_d",
+                "A_en": "2 to the power of d",
+                "B_ar": "d_squared",
+                "B_en": "d squared",
+                "C_ar": "2_times_d",
+                "C_en": "2 * d",
+                "D_ar": "log2(d)",
+                "D_en": "log2(d)"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 14) تنص على أن \"المكعب الفائق ذي d-بعد يحتوي على P = 2^d (2 أس d) عقدة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 14) states that a \"d-dimensional hypercube has P = 2^d nodes\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "العلاقة أسية، وليست تربيعية.",
+                "C": "العلاقة أسية، وليست ضربًا.",
+                "D": "العلاقة العكسية هي أن d = log2(P) (صفحة 14)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The relationship is exponential, not quadratic.",
+                "C": "The relationship is exponential, not multiplicative.",
+                "D": "The inverse relationship is d = log2(P) (Page 14)."
+            }
+        },
+        {
+            "question_number": 28,
+            "lecture_number": 3,
+            "question_ar": "ما هو قطر (diameter) طوبولوجيا المكعب الفائق (Hypercube) ذي d-بعد؟",
+            "question_en": "What is the diameter of a d-dimensional hypercube topology?",
+            "choices": {
+                "A_ar": "d",
+                "A_en": "d",
+                "B_ar": "2_to_the_power_of_d",
+                "B_en": "2 to the power of d",
+                "C_ar": "P - 1",
+                "C_en": "P - 1",
+                "D_ar": "d / 2",
+                "D_en": "d / 2"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 14) تذكر أن \"القطر هو d\" (والذي يساوي log2(P)).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 14) states that the \"Diameter is d\" (which also equals log2(P)).",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو عدد العقد (P)، وليس القطر (صفحة 14).",
+                "C": "هذا هو القطر لشبكة خطية، وليس مكعب فائق.",
+                "D": "هذا غير صحيح. القطر هو d."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the number of nodes (P), not the diameter (Page 14).",
+                "C": "This would be the diameter for a linear array, not a hypercube.",
+                "D": "This is incorrect. The diameter is d."
+            }
+        },
+        {
+            "question_number": 29,
+            "lecture_number": 3,
+            "question_ar": "في طوبولوجيا المكعب الفائق (Hypercube)، يختلف رقم عقدة الجار الأقرب (nearest neighbor) في ___.",
+            "question_en": "In a hypercube topology, the node number of a nearest neighbor node differs in ___.",
+            "choices": {
+                "A_ar": "بت واحد (one bit)",
+                "A_en": "one bit",
+                "B_ar": "بتين (two bits)",
+                "B_en": "two bits",
+                "C_ar": "d بت (d bits)",
+                "C_en": "d bits",
+                "D_ar": "لا يختلف (it does not differ)",
+                "D_en": "it does not differ"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 14) تذكر أن \"رقم عقدة الجار الأقرب يختلف في بت واحد\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 14) states that the \"Node number of nearest neighbor node differs in one bit\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الاختلاف في بتين يعني أنه جار على بعد خطوتين.",
+                "C": "الاختلاف في d بت (كل البتات) يمثل العقدة الأبعد (القطر).",
+                "D": "إذا لم يختلف، فسيكون هو نفس العقدة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Differing by two bits would imply a neighbor two 'hops' away.",
+                "C": "Differing by d bits (all bits) would represent the furthest node (the diameter).",
+                "D": "If it did not differ, it would be the same node."
+            }
+        },
+        {
+            "question_number": 30,
+            "lecture_number": 3,
+            "question_ar": "ما هي الميزة الرئيسية لطوبولوجيا \"مفتاح الربط التقاطعي\" (Cross-bar switch)؟",
+            "question_en": "What is the key advantage of a 'Cross-bar switch' topology?",
+            "choices": {
+                "A_ar": "اتصال متزامن وبدون نزاع",
+                "A_en": "Simultaneous and contention-free communication",
+                "B_ar": "أقل قطر (d=1)",
+                "B_en": "Lowest diameter (d=1)",
+                "C_ar": "أقل تكلفة للبناء",
+                "C_en": "Cheapest to build",
+                "D_ar": "الأفضل لبروتوكولات التماسك",
+                "D_en": "Best for coherence protocols"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 15) تصف أن مفتاح الربط التقاطعي \"يمكّن الاتصال المتزامن (بدون نزاع)\" بين أي معالج وأي ذاكرة.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 15) describes that a cross-bar switch \"Enables simultaneous (contention free) communication\" between any processor and memory.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المحاضرة لا تصف قطرها بـ d=1، بل تصف ميزة الاتصال المتزامن.",
+                "C": "مفاتيح الربط التقاطعي (Cross-bar) معقدة ومكلفة (تحتاج نظريًا PxM مفتاحًا)، وليست الأرخص.",
+                "D": "المحاضرة لا تقدم هذا الادعاء؛ ميزتها هي الأداء الخالي من النزاع."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The lecture does not describe its diameter as d=1; it describes its simultaneous connection feature.",
+                "C": "Cross-bar switches are complex and expensive (theoretically requiring PxM switches), not the cheapest.",
+                "D": "The lecture does not make this claim; its advantage is contention-free performance."
+            }
+        }
+    ]
+}
