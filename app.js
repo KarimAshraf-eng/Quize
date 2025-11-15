@@ -274,14 +274,15 @@ class QuizApp {
         card.className = 'lecture-card bounce-in';
         card.style.animationDelay = `${lecture.number * 0.1}s`;
         
+        // **NEW: Use dynamic titles from the lecture object**
         const title = this.sessionData.currentLanguage === 'en' ? 
-            `Lecture ${lecture.number}` : `محاضرة ${lecture.number}`;
+            lecture.title_en : lecture.title_ar;
         
         const questionText = this.sessionData.currentLanguage === 'en' ? 
             `${lecture.totalQuestions} Questions` : `${lecture.totalQuestions} أسئلة`;
         
         card.innerHTML = `
-            <div class="lecture-number">${title}</div>
+            <div class="lecture-number">${title}</div> 
             
             <div class="lecture-meta">
                 <div class="question-count">
