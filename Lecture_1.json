@@ -1,4 +1,7 @@
-[
+{
+    "title_en": "Lecture 1",
+    "title_ar": "المحاضره الأولى",
+    "questions": [
     {
         "question_number": 1,
         "lecture_number": 1,
@@ -1561,4 +1564,6 @@
             "D": "The focus is on software and its optimization."
         }
     }
+
 ]
+}
