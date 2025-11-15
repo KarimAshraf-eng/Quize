@@ -280,7 +280,6 @@ class QuizApp {
 
         card.innerHTML = `
             <div class="lecture-number">${title}</div>
-            <div class="lecture-title">${this.sessionData.currentLanguage === 'en' ? 'Machine Learning Fundamentals' : 'أساسيات التعلم الآلي'}</div>
             <div class.lecture-meta">
                 <div class="question-count">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="16" height="16">
