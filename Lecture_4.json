@@ -1,0 +1,936 @@
+{
+    "title_en": "Mid General 2025",
+    "title_ar": "امتحان الميد للقسم العام 2025",
+    "questions": [
+        {
+            "question_number": 1,
+            "lecture_number": 4,
+            "question_ar": "وفقًا للمحاضرة، أي مقياس يُستخدم لتحديد \"مدى فعالية التوازي\"؟",
+            "question_en": "According to the lecture, which measurement is used to determine \"How effective is parallelism?\"",
+            "choices": {
+                "A_ar": "معدل Mflops",
+                "A_en": "Mflops rate",
+                "B_ar": "التسريع المتوازي (Parallel speedup)",
+                "B_en": "Parallel speedup",
+                "C_ar": "زمن انتقال الاتصال (Communication latency)",
+                "C_en": "Communication latency",
+                "D_ar": "عدد التعليمات المنفذة (IPC)",
+                "D_en": "Number of instructions executed (IPC)"
+            },
+            "correct_choice": "B",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 3) تذكر أن قياس \"التسريع المتوازي\" (Parallel speedup) يُستخدم للإجابة على سؤال \"ما مدى فعالية التوازي؟\".",
+            "explanation_correct_en": "The correct answer is (B). The lecture (Page 3) lists that measuring \"Parallel speedup\" is used to answer \"How effective is parallelism?\".",
+            "explanation_wrong_ar": {
+                "A": "Mflops تُستخدم للمقارنة مع ذروة الأداء النظري لعمليات الفاصلة العائمة (صفحة 3).",
+                "B": "هذه هي الإجابة الصحيحة.",
+                "C": "زمن انتقال الاتصال (Communication latency) يُستخدم لتحديد كيفية \"إخفاء زمن الانتقال\" (latency hiding) (صفحة 3).",
+                "D": "IPC (التعليمات لكل دورة) يُستخدم للمقارنة مع ذروة الأداء النظري للمعالج (صفحة 3)."
+            },
+            "explanation_wrong_en": {
+                "A": "Mflops is used to compare to theoretical floating-point peak performance (Page 3).",
+                "B": "This is the correct answer.",
+                "C": "Communication latency is used to determine how to improve 'latency hiding' (Page 3).",
+                "D": "IPC (Instructions per cycle) is used to compare to the theoretical peak performance of the processor (Page 3)."
+            }
+        },
+        {
+            "question_number": 2,
+            "lecture_number": 4,
+            "question_ar": "في مخرجات أمر 'time' في يونكس، ما الذي يمثله 'real time'؟",
+            "question_en": "In the output of the Unix 'time' command, what does 'real time' represent?",
+            "choices": {
+                "A_ar": "الوقت المنقضي على مدار الساعة (wall clock time)",
+                "A_en": "The elapsed wall clock time",
+                "B_ar": "الوقت المستغرق في مساحة المستخدم (user-space)",
+                "B_en": "The time spent in user-space",
+                "C_ar": "الوقت المستغرق في استدعاءات نواة نظام التشغيل",
+                "C_en": "The time spent in OS kernel calls",
+                "D_ar": "الوقت المستغرق في انتظار الإدخال/الإخراج (I/O)",
+                "D_en": "The time spent waiting for I/O"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 4) تعرف 'Real time' بأنه \"الوقت المنقضي على مدار الساعة (wall clock time)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 4) defines 'Real time' as \"the elapsed wall clock time\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو 'user time' (وقت المستخدم) (صفحة 4).",
+                "C": "هذا هو 'sys' time (وقت النظام) (صفحة 4).",
+                "D": "وقت الانتظار هو جزء من 'real time' ولكنه غير ممثل بشكل منفصل في هذا الإخراج."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is 'user time' (Page 4).",
+                "C": "This is 'sys' time (Page 4).",
+                "D": "Waiting time is part of 'real time' but not separately represented in this output."
+            }
+        },
+        {
+            "question_number": 3,
+            "lecture_number": 4,
+            "question_ar": "ما الذي يتضمنه 'CPU system time' (وقت نظام وحدة المعالجة المركزية)؟",
+            "question_en": "What does 'CPU system time' include?",
+            "choices": {
+                "A_ar": "استدعاءات نواة نظام التشغيل (OS kernel calls)",
+                "A_en": "OS kernel calls",
+                "B_ar": "تنفيذ كود التطبيق في مساحة المستخدم",
+                "B_en": "Application code executing in user space",
+                "C_ar": "وقت انتظار العمليات الأخرى",
+                "C_en": "Time spent waiting for other processes",
+                "D_ar": "إجمالي الوقت المنقضي على مدار الساعة",
+                "D_en": "The total elapsed wall clock time"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 4 وصفحة 5) تعرف 'CPU system time' بأنه \"الوقت المستغرق في مساحة النظام (استدعاءات نواة نظام التشغيل)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 4 and Page 5) defines 'CPU system time' as \"time spent in system space (OS kernel calls)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو 'CPU user time' (وقت مستخدم وحدة المعالجة المركزية) (صفحة 5).",
+                "C": "هذا الوقت غير مشمول في 'user' أو 'system' time (صفحة 5).",
+                "D": "هذا هو 'real time' (الوقت الحقيقي) (صفحة 5)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is 'CPU user time' (Page 5).",
+                "C": "This time is not included in 'user' or 'system' time (Page 5).",
+                "D": "This is 'real time' (Page 5)."
+            }
+        },
+        {
+            "question_number": 4,
+            "lecture_number": 4,
+            "question_ar": "ما هي العلاقة الصحيحة بين 'real time' و 'user time' و 'system time'؟",
+            "question_en": "What is the correct relationship between 'real time', 'user time', and 'system time'?",
+            "choices": {
+                "A_ar": "user + system أصغر من أو يساوي real",
+                "A_en": "user + system <= real",
+                "B_ar": "user + system يساوي real دائمًا",
+                "B_en": "user + system = real (always)",
+                "C_ar": "user + system أكبر من real",
+                "C_en": "user + system > real",
+                "D_ar": "user + system لا علاقة له بـ real",
+                "D_en": "user + system has no relation to real"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 5) تذكر العلاقة: 'CPU user time + CPU system time <= real time'. هذا لأن 'real time' يتضمن أيضًا أشياء مثل انتظار الإدخال/الإخراج أو تنفيذ عمليات أخرى.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 5) states the relationship: 'CPU user time + CPU system time <= real time'. This is because 'real time' also includes things like waiting for I/O or other processes executing.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا غير صحيح. 'real time' يمكن أن يكون أكبر بكثير إذا كان البرنامج ينتظر (على سبيل المثال، I/O) أو إذا كان النظام مشغولاً بعمليات أخرى (صفحة 5).",
+                "C": "هذا غير ممكن (إلا في البرامج المتوازية التي يتم قياسها بشكل مختلف، وهو ما لا تناقشه هذه الشريحة).",
+                "D": "هناك علاقة واضحة؛ 'user' و 'system' time هي مكونات من 'real' time."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is incorrect. 'real time' can be much larger if the program is waiting (e.g., for I/O) or if the system is busy with other processes (Page 5).",
+                "C": "This is not possible (except in parallel programs measured differently, which this slide isn't discussing).",
+                "D": "There is a clear relationship; 'user' and 'system' time are components of 'real' time."
+            }
+        },
+        {
+            "question_number": 5,
+            "lecture_number": 4,
+            "question_ar": "أي مؤقت نظام (system timer) يوفر 'wall clock time' (وقت الساعة) بالنانوثانية (nanoseconds)؟",
+            "question_en": "Which system timer provides wall clock time in nanoseconds?",
+            "choices": {
+                "A_ar": "gethrtime() (Solaris)",
+                "A_en": "gethrtime() (Solaris)",
+                "B_ar": "gettimeofday()",
+                "B_en": "gettimeofday()",
+                "C_ar": "GetSystemTime() (MS Windows)",
+                "C_en": "GetSystemTime() (MS Windows)",
+                "D_ar": "MPI_Wtime()",
+                "D_en": "MPI_Wtime()"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 6) تذكر أن 'gethrtime()' (على Solaris) \"يعطي wall clock time بالنانوثانية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 6) states that 'gethrtime()' (on Solaris) \"Gives wall clock time in nanoseconds\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "gettimeofday() يعطي الوقت بالثواني والميكروثانية (microseconds) (صفحة 6).",
+                "C": "GetSystemTime() يعطي الوقت بالمللي ثانية (ms) (صفحة 6).",
+                "D": "MPI_Wtime() يعطي الوقت بالثواني (seconds) كرقم فاصلة عائمة (صفحة 6)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "gettimeofday() gives time in seconds and microseconds (Page 6).",
+                "C": "GetSystemTime() gives time in milliseconds (ms) (Page 6).",
+                "D": "MPI_Wtime() gives time in seconds as a double floating-point number (Page 6)."
+            }
+        },
+        {
+            "question_number": 6,
+            "lecture_number": 4,
+            "question_ar": "ما هي المشكلة الرئيسية لاستخدام تعليمة 'RDTSC' (read time stamp counter) على أنظمة متعددة النوى (multicore)؟",
+            "question_en": "What is the main problem with using the 'RDTSC' (read time stamp counter) instruction on multicore systems?",
+            "choices": {
+                "A_ar": "عدادات كل نواة غير متزامنة",
+                "A_en": "The counters on each core are not synched",
+                "B_ar": "لها عبء (overhead) مرتفع جدًا",
+                "B_en": "It has very high overhead",
+                "C_ar": "تقيس وقت النظام (system time) فقط",
+                "C_en": "It only measures system time",
+                "D_ar": "لا يمكن الوصول إليها من مساحة المستخدم",
+                "D_en": "It cannot be accessed from user space"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 7) تحذر من أن \"الأنظمة متعددة النوى لديها RDTSC لكل نواة وهذه غير متزامنة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 7) warns that \"Multicore systems have a RDTSC per core and these are not synched\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هي تعليمة أجهزة (hardware) ولها عبء منخفض جدًا (تقرأ عدادًا فقط).",
+                "C": "هي تقيس دورات وحدة المعالجة المركزية، وليس وقت النظام (صفحة 7).",
+                "D": "المثال البرمجي يوضح أنها يمكن الوصول إليها (عبر inline asm) (صفحة 7)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "It is a hardware instruction and has very low overhead (just reading a counter).",
+                "C": "It counts CPU cycles, not system time (Page 7).",
+                "D": "The code example shows it is accessible (via inline asm) (Page 7)."
+            }
+        },
+        {
+            "question_number": 7,
+            "lecture_number": 4,
+            "question_ar": "في قياس الأداء (Benchmarking)، ما هو 'Warm start'؟",
+            "question_en": "In benchmarking, what is a 'Warm start'?",
+            "choices": {
+                "A_ar": "عدم تضمين التشغيل الأول في نتيجة التوقيت",
+                "A_en": "Not including the first run in the timing result",
+                "B_ar": "تضمين التشغيل الأول في نتيجة التوقيت",
+                "B_en": "Including the first run in the timing result",
+                "C_ar": "استخدام حلقة 'spin loop' لزيادة الدقة",
+                "C_en": "Using a 'spin loop' to increase resolution",
+                "D_ar": "حساب الانحراف المعياري للوقت",
+                "D_en": "Computing the standard deviation of the time"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 8) تعرف 'Warm start' بأنه \"عدم تضمين التشغيل الأول في نتيجة التوقيت، حيث تكون الذاكرة المخبئية (caches) قد 'تم تسخينها'\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 8) defines 'Warm start' as \"do not include the first run in timing result, caches are 'warmed up'\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو تعريف 'Cold start' (البدء البارد) (صفحة 8).",
+                "C": "حلقة 'spin loop' هي تقنية عامة في قياس الأداء، وليست تعريف 'Warm start' (صفحة 8).",
+                "D": "حساب الانحراف المعياري هو اعتبار إضافي، وليس تعريف 'Warm start' (صفحة 8)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the definition of a 'Cold start' (Page 8).",
+                "C": "A 'spin loop' is a general benchmarking technique, not the definition of 'Warm start' (Page 8).",
+                "D": "Computing the standard deviation is an additional consideration, not the definition of 'Warm start' (Page 8)."
+            }
+        },
+        {
+            "question_number": 8,
+            "lecture_number": 4,
+            "question_ar": "أي نوع من تحليل الأداء (Profiling) له عيب \"العبء المرتفع الذي يشوه الوقت المنقضي\"؟",
+            "question_en": "Which type of profiling has the disadvantage of \"high overhead that distorts elapsed time\"?",
+            "choices": {
+                "A_ar": "تحليل الأداء القائم على الأدوات (Instrumentation-based)",
+                "A_en": "Instrumentation-based profiling",
+                "B_ar": "تحليل الأداء القائم على العينات (Sampling-based)",
+                "B_en": "Sampling-based profiling",
+                "C_ar": "تحليل الأداء القائم على عداد الأجهزة (Hardware counter)",
+                "C_en": "Hardware counter profiling",
+                "D_ar": "تحليل الأداء القائم على gprof",
+                "D_en": "gprof-based profiling"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تذكر بوضوح أن عيب 'Instrumentation-based profiling' هو \"العبء المرتفع الذي يشوه الوقت المنقضي\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) explicitly states that the disadvantage of 'Instrumentation-based profiling' is \"high overhead that distorts elapsed time\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "القائم على العينات (Sampling-based) له ميزة \"عبء منخفض جدًا\" (صفحة 10).",
+                "C": "القائم على عداد الأجهزة (Hardware counter) له ميزة \"لا يوجد عبء تحليل أداء\" (صفحة 10).",
+                "D": "gprof هو مثال على القائم على العينات (صفحة 15)، والذي له عبء منخفض."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Sampling-based has the advantage of \"very low profiling overhead\" (Page 10).",
+                "C": "Hardware counter has the advantage of \"no profiling overhead\" (Page 10).",
+                "D": "gprof is an example of sampling-based profiling (Page 15), which has low overhead."
+            }
+        },
+        {
+            "question_number": 9,
+            "lecture_number": 4,
+            "question_ar": "أي نوع من تحليل الأداء (Profiling) له ميزة \"عبء منخفض جدًا\" ولكن عيب \"دقة إحصائية منخفضة\"؟",
+            "question_en": "Which type of profiling has the advantage of \"very low profiling overhead\" but the disadvantage of \"low statistical accuracy\"?",
+            "choices": {
+                "A_ar": "تحليل الأداء القائم على الأدوات (Instrumentation-based)",
+                "A_en": "Instrumentation-based profiling",
+                "B_ar": "تحليل الأداء القائم على العينات (Sampling-based)",
+                "B_en": "Sampling-based profiling",
+                "C_ar": "تحليل الأداء القائم على عداد الأجهزة (Hardware counter)",
+                "C_en": "Hardware counter profiling",
+                "D_ar": "تحليل الأداء ذو البدء الدافئ (Warm start profiling)",
+                "D_en": "Warm start profiling"
+            },
+            "correct_choice": "B",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 10) تذكر أن 'Sampling-based profiling' له \"ميزة: عبء منخفض جدًا\" و \"عيب: دقة إحصائية منخفضة\".",
+            "explanation_correct_en": "The correct answer is (B). The lecture (Page 10) states that 'Sampling-based profiling' has the \"Advantage: very low profiling overhead\" and \"Disadvantage: low statistical accuracy\".",
+            "explanation_wrong_ar": {
+                "A": "القائم على الأدوات (Instrumentation-based) له \"عبء مرتفع\" (صفحة 10).",
+                "B": "هذه هي الإجابة الصحيحة.",
+                "C": "القائم على عداد الأجهزة (Hardware counter) له \"لا يوجد عبء تحليل أداء\" (صفحة 10).",
+                "D": "البدء الدافئ (Warm start) هو تقنية لقياس الأداء (benchmarking)، وليس نوعًا من تحليل الأداء (profiling) (صفحة 8)."
+            },
+            "explanation_wrong_en": {
+                "A": "Instrumentation-based has \"high overhead\" (Page 10).",
+                "B": "This is the correct answer.",
+                "C": "Hardware counter has \"no profiling overhead\" (Page 10).",
+                "D": "Warm start is a benchmarking technique, not a profiling type (Page 8)."
+            }
+        },
+        {
+            "question_number": 10,
+            "lecture_number": 4,
+            "question_ar": "أي نوع من تحليل الأداء (Profiling) يستخدم \"سجلات خاصة في وحدة المعالجة المركزية (CPU registers)\" لعد الأحداث وليس له \"عبء تحليل أداء\"؟",
+            "question_en": "Which type of profiling uses \"special CPU registers\" to count events and has \"no profiling overhead\"?",
+            "choices": {
+                "A_ar": "تحليل الأداء القائم على الأدوات (Instrumentation-based)",
+                "A_en": "Instrumentation-based profiling",
+                "B_ar": "تحليل الأداء القائم على العينات (Sampling-based)",
+                "B_en": "Sampling-based profiling",
+                "C_ar": "تحليل الأداء القائم على عداد الأجهزة (Hardware counter)",
+                "C_en": "Hardware counter profiling",
+                "D_ar": "تحليل الأداء القائم على RDTSC",
+                "D_en": "RDTSC-based profiling"
+            },
+            "correct_choice": "C",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 10) تصف 'Hardware counter profiling' بأنه \"يستخدم سجلات خاصة في وحدة المعالجة المركزية لعد أحداث CPU\" وله \"ميزة: معلومات أكثر تفصيلاً مع عدم وجود عبء تحليل أداء\".",
+            "explanation_correct_en": "The correct answer is (C). The lecture (Page 10) describes 'Hardware counter profiling' as \"Uses special CPU registers to count CPU events\" and having the \"Advantage: more detailed information with no profiling overhead\".",
+            "explanation_wrong_ar": {
+                "A": "القائم على الأدوات (Instrumentation-based) يضيف كودًا (instruments code) وله عبء مرتفع (صفحة 10).",
+                "B": "القائم على العينات (Sampling-based) يستخدم مقاطعات النظام (system interrupt) (صفحة 10).",
+                "C": "هذه هي الإجابة الصحيحة.",
+                "D": "RDTSC هو عداد أجهزة واحد (صفحة 7)، لكن 'Hardware counter profiling' هو الاسم العام للتقنية (صفحة 10)."
+            },
+            "explanation_wrong_en": {
+                "A": "Instrumentation-based adds code and has high overhead (Page 10).",
+                "B": "Sampling-based uses system interrupts (Page 10).",
+                "C": "This is the correct answer.",
+                "D": "RDTSC is one specific hardware counter (Page 7), but 'Hardware counter profiling' is the general name for the technique (Page 10)."
+            }
+        },
+        {
+            "question_number": 11,
+            "lecture_number": 4,
+            "question_ar": "ما هي ظاهرة 'Heisenbugs'؟",
+            "question_en": "What is the 'Heisenbugs' phenomenon?",
+            "choices": {
+                "A_ar": "عندما يغير تحليل الأداء توقيت التطبيق، مما يتسبب في اختفاء الأخطاء المتعلقة بالتوقيت",
+                "A_en": "When profiling changes the application's running time, causing timing-related bugs to disappear",
+                "B_ar": "خطأ في محلل الأداء (profiler) نفسه يعطي نتائج غير صحيحة",
+                "B_en": "A bug in the profiler itself that gives incorrect results",
+                "C_ar": "خطأ في عدادات أجهزة وحدة المعالجة المركزية (CPU hardware counters)",
+                "C_en": "A bug in the CPU hardware counters",
+                "D_ar": "الدقة الإحصائية المنخفضة الناتجة عن أخذ العينات (sampling)",
+                "D_en": "The low statistical accuracy resulting from sampling"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 11) تصف 'Heisenbugs' بأنها \"تحدث عند تحليل أداء تطبيق... يغير وقت التشغيل\"، والنتيجة هي أن \"الأخطاء المتعلقة بالتوقيت... قد لا تحدث بعد الآن\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 11) describes 'Heisenbugs' as occurring \"when profiling an application... changes the running time\", with the result that \"timing-related bugs... may no longer occur\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا ليس تعريف 'Heisenbug'. 'Heisenbug' هو خطأ في البرنامج *الأصلي* يختفي عند ملاحظته.",
+                "C": "هذا ليس تعريف 'Heisenbug'.",
+                "D": "هذه هي مشكلة 'sampling inaccuracy' (صفحة 17)، وليست 'Heisenbugs'."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is not the definition. A 'Heisenbug' is a bug in the *original* program that disappears when observed.",
+                "C": "This is not the definition.",
+                "D": "This is the problem of 'sampling inaccuracy' (Page 17), not 'Heisenbugs'."
+            }
+        },
+        {
+            "question_number": 12,
+            "lecture_number": 4,
+            "question_ar": "ما هو نوع محلل الأداء (profiler) الذي ينتج \"إحصائيات وقت تشغيل هرمية\" ويقوم بـ \"نشر\" (propagate) معلومات الوقت إلى الدوال المستدعية (callers)؟",
+            "question_en": "What type of profiler produces \"hierarchical run time statistics\" and \"propagates\" time information to the callers?",
+            "choices": {
+                "A_ar": "محلل أداء المخطط البياني للاستدعاء (Call-graph profiler)",
+                "A_en": "Call-graph profiler",
+                "B_ar": "محلل الأداء المسطح (Flat profiler)",
+                "B_en": "Flat profiler",
+                "C_ar": "محلل أداء عداد الأجهزة (Hardware counter profiler)",
+                "C_en": "Hardware counter profiler",
+                "D_ar": "محلل أداء الأدوات (Instrumentation-based profiler)",
+                "D_en": "Instrumentation-based profiler"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 13) تعرف 'Call-graph profilers' بأنها \"تنتج إحصائيات وقت تشغيل هرمية\" وأنه \"يتم نشر معلومات المظهر الجانبي المسطح على طول حواف المخطط البياني للاستدعاء إلى الآباء (المستدعين)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 13) defines 'Call-graph profilers' as producing \"hierarchical run time statistics\" and that \"Flat profile information is propagated along the edges of the call graph to the parents (the callers)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المحلل المسطح (Flat profiler) \"ينتج إحصائيات وقت تشغيل لكل دالة\" بشكل مستقل، دون نشرها (صفحة 13).",
+                "C": "محلل عداد الأجهزة هو *تقنية* لجمع البيانات (صفحة 10)، وليس نوعًا من *عرض* المخطط البياني (مسطح مقابل هرمي).",
+                "D": "محلل الأدوات هو *تقنية* لجمع البيانات (صفحة 10)، وليس نوعًا من *عرض* المخطط البياني."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A flat profiler \"produce[s] run time statistics for each function\" independently, without propagation (Page 13).",
+                "C": "A hardware counter profiler is a data *collection technique* (Page 10), not a type of graph *presentation* (flat vs. hierarchical).",
+                "D": "An instrumentation-based profiler is a data *collection technique* (Page 10), not a type of graph *presentation*."
+            }
+        },
+        {
+            "question_number": 13,
+            "lecture_number": 4,
+            "question_ar": "ما هو نوع محلل الأداء (profiler) الذي ينتج \"إحصائيات وقت تشغيل لكل دالة وروتين فرعي\" بشكل مستقل؟",
+            "question_en": "What type of profiler produces \"run time statistics for each function and subroutine\" independently?",
+            "choices": {
+                "A_ar": "محلل الأداء المسطح (Flat profiler)",
+                "A_en": "Flat profiler",
+                "B_ar": "محلل أداء المخطط البياني للاستدعاء (Call-graph profiler)",
+                "B_en": "Call-graph profiler",
+                "C_ar": "محلل أداء التغطية (Codecov profiler)",
+                "C_en": "Codecov profiler",
+                "D_ar": "محلل أداء التماسك (Coherence profiler)",
+                "D_en": "Coherence profiler"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 13) تعرف 'Flat profilers' بأنها \"تنتج إحصائيات وقت تشغيل لكل دالة وروتين فرعي\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 13) defines 'Flat profilers' as \"produce[ing] run time statistics for each function and subroutine\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "محلل المخطط البياني للاستدعاء (Call-graph profiler) هرمي وينشر الوقت (صفحة 13).",
+                "C": "Codecov (صفحة 12) هو مثال على محلل قائم على الأدوات، ولكنه ليس اسم النوع العام.",
+                "D": "هذا المصطلح ليس من المحاضرة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A call-graph profiler is hierarchical and propagates time (Page 13).",
+                "C": "Codecov (Page 12) is an example of an instrumentation-based profiler, but not the name of the general type.",
+                "D": "This term is not from the lecture."
+            }
+        },
+        {
+            "question_number": 14,
+            "lecture_number": 4,
+            "question_ar": "عند استخدام 'gprof'، ما هو الخيار (flag) الذي يجب تمريره للمترجم (compiler) مثل 'gcc'؟",
+            "question_en": "When using 'gprof', what flag must be passed to the compiler (e.g., 'gcc')?",
+            "choices": {
+                "A_ar": "-pg",
+                "A_en": "-pg",
+                "B_ar": "-gprof",
+                "B_en": "-gprof",
+                "C_ar": "-prof-genx",
+                "C_en": "-prof-genx",
+                "D_ar": "-h",
+                "D_en": "-h"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 15) تذكر الخطوة الأولى لاستخدام 'gprof' وهي \"الترجمة باستخدام gcc -pg -o prog\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 15) lists the first step for using 'gprof' as \"Compile with gcc -pg -o prog\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا ليس الخيار الصحيح المذكور.",
+                "C": "هذا الخيار '-prof-genx' يُستخدم مع Intel Codecov (صفحة 12).",
+                "D": "هذا الخيار '-h' يُستخدم مع Sun Studio 'collect' لتحديد عدادات الأجهزة (صفحة 21)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is not the correct flag mentioned.",
+                "C": "The flag '-prof-genx' is used with Intel Codecov (Page 12).",
+                "D": "The flag '-h' is used with Sun Studio 'collect' for hardware counters (Page 21)."
+            }
+        },
+        {
+            "question_number": 15,
+            "lecture_number": 4,
+            "question_ar": "عند تشغيل برنامج تم ترجمته باستخدام 'gprof'، ما هو اسم ملف المخرجات الافتراضي الذي يتم إنشاؤه؟",
+            "question_en": "When a program compiled for 'gprof' is run, what is the default output file name that is generated?",
+            "choices": {
+                "A_ar": "gmon.out",
+                "A_en": "gmon.out",
+                "B_ar": "prof.out",
+                "B_en": "prof.out",
+                "C_ar": "sample.er",
+                "C_en": "sample.er",
+                "D_ar": "prog.dyn",
+                "D_en": "prog.dyn"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 15) تذكر الخطوة الثانية وهي \"تشغيل البرنامج prog لإنشاء gmon.out\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 15) lists the second step as \"Run the program prog to generate gmon.out\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا ليس اسم الملف المذكور لـ gprof.",
+                "C": "هذا 'sample.er' هو اسم ملف مخرجات لمحلل Sun Studio (صفحة 18).",
+                "D": "ملف '.dyn' يتم إنشاؤه بواسطة Intel Codecov (صفحة 12)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is not the file name mentioned for gprof.",
+                "C": "The file 'sample.er' is an output file for the Sun Studio profiler (Page 18).",
+                "D": "A '.dyn' file is generated by Intel Codecov (Page 12)."
+            }
+        },
+        {
+            "question_number": 16,
+            "lecture_number": 4,
+            "question_ar": "ما هي 'أخطاء التكميم' (Quantization errors) في تحليل الأداء القائم على العينات؟",
+            "question_en": "What are 'Quantization errors' in sampling-based profiling?",
+            "choices": {
+                "A_ar": "عدم الدقة الناتج عن تقسيم إجمالي الوقت على عدد الاستدعاءات",
+                "A_en": "Inaccuracies from dividing total time by the number of function calls",
+                "B_ar": "الأخطاء الناتجة عن عبء (overhead) الأدوات",
+                "B_en": "Errors caused by instrumentation overhead",
+                "C_ar": "الأخطاء الناتجة عن عدادات الأجهزة غير المتزامنة",
+                "C_en": "Errors from unsynchronized hardware counters",
+                "D_ar": "الأخطاء الناتجة عن 'Heisenbugs'",
+                "D_en": "Errors resulting from 'Heisenbugs'"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 17) تصف 'Quantization errors' بأنها تحدث لأن \"الوقت لكل تنفيذ للدالة يُعبر عنه بإجمالي الوقت للدالة مقسومًا على عدد مرات استدعاء الدالة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 17) describes 'Quantization errors' as occurring because \"The time for each execution of a function is expressed by the total time for the function divided by the number of times the function is called\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "عبء الأدوات (Instrumentation overhead) هو مشكلة في تحليل الأداء القائم على الأدوات، وليس في أخطاء التكميم للعينات (صفحة 10).",
+                "C": "العدادات غير المتزامنة هي مشكلة في RDTSC (صفحة 7).",
+                "D": "Heisenbugs هي ظاهرة مختلفة حيث تختفي الأخطاء (صفحة 11)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Instrumentation overhead is a problem with instrumentation-based profiling, not quantization errors in sampling (Page 10).",
+                "C": "Unsynchronized counters are a problem with RDTSC (Page 7).",
+                "D": "Heisenbugs are a different phenomenon where bugs disappear (Page 11)."
+            }
+        },
+        {
+            "question_number": 17,
+            "lecture_number": 4,
+            "question_ar": "في محلل Sun Studio Profiler، ما هو 'Exclusive time' (الوقت الحصري)؟",
+            "question_en": "In the Sun Studio Profiler, what is 'Exclusive time'?",
+            "choices": {
+                "A_ar": "الوقت المستغرق في الدالة باستثناء الدوال التي تستدعيها",
+                "A_en": "Time spent in the function, excluding the functions it calls",
+                "B_ar": "الوقت المستغرق في الدالة وجميع الدوال التي تستدعيها",
+                "B_en": "Time spent in the function AND all the functions it calls",
+                "C_ar": "الوقت المستغرق في وضع المستخدم (User CPU) فقط",
+                "C_en": "Time spent in User CPU mode only",
+                "D_ar": "الوقت الإجمالي للساعة (Wall clock time) فقط",
+                "D_en": "The total Wall clock time only"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 19) تعرف 'Exclusive time' بأنه \"الوقت المستغرق في الدالة عن طريق استبعاد المستدعين (callers)\" - التسمية مضللة قليلاً، لكنها تعني استبعاد الدوال *المستدعاة* (callees).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 19) defines 'Exclusive time' as \"the time spent in the function by excluding the callers\" - the label is slightly confusing, but it means excluding the *callees* (functions it calls).",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو تعريف 'Inclusive time' (الوقت الشامل) (صفحة 19).",
+                "C": "الوقت الحصري (Exclusive time) هو مفهوم مستقل عن كونه 'User CPU' أو 'System CPU' (صفحة 19).",
+                "D": "الوقت الحصري (Exclusive time) هو مفهوم مستقل عن كونه 'Wall' أو 'User CPU' (صفحة 19)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the definition of 'Inclusive time' (Page 19).",
+                "C": "Exclusive time is a concept separate from whether it's 'User CPU' or 'System CPU' time (Page 19).",
+                "D": "Exclusive time is a concept separate from whether it's 'Wall' or 'User CPU' time (Page 19)."
+            }
+        },
+        {
+            "question_number": 18,
+            "lecture_number": 4,
+            "question_ar": "في محلل Sun Studio Profiler، ما هو 'Inclusive time' (الوقت الشامل)؟",
+            "question_en": "In the Sun Studio Profiler, what is 'Inclusive time'?",
+            "choices": {
+                "A_ar": "الوقت المستغرق في الدالة وجميع الدوال التي تستدعيها",
+                "A_en": "Time spent in the function AND all the functions it calls",
+                "B_ar": "الوقت المستغرق في الدالة باستثناء الدوال التي تستدعيها",
+                "B_en": "Time spent in the function, excluding the functions it calls",
+                "C_ar": "الوقت الإجمالي لـ 'User CPU' و 'System CPU'",
+                "C_en": "The total of 'User CPU' and 'System CPU' time",
+                "D_ar": "الوقت الإجمالي للساعة (Wall clock time) فقط",
+                "D_en": "The total Wall clock time only"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 19) تعرف 'Inclusive time' بأنه \"الوقت المستغرق في الدالة والدوال التي استدعتها\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 19) defines 'Inclusive time' as \"the time spent in function and the functions called by it\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو تعريف 'Exclusive time' (الوقت الحصري) (صفحة 19).",
+                "C": "الوقت الشامل (Inclusive time) هو مقياس لكل دالة، وليس المجموع الكلي.",
+                "D": "الوقت الشامل (Inclusive time) يمكن قياسه لـ 'Wall' أو 'User CPU'، وليس فقط 'Wall' (صفحة 19)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the definition of 'Exclusive time' (Page 19).",
+                "C": "Inclusive time is a per-function metric, not the grand total.",
+                "D": "Inclusive time can be measured for 'Wall' or 'User CPU', not just 'Wall' (Page 19)."
+            }
+        },
+        {
+            "question_number": 19,
+            "lecture_number": 4,
+            "question_ar": "كيف يعمل 'تحليل الأداء القائم على عداد الأجهزة' (Hardware Counter Profiling)؟",
+            "question_en": "How does 'Hardware Counter Profiling' work?",
+            "choices": {
+                "A_ar": "تفيض (overflow) العدادات يسبب مقاطعة (interrupt) لحفظ القيمة",
+                "A_en": "Counter overflow causes an interrupt to save the value",
+                "B_ar": "يضيف كود أدوات (instrumentation code) لتحديث العدادات",
+                "B_en": "It adds instrumentation code to update counters",
+                "C_ar": "يأخذ لقطات دورية (periodic snapshots) لعداد البرنامج (program counter)",
+                "C_en": "It takes periodic snapshots of the program counter",
+                "D_ar": "يقرأ عداد RDTSC في بداية ونهاية كل دالة",
+                "D_en": "It reads the RDTSC counter at the start and end of every function"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 20) تشرح أن \"تفيض عداد الأجهزة يسبب مقاطعة\" و \"المقاطعة تحفظ قيمة العداد في ملف التحليل\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 20) explains that \"Hardware counter overflow causes interrupt\" and the \"Interrupt saves the counter value in profile\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو 'Instrumentation-based profiling' (صفحة 10).",
+                "C": "هذا هو 'Sampling-based profiling' (صفحة 10).",
+                "D": "هذا سيكون شكلاً من أشكال 'Instrumentation-based' باستخدام RDTSC، وليس كيف تعمل عدادات الأحداث العامة (general event counters)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is 'Instrumentation-based profiling' (Page 10).",
+                "C": "This is 'Sampling-based profiling' (Page 10).",
+                "D": "This would be a form of instrumentation-based profiling using RDTSC, not how general event counters work."
+            }
+        },
+        {
+            "question_number": 20,
+            "lecture_number": 4,
+            "question_ar": "ما هي الخطوة الأولى في دورة 'التحسين التكراري' (Iterative Optimization)؟",
+            "question_en": "What is the first step in the 'Iterative Optimization' cycle?",
+            "choices": {
+                "A_ar": "التحقق من الإجابات الصحيحة (Check for correct answers)",
+                "A_en": "Check for correct answers",
+                "B_ar": "تحليل الأداء للعثور على النقاط الساخنة (Profile to find hotspots)",
+                "B_en": "Profile to find hotspots",
+                "C_ar": "تحسين (Optimize) الروتينات",
+                "C_en": "Optimize the routines",
+                "D_ar": "تعديل كود المصدر (Modify source code)",
+                "D_en": "Modify source code"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 22) تدرج الخطوة 1 على أنها \"1. التحقق من الإجابات الصحيحة (البرنامج يجب أن يكون صحيحًا!)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 22) lists step 1 as \"1. Check for correct answers (program must be correct!)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه هي الخطوة 2 (صفحة 22).",
+                "C": "هذه هي الخطوة 3 (صفحة 22).",
+                "D": "تعديل كود المصدر هو جزء من الخطوة 3 (التحسين) (صفحة 22)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is step 2 (Page 22).",
+                "C": "This is step 3 (Page 22).",
+                "D": "Modifying source code is part of step 3 (Optimize) (Page 22)."
+            }
+        },
+        {
+            "question_number": 21,
+            "lecture_number": 4,
+            "question_ar": "ما هو \"المظهر الجانبي المسطح\" (flat profile) في سياق التحسين؟",
+            "question_en": "What is a \"flat profile\" in the context of optimization?",
+            "choices": {
+                "A_ar": "برنامج به الكثير من الروتينات التي يستغرق كل منها وقتًا قصيرًا",
+                "A_en": "A program with lots of routines that each take a small amount of time",
+                "B_ar": "برنامج به 'نقطة ساخنة' (hotspot) واحدة واضحة",
+                "B_en": "A program with one clear 'hotspot'",
+                "C_ar": "برنامج لا يحتوي على استدعاءات دوال (function calls)",
+                "C_en": "A program with no function calls",
+                "D_ar": "ملف تعريف تم إنشاؤه بواسطة 'Flat profiler'",
+                "D_en": "A profile generated by a 'Flat profiler'"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 22) تصف البرامج ذات \"المظاهر الجانبية المسطحة\" (flat profiles) بأنها \"برامج بها الكثير من الروتينات التي يستغرق كل منها وقتًا قصيرًا\" وتلاحظ أنها \"صعبة التحسين\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 22) describes programs with \"flat profiles\" as \"Programs with lots of routines that each take a small amount of time\" and notes they are \"difficult to optimize\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو عكس المظهر الجانبي المسطح؛ سيكون له مظهر جانبي 'حاد' (spiky) يسهل تحسينه.",
+                "C": "هذا غير مرجح وغير ذي صلة بالتعريف.",
+                "D": "بينما يتم إنشاؤه بواسطة 'Flat profiler'، فإن التعريف المحدد في سياق التحسين يتعلق بتوزيع الوقت، وليس الأداة (صفحة 22)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the opposite of a flat profile; it would have a 'spiky' profile that is easy to optimize.",
+                "C": "This is unlikely and not relevant to the definition.",
+                "D": "While it would be generated by a 'Flat profiler', the specific definition in the context of optimization relates to the time distribution, not the tool (Page 22)."
+            }
+        },
+        {
+            "question_number": 22,
+            "lecture_number": 4,
+            "question_ar": "ما هي 'النقاط الساخنة' (Hotspots) في تحليل الأداء؟",
+            "question_en": "What are 'Hotspots' in performance analysis?",
+            "choices": {
+                "A_ar": "أجزاء البرنامج التي تظهر نسبة كبيرة من إحصائية معينة (مثل الوقت أو إخفاقات الذاكرة المخبئية)",
+                "A_en": "Parts of the program showing a large percentage of a statistic (like time or cache misses)",
+                "B_ar": "الأخطاء المتعلقة بالتوقيت التي تختفي عند تحليل الأداء",
+                "B_en": "Timing-related bugs that disappear when profiling",
+                "C_ar": "البرامج التي يصعب تحسينها لأن الوقت موزع",
+                "C_en": "Programs that are difficult to optimize because time is spread out",
+                "D_ar": "أخطاء التكميم (Quantization errors) الناتجة عن أخذ العينات",
+                "D_en": "Quantization errors from sampling"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 23) تعرف 'Hotspots' بأنها \"تظهر نسبة كبيرة من إحصائية تحليل أداء معينة مثل الوقت أو إخفاقات الذاكرة المخبئية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 23) defines 'Hotspots' as showing \"a large percentage of a particular profiling statistic such as time or cache misses\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه هي 'Heisenbugs' (صفحة 11).",
+                "C": "هذه هي 'المظاهر الجانبية المسطحة' (flat profiles) (صفحة 22).",
+                "D": "هذه هي 'Quantization errors' (صفحة 17)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "These are 'Heisenbugs' (Page 11).",
+                "C": "These are 'flat profiles' (Page 22).",
+                "D": "These are 'Quantization errors' (Page 17)."
+            }
+        },
+        {
+            "question_number": 23,
+            "lecture_number": 4,
+            "question_ar": "ما هو 'التحسين الموجه بملف التعريف' (Profile-Guided Optimization - PGO)؟",
+            "question_en": "What is 'Profile-Guided Optimization' (PGO)?",
+            "choices": {
+                "A_ar": "عملية من 3 خطوات تستخدم إحصائيات وقت التشغيل لتحسين ترجمة (compilation) الكود",
+                "A_en": "A 3-step process that uses runtime statistics to enhance code compilation",
+                "B_ar": "عملية يدوية يقوم فيها المبرمج بقراءة ملف التعريف وتحسين الكود",
+                "B_en": "A manual process where a programmer reads a profile and optimizes code",
+                "C_ar": "تقنية تحليل أداء تستخدم عدادات الأجهزة فقط",
+                "C_en": "A profiling technique that uses only hardware counters",
+                "D_ar": "تقنية تحليل أداء تستخدم أخذ العينات (sampling) فقط",
+                "D_en": "A profiling technique that uses only sampling"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 24 وصفحة 26) تصف PGO بأنه \"يجمع إحصائيات ملف تعريف التنفيذ لتعزيز فعالية التحسينات\" وأنه \"عملية من 3 خطوات\" (Instrument, Collect, Optimize).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 24 and Page 26) describes PGO as \"collect[ing] execution profile statistics to enhance effectiveness of optimizations\" and as being a \"three-step process\" (Instrument, Collect, Optimize).",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو 'التحسين التكراري' (Iterative Optimization) اليدوي (صفحة 22). PGO هو عملية تلقائية للمترجم.",
+                "C": "PGO هي عملية مترجم (compiler)، وليست تقنية تحليل أداء (profiling technique) بحد ذاتها.",
+                "D": "PGO هي عملية مترجم (compiler)، وليست تقنية تحليل أداء (profiling technique) بحد ذاتها."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is manual 'Iterative Optimization' (Page 22). PGO is an automated compiler process.",
+                "C": "PGO is a compiler process, not a profiling technique itself.",
+                "D": "PGO is a compiler process, not a profiling technique itself."
+            }
+        },
+        {
+            "question_number": 24,
+            "lecture_number": 4,
+            "question_ar": "ما هي الخطوات الثلاث لـ 'التحسين الموجه بملف التعريف' (PGO) بالترتيب؟",
+            "question_en": "What are the three steps of 'Profile-Guided Optimization' (PGO) in order?",
+            "choices": {
+                "A_ar": "ترجمة بأدوات (Instrument)، تشغيل لجمع (Collect)، إعادة ترجمة لاستخدام (Optimize)",
+                "A_en": "Compile with instrumentation, Run to collect, Recompile to use (Optimize)",
+                "B_ar": "تحليل أداء (Profile)، تحسين (Optimize)، تكرار (Repeat)",
+                "B_en": "Profile, Optimize, Repeat",
+                "C_ar": "تشغيل (Run)، تحليل (Analyze)، إصلاح (Fix)",
+                "C_en": "Run, Analyze, Fix",
+                "D_ar": "تجميع (Compile)، ربط (Link)، تنفيذ (Execute)",
+                "D_en": "Compile, Link, Execute"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 24 وصفحة 26) تصف الخطوات بأنها: المرحلة 1: 'instrument' (cc -prob-gen)، المرحلة 2: 'collect' (تشغيل الملف التنفيذي)، والمرحلة 3: 'optimize' (cc -prob-use).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 24 and Page 26) describes the steps as: Phase 1: 'instrument' (cc -prob-gen), Phase 2: 'collect' (running the executable), and Phase 3: 'optimize' (cc -prob-use).",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه هي دورة 'التحسين التكراري' (Iterative Optimization) اليدوية (صفحة 22).",
+                "C": "هذه خطوات عامة لتصحيح الأخطاء، وليست PGO.",
+                "D": "هذه هي عملية البناء (build process) القياسية، وليست PGO."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the manual 'Iterative Optimization' cycle (Page 22).",
+                "C": "These are general debugging steps, not PGO.",
+                "D": "This is the standard build process, not PGO."
+            }
+        },
+        {
+            "question_number": 25,
+            "lecture_number": 4,
+            "question_ar": "أي نوع من التطبيقات *سيستفيد* من PGO؟",
+            "question_en": "What type of application *will* benefit from PGO?",
+            "choices": {
+                "A_ar": "تطبيقات ذات مسارات تنفيذ ساخنة (hot execution paths) متسقة",
+                "A_en": "Applications with consistent hot execution paths",
+                "B_ar": "تطبيقات مع حسابات موزعة في كل مكان",
+                "B_en": "Applications with computations spread throughout",
+                "C_ar": "تطبيقات ذات 'مظهر جانبي مسطح' (flat profile)",
+                "C_en": "Applications with a 'flat profile'",
+                "D_ar": "تطبيقات صغيرة جدًا ذات تفرعات (branches) قليلة",
+                "D_en": "Very small applications with few branches"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 25) توضح أن التطبيقات التي تستفيد (سهم غامق) هي تلك التي لديها \"مسارات تنفيذ ساخنة متسقة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 25) shows that applications that benefit (heavy arrow) are those with \"consistent hot execution paths\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه التطبيقات (سهم رفيع) لا تستفيد كثيرًا (صفحة 25).",
+                "C": "البرامج ذات 'المظاهر الجانبية المسطحة' (flat profiles) يصعب تحسينها (صفحة 22).",
+                "D": "PGO يفيد التطبيقات التي بها \"الكثير من الدوال، الاستدعاءات، أو التفرعات\" (صفحة 25)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "These applications (thin arrow) do not benefit as much (Page 25).",
+                "C": "Programs with 'flat profiles' are difficult to optimize (Page 22).",
+                "D": "PGO benefits applications with \"lots of functions, calls, or branches\" (Page 25)."
+            }
+        },
+        {
+            "question_number": 26,
+            "lecture_number": 4,
+            "question_ar": "العملية التي تكون 'كثيفة الحساب' (compute intensive) ولديها \"عدد قليل جدًا من عمليات الإدخال/الإخراج\" تسمى ___.",
+            "question_en": "A process that is 'compute intensive' and has \"very few I/O operations\" is called ___.",
+            "choices": {
+                "A_ar": "مرتبطة بوحدة المعالجة المركزية (CPU bound)",
+                "A_en": "CPU bound",
+                "B_ar": "مرتبطة بالإدخال/الإخراج (I/O bound)",
+                "B_en": "I/O bound",
+                "C_ar": "مرتبطة بالذاكرة (Memory bound)",
+                "C_en": "Memory bound",
+                "D_ar": "مرتبطة بالشبكة (Network bound)",
+                "D_en": "Network bound"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 27) تعرف 'CPU bound' بأنها \"كثيفة الحساب\" (compute intensive) ولديها \"عدد قليل جدًا من عمليات الإدخال/الإخراج\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 27) defines a 'CPU bound' process as \"compute intensive\" with \"Very few I/O operations\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الـ I/O bound هي \"كثيفة الإدخال/الإخراج\" (I/O intensive) (صفحة 27).",
+                "C": "مرتبطة بالذاكرة (Memory bound) (غير مذكور هنا) تعني الانتظار للوصول إلى الذاكرة.",
+                "D": "مرتبطة بالشبكة (Network bound) هي نوع من I/O bound (صفحة 27)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "An 'I/O bound' process is \"I/O intensive\" (Page 27).",
+                "C": "Memory bound (not mentioned here) would mean waiting on memory access.",
+                "D": "Network bound is a type of I/O bound (Page 27)."
+            }
+        },
+        {
+            "question_number": 27,
+            "lecture_number": 4,
+            "question_ar": "العملية التي تكون سرعتها \"محدودة بأزمنة انتقال الإدخال/الإخراج للنظام\" تسمى ___.",
+            "question_en": "A process whose speed is \"limited by system's I/O latencies\" is called ___.",
+            "choices": {
+                "A_ar": "مرتبطة بالإدخال/الإخراج (I/O bound)",
+                "A_en": "I/O bound",
+                "B_ar": "مرتبطة بوحدة المعالجة المركزية (CPU bound)",
+                "B_en": "CPU bound",
+                "C_ar": "مرتبطة بالتوازي (Parallel bound)",
+                "C_en": "Parallel bound",
+                "D_ar": "مرتبطة بالتحسين (Optimization bound)",
+                "D_en": "Optimization bound"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 27) تصف عملية 'I/O bound' بأن \"سرعة التنفيذ محدودة بأزمنة انتقال الإدخال/الإخراج للنظام\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 27) describes an 'I/O bound' process as one whose \"Execution speed is limited by system's I/O latencies\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الـ CPU bound \"تتحدد سرعة تنفيذها بواسطة وحدة المعالجة المركزية (CPU)\" (صفحة 27).",
+                "C": "هذا المصطلح ليس من المحاضرة.",
+                "D": "هذا المصطلح ليس من المحاضرة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A 'CPU bound' process's \"Execution speed... is determined by CPU\" (Page 27).",
+                "C": "This term is not from the lecture.",
+                "D": "This term is not from the lecture."
+            }
+        },
+        {
+            "question_number": 28,
+            "lecture_number": 4,
+            "question_ar": "ما هي التقنية المستخدمة لقياس زمن انتقال الرسالة (message latency) وعرض النطاق الترددي (bandwidth) عن طريق إرسال رسالة واستقبالها مرة أخرى؟",
+            "question_en": "What technique is used to measure message latency and bandwidth by sending a message and receiving it back?",
+            "choices": {
+                "A_ar": "بينج بونج (Ping-pong)",
+                "A_en": "Ping-pong",
+                "B_ar": "نقطة ساخنة (Hotspot)",
+                "B_en": "Hotspot",
+                "C_ar": "تحسين موجه بملف التعريف (PGO)",
+                "C_en": "PGO",
+                "D_ar": "أخذ عينات (Sampling)",
+                "D_en": "Sampling"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 28) تصف \"قياس زمن انتقال الرسالة وعرض النطاق الترددي باستخدام 'ping-pong'\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 28) describes \"Measuring message latency and bandwidth... using ping-pong\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "النقطة الساخنة (Hotspot) هي جزء من الكود يستغرق وقتًا طويلاً (صفحة 23).",
+                "C": "PGO هو تقنية تحسين للمترجم (compiler) (صفحة 24).",
+                "D": "أخذ العينات (Sampling) هو تقنية لتحليل الأداء (profiling) (صفحة 10)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A hotspot is a time-consuming part of code (Page 23).",
+                "C": "PGO is a compiler optimization technique (Page 24).",
+                "D": "Sampling is a profiling technique (Page 10)."
+            }
+        },
+        {
+            "question_number": 29,
+            "lecture_number": 4,
+            "question_ar": "إذا كان من الممكن تداخل (overlap) الحساب مع الاتصال بشكل مثالي، فكيف يُحسب وقت التوازي (t_p)؟",
+            "question_en": "If computation can be perfectly overlapped with communication, how is the parallel time (t_p) calculated?",
+            "choices": {
+                "A_ar": "t_p = max(t_comp, t_comm)",
+                "A_en": "t_p = max(t_comp, t_comm)",
+                "B_ar": "t_p = t_comp + t_comm",
+                "B_en": "t_p = t_comp + t_comm",
+                "C_ar": "t_p = t_comp - t_comm",
+                "C_en": "t_p = t_comp - t_comm",
+                "D_ar": "t_p = t_comp / t_comm",
+                "D_en": "t_p = t_comp / t_comm"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 31) تذكر \"افترض أنه يمكننا تداخل الحساب مع الاتصال بشكل مثالي: t_p = max(t_comp, t_comm)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 31) states, \"Assume we can perfectly overlap computation with communication: t_p = max(t_comp, t_comm)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه هي الصيغة بدون تداخل (صفحة 29).",
+                "C": "هذا غير صحيح.",
+                "D": "هذه هي نسبة الحساب إلى الاتصال (صفحة 12)، وليست إجمالي الوقت."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the formula *without* overlap (Page 29).",
+                "C": "This is incorrect.",
+                "D": "This is the computation-to-communication ratio (Page 12), not the total time."
+            }
+        },
+        {
+            "question_number": 30,
+            "lecture_number": 4,
+            "question_ar": "متى تعتبر الخوارزمية المتوازية \"مثلى من حيث التكلفة\" (cost-optimal)؟",
+            "question_en": "When is a parallel algorithm considered \"cost-optimal\"?",
+            "choices": {
+                "A_ar": "عندما (t_P * P) = k * t_s (حيث k ثابت)",
+                "A_en": "When (t_P * P) = k * t_s (where k is a constant)",
+                "B_ar": "عندما t_P = t_s",
+                "B_en": "When t_P = t_s",
+                "C_ar": "عندما t_P * P = t_s * P",
+                "C_en": "When t_P * P = t_s * P",
+                "D_ar": "عندما يكون التسريع (Speedup) خطيًا تمامًا",
+                "D_en": "When Speedup is perfectly linear"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 32) تعرف الخوارزمية المتوازية بأنها \"مثلى من حيث التكلفة\" عندما \"يوجد ثابت k بحيث cost = t_P * P = k * t_s\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 32) defines a parallel algorithm as cost-optimal \"when there is some constant k such that cost = t_P * P = k * t_s\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا يعني عدم وجود تسريع على الإطلاق.",
+                "C": "هذا يبسط إلى t_P = t_s، وهو غير صحيح.",
+                "D": "التسريع الخطي (S_p = P) يعني t_s / t_P = P، أو t_s = t_P * P. هذا هو الحال المثالي (k=1)، ولكن التعريف يسمح بأي ثابت k (صفحة 32)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This would mean no speedup at all.",
+                "C": "This simplifies to t_P = t_s, which is incorrect.",
+                "D": "Linear speedup (S_p = P) means t_s / t_P = P, or t_s = t_P * P. This is the ideal case (k=1), but the definition allows for any constant k (Page 32)."
+            }
+        }
+    ]
+}
