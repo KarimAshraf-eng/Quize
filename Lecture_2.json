@@ -1,379 +1,936 @@
 {
-  "title_en": "Mid General 2025",
-  "title_ar": "امتحان الميد للقسم العام 2025",
+  "title_en": "Lecture 2",
+  "title_ar": "المحاضره الثانيه",
   "questions": [
     {
       "question_number": 1,
-      "lecture_number": 1,
-      "question_ar": "تُعد حدود تبديد حرارة المعالج (CPU heat dissipation) دافعًا رئيسيًا لاستخدام الحاسوبية ___.",
-      "question_en": "CPU heat dissipation limits are a key motivation for using ___ computing.",
+      "lecture_number": 2,
+      "question_ar": "المعالج من نوع N-way superscalar يقوم بـ ___ لعدد N من التعليمات في كل دورة.",
+      "question_en": "An N-way superscalar processor performs ___ for N instructions each cycle.",
       "choices": {
-        "A_ar": "التسلسلية (sequential)",
-        "A_en": "sequential",
-        "B_ar": "الكمومية (quantum)",
-        "B_en": "quantum",
-        "C_ar": "المتوازية (parallel)",
-        "C_en": "parallel",
-        "D_ar": "التناظرية (analog)",
-        "D_en": "analog"
+        "A_ar": "جلب (Fetch)",
+        "A_en": "Fetch",
+        "B_ar": "فك تشفير (Decode)",
+        "B_en": "Decode",
+        "C_ar": "تنفيذ (Execute)",
+        "C_en": "Execute",
+        "D_ar": "اعتماد (Retirement)",
+        "D_en": "Retirement"
       },
-      "correct_choice": "C",
-      "explanation_correct_ar": "المحاضرة الأولى (صفحة 9) تناقش 'استهلاك طاقة المعالج وتبديد الحرارة'. وتشير صراحة إلى أن 'التوازي (Parallelism) يمكن أن يساعد في الحفاظ على الطاقة'.",
-      "explanation_correct_en": "Lecture 1 (page 9) discusses 'CPU Energy Consumption & Heat Dissipation'. It explicitly states that 'Parallelism can help to conserve energy'.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (جلب). كما هو موضح في المحاضرة (صفحة 9)، معالجات N-way superscalar مصممة لزيادة التوازي على مستوى التعليمات (ILP) عن طريق جلب (fetch) عدد N من التعليمات في كل دورة.",
+      "explanation_correct_en": "The correct answer is (Fetch). As shown in the lecture (Page 9), N-way superscalar processors are designed to increase instruction-level parallelism (ILP) by fetching N instructions each cycle.",
       "explanation_wrong_ar": {
-        "A": "الحاسوبية التسلسلية (استخدام معالج واحد بتردد عالٍ) هي التي تسببت في الوصول إلى هذه الحدود الحرارية، وليست الحل.",
-        "B": "لم يُذكر مصطلح 'الحوسبة الكمومية' في أي من المحاضرات الخمس المرفقة.",
-        "C": "هذه هي الإجابة الصحيحة.",
-        "D": "لم يُذكر مصطلح 'الحوسبة التناظرية' في أي من المحاضرات الخمس المرفقة."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "فك التشفير (Decode) هو المرحلة التالية بعد الجلب. المعالج قد يفك تشفير تعليمات متعددة، ولكن التعريف الأساسي لـ N-way هو جلب N تعليمة.",
+        "C": "التنفيذ (Execute) يحدث لاحقًا في خط الأنابيب، وقد يتم تنفيذ تعليمات متعددة (out-of-order) ولكن هذا ليس تعريف N-way fetch.",
+        "D": "الاعتماد (Retirement) هو المرحلة الأخيرة لإنهاء التعليمات بالترتيب. Pentium 4، على سبيل المثال، يعتمد حتى 3 تعليمات لكل دورة، ولكن هذا منفصل عن آلية الجلب N-way."
       },
       "explanation_wrong_en": {
-        "A": "Sequential computing (using one high-frequency CPU) is what caused these heat limits, not the solution.",
-        "B": "The term 'quantum computing' was not mentioned in the provided lectures.",
-        "C": "This is the correct answer.",
-        "D": "The term 'analog computing' was not mentioned in the provided lectures."
+        "A": "This is the correct answer.",
+        "B": "Decode is the stage after fetch. The processor might decode multiple instructions, but the N-way definition is about fetching N instructions.",
+        "C": "Execute happens later in the pipeline. Multiple instructions might be executed (out-of-order), but this isn't the definition of N-way fetch.",
+        "D": "Retirement is the final stage to complete instructions in order. The Pentium 4, for example, retires up to 3 instructions per cycle, but this is separate from the N-way fetch mechanism."
       }
     },
     {
       "question_number": 2,
-      "lecture_number": 1,
-      "question_ar": "يتم تحقيق التسريع المثالي (Ideal speedup) عندما تكون SP = ___.",
-      "question_en": "Ideal speedup is achieved when SP = ___.",
+      "lecture_number": 2,
+      "question_ar": "أي من اعتماديات البيانات التالية تُعتبر \"اعتماديات زائفة\" (False Dependences) لأنها تنشأ بسبب إعادة استخدام مواقع التخزين (السجلات)؟",
+      "question_en": "Which of the following data dependences are considered \"False Dependences\" because they exist due to storage location reuse (registers)?",
       "choices": {
-        "A_ar": "1",
-        "A_en": "1",
-        "B_ar": "P",
-        "B_en": "P",
-        "C_ar": "f",
-        "C_en": "f",
-        "D_ar": "Sf / F",
-        "D_en": "Sf / F"
+        "A_ar": "RAW (Read-After-Write) فقط",
+        "A_en": "RAW (Read-After-Write) only",
+        "B_ar": "WAR (Write-After-Read) و WAW (Write-After-Write)",
+        "B_en": "WAR (Write-After-Read) and WAW (Write-After-Write)",
+        "C_ar": "RAW (Read-After-Write) و WAR (Write-After-Read)",
+        "C_en": "RAW (Read-After-Write) and WAR (Write-After-Read)",
+        "D_ar": "RAW (Read-After-Write) و WAW (Write-After-Write)",
+        "D_en": "RAW (Read-After-Write) and WAW (Write-After-Write)"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الأولى (صفحة 14) تنص بوضوح: 'التسريع يكون مثاليًا (perfect or ideal) إذا كانت SP = P'، حيث P تمثل عدد المعالجات.",
-      "explanation_correct_en": "Lecture 1 (page 14) explicitly states: 'The speedup is perfect or ideal if SP = P', where P is the number of processors.",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 18) توضح أن اعتماديات WAR و WAW توجد بسبب إعادة استخدام مواقع التخزين وتسمى أحيانًا \"اعتماديات زائفة\". يمكن إزالتها باستخدام تقنيات مثل إعادة تسمية السجلات (Register Renaming).",
+      "explanation_correct_en": "The correct answer is (B). The lecture (Page 18) states that WAR and WAW dependences exist because of storage location reuse and are sometimes called \"false dependences\". They can be removed using techniques like register renaming.",
       "explanation_wrong_ar": {
-        "A": "تسريع يساوي 1 يعني عدم وجود أي تحسن في الأداء.",
+        "A": "اعتمادية RAW (المعروفة أيضًا بـ flow dependence) هي \"اعتمادية حقيقية\" (True Dependence) ولا يمكن إزالتها لأنها تمثل تدفق البيانات الفعلي.",
         "B": "هذه هي الإجابة الصحيحة.",
-        "C": "الرمز f يُستخدم للإشارة إلى 'الجزء التسلسلي' في قانون أمدال، وهو عامل يحد من التسريع.",
-        "D": "هذا الرمز لم يُذكر في المحاضرات بهذا السياق."
+        "C": "اعتمادية RAW هي اعتمادية حقيقية، وليست زائفة.",
+        "D": "اعتمادية RAW هي اعتمادية حقيقية، وليست زائفة."
       },
       "explanation_wrong_en": {
-        "A": "A speedup of 1 means no performance improvement.",
+        "A": "RAW dependence (also called flow dependence) is a \"True Dependence\" and cannot be removed as it represents the actual data flow.",
         "B": "This is the correct answer.",
-        "C": "The symbol f is used to denote the 'serial fraction' in Amdahl's Law, which limits speedup.",
-        "D": "This symbol was not mentioned in the lectures in this context."
+        "C": "RAW dependence is a true dependence, not a false one.",
+        "D": "RAW dependence is a true dependence, not a false one."
       }
     },
     {
       "question_number": 3,
-      "lecture_number": 1,
-      "question_ar": "قانون جوستافسون (Gustafson's Law) يُبقي ___ ثابتًا أثناء تغيير حجم المشكلة.",
-      "question_en": "Gustafson's Law keeps ___ constant while scaling the problem size.",
+      "lecture_number": 2,
+      "question_ar": "آلية \"تكهن التحكم\" (Control Speculation) تسمح للتعليمات الشرطية بأن يتم تنفيذها ___ التفرع الشرطي الذي تقع فيه.",
+      "question_en": "Control speculation allows conditional instructions to be executed ___ the conditional branch in which the instruction occurs.",
       "choices": {
-        "A_ar": "حمل العمل (workload)",
-        "A_en": "workload",
-        "B_ar": "الزمن التسلسلي (sequential time)",
-        "B_en": "sequential time",
-        "C_ar": "الزمن المتوازي (parallel time)",
-        "C_en": "parallel time",
-        "D_ar": "الكفاءة (efficiency)",
-        "D_en": "efficiency"
+        "A_ar": "قبل (before)",
+        "A_en": "before",
+        "B_ar": "بعد (after)",
+        "B_en": "after",
+        "C_ar": "أثناء (during)",
+        "C_en": "during",
+        "D_ar": "فقط إذا نجح التوقع (only if predicted)",
+        "D_en": "only if predicted"
       },
-      "correct_choice": "C",
-      "explanation_correct_ar": "المحاضرة الأولى (صفحة 22) تذكر أن قانون جوستافسون 'يُبقي زمن التنفيذ الموازي ثابتًا (keeping the parallel execution time constant)'.",
-      "explanation_correct_en": "Lecture 1 (page 22) states that Gustafson's Law 'defines the scaled speedup by keeping the parallel execution time constant'.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (قبل). الهدف من تكهن التحكم هو إخفاء زمن الوصول (latency) للذاكرة. المحاضرة (صفحة 24) تنص صراحة على أن هذه الآلية تسمح بتنفيذ التعليمات الشرطية *قبل* التفرع الشرطي.",
+      "explanation_correct_en": "The correct answer is (before). The goal of control speculation is to hide memory latencies. The lecture (Page 24) explicitly states that this mechanism allows conditional instructions to be executed *before* the conditional branch.",
       "explanation_wrong_ar": {
-        "A": "قانون أمدال (Amdahl's Law) هو الذي 'يعتمد على حمل عمل ثابت'.",
-        "B": "الزمن التسلسلي هو متغير يتم حسابه في معادلة جوستافسون، ولا يتم تثبيته.",
-        "C": "هذه هي الإجابة الصحيحة.",
-        "D": "الكفاءة هي مقياس يُشتق من التسريع، وليست المتغير الذي يتم تثبيته."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "تنفيذها \"بعد\" هو السلوك العادي بدون تكهن، وهذا ما تحاول الآلية تجنبه.",
+        "C": "يتم تنفيذها \"قبل\" التفرع، وليس \"أثناء\" حسابه.",
+        "D": "يتم تنفيذها بشكل \"تكهني\" (speculative) قبل معرفة نتيجة التفرع، وليس فقط إذا كان التوقع صحيحًا."
       },
       "explanation_wrong_en": {
-        "A": "Amdahl's Law is the one 'based on a fixed workload'.",
-        "B": "Sequential time is a calculated variable in Gustafson's law, not the constant.",
-        "C": "This is the correct answer.",
-        "D": "Efficiency is a derived metric, not the variable that is held constant."
+        "A": "This is the correct answer.",
+        "B": "Executing \"after\" is the normal behavior without speculation, which the mechanism tries to avoid.",
+        "C": "It is executed \"before\" the branch, not \"during\" its calculation.",
+        "D": "It is executed \"speculatively\" before the branch outcome is known, not only if the prediction is correct."
       }
     },
     {
       "question_number": 4,
-      "lecture_number": 1,
-      "question_ar": "ضعف الموضعية (Poor locality) في الوصول للذاكرة يؤدي إلى قيود في الأداء تُعرف بـ ___.",
-      "question_en": "Poor locality in memory access leads to performance limits known as the ___ wall.",
+      "lecture_number": 2,
+      "question_ar": "إخفاق الذاكرة المخبئية (Cache Miss) الذي يحدث بسبب أن حجم الذاكرة المخبئية محدود (finite) ولا يمكنه استيعاب مجموعة العمل (working set) الكاملة للتطبيق هو...",
+      "question_en": "A cache miss that occurs because the cache size is finite and cannot hold the application's entire working set is a...",
       "choices": {
-        "A_ar": "جدار البيانات (data)",
-        "A_en": "data",
-        "B_ar": "جدار الذاكرة (memory)",
-        "B_en": "memory",
-        "C_ar": "جدار خط الأنابيب (pipeline)",
-        "C_en": "pipeline",
-        "D_ar": "جدار الذاكرة المخبئية (cache)",
-        "D_en": "cache"
+        "A_ar": "إخفاق إجباري (Compulsory miss)",
+        "A_en": "Compulsory miss",
+        "B_ar": "إخفاق سعة (Capacity miss)",
+        "B_en": "Capacity miss",
+        "C_ar": "إخفاق تضارب (Conflict miss)",
+        "C_en": "Conflict miss",
+        "D_ar": "إخفاق مشاركة كاذبة (False sharing miss)",
+        "D_en": "False sharing miss"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الأولى (صفحة 29) تذكر صراحة: 'جدار الذاكرة (Memory wall) يشير إلى التفاوت المتزايد في السرعة بين المعالج (CPU) والذاكرة خارج شريحة المعالج'.",
-      "explanation_correct_en": "Lecture 1 (page 29) explicitly states: 'The Memory wall refers to the growing disparity of speed between CPU and memory outside the CPU chip'.",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (إخفاق سعة). المحاضرة (صفحة 34) تعرف إخفاقات السعة (Capacity misses) بأنها تحدث لأن \"حجم الذاكرة المخبئية محدود\". ويمكن تقليلها عن طريق \"تحديد حجم مجموعة العمل للتطبيق\".",
+      "explanation_correct_en": "The correct answer is (Capacity miss). The lecture (Page 34) defines Capacity misses as occurring because the \"Cache size is finite\". They are reduced by \"limiting the working set size of the application\".",
       "explanation_wrong_ar": {
-        "A": "لم يُذكر هذا المصطلح في المحاضرات.",
+        "A": "الإخفاق الإجباري (Compulsory miss) يحدث بسبب المرجع الأول للبيانات، وليس بسبب الحجم.",
         "B": "هذه هي الإجابة الصحيحة.",
-        "C": "لم يُذكر هذا المصطلح في المحاضرات.",
-        "D": "لم يُذكر هذا المصطلح في المحاضرات."
+        "C": "إخفاق التضارب (Conflict miss) يحدث بسبب سياسة الاستبدال (replacement policy) أو مستوى الارتباط (associativity)، حيث يتم ربط عنصرين في نفس مكان الذاكرة المخبئية.",
+        "D": "المشاركة الكاذبة (False sharing) هي مشكلة تماسك (coherency) في أنظمة متعددة النوى، وليست نوعًا أساسيًا من إخفاقات الذاكرة المخبئية الثلاثة (3 C's)."
       },
       "explanation_wrong_en": {
-        "A": "This term was not mentioned in the lectures.",
+        "A": "A Compulsory miss is caused by the first reference to a datum, not by size limitations.",
         "B": "This is the correct answer.",
-        "C": "This term was not mentioned in the lectures.",
-        "D": "This term was not mentioned in the lectures."
+        "C": "A Conflict miss is caused by the replacement policy or level of associativity, where two items map to the same cache location.",
+        "D": "False sharing is a coherency problem in multi-core systems, not one of the three basic types (3 C's) of cache misses."
       }
     },
     {
       "question_number": 5,
       "lecture_number": 2,
-      "question_ar": "المعالجات فائقة القياس (N-way superscalar processors) تجلب ___ تعليمات كل دورة.",
-      "question_en": "N-way superscalar processors fetch ___ instructions each cycle.",
+      "question_ar": "ما هو الاسم الذي يطلق على ذاكرة التخزين المؤقت الفعالة الموجودة على الشريحة (on-chip) والتي تستخدم لتسريع ترجمة العناوين المنطقية إلى فيزيائية؟",
+      "question_en": "What is the name of the efficient on-chip cache used to speed up logical-to-physical address translation?",
       "choices": {
-        "A_ar": "واحدة (one)",
-        "A_en": "one",
-        "B_ar": "متعددة (multiple)",
-        "B_en": "multiple",
-        "C_ar": "شرطية (conditional)",
-        "C_en": "conditional",
-        "D_ar": "تخمينية (speculative)",
-        "D_en": "speculative"
+        "A_ar": "مخزن الترجمة المؤقت (TLB)",
+        "A_en": "Translation Lookaside Buffer (TLB)",
+        "B_ar": "ذاكرة مخبئية للتعليمات (I-cache)",
+        "B_en": "Instruction Cache (I-cache)",
+        "C_ar": "ذاكرة مخبئية للبيانات (D-cache)",
+        "C_en": "Data Cache (D-cache)",
+        "D_ar": "ذاكرة مخبئية موحدة (Unified L2 Cache)",
+        "D_en": "Unified L2 Cache"
       },
-      "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الثانية (صفحة 9) تصف المعالجات 'N-way superscalar' بأنها 'تجلب N من التعليمات (fetch N instructions) كل دورة'، و N تشير إلى عدد متعدد.",
-      "explanation_correct_en": "Lecture 2 (page 9) describes 'N-way superscalar' processors as those that 'fetch N instructions each cycle', where N implies a multiple number.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 30) تعرف مخزن الترجمة المؤقت (TLB) بأنه \"ذاكرة تخزين مؤقت فعالة لترجمة العناوين على الشريحة\" (efficient on-chip address translation cache).",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 30) defines the Translation Lookaside Buffer (TLB) as an \"efficient on-chip address translation cache\".",
       "explanation_wrong_ar": {
-        "A": "جلب تعليمة واحدة هو السلوك القياسي لخط الأنابيب البسيط، وليس لـ superscalar.",
-        "B": "هذه هي الإجابة الصحيحة.",
-        "C": "'الشرطية' تصف نوعًا من التعليمات، وليست كمية التعليمات.",
-        "D": "'التخمينية' تصف آلية لتنفيذ التعليمات، وليست كمية التعليمات."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "I-cache (جزء من L1) يخزن التعليمات، وليس ترجمات العناوين.",
+        "C": "D-cache (جزء من L1) يخزن البيانات، وليس ترجمات العناوين.",
+        "D": "L2 cache تخزن التعليمات والبيانات، ولكن TLB هو المتخصص في *ترجمة العناوين*."
       },
       "explanation_wrong_en": {
-        "A": "Fetching one instruction is standard pipelining, not superscalar.",
-        "B": "This is the correct answer.",
-        "C": "'Conditional' describes a type of instruction, not the quantity.",
-        "D": "'Speculative' describes a mechanism for execution, not the quantity."
+        "A": "This is the correct answer.",
+        "B": "The I-cache (part of L1) stores instructions, not address translations.",
+        "C": "The D-cache (part of L1) stores data, not address translations.",
+        "D": "The L2 cache stores instructions and data, but the TLB is what specializes in *address translation*."
       }
     },
     {
       "question_number": 6,
       "lecture_number": 2,
-      "question_ar": "آلية إعادة تسمية السجلات (Register renaming) تزيل اعتماديات ___ غير الضرورية.",
-      "question_en": "Register renaming removes unnecessary ___ dependencies.",
+      "question_ar": "تحدث \"المشاركة الكاذبة\" (False Sharing) في معالج متعدد النوى (multi-core) عندما تقوم نواتان (cores) بتخزين بيانات مختلفة وغير مشتركة تقع في ___.",
+      "question_en": "False sharing occurs on a multi-core processor when two cores cache two different, non-shared data items that reside on ___.",
       "choices": {
-        "A_ar": "RAW",
-        "A_en": "RAW",
-        "B_ar": "WAR",
-        "B_en": "WAR",
-        "C_ar": "WAW",
-        "C_en": "WAW",
-        "D_ar": "temporal",
-        "D_en": "temporal"
+        "A_ar": "نفس خط الذاكرة المخبئية (the same cache line)",
+        "A_en": "the same cache line",
+        "B_ar": "نفس صفحة الذاكرة (the same memory page)",
+        "B_en": "the same memory page",
+        "C_ar": "ذاكرة L1 cache مختلفة (different L1 caches)",
+        "C_en": "different L1 caches",
+        "D_ar": "نفس السجل (the same register)",
+        "D_en": "the same register"
       },
-      "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الثانية (صفحة 22) تذكر صراحة أن 'إعادة تسمية السجلات ... تزيل اعتماديات WAR (Write-After-Read) غير الضرورية الناتجة عن إعادة استخدام السجلات'.",
-      "explanation_correct_en": "Lecture 2 (page 22) explicitly states that 'Register renaming ... removes unnecessary WAR dependences caused by register reuse'.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 35) تعرف المشاركة الكاذبة بأنها تحدث عندما \"تخزن ذاكرتان مختبئتان ... بيانات مختلفة غير مشتركة تقع في نفس خط الذاكرة المخبئية (same cache line)\". هذا يجبر بروتوكول تماسك الذاكرة المخبئية على إبطال الخط (mark dirty) دون داعٍ.",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 35) defines false sharing as occurring when \"two caches ... cache two different non-shared data items that reside on the same cache line\". This forces the cache coherency protocol to unnecessarily mark the line dirty.",
       "explanation_wrong_ar": {
-        "A": "اعتمادية RAW هي 'اعتمادية حقيقية (true dependence)' ولا يمكن إزالتها.",
-        "B": "هذه هي الإجابة الصحيحة.",
-        "C": "اعتمادية WAW هي أيضًا 'اعتمادية زائفة' يمكن إزالتها، ولكن المحاضرة ركزت على WAR.",
-        "D": "'الزمانية' تصف 'الموضعية الزمانية'، وليست نوعًا من اعتماديات البيانات."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "الصفحات (Pages) كبيرة جدًا (مثل 4KB)؛ المشاركة الكاذبة هي مشكلة على مستوى \"خط الذاكرة المخبئية\" (cache line) الأصغر بكثير (مثل 64 بايت).",
+        "C": "وجود البيانات في L1 caches مختلفة هو شرط لحدوث المشكلة، وليس السبب. السبب هو أن هذه البيانات (الموجودة في L1 caches مختلفة) تشترك في *نفس خط الذاكرة المخبئية*.",
+        "D": "السجلات (Registers) خاصة بكل نواة (core) ولا تتم مشاركتها أو جعلها متماسكة (coherent) بهذه الطريقة."
       },
       "explanation_wrong_en": {
-        "A": "RAW is a 'true dependence' and cannot be removed.",
-        "B": "This is the correct answer.",
-        "C": "WAW is also a 'false dependence' that can be removed, but the lecture highlighted WAR.",
-        "D": "'Temporal' describes 'Temporal locality', not a type of data dependency."
+        "A": "This is the correct answer.",
+        "B": "Pages are very large (e.g., 4KB); false sharing is a problem at the much smaller cache line level (e.g., 64 bytes).",
+        "C": "Having data in different L1 caches is a prerequisite for the problem, not the cause. The cause is that this data (in different L1s) shares *the same cache line*.",
+        "D": "Registers are private to each core and are not shared or kept coherent in this way."
       }
     },
     {
       "question_number": 7,
       "lecture_number": 2,
-      "question_ar": "التكهن بالتحكم (Control speculation) ينفذ التعليمات الشرطية ___ الفرع (branch).",
-      "question_en": "Control speculation executes conditional instructions ___ the branch.",
+      "question_ar": "في تسلسل مستويات التوازي، ما هي التقنية التي تنفذ عمل خيطين (threads) مع موارد مشتركة على الشريحة؟",
+      "question_en": "In the levels of parallelism hierarchy, which technique executes the work of two threads with shared on-chip resources?",
       "choices": {
-        "A_ar": "بعد (after)",
-        "A_en": "after",
-        "B_ar": "قبل (before)",
-        "B_en": "before",
-        "C_ar": "ضمن (within)",
-        "C_en": "within",
-        "D_ar": "خارج (outside)",
-        "D_en": "outside"
+        "A_ar": "توازي مستوى التعليمات (Instruction-level parallelism)",
+        "A_en": "Instruction-level parallelism",
+        "B_ar": "المعالجة الفائقة (Hyper-threading)",
+        "B_en": "Hyper-threading",
+        "C_ar": "نواة ثنائية (2 cores on 1 chip)",
+        "C_en": "2 cores on 1 chip",
+        "D_ar": "المعالجة المتعددة (Multiprocessing)",
+        "D_en": "Multiprocessing"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الثانية (صفحة 24) تعرّف 'التكهن بالتحكم' بأنه 'يسمح للتعليمات الشرطية بأن تُنفذ قبل (before) فرع التحكم (conditional branch)'.",
-      "explanation_correct_en": "Lecture 2 (page 24) defines 'Control speculation' as allowing 'conditional instructions to be executed before the conditional branch'.",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (B). الرسم البياني في (صفحة 3) يوضح أن 'Hyper-threading' (المعالجة الفائقة) هي التقنية التي \"تنفذ عمل خيطين مع موارد مشتركة على الشريحة\".",
+      "explanation_correct_en": "The correct answer is (B). The diagram on (Page 3) explicitly shows 'Hyper-threading' as the technique that \"Executes the work of two threads with shared on-chip resources\".",
       "explanation_wrong_ar": {
-        "A": "التنفيذ 'بعد' الفرع هو السلوك الطبيعي إذا لم يتم اتخاذ الفرع.",
+        "A": "توازي مستوى التعليمات ينفذ تعليمات متعددة في نفس الوقت، ولكنه لا يدير خيوط (threads) منفصلة.",
         "B": "هذه هي الإجابة الصحيحة.",
-        "C": "مصطلح غامض ولا يصف المفهوم.",
-        "D": "مصطلح غامض ولا يصف المفهوم."
+        "C": "النواة الثنائية (2 cores) تنفذ خيطين (أو أكثر) ولكن على أنوية *منفصلة*، وليست بالضرورة بموارد مشتركة بنفس طريقة Hyper-threading.",
+        "D": "المعالجة المتعددة (Multiprocessing) تشير إلى معالجات (processors) متعددة، وهو مستوى أعلى من التوازي."
       },
       "explanation_wrong_en": {
-        "A": "Executing 'after' the branch is the normal behavior if the branch isn't taken.",
+        "A": "Instruction-level parallelism executes multiple instructions at the same time, but doesn't manage separate threads.",
         "B": "This is the correct answer.",
-        "C": "Vague term that doesn't describe the concept.",
-        "D": "Vague term that doesn't describe the concept."
+        "C": "2 cores execute two (or more) threads but on *separate* cores, not necessarily with shared resources in the same way as Hyper-threading.",
+        "D": "Multiprocessing refers to multiple processors, which is a higher level of parallelism."
       }
     },
     {
       "question_number": 8,
       "lecture_number": 2,
-      "question_ar": "إخفاقات ذاكرة التخزين المؤقت (Cache misses) لها ثلاثة أنواع رئيسية: إجبارية (compulsory)، وسعة (capacity)، و ___.",
-      "question_en": "Cache misses are of three main types: compulsory, capacity, and ___.",
+      "question_ar": "في خط الأنابيب الكلاسيكي ذي الـ 5 مراحل، ما هي المرحلة المسؤولة عن 'جلب التعليمات' (instruction fetch)؟",
+      "question_en": "In the classic 5-stage pipeline, which stage is responsible for 'instruction fetch'?",
       "choices": {
-        "A_ar": "سجل (register)",
-        "A_en": "register",
-        "B_ar": "تماسك (coherence)",
-        "B_en": "coherence",
-        "C_ar": "تعارض (conflict)",
-        "C_en": "conflict",
-        "D_ar": "تسلسلي (sequential)",
-        "D_en": "sequential"
+        "A_ar": "ID",
+        "A_en": "ID",
+        "B_ar": "EX",
+        "B_en": "EX",
+        "C_ar": "IF",
+        "C_en": "IF",
+        "D_ar": "MEM",
+        "D_en": "MEM"
       },
       "correct_choice": "C",
-      "explanation_correct_ar": "المحاضرة الثانية (صفحة 34) تعدد صراحة الأنواع الثلاثة: Compulsory, Capacity, و Conflict misses.",
-      "explanation_correct_en": "Lecture 2 (page 34) explicitly lists the three types: Compulsory, Capacity, and Conflict misses.",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 6) تعرف المراحل الخمس الكلاسيكية لخط الأنابيب، حيث 'IF' هي اختصار لـ 'instruction fetch'.",
+      "explanation_correct_en": "The correct answer is (C). The lecture (Page 6) defines the classic 5-stage pipeline, where 'IF' stands for 'instruction fetch'.",
       "explanation_wrong_ar": {
-        "A": "السجلات هي مستوى أعلى من ذاكرة التخزين المؤقت، وليست نوعًا من إخفاقاتها.",
-        "B": "'التماسك' هو بروتوكول، ومشاكله تسبب 'False Sharing'، لكنه ليس نوعًا من الإخفاق.",
+        "A": "ID ترمز إلى 'instruction decode' (فك تشفير التعليمات).",
+        "B": "EX ترمز إلى 'execute' (تنفيذ).",
         "C": "هذه هي الإجابة الصحيحة.",
-        "D": "لم يُذكر هذا المصطلح كنوع من إخفاقات ذاكرة التخزين المؤقت."
+        "D": "MEM ترمز إلى 'load/store' (الوصول للذاكرة)."
       },
       "explanation_wrong_en": {
-        "A": "Registers are a level above cache, not a type of miss.",
-        "B": "'Coherence' is a protocol; its issues cause 'False Sharing', but it's not a miss type.",
+        "A": "ID stands for 'instruction decode'.",
+        "B": "EX stands for 'execute'.",
         "C": "This is the correct answer.",
-        "D": "This term was not mentioned as a type of cache miss."
+        "D": "MEM stands for 'load/store' (memory access)."
       }
     },
     {
       "question_number": 9,
-      "lecture_number": 3,
-      "question_ar": "تُعرف المعالجات المتعددة ذات الذاكرة المشتركة (Shared memory multiprocessors) أيضًا باسم ___.",
-      "question_en": "Shared memory multiprocessors are also known as ___.",
+      "lecture_number": 2,
+      "question_ar": "عندما يتم حل خطر في خط الأنابيب (pipeline hazard) عن طريق إيقاف خط الأنابيب، فإن هذا يتسبب في ___ من دورة واحدة أو أكثر.",
+      "question_en": "When a pipeline hazard is resolved by stalling the pipeline, it causes a ___ of one or more cycles.",
       "choices": {
-        "A_ar": "MPP",
-        "A_en": "MPP",
-        "B_ar": "NUMA",
-        "B_en": "NUMA",
-        "C_ar": "SMP",
-        "C_en": "SMP",
-        "D_ar": "COMA",
-        "D_en": "COMA"
+        "A_ar": "فقاعة (bubble)",
+        "A_en": "bubble",
+        "B_ar": "إخفاق (miss)",
+        "B_en": "miss",
+        "C_ar": "تكهن (speculation)",
+        "C_en": "speculation",
+        "D_ar": "اعتماد (dependence)",
+        "D_en": "dependence"
       },
-      "correct_choice": "C",
-      "explanation_correct_ar": "المحاضرة الثالثة (صفحة 4) تذكر صراحة أن هذه البنية 'تُعرف أحيانًا باسم \"المعالجات المتعددة المتماثلة - SMP\"'.",
-      "explanation_correct_en": "Lecture 3 (page 4) explicitly states this architecture is 'sometimes known as a \"Symmetric Multiprocessors - SMP\"'.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 8) تنص على أن \"الخطر يتم حله عن طريق إيقاف خط الأنابيب، مما يتسبب في فقاعة (bubble) من دورة واحدة أو أكثر\". مثال على ذلك هو إدراج (NOP).",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 8) states that \"A hazard is resolved by stalling the pipeline, which causes a bubble of one or more cycles\". An example is inserting a NOP (no-operation).",
       "explanation_wrong_ar": {
-        "A": "MPP يُستخدم لوصف أنظمة الذاكرة الموزعة (صفحة 10).",
-        "B": "NUMA هو نوع من الوصول للذاكرة، وليس مرادفًا لـ SMP.",
-        "C": "هذه هي الإجابة الصحيحة.",
-        "D": "COMA هو نوع محدد من أبنية الذاكرة المخبئية (صفحة 9)."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "الإخفاق (miss) هو نوع من الأخطار (مثل cache miss)، ولكنه ليس اسم الدورة الضائعة نفسها.",
+        "C": "التكهن (speculation) هو تقنية لتجنب الإيقاف، وليس نتيجة له.",
+        "D": "الاعتماد (dependence) هو *سبب* الخطر، وليس اسم الدورة الضائعة."
       },
       "explanation_wrong_en": {
-        "A": "MPP is used for Distributed Memory systems (page 10).",
-        "B": "NUMA is a type of memory access, not synonymous with SMP.",
-        "C": "This is the correct answer.",
-        "D": "COMA is a specific cache-only architecture (page 9)."
+        "A": "This is the correct answer.",
+        "B": "A 'miss' is a type of hazard (e.g., cache miss), but it is not the name for the resulting stalled cycle itself.",
+        "C": "Speculation is a technique to avoid stalls, not the result of one.",
+        "D": "A 'dependence' is the *cause* of the hazard, not the name for the stalled cycle."
       }
     },
     {
       "question_number": 10,
-      "lecture_number": 3,
-      "question_ar": "نسبة عمليات الفاصلة العائمة (floating-point operations) إلى عمليات الوصول المميزة للذاكرة (distinct memory accesses) هي نسبة ___.",
-      "question_en": "The ratio of floating-point operations to distinct memory accesses is the ___ ratio.",
+      "lecture_number": 2,
+      "question_ar": "تقوم معالجات Pentium بترجمة تعليمات CISC المعقدة إلى عمليات أبسط شبيهة بـ RISC تسمى ___.",
+      "question_en": "Pentium processors translate complex CISC instructions into simpler, RISC-like operations called ___.",
       "choices": {
-        "A_ar": "عرض النطاق (bandwidth)",
-        "A_en": "bandwidth",
-        "B_ar": "FP:M",
-        "B_en": "FP:M",
-        "C_ar": "I/O (الإدخال/الإخراج)",
-        "C_en": "I/O",
-        "D_ar": "W/F",
-        "D_en": "W/F"
+        "A_ar": "uOps (عمليات دقيقة)",
+        "A_en": "uOps (micro-ops)",
+        "B_ar": "Macro-ops (عمليات كلية)",
+        "B_en": "Macro-ops",
+        "C_ar": "Vectors (متجهات)",
+        "C_en": "Vectors",
+        "D_ar": "Kernels (أنوية)",
+        "D_en": "Kernels"
       },
-      "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الثالثة (صفحة 6) تعرّف 'نسبة العمل إلى الذاكرة' وتطلق عليها اسم 'نسبة FP:M (FP:M ratio)'.",
-      "explanation_correct_en": "Lecture 3 (page 6) defines the 'Work-memory ratio' and calls it the 'FP:M ratio'.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تذكر أن \"معالجات Pentium تترجم تعليمات CISC إلى uOps شبيهة بـ RISC\". وتستخدم الصفحة 11 أيضًا مصطلح 'uOps'.",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) states that \"Pentium processors translate CISC instructions to RISC-like uOps\". Page 11 also uses the term 'uOps'.",
       "explanation_wrong_ar": {
-        "A": "لم يُعرّف عرض النطاق بهذه النسبة.",
-        "B": "هذه هي الإجابة الصحيحة.",
-        "C": "هذا المصطلح يشير إلى الإدخال والإخراج.",
-        "D": "هذه النسبة (W/F) ذُكرت في (صفحة 5) لكنها تشير إلى نسبة 'الكلمات (Words)' إلى 'التعليمات (F instructions)'."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "Macro-ops هي عمليات أكبر، وهي عكس هذا المفهوم.",
+        "C": "Vectors (المتجهات) تستخدم في آلات المتجهات (Page 2)، وليست المصطلح المستخدم لهذه الترجمة.",
+        "D": "Kernels (الأنوية) هي روتينات برمجية، وليست عمليات دقيقة للأجهزة."
       },
       "explanation_wrong_en": {
-        "A": "Bandwidth is not defined by this ratio.",
-        "B": "This is the correct answer.",
-        "C": "This term refers to Input/Output.",
-        "D": "This ratio (W/F) was mentioned (page 5) but refers to 'Words (W)' to 'Instructions (F)'."
+        "A": "This is the correct answer.",
+        "B": "Macro-ops are larger operations, the opposite of this concept.",
+        "C": "Vectors are used in vector machines (Page 2), not the term for this translation.",
+        "D": "Kernels are software routines, not hardware micro-operations."
       }
     },
     {
       "question_number": 11,
-      "lecture_number": 4,
-      "question_ar": "التنميط القائم على الأدوات (Instrumentation-based profiling) يضيف:",
-      "question_en": "Instrumentation-based profiling adds:",
+      "lecture_number": 2,
+      "question_ar": "ما هو المكون في معالج Pentium 4 الذي يخزن \"آثار\" (traces) من uOps التي تم فك تشفيرها ليتم جلبها مرة أخرى، خاصة في الحلقات (loops)؟",
+      "question_en": "What component in the Pentium 4 stores 'traces' of decoded uOps to be fetched again, especially in loops?",
       "choices": {
-        "A_ar": "عدادات (Counters)",
-        "A_en": "Counters",
-        "B_ar": "سجلات (Logs)",
-        "B_en": "Logs",
-        "C_ar": "نقاط توقف (Breakpoints)",
-        "C_en": "Breakpoints",
-        "D_ar": "خيوط (Threads)",
-        "D_en": "Threads"
+        "A_ar": "L1 Data Cache",
+        "A_en": "L1 Data Cache",
+        "B_ar": "Trace Cache",
+        "B_en": "Trace Cache",
+        "C_ar": "Branch Prediction Unit",
+        "C_en": "Branch Prediction Unit",
+        "D_ar": "Execution Out-of-Order Core",
+        "D_en": "Execution Out-of-Order Core"
       },
-      "correct_choice": "A",
-      "explanation_correct_ar": "المحاضرة الرابعة (صفحة 10) تصف هذا النوع من التنميط بأنه 'يضيف أدوات للكود لتسجيل الأحداث، عادةً باستخدام عدادات (counters)'.",
-      "explanation_correct_en": "Lecture 4 (page 10) describes this type of profiling as 'Instruments code to record events, usually with counters'.",
+      "correct_choice": "B",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 11) تشرح أن Pentium 4 يودع uOps في 'trace cache' (ذاكرة التخزين المؤقت للآثار)، مما يسمح للمعالج بجلب \"أثر uOps لتعليمة يتم تنفيذها مرة أخرى (على سبيل المثال، في حلقة)\".",
+      "explanation_correct_en": "The correct answer is (B). The lecture (Page 11) explains that the Pentium 4 deposits uOps in a 'trace cache', which allows the processor to fetch the \"uOps trace of an instruction that is executed again (e.g. in a loop)\".",
       "explanation_wrong_ar": {
-        "A": "هذه هي الإجابة الصحيحة.",
-        "B": "'العدادات' هي الأداة المحددة المضافة للكود، وليس 'السجلات' بشكل عام.",
-        "C": "نقاط التوقف تُستخدم في مصححات الأخطاء، وليست في التنميط.",
-        "D": "الخيوط هي جزء من البرنامج، وليست أداة يضيفها المنمّط."
+        "A": "L1 Data Cache تخزن البيانات، وليس آثار التعليمات المترجمة.",
+        "B": "هذه هي الإجابة الصحيحة.",
+        "C": "وحدة توقع التفرع تتوقع مسار التفرعات، ولكنها لا تخزن آثار uOps.",
+        "D": "نواة التنفيذ خارج الترتيب هي المكان الذي يتم فيه تنفيذ uOps، وليس تخزينها مسبقًا."
       },
       "explanation_wrong_en": {
-        "A": "This is the correct answer.",
-        "B": "'Counters' are the specific tool added, not 'Logs' in general.",
-        "C": "Breakpoints are used in debuggers, not profiling.",
-        "D": "Threads are part of the program, not a tool added by the profiler."
+        "A": "The L1 Data Cache stores data, not traces of decoded instructions.",
+        "B": "This is the correct answer.",
+        "C": "The Branch Prediction Unit predicts branch direction, but doesn't store uOps traces.",
+        "D": "The Execution Out-of-Order Core is where uOps are executed, not where they are pre-stored."
       }
     },
     {
       "question_number": 12,
-      "lecture_number": 4,
-      "question_ar": "تحدث 'أخطاء هايزنبرج (Heisenbugs)' بسبب:",
-      "question_en": "Heisenbugs occur due to:",
+      "lecture_number": 2,
+      "question_ar": "عندما يستطيع المعالج تنفيذ التعليمات بترتيب مختلف عن ترتيبها في البرنامج، تسمى هذه القدرة ___.",
+      "question_en": "When a processor can execute instructions in an order different from their program order, this capability is called ___.",
       "choices": {
-        "A_ar": "تسريب الذاكرة (Memory leaks)",
-        "A_en": "Memory leaks",
-        "B_ar": "تغيرات التوقيت (Timing changes)",
-        "B_en": "Timing changes",
-        "C_ar": "أخطاء الصياغة (Syntax errors)",
-        "C_en": "Syntax errors",
-        "D_ar": "أخطاء المترجم (Compiler bugs)",
-        "D_en": "Compiler bugs"
+        "A_ar": "تنفيذ خارج الترتيب (Out-of-Order Execution)",
+        "A_en": "Out-of-Order Execution",
+        "B_ar": "تنفيذ داخل الترتيب (In-Order Execution)",
+        "B_en": "In-Order Execution",
+        "C_ar": "جدولة ثابتة (Static Scheduling)",
+        "C_en": "Static Scheduling",
+        "D_ar": "توقع التفرع (Branch Prediction)",
+        "D_en": "Branch Prediction"
       },
-      "correct_choice": "B",
-      "explanation_correct_ar": "المحاضرة الرابعة (صفحة 11) تشرح أن 'Heisenbugs' تحدث 'عندما يؤدي التنميط ... إلى تغيير وقت التشغيل (changes the running time)'، مما 'يغير التوقيت الداخلي (internal timing) للأحداث'.",
-      "explanation_correct_en": "Lecture 4 (page 11) explains 'Heisenbugs' occur 'when profiling ... that changes the running time', which 'changes the internal timing of events'.",
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 12) تصف مرحلة التنفيذ في Pentium 4، مشيرة إلى أن \"uOp يمكن تنفيذه خارج الترتيب (out-of-order) الذي ظهر به\". هذا جزء من الجدولة الديناميكية (صفحة 21).",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 12) describes the Pentium 4 execution stage, stating that \"A uOp can be executed out-of-order in which it appeared\". This is part of dynamic scheduling (Page 21).",
       "explanation_wrong_ar": {
-        "A": "المحاضرة لم تربط 'Heisenbugs' بتسريب الذاكرة.",
-        "B": "هذه هي الإجابة الصحيحة.",
-        "C": "أخطاء الصياغة يتم اكتشافها بواسطة المترجم قبل تشغيل البرنامج.",
-        "D": "المحاضرة تعزو 'Heisenbugs' إلى تأثير أداة التنميط، وليس خطأ في المترجم."
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "التنفيذ داخل الترتيب هو السلوك الأبسط الذي لا يعيد ترتيب التعليمات.",
+        "C": "الجدولة الثابتة (Static Scheduling) تتم بواسطة المترجم (compiler) قبل التنفيذ، وليس بواسطة المعالج أثناء التنفيذ.",
+        "D": "توقع التفرع هو تقنية مختلفة تتعامل مع تعليمات 'if' و 'loops'."
       },
       "explanation_wrong_en": {
-        "A": "The lecture does not link 'Heisenbugs' to memory leaks.",
+        "A": "This is the correct answer.",
+        "B": "In-Order Execution is the simpler behavior that does not reorder instructions.",
+        "C": "Static Scheduling is done by the compiler before execution, not by the processor during execution.",
+        "D": "Branch Prediction is a different technique for handling 'if' statements and loops."
+      }
+    },
+    {
+      "question_number": 13,
+      "lecture_number": 2,
+      "question_ar": "ما هي المرحلة في خط أنابيب Pentium 4 المسؤولة عن إعادة التعليمات إلى ترتيبها الأصلي؟",
+      "question_en": "What stage in the Pentium 4 pipeline is responsible for putting instructions back in their original order?",
+      "choices": {
+        "A_ar": "Fetch/Decode",
+        "A_en": "Fetch/Decode",
+        "B_ar": "Execution",
+        "B_en": "Execution",
+        "C_ar": "Retirement",
+        "C_en": "Retirement",
+        "D_ar": "Trace Cache",
+        "D_en": "Trace Cache"
+      },
+      "correct_choice": "C",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 13) تصف مرحلة 'Retirement' (الاعتماد) بأنها تبحث عن التعليمات المكتملة وتتأكد من أن جميع التعليمات السابقة قد تم \"اعتمادها\"، وهو ما يعني \"إعادة التعليمات إلى ترتيبها الصحيح\".",
+      "explanation_correct_en": "The correct answer is (C). The lecture (Page 13) describes the 'Retirement' stage as looking for completed instructions and ensuring all preceding instructions are retired, which it defines as \"(putting instructions back in order)\".",
+      "explanation_wrong_ar": {
+        "A": "Fetch/Decode يحدث في البداية، قبل تنفيذ أي شيء خارج الترتيب.",
+        "B": "Execution (التنفيذ) هو حيث يحدث التنفيذ خارج الترتيب.",
+        "C": "هذه هي الإجابة الصحيحة.",
+        "D": "Trace Cache هو ذاكرة تخزين مؤقت للمساعدة في مرحلة Fetch/Decode."
+      },
+      "explanation_wrong_en": {
+        "A": "Fetch/Decode happens at the beginning, before out-of-order execution.",
+        "B": "Execution is where the out-of-order execution happens.",
+        "C": "This is the correct answer.",
+        "D": "The Trace Cache is a cache to help the Fetch/Decode stage."
+      }
+    },
+    {
+      "question_number": 14,
+      "lecture_number": 2,
+      "question_ar": "لتحقيق أقصى سرعة للمعالج (إنتاجية عالية)، يجب أن تكون نسبة عمليات الفاصلة العائمة (FP) إلى عمليات الذاكرة (MEM)...",
+      "question_en": "For processors to run at maximum speed (high instruction per cycle rate), the FP to memory operation ratio (FP : MEM) should be...",
+      "choices": {
+        "A_ar": "عالية (FP : MEM > 1)",
+        "A_en": "high (FP : MEM > 1)",
+        "B_ar": "منخفضة (FP : MEM < 1)",
+        "B_en": "low (FP : MEM < 1)",
+        "C_ar": "متساوية (FP : MEM = 1)",
+        "C_en": "equal (FP : MEM = 1)",
+        "D_ar": "صفر (FP : MEM = 0)",
+        "D_en": "zero (FP : MEM = 0)"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 14)، في نقطة #3 حول تحسين البرمجيات، تنص على أن المعالجات تعمل بأقصى سرعة عندما تكون \"نسبة FP إلى عمليات الذاكرة عالية (FP : MEM > 1)\".",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 14), in point #3 on software optimization, states that processors run at maximum speed when \"The FP to memory operation ratio is high (FP : MEM > 1)\".",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "النسبة المنخفضة تعني أن المعالج يقضي وقتًا طويلاً في انتظار الذاكرة (memory-bound)، وهو ما يقلل الإنتاجية.",
+        "C": "النسبة المتساوية جيدة، ولكن \"عالية\" (أكثر من 1) هي المثالية لأن عمليات FP أسرع من الوصول للذاكرة.",
+        "D": "النسبة صفر تعني عدم وجود عمليات فاصلة عائمة، وهو أمر غير مرغوب فيه للحسابات العلمية."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "A low ratio means the processor spends too much time waiting for memory (memory-bound), which hurts throughput.",
+        "C": "An equal ratio is good, but 'high' (greater than 1) is ideal because FP ops are faster than memory access.",
+        "D": "A zero ratio means no floating-point work is being done, which is not desirable for scientific computing."
+      }
+    },
+    {
+      "question_number": 15,
+      "lecture_number": 2,
+      "question_ar": "عدد دورات الساعة (clocks) التي يجب الانتظار لها قبل بدء تعليمة *مطابقة* (identical) تستخدم نفس وحدة التنفيذ، يُعرّف بأنه ___.",
+      "question_en": "The number of clocks to wait before starting an *identical* instruction that uses the same execution unit is defined as ___.",
+      "choices": {
+        "A_ar": "زمن الوصول (Latency)",
+        "A_en": "Latency",
+        "B_ar": "الإنتاجية (Throughput)",
+        "B_en": "Throughput",
+        "C_ar": "زمن الدورة (Cycle time)",
+        "C_en": "Cycle time",
+        "D_ar": "عرض النطاق الترددي (Bandwidth)",
+        "D_en": "Bandwidth"
+      },
+      "correct_choice": "B",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 15) تعرف 'Throughput' (الإنتاجية) بأنه \"عدد دورات الساعة للانتظار قبل بدء تعليمة مطابقة\".",
+      "explanation_correct_en": "The correct answer is (B). The lecture (Page 15) defines 'Throughput' as \"the number of clocks to wait before starting an identical instruction\".",
+      "explanation_wrong_ar": {
+        "A": "زمن الوصول (Latency) هو عدد الدورات لإكمال التعليمة *الواحدة*، وليس لبدء التالية.",
+        "B": "هذه هي الإجابة الصحيحة.",
+        "C": "زمن الدورة هو مدة الدورة الواحدة للساعة.",
+        "D": "عرض النطاق الترددي (Bandwidth) هو مقياس لمعدل نقل البيانات، وليس لجدولة التعليمات."
+      },
+      "explanation_wrong_en": {
+        "A": "'Latency' is the number of clocks to *complete* one instruction, not to start the next identical one.",
         "B": "This is the correct answer.",
-        "C": "Syntax errors are caught by the compiler before the program runs.",
-        "D": "The lecture attributes 'Heisenbugs' to the profiler's effect, not a compiler bug."
+        "C": "Cycle time is the duration of a single clock cycle.",
+        "D": "Bandwidth is a measure of data transfer rate, not instruction scheduling."
+      }
+    },
+    {
+      "question_number": 16,
+      "lecture_number": 2,
+      "question_ar": "عدد دورات الساعة (clocks) لإكمال تعليمة واحدة عندما تكون جميع مدخلاتها جاهزة، يُعرّف بأنه ___.",
+      "question_en": "The number of clocks to complete an instruction when all of its inputs are ready is defined as ___.",
+      "choices": {
+        "A_ar": "زمن الوصول (Latency)",
+        "A_en": "Latency",
+        "B_ar": "الإنتاجية (Throughput)",
+        "B_en": "Throughput",
+        "C_ar": "معدل IPC",
+        "C_en": "IPC rate",
+        "D_ar": "اعتماد (Retirement)",
+        "D_en": "Retirement"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 15) تعرف 'Latency' (زمن الوصول) بأنه \"عدد دورات الساعة لإكمال تعليمة عندما تكون جميع مدخلاتها جاهزة\".",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 15) defines 'Latency' as \"the number of clocks to complete an instruction when all of its inputs are ready\".",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "الإنتاجية (Throughput) هي الزمن قبل بدء التعليمة المطابقة *التالية*.",
+        "C": "IPC (Instructions Per Cycle) هو مقياس لأداء المعالج العام، وليس لتعليمة واحدة.",
+        "D": "الاعتماد (Retirement) هو مرحلة في خط الأنابيب، وليس مقياسًا للزمن."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "'Throughput' is the time before starting the *next* identical instruction.",
+        "C": "IPC (Instructions Per Cycle) is a measure of overall processor performance, not for a single instruction.",
+        "D": "Retirement is a pipeline stage, not a time measurement."
+      }
+    },
+    {
+      "question_number": 17,
+      "lecture_number": 2,
+      "question_ar": "اعتمادية 'Read-After-Write' (RAW) تُعرف أيضًا بأنها اعتمادية ___ وهي اعتمادية \"حقيقية\".",
+      "question_en": "A 'Read-After-Write' (RAW) dependence is also called a ___ dependence and is a \"true\" dependence.",
+      "choices": {
+        "A_ar": "تدفق (flow)",
+        "A_en": "flow",
+        "B_ar": "ضد (anti)",
+        "B_en": "anti",
+        "C_ar": "خرج (output)",
+        "C_en": "output",
+        "D_ar": "تحكم (control)",
+        "D_en": "control"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 18) تذكر صراحة أن \"RAW: read-after-write تسمى أيضًا flow dependence (اعتمادية التدفق)\" وتضيف أن \"RAW هي اعتمادية حقيقية (true dependence)\".",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 18) explicitly states \"RAW: read-after-write also called flow dependence\" and adds \"RAW is a true dependence\".",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "اعتمادية 'Anti' (ضد) هي WAR (Write-After-Read).",
+        "C": "اعتمادية 'Output' (خرج) هي WAW (Write-After-Write).",
+        "D": "اعتمادية التحكم (Control) تتعلق بالتفرعات (branches)، وليست باعتماديات البيانات."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "'Anti' dependence is WAR (Write-After-Read).",
+        "C": "'Output' dependence is WAW (Write-After-Write).",
+        "D": "A control dependence relates to branches, not data dependences."
+      }
+    },
+    {
+      "question_number": 18,
+      "lecture_number": 2,
+      "question_ar": "عندما يقوم *المترجم (compiler)* بنقل التعليمات المستقلة لإخفاء أزمنة الوصول، تسمى هذه العملية ___.",
+      "question_en": "When the *compiler* moves independent instructions to hide latencies, this process is called ___.",
+      "choices": {
+        "A_ar": "جدولة ثابتة (Static scheduling)",
+        "A_en": "Static scheduling",
+        "B_ar": "جدولة ديناميكية (Dynamic scheduling)",
+        "B_en": "Dynamic scheduling",
+        "C_ar": "إعادة تسمية السجلات (Register renaming)",
+        "C_en": "Register renaming",
+        "D_ar": "تنفيذ خارج الترتيب (Out-of-order execution)",
+        "D_en": "Out-of-order execution"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 21) تعرف 'Static scheduling' (الجدولة الثابتة) بأنها عندما \"يقوم المترجم (compiler) بنقل التعليمات المستقلة لأعلى/لأسفل إلى مواضع ثابتة\".",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 21) defines 'Static scheduling' as when \"the compiler moves independent instructions up/down to fixed positions\".",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "الجدولة الديناميكية (Dynamic scheduling) تتم بواسطة *المعالج* (processor) أثناء وقت التشغيل.",
+        "C": "إعادة تسمية السجلات هي تقنية أجهزة (hardware) للتعامل مع اعتماديات WAR، وليست جدولة للمترجم.",
+        "D": "التنفيذ خارج الترتيب هو نتيجة للجدولة الديناميكية التي يقوم بها المعالج."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "'Dynamic scheduling' is performed by the *processor* at runtime.",
+        "C": "Register renaming is a hardware technique to handle WAR dependences, not compiler scheduling.",
+        "D": "Out-of-order execution is the result of dynamic scheduling by the processor."
+      }
+    },
+    {
+      "question_number": 19,
+      "lecture_number": 2,
+      "question_ar": "عندما يقوم *المعالج (processor)* بتنفيذ التعليمات فور جهوزيتها، بغض النظر عن ترتيب البرنامج، تسمى هذه العملية ___.",
+      "question_en": "When the *processor* executes instructions as soon as they are ready, regardless of program order, this process is called ___.",
+      "choices": {
+        "A_ar": "جدولة ثابتة (Static scheduling)",
+        "A_en": "Static scheduling",
+        "B_ar": "جدولة ديناميكية (Dynamic scheduling)",
+        "B_en": "Dynamic scheduling",
+        "C_ar": "تكهن التحكم (Control speculation)",
+        "C_en": "Control speculation",
+        "D_ar": "تكهن البيانات (Data speculation)",
+        "D_en": "Data speculation"
+      },
+      "correct_choice": "B",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 21) تعرف 'Dynamic scheduling' (الجدولة الديناميكية) بأنها عندما \"يقوم المعالج (processor) بتنفيذ التعليمات خارج الترتيب عندما تكون جاهزة\".",
+      "explanation_correct_en": "The correct answer is (B). The lecture (Page 21) defines 'Dynamic scheduling' as when \"the processor executes instructions out of order when they are ready\".",
+      "explanation_wrong_ar": {
+        "A": "الجدولة الثابتة (Static scheduling) تتم بواسطة *المترجم (compiler)*.",
+        "B": "هذه هي الإجابة الصحيحة.",
+        "C": "تكهن التحكم هو تنفيذ التعليمات *قبل* التفرع.",
+        "D": "تكهن البيانات هو تنفيذ 'advanced load' لتجنب اعتمادية."
+      },
+      "explanation_wrong_en": {
+        "A": "'Static scheduling' is performed by the *compiler*.",
+        "B": "This is the correct answer.",
+        "C": "Control speculation is executing instructions *before* a branch.",
+        "D": "Data speculation is performing an 'advanced load' to avoid a dependence."
+      }
+    },
+    {
+      "question_number": 20,
+      "lecture_number": 2,
+      "question_ar": "تقنية \"إعادة تسمية السجلات\" (Register Renaming) التي تتم بواسطة المعالج تزيل اعتماديات ___ عن طريق استخدام سجلات مخفية (hidden registers).",
+      "question_en": "The 'Register Renaming' technique performed by a processor removes ___ dependences by using hidden registers.",
+      "choices": {
+        "A_ar": "RAW (Read-After-Write)",
+        "A_en": "RAW (Read-After-Write)",
+        "B_ar": "WAR (Write-After-Read)",
+        "B_en": "WAR (Write-After-Read)",
+        "C_ar": "اعتماديات حقيقية (True dependences)",
+        "C_en": "True dependences",
+        "D_ar": "اعتماديات تحكم (Control dependences)",
+        "D_en": "Control dependences"
+      },
+      "correct_choice": "B",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 22) تذكر صراحة أن \"إعادة تسمية السجلات... تزيل اعتماديات WAR غير الضرورية\". كما تشرح (صفحة 21) أن WAR هي اعتمادية زائفة يمكن إزالتها.",
+      "explanation_correct_en": "The correct answer is (B). The lecture (Page 22) explicitly states that \"Register renaming... removes unnecessary WAR dependences\". Page 21 also explains WAR is a false dependence that can be removed.",
+      "explanation_wrong_ar": {
+        "A": "لا يمكن إزالة اعتماديات RAW (الحقيقية) لأنها تمثل تدفق البيانات الفعلي. (صفحة 18)",
+        "B": "هذه هي الإجابة الصحيحة.",
+        "C": "الاعتماديات الحقيقية (True dependences) هي RAW، والتي لا يمكن إزالتها.",
+        "D": "اعتماديات التحكم تتعلق بالتفرعات، ويتم التعامل معها بواسطة توقع التفرع."
+      },
+      "explanation_wrong_en": {
+        "A": "RAW (true) dependences cannot be removed as they represent actual data flow. (Page 18)",
+        "B": "This is the correct answer.",
+        "C": "True dependences are RAW dependences, which cannot be removed.",
+        "D": "Control dependences relate to branches and are handled by branch prediction."
+      }
+    },
+    {
+      "question_number": 21,
+      "lecture_number": 2,
+      "question_ar": "استخدام تعليمة 'advanced load' لتجاهل اعتمادية RAW محتملة مع تعليمة 'store' سابقة، هو مثال على ___.",
+      "question_en": "Using an 'advanced load' instruction to ignore a potential RAW dependence with a preceding 'store' instruction is an example of ___.",
+      "choices": {
+        "A_ar": "تكهن البيانات (Data Speculation)",
+        "A_en": "Data Speculation",
+        "B_ar": "تكهن التحكم (Control Speculation)",
+        "B_en": "Control Speculation",
+        "C_ar": "إعادة تسمية السجلات (Register Renaming)",
+        "C_en": "Register Renaming",
+        "D_ar": "توقع التفرع (Branch Prediction)",
+        "D_en": "Branch Prediction"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 23) تصف 'Data Speculation' (تكهن البيانات) بأنه استخدام تعليمة 'advanced load' لتجاهل اعتمادية RAW محتملة مع 'store'، ثم التحقق من النزاع لاحقًا.",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 23) describes 'Data Speculation' as using an 'advanced load' instruction to ignore a potential RAW dependence with a 'store', and sorting out the conflict at run time.",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "تكهن التحكم (Control Speculation) يتعلق بتنفيذ التعليمات *قبل* التفرع (صفحة 24).",
+        "C": "إعادة تسمية السجلات تتعامل مع اعتماديات WAR و WAW، وليس RAW.",
+        "D": "توقع التفرع هو تقنية مختلفة تمامًا للتعامل مع التدفق الشرطي."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "Control speculation relates to executing instructions *before* a branch (Page 24).",
+        "C": "Register renaming deals with WAR and WAW dependences, not RAW.",
+        "D": "Branch prediction is a different technique entirely for handling conditional flow."
+      }
+    },
+    {
+      "question_number": 22,
+      "lecture_number": 2,
+      "question_ar": "عندما يفشل \"توقع التفرع\" (Branch Prediction)، تكون العقوبة (penalty) عادة...",
+      "question_en": "When 'Branch Prediction' is not predicted correctly, the penalty is typically...",
+      "choices": {
+        "A_ar": "0-1 دورة (0-1 cycles)",
+        "A_en": "0-1 cycles",
+        "B_ar": "2-3 دورات (2-3 cycles)",
+        "B_en": "2-3 cycles",
+        "C_ar": "أكثر من 10 دورات (>10 cycles)",
+        "C_en": ">10 cycles",
+        "D_ar": "لا توجد عقوبة (no penalty)",
+        "D_en": "no penalty"
+      },
+      "correct_choice": "C",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 25) تنص على أنه \"عندما لا يتم التوقع بشكل صحيح، تكون العقوبة عادة أكثر من 10 دورات (>10 cycles)\". وتؤكد (صفحة 13) أن هذا يستغرق \"10 دورات تقريبًا\".",
+      "explanation_correct_en": "The correct answer is (C). The lecture (Page 25) states, \"When not predicted correctly, the penalty is typically >10 cycles\". Page 13 confirms this takes \"approx 10 cycles\".",
+      "explanation_wrong_ar": {
+        "A": "هذه العقوبة صغيرة جدًا. 0 دورات هي حالة التوقع الصحيح.",
+        "B": "هذه العقوبة لا تزال صغيرة جدًا. العقوبة الحقيقية كبيرة لأن خط الأنابيب بأكمله يجب تفريغه.",
+        "C": "هذه هي الإجابة الصحيحة.",
+        "D": "لا توجد عقوبة فقط عندما يتم التوقع بشكل صحيح."
+      },
+      "explanation_wrong_en": {
+        "A": "This is too small. 0 cycles is the 'correctly predicted' case.",
+        "B": "This is still too small. The real penalty is large because the pipeline must be flushed.",
+        "C": "This is the correct answer.",
+        "D": "There is 'no penalty' only when predicted correctly."
+      }
+    },
+    {
+      "question_number": 23,
+      "lecture_number": 2,
+      "question_ar": "أي مما يلي *ليس* طريقة مقترحة في المحاضرة لتحسين \"توقع التفرع\" (Branch Prediction)؟",
+      "question_en": "Which of the following is *not* a suggested method in the lecture for improving 'Branch Prediction'?",
+      "choices": {
+        "A_ar": "نقل الشرط الأسهل توقعه إلى بداية التعبير",
+        "A_en": "Move the simplest to predict condition to the front",
+        "B_ar": "استخدام min/max لتجنب التفرعات",
+        "B_en": "Use min/max or arithmetic to avoid branches",
+        "C_ar": "استخدام حلقات (loops) أكثر",
+        "C_en": "Use more loops",
+        "D_ar": "إعادة كتابة (t1==0 && t2==0) إلى ( (t1|t2|t3)==0 )",
+        "D_en": "Rewrite (t1==0 && t2==0) to ( (t1|t2|t3)==0 )"
+      },
+      "correct_choice": "C",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 26) تقترح A و B و D كطرق لتحسين أداء التفرع. لكنها لا تقترح \"استخدام حلقات أكثر\"؛ الحلقات نفسها تحتوي على تفرعات تحتاج إلى توقع.",
+      "explanation_correct_en": "The correct answer is (C). The lecture (Page 26) suggests A, B, and D as ways to improve branch performance. It does not suggest 'using more loops'; loops themselves contain branches that need prediction.",
+      "explanation_wrong_ar": {
+        "A": "تم اقتراح هذا في (صفحة 26) (if (i == 0 && a[i]>0)).",
+        "B": "تم اقتراح هذا في (صفحة 26) (a = min(a, 255)).",
+        "C": "هذه هي الإجابة الصحيحة (لم يتم اقتراحها).",
+        "D": "تم اقتراح هذا في (صفحة 26) كطريقة لإعادة كتابة العبارات المنطقية."
+      },
+      "explanation_wrong_en": {
+        "A": "This is suggested on (Page 26) (if (i == 0 && a[i]>0)).",
+        "B": "This is suggested on (Page 26) (a = min(a, 255)).",
+        "C": "This is the correct answer (it is not suggested).",
+        "D": "This is suggested on (Page 26) as a way to rewrite logical expressions."
+      }
+    },
+    {
+      "question_number": 24,
+      "lecture_number": 2,
+      "question_ar": "في التسلسل الهرمي للذاكرة، أي مستوى يتميز بأنه الأسرع ويتم إدارته بواسطة \"المترجم\" (compiler)؟",
+      "question_en": "In the memory hierarchy, which level is the fastest and is managed by the 'compiler'?",
+      "choices": {
+        "A_ar": "السجلات (registers)",
+        "A_en": "registers",
+        "B_ar": "الذاكرة المخبئية (cache)",
+        "B_en": "cache",
+        "C_ar": "الذاكرة الرئيسية (main memory)",
+        "C_en": "main memory",
+        "D_ar": "التخزين على القرص (disk storage)",
+        "D_en": "disk storage"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). الجدول في (صفحة 29) يوضح أن 'registers' (السجلات) هي المستوى 1، ولها أسرع زمن وصول (0.25-0.5 نانوثانية)، ويتم إدارتها بواسطة 'compiler' (المترجم).",
+      "explanation_correct_en": "The correct answer is (A). The table on (Page 29) shows that 'registers' are Level 1, have the fastest access time (0.25-0.5 ns), and are 'Managed by' the 'compiler'.",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "الذاكرة المخبئية (cache) أبطأ من السجلات ويتم إدارتها بواسطة 'الأجهزة' (hardware).",
+        "C": "الذاكرة الرئيسية (main memory) أبطأ بكثير ويتم إدارتها بواسطة 'نظام التشغيل' (operating system).",
+        "D": "التخزين على القرص (disk storage) هو الأبطأ على الإطلاق ويتم إدارته بواسطة 'نظام التشغيل' (operating system)."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "'cache' is slower than registers and is managed by 'hardware'.",
+        "C": "'main memory' is much slower and is managed by the 'operating system'.",
+        "D": "'disk storage' is the slowest and is managed by the 'operating system'."
+      }
+    },
+    {
+      "question_number": 25,
+      "lecture_number": 2,
+      "question_ar": "أي مستوى في التسلسل الهرمي للذاكرة يتم إدارته بواسطة \"نظام التشغيل\" (operating system)؟",
+      "question_en": "Which level in the memory hierarchy is managed by the 'operating system'?",
+      "choices": {
+        "A_ar": "السجلات (registers)",
+        "A_en": "registers",
+        "B_ar": "الذاكرة المخبئية (cache)",
+        "B_en": "cache",
+        "C_ar": "الذاكرة الرئيسية (main memory)",
+        "C_en": "main memory",
+        "D_ar": "السجلات المخفية (Hidden registers)",
+        "D_en": "Hidden registers"
+      },
+      "correct_choice": "C",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). الجدول في (صفحة 29) يوضح أن 'main memory' (الذاكرة الرئيسية) (وكذلك 'disk storage') يتم إدارتها بواسطة 'operating system' (نظام التشغيل).",
+      "explanation_correct_en": "The correct answer is (C). The table on (Page 29) shows that 'main memory' (as well as 'disk storage') is 'Managed by' the 'operating system'.",
+      "explanation_wrong_ar": {
+        "A": "السجلات (registers) تدار بواسطة 'المترجم' (compiler).",
+        "B": "الذاكرة المخبئية (cache) تدار بواسطة 'الأجهزة' (hardware).",
+        "C": "هذه هي الإجابة الصحيحة.",
+        "D": "السجلات المخفية هي جزء من أجهزة المعالج لإعادة تسمية السجلات، وليست مستوى ذاكرة مدار بواسطة نظام التشغيل."
+      },
+      "explanation_wrong_en": {
+        "A": "'registers' are managed by the 'compiler'.",
+        "B": "'cache' is managed by 'hardware'.",
+        "C": "This is the correct answer.",
+        "D": "Hidden registers are part of the processor hardware for register renaming, not an OS-managed memory level."
+      }
+    },
+    {
+      "question_number": 26,
+      "lecture_number": 2,
+      "question_ar": "عندما لا يتم العثور على ترجمة عنوان في 'مخزن الترجمة المؤقت' (TLB)، يُطلق على هذا الحدث ___.",
+      "question_en": "When an address translation is not found in the 'Translation Lookaside Buffer' (TLB), this event is called a ___.",
+      "choices": {
+        "A_ar": "TLB miss (إخفاق TLB)",
+        "A_en": "TLB miss",
+        "B_ar": "TLB hit (إصابة TLB)",
+        "B_en": "TLB hit",
+        "C_ar": "Page fault (خطأ صفحة)",
+        "C_en": "Page fault",
+        "D_ar": "Cache miss (إخفاق مخبئية)",
+        "D_en": "Cache miss"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). الرسم البياني في (صفحة 30) يوضح المسار 'No' (لا) من \"هل العنوان مترجم؟\" مشيرًا إلى 'TLB miss handler' (معالج إخفاق TLB). (صفحة 31) توضح أيضًا 'TLB miss' صراحة.",
+      "explanation_correct_en": "The correct answer is (A). The flowchart on (Page 30) shows the 'No' path from \"Is address translated?\" pointing to the 'TLB miss handler'. Page 31 also explicitly labels the 'TLB miss' path.",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "TLB hit (إصابة TLB) تعني أن الترجمة *تم العثور عليها*.",
+        "C": "Page fault (خطأ صفحة) يحدث عندما تكون الصفحة *نفسها* غير موجودة في الذاكرة الرئيسية ويجب جلبها من القرص (صفحة 30). إخفاق TLB يحدث أولاً.",
+        "D": "Cache miss (إخفاق مخبئية) يحدث عندما لا تكون *البيانات* (data) موجودة في الذاكرة المخبئية، بعد ترجمة العنوان بنجاح."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "A 'TLB hit' means the translation *was* found.",
+        "C": "A 'Page fault' occurs when the page *itself* is not in main memory and must be fetched from disk (Page 30). A TLB miss happens first.",
+        "D": "A 'Cache miss' occurs when the *data* is not in the cache, *after* the address is successfully translated."
+      }
+    },
+    {
+      "question_number": 27,
+      "lecture_number": 2,
+      "question_ar": "في حالة 'TLB miss' (إخفاق TLB)، يجب على المعالج قراءة ___ للعثور على رقم إطار الصفحة (page frame number) الفيزيائي.",
+      "question_en": "In the event of a 'TLB miss', the processor must read the ___ to find the physical page frame number.",
+      "choices": {
+        "A_ar": "Cache (الذاكرة المخبئية)",
+        "A_en": "Cache",
+        "B_ar": "Registers (السجلات)",
+        "B_en": "Registers",
+        "C_ar": "Page table (جدول الصفحات)",
+        "C_en": "Page table",
+        "D_ar": "Disk (القرص)",
+        "D_en": "Disk"
+      },
+      "correct_choice": "C",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). الرسم البياني في (صفحة 31) يوضح أن مسار 'TLB miss' يؤدي إلى قراءة 'page table' (جدول الصفحات) للعثور على الإطار (frame) 'f' المقابل للصفحة (page) 'p'.",
+      "explanation_correct_en": "The correct answer is (C). The diagram on (Page 31) clearly shows the 'TLB miss' path leading to a read of the 'page table' to find the corresponding frame 'f' for page 'p'.",
+      "explanation_wrong_ar": {
+        "A": "الذاكرة المخبئية تخزن البيانات، وليس جدول ترجمة العناوين (الذي يخزن في الذاكرة الرئيسية).",
+        "B": "السجلات تخزن قيم مؤقتة، وليس جدول الصفحات.",
+        "C": "هذه هي الإجابة الصحيحة.",
+        "D": "القرص لا يتم الوصول إليه إلا في حالة 'Page Fault' (خطأ صفحة)، والذي يحدث بعد إخفاق TLB وفحص جدول الصفحات."
+      },
+      "explanation_wrong_en": {
+        "A": "The cache stores data, not the address translation table (which is in main memory).",
+        "B": "Registers store temporary values, not the page table.",
+        "C": "This is the correct answer.",
+        "D": "The disk is only accessed for a 'Page Fault', which happens *after* the TLB miss and page table check."
+      }
+    },
+    {
+      "question_number": 28,
+      "lecture_number": 2,
+      "question_ar": "تسمى الذاكرة المخبئية (cache) التي يمكن فيها تخزين كل موقع في الذاكرة الرئيسية بواسطة *موقع واحد فقط* في الذاكرة المخبئية ___.",
+      "question_en": "A cache where each location in main memory can be cached by *just one* cache location is called ___.",
+      "choices": {
+        "A_ar": "Direct Mapped (مباشرة الربط)",
+        "A_en": "Direct Mapped",
+        "B_ar": "2-Way Associative (ثنائية الارتباط)",
+        "B_en": "2-Way Associative",
+        "C_ar": "Fully Associative (كاملة الارتباط)",
+        "C_en": "Fully Associative",
+        "D_ar": "Unified (موحدة)",
+        "D_en": "Unified"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 32) تعرف 'Direct mapped cache' (الذاكرة المخبئية مباشرة الربط) بأنها \"كل موقع في الذاكرة الرئيسية يمكن تخزينه بواسطة موقع واحد فقط في الذاكرة المخبئية\".",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 32) defines 'Direct mapped cache' as \"each location in main memory can be cached by just one cache location\".",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "ثنائية الارتباط (2-Way) تسمح بموقعين (two cache locations).",
+        "C": "كاملة الارتباط (Fully Associative) تسمح بـ *أي* موقع (any cache location).",
+        "D": "موحدة (Unified) (مثل L2) تعني أنها تخزن التعليمات والبيانات، وهو مفهوم مختلف عن الارتباط."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "2-Way Associative allows 'one of two cache locations'.",
+        "C": "Fully Associative allows 'any cache location'.",
+        "D": "Unified (like L2) means it stores both instructions and data, which is a different concept from associativity."
+      }
+    },
+    {
+      "question_number": 29,
+      "lecture_number": 2,
+      "question_ar": "تسمى الذاكرة المخبئية (cache) التي يمكن فيها تخزين كل موقع في الذاكرة الرئيسية بواسطة *أي* موقع في الذاكرة المخبئية ___.",
+      "question_en": "A cache where each location in main memory can be cached by *any* cache location is called ___.",
+      "choices": {
+        "A_ar": "Direct Mapped (مباشرة الربط)",
+        "A_en": "Direct Mapped",
+        "B_ar": "N-Way Associative (N-طرق ارتباط)",
+        "B_en": "N-Way Associative",
+        "C_ar": "Fully Associative (كاملة الارتباط)",
+        "C_en": "Fully Associative",
+        "D_ar": "L1 Cache (مخبئية L1)",
+        "D_en": "L1 Cache"
+      },
+      "correct_choice": "C",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 32) تعرف 'Fully associative' (كاملة الارتباط) بأنها \"كل موقع في الذاكرة الرئيسية يمكن تخزينه بواسطة أي موقع في الذاكرة المخبئية\".",
+      "explanation_correct_en": "The correct answer is (C). The lecture (Page 32) defines 'Fully associative' as \"each location in main memory can be cached by any cache location\".",
+      "explanation_wrong_ar": {
+        "A": "مباشرة الربط (Direct Mapped) تسمح بموقع *واحد فقط*.",
+        "B": "ارتباط N-طرق (N-Way Associative) يسمح بـ N موقع، وليس *أي* موقع.",
+        "C": "هذه هي الإجابة الصحيحة.",
+        "D": "L1 Cache هو مستوى في التسلسل الهرمي، وليس نوع ارتباط."
+      },
+      "explanation_wrong_en": {
+        "A": "Direct Mapped allows 'just one' location.",
+        "B": "N-Way Associative allows 'one of N' locations, not 'any' location.",
+        "C": "This is the correct answer.",
+        "D": "L1 Cache is a level in the hierarchy, not an associativity type."
+      }
+    },
+    {
+      "question_number": 30,
+      "lecture_number": 2,
+      "question_ar": "إخفاق الذاكرة المخبئية (Cache Miss) الذي يحدث بسبب المرجع *الأول* لبيانات معينة هو ___.",
+      "question_en": "A cache miss that is caused by the *first* reference to a datum is a ___.",
+      "choices": {
+        "A_ar": "إخفاق إجباري (Compulsory miss)",
+        "A_en": "Compulsory miss",
+        "B_ar": "إخفاق سعة (Capacity miss)",
+        "B_en": "Capacity miss",
+        "C_ar": "إخفاق تضارب (Conflict miss)",
+        "C_en": "Conflict miss",
+        "D_ar": "إخفاق صحيح (True miss)",
+        "D_en": "True miss"
+      },
+      "correct_choice": "A",
+      "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 34) تعرف 'Compulsory misses' (الإخفاقات الإجبارية) بأنها \"تحدث بسبب المرجع الأول لبيانات\".",
+      "explanation_correct_en": "The correct answer is (A). The lecture (Page 34) defines 'Compulsory misses' as \"Caused by the first reference to a datum\".",
+      "explanation_wrong_ar": {
+        "A": "هذه هي الإجابة الصحيحة.",
+        "B": "إخفاق السعة (Capacity miss) يحدث لأن حجم الذاكرة المخبئية محدود (finite size).",
+        "C": "إخفاق التضارب (Conflict miss) يحدث بسبب سياسة الاستبدال أو الارتباط.",
+        "D": "هذا ليس مصطلحًا قياسيًا لأنواع إخفاقات الذاكرة المخبئية."
+      },
+      "explanation_wrong_en": {
+        "A": "This is the correct answer.",
+        "B": "A capacity miss is caused by the finite size of the cache.",
+        "C": "A conflict miss is caused by the replacement policy or associativity.",
+        "D": "This is not a standard term for cache miss types."
       }
     }
   ]
 }
-
