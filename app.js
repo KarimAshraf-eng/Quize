@@ -809,8 +809,17 @@ class QuizApp {
         if (this.currentQuestionIndex < this.getTotalQuestions() - 1) {
             this.currentQuestionIndex++;
 
-            // **FIX: Set answerSubmitted based on mode**
-            this.answerSubmitted = this.viewOnlyMode;
+            // --- هذا هو التعديل لإصلاح المشكلة ---
+            // (أصبح هذا الكود مطابقًا للكود الموجود في previousQuestion)
+
+            // 1. احصل على السؤال التالي الذي ننتقل إليه
+            const question = this.getCurrentQuestion();
+            const lectureNum = question.lectureNumber || this.currentLecture.number;
+            const questionKey = `${lectureNum}-${question.question_number}`;
+
+            // 2. تحقق إذا كان هذا السؤال (التالي) محلولاً مسبقًا أم لا
+            this.answerSubmitted = this.sessionData.answers.has(questionKey) || this.viewOnlyMode;
+            // --- نهاية التعديل ---
 
             this.currentSelection = null; // Clear selection
             this.renderQuestion();
