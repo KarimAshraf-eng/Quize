@@ -1,74 +1,74 @@
 {
-  "title_en": "Lecture 1",
+  "title_en": "Lecture_1",
   "title_ar": "المحاضره الأولى",
   "questions": [
     {
       "question_number": 1,
       "lecture_number": 1,
-      "question_ar": "وفقًا لقانون أمدال، إذا كانت `f` هي الجزء التسلسلي من الحساب، فإن أقصى تسريع يمكن تحقيقه عندما يقترب عدد المعالجات (P) من الما لا نهاية يكون محدودًا بـ ___.",
-      "question_en": "According to Amdahl's Law, if `f` is the sequential fraction of a computation, the maximum achievable speedup as the number of processors (P) approaches infinity is limited by ___.",
+      "question_ar": "وفقًا لقانون أمدال، إذا كانت f هي الجزء التسلسلي من الحساب، فإن أقصى تسريع يمكن تحقيقه عندما يقترب عدد المعالجات (P) من الما لا نهاية يكون محدودًا بـ ___.",
+      "question_en": "According to Amdahl's Law, if f is the sequential fraction of a computation, the maximum achievable speedup as the number of processors (P) approaches infinity is limited by ___.",
       "choices": {
-        "A_ar": "$P / (1-f)$",
-        "A_en": "$P / (1-f)$",
-        "B_ar": "$1 / f$",
-        "B_en": "$1 / f$",
-        "C_ar": "$P - f$",
-        "C_en": "$P - f$",
-        "D_ar": "$1 - f$",
-        "D_en": "$1 - f$"
+        "A_ar": "P / (1-f)",
+        "A_en": "P / (1-f)",
+        "B_ar": "1 / f",
+        "B_en": "1 / f",
+        "C_ar": "P - f",
+        "C_en": "P - f",
+        "D_ar": "1 - f",
+        "D_en": "1 - f"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "ينص قانون أمدال على أن التسريع $S_P = P / (1 + (P-1)f)$. عندما تقترب P من الما لا نهاية، فإن الحد $(P-1)f$ يهيمن على المقام، ليصبح تقريبًا $P / (P \\\\times f)$، وهو ما يتم تبسيطه إلى $1/f$. هذا يعني أن الجزء التسلسلي `f` يحد بشكل أساسي من أقصى تسريع ممكن.",
-      "explanation_correct_en": "Amdahl's Law states that speedup $S_P = P / (1 + (P-1)f)$. As P approaches infinity, the $(P-1)f$ term dominates the denominator, approximating to $P / (P \\\\times f)$, which simplifies to $1/f$. This means the sequential fraction `f` fundamentally limits the maximum speedup.",
+      "explanation_correct_ar": "ينص قانون أمدال على أن التسريع S_P = P / (1 + (P-1)f). عندما تقترب P من الما لا نهاية، فإن الحد (P-1)f يهيمن على المقام، ليصبح تقريبًا P / (P x f)، وهو ما يتم تبسيطه إلى 1/f. هذا يعني أن الجزء التسلسلي f يحد بشكل أساسي من أقصى تسريع ممكن.",
+      "explanation_correct_en": "Amdahl's Law states that speedup S_P = P / (1 + (P-1)f). As P approaches infinity, the (P-1)f term dominates the denominator, approximating to P / (P x f), which simplifies to 1/f. This means the sequential fraction f fundamentally limits the maximum speedup.",
       "explanation_wrong_ar": {
-        "A": "هذه صيغة غير صحيحة. الصيغة الصحيحة تقسم الوقت التسلسلي على الوقت الموازي، وهو $t_s / (f \\\\times t_s + (1-f)t_s/P)$، والذي يتم تبسيطه إلى $P / (1 + (P-1)f)$.",
+        "A": "هذه صيغة غير صحيحة. الصيغة الصحيحة تقسم الوقت التسلسلي على الوقت الموازي، وهو t_s / (f x t_s + (1-f)t_s/P)، والذي يتم تبسيطه إلى P / (1 + (P-1)f).",
         "B": "الإجابة الصحيحة",
-        "C": "هذا لا علاقة له بصيغة قانون أمدال لحد التسريع. الحد هو مقلوب ضربي ($1/f$)، وليس عملية طرح.",
-        "D": "هذا يمثل الجزء *القابل للموازاة* من الحساب، وليس أقصى تسريع. الحد الأقصى للتسريع يتم تحديده بواسطة الجزء *التسلسلي* `f`."
+        "C": "هذا لا علاقة له بصيغة قانون أمدال لحد التسريع. الحد هو مقلوب ضربي (1/f)، وليس عملية طرح.",
+        "D": "هذا يمثل الجزء *القابل للموازاة* من الحساب، وليس أقصى تسريع. الحد الأقصى للتسريع يتم تحديده بواسطة الجزء *التسلسلي* f."
       },
       "explanation_wrong_en": {
-        "A": "This is an incorrect formula. The correct formula divides the sequential time by the parallel time, which is $t_s / (f \\\\times t_s + (1-f)t_s/P)$, simplifying to $P / (1 + (P-1)f)$.",
+        "A": "This is an incorrect formula. The correct formula divides the sequential time by the parallel time, which is t_s / (f x t_s + (1-f)t_s/P), simplifying to P / (1 + (P-1)f).",
         "B": "Correct answer",
-        "C": "This is not related to the Amdahl's Law formula for speedup limit. The limit is a multiplicative inverse ($1/f$), not a subtraction.",
-        "D": "This represents the *parallelizable* fraction of the computation, not the maximum speedup. The maximum speedup is limited by the *sequential* fraction `f`."
+        "C": "This is not related to the Amdahl's Law formula for speedup limit. The limit is a multiplicative inverse (1/f), not a subtraction.",
+        "D": "This represents the *parallelizable* fraction of the computation, not the maximum speedup. The maximum speedup is limited by the *sequential* fraction f."
       }
     },
     {
       "question_number": 2,
       "lecture_number": 1,
-      "question_ar": "تُعرَّف كفاءة ($E_P$) خوارزمية موازية تستخدم P من المعالجات على أنها ___.",
-      "question_en": "The efficiency ($E_P$) of a parallel algorithm using P processors is defined as ___.",
+      "question_ar": "تُعرَّف كفاءة (E_P) خوارزمية موازية تستخدم P من المعالجات على أنها ___.",
+      "question_en": "The efficiency (E_P) of a parallel algorithm using P processors is defined as ___.",
       "choices": {
-        "A_ar": "$S_P / P$",
-        "A_en": "$S_P / P$",
-        "B_ar": "$S_P \\\\times P$",
-        "B_en": "$S_P \\\\times P$",
-        "C_ar": "$t_P / t_s$",
-        "C_en": "$t_P / t_s$",
-        "D_ar": "$P / S_P$",
-        "D_en": "$P / S_P$"
+        "A_ar": "S_P / P",
+        "A_en": "S_P / P",
+        "B_ar": "S_P x P",
+        "B_en": "S_P x P",
+        "C_ar": "t_P / t_s",
+        "C_en": "t_P / t_s",
+        "D_ar": "P / S_P",
+        "D_en": "P / S_P"
       },
       "correct_choice": "A",
-      "explanation_correct_ar": "تُعرَّف الكفاءة بأنها نسبة التسريع المُحقق ($S_P$) إلى عدد المعالجات (P)، أو $E_P = S_P / P$. وهي تقيس مدى جودة استخدام المعالجات.",
-      "explanation_correct_en": "Efficiency is defined as the ratio of the achieved speedup ($S_P$) to the number of processors (P), or $E_P = S_P / P$. It measures how well-utilized the processors are.",
+      "explanation_correct_ar": "تُعرَّف الكفاءة بأنها نسبة التسريع المُحقق (S_P) إلى عدد المعالجات (P)، أو E_P = S_P / P. وهي تقيس مدى جودة استخدام المعالجات.",
+      "explanation_correct_en": "Efficiency is defined as the ratio of the achieved speedup (S_P) to the number of processors (P), or E_P = S_P / P. It measures how well-utilized the processors are.",
       "explanation_wrong_ar": {
         "A": "الإجابة الصحيحة",
         "B": "هذا غير صحيح. ضرب التسريع في عدد المعالجات لا يمثل الكفاءة.",
-        "C": "هذا هو مقلوب التسريع ($S_P = t_s / t_P$). تمثل هذه القيمة نسبة الوقت الموازي إلى الوقت التسلسلي، والتي يُتوقع أن تكون صغيرة.",
-        "D": "هذا هو مقلوب الكفاءة. الكفاءة المثالية هي 1 (أو 100%)، مما يعني أن $S_P = P$."
+        "C": "هذا هو مقلوب التسريع (S_P = t_s / t_P). تمثل هذه القيمة نسبة الوقت الموازي إلى الوقت التسلسلي، والتي يُتوقع أن تكون صغيرة.",
+        "D": "هذا هو مقلوب الكفاءة. الكفاءة المثالية هي 1 (أو 100%)، مما يعني أن S_P = P."
       },
       "explanation_wrong_en": {
         "A": "Correct answer",
         "B": "This is incorrect. Multiplying speedup by processors does not represent efficiency.",
-        "C": "This is the inverse of speedup ($S_P = t_s / t_P$). This value would represent the ratio of parallel time to sequential time, which is expected to be small.",
-        "D": "This is the inverse of efficiency. Ideal efficiency is 1 (or 100%), meaning $S_P = P$."
+        "C": "This is the inverse of speedup (S_P = t_s / t_P). This value would represent the ratio of parallel time to sequential time, which is expected to be small.",
+        "D": "This is the inverse of efficiency. Ideal efficiency is 1 (or 100%), meaning S_P = P."
       }
     },
     {
       "question_number": 3,
       "lecture_number": 1,
-      "question_ar": "يمكن أن يحدث التسريع الفائق ($S_P > P$) بشكل أساسي بسبب تأثيرات ___.",
-      "question_en": "Superlinear speedup ($S_P > P$) can occur primarily due to ___ effects.",
+      "question_ar": "يمكن أن يحدث التسريع الفائق (S_P > P) بشكل أساسي بسبب تأثيرات ___.",
+      "question_en": "Superlinear speedup (S_P > P) can occur primarily due to ___ effects.",
       "choices": {
         "A_ar": "الاتصال",
         "A_en": "Communication",
@@ -142,16 +142,16 @@
         "D_en": "time-constrained"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "هذا هو تعريف قابلية التوسع (Scalability). تتعلق قابلية التوسع بكفاءة الخوارزم مع تغير كل من حجم المشكلة N وعدد المعالجات P(N)، وتحديدًا ما إذا كانت الكفاءة $E_{P(N)}$ تظل محدودة فوق قيمة دنيا $\\\\epsilon > 0$ مع نمو N و P(N).",
-      "explanation_correct_en": "This is the definition of scalability. Scalability concerns the efficiency of an algorithm as both problem size N and processor count P(N) change, specifically if the efficiency $E_{P(N)}$ remains bounded above a minimal value $\\\\epsilon > 0$ as N and P(N) grow.",
+      "explanation_correct_ar": "هذا هو تعريف قابلية التوسع (Scalability). تتعلق قابلية التوسع بكفاءة الخوارزم مع تغير كل من حجم المشكلة N وعدد المعالجات P(N)، وتحديدًا ما إذا كانت الكفاءة E_P(N) تظل محدودة فوق قيمة دنيا epsilon > 0 مع نمو N و P(N).",
+      "explanation_correct_en": "This is the definition of scalability. Scalability concerns the efficiency of an algorithm as both problem size N and processor count P(N) change, specifically if the efficiency E_P(N) remains bounded above a minimal value epsilon > 0 as N and P(N) grow.",
       "explanation_wrong_ar": {
-        "A": "\"فعّال\" (Efficient) تعني فقط أن الكفاءة $E_P$ عالية (قريبة من 1 بشكل مثالي). \"قابل للتوسع\" (Scalable) يصف تحديدًا كيف يتصرف هذا الأداء مع زيادة N و P معًا. قد يكون الخوارزم الفعال لعدد قليل من P غير قابل للتوسع.",
+        "A": "\"فعّال\" (Efficient) تعني فقط أن الكفاءة E_P عالية (قريبة من 1 بشكل مثالي). \"قابل للتوسع\" (Scalable) يصف تحديدًا كيف يتصرف هذا الأداء مع زيادة N و P معًا. قد يكون الخوارزم الفعال لعدد قليل من P غير قابل للتوسع.",
         "B": "الإجابة الصحيحة",
         "C": "\"تسلسلي\" (Sequential) يصف خوارزمًا غير موازٍ، مثل الذي يحتوي على اعتماديات محمولة عبر الحلقة.",
         "D": "القياس \"المقيّد بالوقت\" (Time-constrained) هو مفهوم مرتبط بقانون جوستافسون، والذي *يُعرّف* نوعًا من التسريع المُقاس، لكن \"قابل للتوسع\" هو المصطلح الخاص بخاصية الخوارزم نفسه."
       },
       "explanation_wrong_en": {
-        "A": "\"Efficient\" just means the efficiency $E_P$ is high (ideally close to 1). \"Scalable\" specifically describes how this efficiency behaves as N and P increase together. An efficient algorithm for small P may not be scalable.",
+        "A": "\"Efficient\" just means the efficiency E_P is high (ideally close to 1). \"Scalable\" specifically describes how this efficiency behaves as N and P increase together. An efficient algorithm for small P may not be scalable.",
         "B": "Correct answer",
         "C": "\"Sequential\" describes an algorithm that is not parallel, such as one with loop-carried dependences.",
         "D": "\"Time-constrained\" scaling is a concept associated with Gustafson's Law, which *defines* a type of scaled speedup, but \"scalable\" is the term for the algorithm's property itself."
@@ -240,7 +240,7 @@
       "explanation_wrong_ar": {
         "A": "الإجابة الصحيحة",
         "B": "البرمجة الموازية غالبًا ما تكون *أكثر تعقيدًا* من البرمجة التسلسلية، وليست بالضرورة أرخص في التطوير.",
-        "C": "الأمان والموثوقية هما أهداف برمجية هامة، لكنهما ليسا الدافعين *الئيسيين* المذكورين لاختيار الموازاة على الحسابات التسلسلية.",
+        "C": "الأمان والموثوقية هما أهداف برمجية هامة، لكنهما ليسا الدافعين *الرئيسيين* المذكورين لاختيار الموازاة على الحسابات التسلسلية.",
         "D": "بينما يمكن أن تكون الموازاة موفرة للطاقة (كما هو موضح لاحقًا في المحاضرة)، فإن 'أسرع' و 'أكبر' هما الدافعان الأساسيان المذكوران في البداية."
       },
       "explanation_wrong_en": {
@@ -253,94 +253,94 @@
     {
       "question_number": 9,
       "lecture_number": 1,
-      "question_ar": "يُعرّف التسريع ($S_P$) لخوارزم موازٍ باستخدام P من المعالجات بالصيغة ___.",
-      "question_en": "The speedup ($S_P$) of a parallel algorithm using P processors is defined by the formula ___.",
+      "question_ar": "يُعرّف التسريع (S_P) لخوارزم موازٍ باستخدام P من المعالجات بالصيغة ___.",
+      "question_en": "The speedup (S_P) of a parallel algorithm using P processors is defined by the formula ___.",
       "choices": {
-        "A_ar": "$t_P / t_s$",
-        "A_en": "$t_P / t_s$",
-        "B_ar": "$t_s / t_P$",
-        "B_en": "$t_s / t_P$",
-        "C_ar": "$t_1 / t_s$",
-        "C_en": "$t_1 / t_s$",
-        "D_ar": "$t_P / P$",
-        "D_en": "$t_P / P$"
+        "A_ar": "t_P / t_s",
+        "A_en": "t_P / t_s",
+        "B_ar": "t_s / t_P",
+        "B_en": "t_s / t_P",
+        "C_ar": "t_1 / t_s",
+        "C_en": "t_1 / t_s",
+        "D_ar": "t_P / P",
+        "D_en": "t_P / P"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "يُعرّف التسريع ($S_P$) بأنه نسبة وقت تنفيذ أفضل خوارزم تسلسلي متاح ($t_s$) إلى وقت تنفيذ الخوارزم الموازي ($t_P$).",
-      "explanation_correct_en": "Speedup ($S_P$) is defined as the ratio of the execution time of the best available sequential algorithm ($t_s$) to the execution time of the parallel algorithm ($t_P$).",
+      "explanation_correct_ar": "يُعرّف التسريع (S_P) بأنه نسبة وقت تنفيذ أفضل خوارزم تسلسلي متاح (t_s) إلى وقت تنفيذ الخوارزم الموازي (t_P).",
+      "explanation_correct_en": "Speedup (S_P) is defined as the ratio of the execution time of the best available sequential algorithm (t_s) to the execution time of the parallel algorithm (t_P).",
       "explanation_wrong_ar": {
         "A": "هذا هو مقلوب التسريع. هذه القيمة ستكون أقل من 1 إذا كان هناك أي تسريع.",
         "B": "الإجابة الصحيحة",
-        "C": "هذه الصيغة تقارن وقت الخوارزم الموازي على معالج واحد ($t_1$) بالخوارزم التسلسلي ($t_s$). يُعرف التسريع النسبي بأنه $t_1 / t_P$.",
-        "D": "هذه الصيغة لا تمثل مقياسًا قياسيًا. الكفاءة هي $S_P / P = (t_s / t_P) / P$."
+        "C": "هذه الصيغة تقارن وقت الخوارزم الموازي على معالج واحد (t_1) بالخوارزم التسلسلي (t_s). يُعرف التسريع النسبي بأنه t_1 / t_P.",
+        "D": "هذه الصيغة لا تمثل مقياسًا قياسيًا. الكفاءة هي S_P / P = (t_s / t_P) / P."
       },
       "explanation_wrong_en": {
         "A": "This is the inverse of speedup. This value would be less than 1 if there is any speedup.",
         "B": "Correct answer",
-        "C": "This formula compares the parallel algorithm's time on one processor ($t_1$) to the sequential algorithm ($t_s$). Relative speedup is defined as $t_1 / t_P$.",
-        "D": "This formula does not represent a standard metric. Efficiency is $S_P / P = (t_s / t_P) / P$."
+        "C": "This formula compares the parallel algorithm's time on one processor (t_1) to the sequential algorithm (t_s). Relative speedup is defined as t_1 / t_P.",
+        "D": "This formula does not represent a standard metric. Efficiency is S_P / P = (t_s / t_P) / P."
       }
     },
     {
       "question_number": 10,
       "lecture_number": 1,
-      "question_ar": "يُقال إن التسريع \"مثالي\" (ideal) أو \"كامل\" (perfect) إذا كان $S_P = $ ___.",
-      "question_en": "Speedup is said to be 'ideal' or 'perfect' if $S_P = $ ___.",
+      "question_ar": "يُقال إن التسريع \"مثالي\" (ideal) أو \"كامل\" (perfect) إذا كان S_P = ___.",
+      "question_en": "Speedup is said to be 'ideal' or 'perfect' if S_P = ___.",
       "choices": {
         "A_ar": "1",
         "A_en": "1",
         "B_ar": "P",
         "B_en": "P",
-        "C_ar": "$P^2$",
-        "C_en": "$P^2$",
-        "D_ar": "$\u221E$",
-        "D_en": "$\u221E$"
+        "C_ar": "P^2",
+        "C_en": "P^2",
+        "D_ar": "∞",
+        "D_en": "∞"
       },
       "correct_choice": "B",
       "explanation_correct_ar": "التسريع المثالي (أو الكامل) يعني أن البرنامج يعمل أسرع بـ P مرة عند استخدام P من المعالجات. وهذا يتوافق مع كفاءة 100%.",
       "explanation_correct_en": "Ideal (or perfect) speedup means the program runs P times faster when using P processors. This corresponds to 100% efficiency.",
       "explanation_wrong_ar": {
-        "A": "تسريع $S_P = 1$ يعني عدم وجود أي تحسن. هذا هو أداء الخوارزم التسلسلي (أو الخوارزم الموازي على معالج واحد).",
+        "A": "تسريع S_P = 1 يعني عدم وجود أي تحسن. هذا هو أداء الخوارزم التسلسلي (أو الخوارزم الموازي على معالج واحد).",
         "B": "الإجابة الصحيحة",
         "C": "هذا سيكون تسريعًا فائقًا بشكل كبير (superlinear) وليس المعيار \"المثالي\".",
         "D": "التسريع اللانهائي ليس مفهومًا عمليًا في هذا السياق، على الرغم من أن مثال البحث الموازي يوضح كيف يمكن أن تقترب S_P من اللانهاية في حالات نظرية معينة."
       },
       "explanation_wrong_en": {
-        "A": "A speedup of $S_P = 1$ implies no improvement at all. This is the performance of the sequential algorithm (or the parallel one on a single processor).",
+        "A": "A speedup of S_P = 1 implies no improvement at all. This is the performance of the sequential algorithm (or the parallel one on a single processor).",
         "B": "Correct answer",
         "C": "This would be a significant superlinear speedup, not the 'ideal' standard.",
-        "D": "Infinite speedup is not a practical concept in this context, although the parallel search example shows how $S_P$ can tend to infinity in specific theoretical cases."
+        "D": "Infinite speedup is not a practical concept in this context, although the parallel search example shows how S_P can tend to infinity in specific theoretical cases."
       }
     },
     {
       "question_number": 11,
       "lecture_number": 1,
-      "question_ar": "يُعرّف \"التسريع النسبي\" (Relative Speedup) ${S^1}_P$ بأنه ___.",
-      "question_en": "The 'Relative Speedup' ${S^1}_P$ is defined as ___.",
+      "question_ar": "يُعرّف \"التسريع النسبي\" (Relative Speedup) S^1_P بأنه ___.",
+      "question_en": "The 'Relative Speedup' S^1_P is defined as ___.",
       "choices": {
-        "A_ar": "$t_1 / t_P$",
-        "A_en": "$t_1 / t_P$",
-        "B_ar": "$t_s / t_1$",
-        "B_en": "$t_s / t_1$",
-        "C_ar": "$t_k / t_P$",
-        "C_en": "$t_k / t_P$",
-        "D_ar": "$t_s / t_P$",
-        "D_en": "$t_s / t_P$"
+        "A_ar": "t_1 / t_P",
+        "A_en": "t_1 / t_P",
+        "B_ar": "t_s / t_1",
+        "B_en": "t_s / t_1",
+        "C_ar": "t_k / t_P",
+        "C_en": "t_k / t_P",
+        "D_ar": "t_s / t_P",
+        "D_en": "t_s / t_P"
       },
       "correct_choice": "A",
-      "explanation_correct_ar": "التسريع النسبي ${S^1}_P$ يقارن وقت تنفيذ الخوارزم *الموازي* على معالج واحد ($t_1$) بوقته على P من المعالجات ($t_P$). يتم استخدامه عندما يكون $t_s$ (أفضل خوارزم تسلسلي) غير معروف أو غير متاح.",
-      "explanation_correct_en": "The relative speedup ${S^1}_P$ compares the execution time of the *parallel* algorithm on one processor ($t_1$) to its time on P processors ($t_P$). This is used when $t_s$ (best sequential) is unknown or unavailable.",
+      "explanation_correct_ar": "التسريع النسبي S^1_P يقارن وقت تنفيذ الخوارزم *الموازي* على معالج واحد (t_1) بوقته على P من المعالجات (t_P). يتم استخدامه عندما يكون t_s (أفضل خوارزم تسلسلي) غير معروف أو غير متاح.",
+      "explanation_correct_en": "The relative speedup S^1_P compares the execution time of the *parallel* algorithm on one processor (t_1) to its time on P processors (t_P). This is used when t_s (best sequential) is unknown or unavailable.",
       "explanation_wrong_ar": {
         "A": "الإجابة الصحيحة",
         "B": "هذه الصيغة تقارن الخوارزم التسلسلي بالخوارزم الموازي على معالج واحد، وهو ليس تعريف التسريع النسبي.",
-        "C": "هذا هو تعريف التسريع النسبي ${S^k}_P$ بالنسبة لـ k من المعالجات، وليس ${S^1}_P$.",
-        "D": "هذا هو تعريف التسريع القياسي (أو \"المطلق\") ($S_P$)، وليس التسريع النسبي."
+        "C": "هذا هو تعريف التسريع النسبي S^k_P بالنسبة لـ k من المعالجات، وليس S^1_P.",
+        "D": "هذا هو تعريف التسريع القياسي (أو \"المطلق\") (S_P)، وليس التسريع النسبي."
       },
       "explanation_wrong_en": {
         "A": "Correct answer",
         "B": "This formula compares the sequential algorithm to the parallel algorithm on one processor, which is not the definition of relative speedup.",
-        "C": "This is the definition of relative speedup ${S^k}_P$ with respect to k processors, not ${S^1}_P$.",
-        "D": "This is the definition of standard (or 'absolute') speedup ($S_P$), not relative speedup."
+        "C": "This is the definition of relative speedup S^k_P with respect to k processors, not S^1_P.",
+        "D": "This is the definition of standard (or 'absolute') speedup (S_P), not relative speedup."
       }
     },
     {
@@ -383,11 +383,11 @@
         "A_ar": "تتطلب أكثر من 1 تيرافلوب من قوة الحوسبة",
         "A_en": "requires over 1 TFLOP of computing power",
         "B_ar": "تتعلق بمحاكاة الأسلحة النووية",
-        "A_en": "relates to nuclear weapons simulations",
+        "B_en": "relates to nuclear weapons simulations",
         "C_ar": "لا يمكن حلها في فترة زمنية معقولة بأجهزة الكمبيوتر الحالية",
         "C_en": "cannot be solved in a reasonable amount of time with today's computers",
-        "D_ar": "تحتوي على أكثر من $10^{15}$ عملية فاصلة عائمة",
-        "D_en": "has over $10^{15}$ floating point operations"
+        "D_ar": "تحتوي على أكثر من 10^15 عملية فاصلة عائمة",
+        "D_en": "has over 10^15 floating point operations"
       },
       "correct_choice": "C",
       "explanation_correct_ar": "التعريف المقدم في المحاضرة هو أن مشكلة \"التحدي الكبير\" هي مشكلة \"لا يمكن حلها في فترة زمنية معقولة بأجهزة الكمبيوتر الحالية\".",
@@ -421,16 +421,16 @@
         "D_en": "CPU energy consumption"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "المثال يحسب أنه لإجراء $3 \\\\times 10^{12}$ عملية نقل ذاكرة في ثانية واحدة، يجب أن يكون متوسط المسافة إلى الذاكرة $10^{-4}$ متر، بافتراض أن البيانات تسافر بسرعة الضوء. هذا يوضح أن سرعة الضوء تحد من مدى سرعة جلب البيانات.",
-      "explanation_correct_en": "The example calculates that to perform $3 \\\\times 10^{12}$ memory moves in one second, the average distance to memory must be $10^{-4}$ meters, assuming data travels at the speed of light. This demonstrates the speed of light is a limiting factor for data retrieval.",
+      "explanation_correct_ar": "المثال يحسب أنه لإجراء 3 × 10^12 عملية نقل ذاكرة في ثانية واحدة، يجب أن يكون متوسط المسافة إلى الذاكرة 10^-4 متر، بافتراض أن البيانات تسافر بسرعة الضوء. هذا يوضح أن سرعة الضوء تحد من مدى سرعة جلب البيانات.",
+      "explanation_correct_en": "The example calculates that to perform 3 x 10^12 memory moves in one second, the average distance to memory must be 10^-4 meters, assuming data travels at the speed of light. This demonstrates the speed of light is a limiting factor for data retrieval.",
       "explanation_wrong_ar": {
-        "A": "حجم الذرة ($10^{-10}$ م) يُذكر كنتيجة سخيفة للحساب، لإظهار أن متطلبات المسافة مستحيلة، ولكنه ليس العائق الأولي.",
+        "A": "حجم الذرة (10^-10 م) يُذكر كنتيجة سخيفة للحساب، لإظهار أن متطلبات المسافة مستحيلة، ولكنه ليس العائق الأولي.",
         "B": "الإجابة الصحيحة",
         "C": "تبديد الحرارة هو قيد مادي آخر، ولكنه يُناقش في الشريحة التالية (Page 9) وليس هو محور هذا المثال المحدد.",
         "D": "استهلاك الطاقة مرتبط بتبديد الحرارة ويُناقش لاحقًا، ولكنه ليس القيد الموضح في مثال \"الحدود المادية\" (Physical Limits)."
       },
       "explanation_wrong_en": {
-        "A": "The size of an atom ($10^{-10}$m) is mentioned as an absurd result of the calculation, showing the distance requirement is impossible, but it's not the initial bottleneck.",
+        "A": "The size of an atom (10^-10m) is mentioned as an absurd result of the calculation, showing the distance requirement is impossible, but it's not the initial bottleneck.",
         "B": "Correct answer",
         "C": "Heat dissipation is another physical limit, but it is discussed on the next slide (Page 9) and is not the focus of this specific example.",
         "D": "Energy consumption is related to heat dissipation and discussed later, but it's not the constraint demonstrated in the 'Physical Limits' example."
@@ -444,24 +444,24 @@
       "choices": {
         "A_ar": "التردد (f)",
         "A_en": "frequency (f)",
-        "B_ar": "مربع التردد ($f^2$)",
-        "B_en": "frequency squared ($f^2$)",
+        "B_ar": "مربع التردد (f^2)",
+        "B_en": "frequency squared (f^2)",
         "C_ar": "عدد وحدات المعالجة المركزية (P)",
         "C_en": "number of CPUs (P)",
-        "D_ar": "الوقت المستغرق ($t_s$)",
-        "D_en": "time elapsed ($t_s$)"
+        "D_ar": "الوقت المستغرق (t_s)",
+        "D_en": "time elapsed (t_s)"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "توضح الشريحة (Page 9) أن $E \\\\propto f^2$. لذلك، فإن تشغيل معالجين بتردد 2 جيجاهرتز ($E \\\\propto 4$ لكل منهما، ولكن لوقت أقصر) يمكن أن يكون أكثر كفاءة من معالج واحد بتردد 3 جيجاهرتز ($E \\\\propto 9$).",
-      "explanation_correct_en": "The slide (Page 9) explicitly states $E \\\\propto f^2$. Therefore, running two CPUs at 2 GHz ($E \\\\propto 4$ each, but for a shorter time) can be more efficient than one CPU at 3 GHz ($E \\\\propto 9$).",
+      "explanation_correct_ar": "توضح الشريحة (Page 9) أن E ~ f^2. لذلك، فإن تشغيل معالجين بتردد 2 جيجاهرتز (E ~ 4 لكل منهما، ولكن لوقت أقصر) يمكن أن يكون أكثر كفاءة من معالج واحد بتردد 3 جيجاهرتز (E ~ 9).",
+      "explanation_correct_en": "The slide (Page 9) explicitly states E ~ f^2. Therefore, running two CPUs at 2 GHz (E ~ 4 each, but for a shorter time) can be more efficient than one CPU at 3 GHz (E ~ 9).",
       "explanation_wrong_ar": {
-        "A": "العلاقة الموضحة ليست خطية، بل تربيعية ($f^2$).",
+        "A": "العلاقة الموضحة ليست خطية، بل تربيعية (f^2).",
         "B": "الإجابة الصحيحة",
         "C": "استخدام المزيد من وحدات المعالجة المركزية (P) لا يحافظ على الطاقة بطبيعته إلا إذا سمح بتقليل التردد (f) بشكل كبير.",
         "D": "الوقت هو عامل في إجمالي الطاقة المستهلكة، لكن العلاقة المحددة التي تبرر فائدة الموازاة في هذا المثال هي مع *التردد*."
       },
       "explanation_wrong_en": {
-        "A": "The relationship shown is not linear, but quadratic ($f^2$).",
+        "A": "The relationship shown is not linear, but quadratic (f^2).",
         "B": "Correct answer",
         "C": "Using more CPUs (P) doesn't inherently save energy unless it allows for a significant reduction in frequency (f).",
         "D": "Time is a factor in total energy consumed, but the specific relationship justifying the parallel benefit in this example is with *frequency*."
@@ -478,7 +478,7 @@
         "B_ar": "تكلفة الاتصال الزائدة (communication overhead)",
         "B_en": "communication overhead",
         "C_ar": "المرجعية الزمنية الجيدة",
-        "A_en": "good temporal locality",
+        "C_en": "good temporal locality",
         "D_ar": "الخوارزميات القابلة للتوسع",
         "D_en": "scalable algorithms"
       },
@@ -546,7 +546,7 @@
       },
       "correct_choice": "C",
       "explanation_correct_ar": "توضح المحاضرة النقطة الدقيقة بأنه \"ملاحظة: بالنظر إلى متجه من k من القيم، يمكننا حساب k من أرقام كولاتز بالتوازي\". هذا يوضح الفرق بين موازاة *المهمة* (Task Parallelism) وموازاة *البيانات* داخل مهمة واحدة.",
-      "explanation_correct_en": "The lecture makes the specific point that \"Note: given a vector of k values, we can compute k CollatZ numbers in parallel.\" This illustrates the difference between Task Parallelism and data parallelism within one task.",
+      "explanation_correct_en": "The lecture makes the specific point that \"Note: given a vector of k values, we can compute k Collatz numbers in parallel.\" This illustrates the difference between Task Parallelism and data parallelism within one task.",
       "explanation_wrong_ar": {
         "A": "لا يمكن موازاة الحلقة الداخلية؛ هذا هو جوهر المشكلة لأنها تحتوي على اعتمادية محمولة عبر الحلقة.",
         "B": "قانون جوستافسون (وقانون أمدال) ينطبقان على الخوارزميات القابلة للموازاة، وهو ما لا ينطبق على خوارزم كولاتز الأساسي.",
@@ -563,29 +563,29 @@
     {
       "question_number": 19,
       "lecture_number": 1,
-      "question_ar": "يُقال إن التسريع \"خطي\" (linear) إذا كان $S_P \\approx$ ___.",
-      "question_en": "Speedup is said to be 'linear' if $S_P \\approx$ ___.",
+      "question_ar": "يُقال إن التسريع \"خطي\" (linear) إذا كان S_P ~ ___.",
+      "question_en": "Speedup is said to be 'linear' if S_P ~ ___.",
       "choices": {
         "A_ar": "1",
         "A_en": "1",
-        "B_ar": "$f^{-1}$",
-        "B_en": "$f^{-1}$",
+        "B_ar": "1/f",
+        "B_en": "1/f",
         "C_ar": "N",
         "C_en": "N",
         "D_ar": "P",
         "D_en": "P"
       },
       "correct_choice": "D",
-      "explanation_correct_ar": "يعرّف التسريع الخطي بأنه عندما يكون التسريع $S_P$ مساويًا تقريبًا لعدد المعالجات P. وهذا يختلف قليلاً عن \"المثالي\" ($S_P = P$)، حيث يسمح ببعض التكلفة الزائدة الطفيفة.",
-      "explanation_correct_en": "Linear speedup is defined as when the speedup $S_P$ is approximately equal to the number of processors, P. This is slightly different from 'ideal' ($S_P = P$), as it allows for some minor overhead.",
+      "explanation_correct_ar": "يعرّف التسريع الخطي بأنه عندما يكون التسريع S_P مساويًا تقريبًا لعدد المعالجات P. وهذا يختلف قليلاً عن \"المثالي\" (S_P = P)، حيث يسمح ببعض التكلفة الزائدة الطفيفة.",
+      "explanation_correct_en": "Linear speedup is defined as when the speedup S_P is approximately equal to the number of processors, P. This is slightly different from 'ideal' (S_P = P), as it allows for some minor overhead.",
       "explanation_wrong_ar": {
-        "A": "تسريع $S_P = 1$ يعني عدم وجود تسريع.",
+        "A": "تسريع S_P = 1 يعني عدم وجود تسريع.",
         "B": "هذا هو الحد الأقصى للتسريع وفقًا لقانون أمدال، وليس تعريف التسريع الخطي.",
         "C": "التسريع يتعلق بعدد المعالجات (P)، وليس حجم المشكلة (N).",
         "D": "الإجابة الصحيحة"
       },
       "explanation_wrong_en": {
-        "A": "A speedup of $S_P = 1$ is no speedup.",
+        "A": "A speedup of S_P = 1 is no speedup.",
         "B": "This is the maximum speedup according to Amdahl's Law, not the definition of linear speedup.",
         "C": "Speedup is relative to the number of processors (P), not the problem size (N).",
         "D": "Correct answer"
@@ -594,8 +594,8 @@
     {
       "question_number": 20,
       "lecture_number": 1,
-      "question_ar": "كفاءة $E_P = 1$ (أو 100%) تعني ___.",
-      "question_en": "An efficiency of $E_P = 1$ (or 100%) implies ___.",
+      "question_ar": "كفاءة E_P = 1 (أو 100%) تعني ___.",
+      "question_en": "An efficiency of E_P = 1 (or 100%) implies ___.",
       "choices": {
         "A_ar": "تسريع فائق",
         "A_en": "superlinear speedup",
@@ -607,18 +607,18 @@
         "D_en": "a sequential algorithm"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "بما أن $E_P = S_P / P$، فإن $E_P = 1$ تعني أن $S_P / P = 1$، وهو ما يعني أن $S_P = P$. يُعرف هذا بالتسريع المثالي.",
-      "explanation_correct_en": "Since $E_P = S_P / P$, an $E_P = 1$ implies $S_P / P = 1$, which means $S_P = P$. This is defined as ideal speedup.",
+      "explanation_correct_ar": "بما أن E_P = S_P / P، فإن E_P = 1 تعني أن S_P / P = 1، وهو ما يعني أن S_P = P. يُعرف هذا بالتسريع المثالي.",
+      "explanation_correct_en": "Since E_P = S_P / P, an E_P = 1 implies S_P / P = 1, which means S_P = P. This is defined as ideal speedup.",
       "explanation_wrong_ar": {
-        "A": "التسريع الفائق سيعني $S_P > P$، وهو ما سيؤدي إلى كفاءة $E_P > 1$.",
+        "A": "التسريع الفائق سيعني S_P > P، وهو ما سيؤدي إلى كفاءة E_P > 1.",
         "B": "الإجابة الصحيحة",
-        "C": "عدم وجود تسريع يعني $S_P = 1$، وهو ما سيعطي كفاءة $E_P = 1/P$.",
+        "C": "عدم وجود تسريع يعني S_P = 1، وهو ما سيعطي كفاءة E_P = 1/P.",
         "D": "الخوارزم التسلسلي ليس له كفاءة موازية."
       },
       "explanation_wrong_en": {
-        "A": "Superlinear speedup would mean $S_P > P$, which would result in an efficiency $E_P > 1$.",
+        "A": "Superlinear speedup would mean S_P > P, which would result in an efficiency E_P > 1.",
         "B": "Correct answer",
-        "C": "No speedup means $S_P = 1$, which would give an efficiency of $E_P = 1/P$.",
+        "C": "No speedup means S_P = 1, which would give an efficiency of E_P = 1/P.",
         "D": "A sequential algorithm does not have a parallel efficiency."
       }
     },
@@ -634,8 +634,8 @@
         "B_en": "workload (problem size)",
         "C_ar": "كفاءة",
         "C_en": "efficiency",
-        "D_ar": "جزء تسلسلي $f=0$",
-        "D_en": "serial fraction $f=0$"
+        "D_ar": "جزء تسلسلي f=0",
+        "D_en": "serial fraction f=0"
       },
       "correct_choice": "B",
       "explanation_correct_ar": "تنص المحاضرة على أن \"قانون أمدال يعتمد على عبء عمل ثابت أو حجم مشكلة ثابت\".",
@@ -644,13 +644,13 @@
         "A": "الحفاظ على وقت التنفيذ الموازي ثابتًا هو أساس قانون *جوستافسون*.",
         "B": "الإجابة الصحيحة",
         "C": "الكفاءة هي ما يتم *قياسه*، وليست الافتراض الثابت.",
-        "D": "إذا كان $f=0$، فسيكون التسريع مثاليًا ($S_P=P$) ولن تكون هناك حاجة لقانون أمدال. القانون مصمم لتحليل تأثير $f > 0$."
+        "D": "إذا كان f=0، فسيكون التسريع مثاليًا (S_P=P) ولن تكون هناك حاجة لقانون أمدال. القانون مصمم لتحليل تأثير f > 0."
       },
       "explanation_wrong_en": {
         "A": "Keeping parallel execution time constant is the basis for *Gustafson's* Law.",
         "B": "Correct answer",
         "C": "Efficiency is what is being *measured*, not the fixed assumption.",
-        "D": "If $f=0$, the speedup would be ideal ($S_P=P$) and Amdahl's Law would be unnecessary. The law is designed to analyze the impact of $f > 0$."
+        "D": "If f=0, the speedup would be ideal (S_P=P) and Amdahl's Law would be unnecessary. The law is designed to analyze the impact of f > 0."
       }
     },
     {
@@ -663,8 +663,8 @@
         "A_en": "constant problem size scaling",
         "B_ar": "القياس المقيّد بالوقت",
         "B_en": "time-constrained scaling",
-        "C_ar": "الحد الأقصى للتسريع النظري $1/f$",
-        "C_en": "the maximum theoretical speedup $1/f$",
+        "C_ar": "الحد الأقصى للتسريع النظري 1/f",
+        "C_en": "the maximum theoretical speedup 1/f",
         "D_ar": "تكلفة الاتصال الزائدة",
         "D_en": "communication overhead"
       },
@@ -687,30 +687,30 @@
     {
       "question_number": 23,
       "lecture_number": 1,
-      "question_ar": "الصيغة الكاملة لقانون أمدال للتسريع ($S_P$) هي ___.",
-      "question_en": "The full formula for Amdahl's Law speedup ($S_P$) is ___.",
+      "question_ar": "الصيغة الكاملة لقانون أمدال للتسريع (S_P) هي ___.",
+      "question_en": "The full formula for Amdahl's Law speedup (S_P) is ___.",
       "choices": {
-        "A_ar": "$P / (1 + (P-1)f)$",
-        "A_en": "$P / (1 + (P-1)f)$",
-        "B_ar": "$t_s / t_P$",
-        "B_en": "$t_s / t_P$",
-        "C_ar": "$P + (1-P)\\\\alpha(N)$",
-        "C_en": "$P + (1-P)\\\\alpha(N)$",
-        "D_ar": "$1 / f$",
-        "D_en": "$1 / f$"
+        "A_ar": "P / (1 + (P-1)f)",
+        "A_en": "P / (1 + (P-1)f)",
+        "B_ar": "t_s / t_P",
+        "B_en": "t_s / t_P",
+        "C_ar": "P + (1-P)alpha(N)",
+        "C_en": "P + (1-P)alpha(N)",
+        "D_ar": "1 / f",
+        "D_en": "1 / f"
       },
       "correct_choice": "A",
-      "explanation_correct_ar": "الصيغة مشتقة من $S_P = t_s / t_P = t_s / (f \\\\times t_s + (1-f)t_s/P)$. بقسمة البسط والمقام على $t_s$ ثم ضربهما في P، نصل إلى $S_P = P / (1 + (P-1)f)$.",
-      "explanation_correct_en": "The formula is derived from $S_P = t_s / t_P = t_s / (f \\\\times t_s + (1-f)t_s/P)$. By dividing the numerator and denominator by $t_s$ and simplifying, we arrive at $S_P = P / (1 + (P-1)f)$.",
+      "explanation_correct_ar": "الصيغة مشتقة من S_P = t_s / t_P = t_s / (f x t_s + (1-f)t_s/P). بقسمة البسط والمقام على t_s ثم ضربهما في P، نصل إلى S_P = P / (1 + (P-1)f).",
+      "explanation_correct_en": "The formula is derived from S_P = t_s / t_P = t_s / (f x t_s + (1-f)t_s/P). By dividing the numerator and denominator by t_s and simplifying, we arrive at S_P = P / (1 + (P-1)f).",
       "explanation_wrong_ar": {
         "A": "الإجابة الصحيحة",
-        "B": "هذا هو *تعريف* التسريع، وليس صيغة قانون أمدال التي تحلله بناءً على `f`.",
+        "B": "هذا هو *تعريف* التسريع، وليس صيغة قانون أمدال التي تحلله بناءً على f.",
         "C": "هذه هي صيغة قانون *جوستافسون*.",
         "D": "هذا هو *الحد الأقصى* لقانون أمدال عندما تقترب P من الما لا نهاية، وليست الصيغة الكاملة."
       },
       "explanation_wrong_en": {
         "A": "Correct answer",
-        "B": "This is the *definition* of speedup, not the Amdahl's Law formula that analyzes it based on `f`.",
+        "B": "This is the *definition* of speedup, not the Amdahl's Law formula that analyzes it based on f.",
         "C": "This is the formula for *Gustafson's* Law.",
         "D": "This is the *limit* of Amdahl's Law as P approaches infinity, not the full formula."
       }
@@ -718,32 +718,32 @@
     {
       "question_number": 24,
       "lecture_number": 1,
-      "question_ar": "في قانون جوستافسون، يُعطى التسريع المُقاس $S_{P,N}$ بالصيغة ___، حيث $\\\\alpha(N)$ هي الجزء غير القابل للموازاة.",
-      "question_en": "In Gustafson's Law, the scaled speedup $S_{P,N}$ is given by the formula ___, where $\\\\alpha(N)$ is the non-parallelizable fraction.",
+      "question_ar": "في قانون جوستافسون، يُعطى التسريع المُقاس S_P,N بالصيغة ___، حيث alpha(N) هي الجزء غير القابل للموازاة.",
+      "question_en": "In Gustafson's Law, the scaled speedup S_P,N is given by the formula ___, where alpha(N) is the non-parallelizable fraction.",
       "choices": {
-        "A_ar": "$P / (1 + (P-1)\\\\alpha(N))$",
-        "A_en": "$P / (1 + (P-1)\\\\alpha(N))$",
-        "B_ar": "$\\\\alpha(N) + P(1-\\\\alpha(N))$",
-        "B_en": "$\\\\alpha(N) + P(1-\\\\alpha(N))$",
-        "C_ar": "$P / \\\\alpha(N)$",
-        "C_en": "$P / \\\\alpha(N)$",
-        "D_ar": "$1 / (\\\\alpha(N) + (1-\\\\alpha(N))/P)$",
-        "D_en": "$1 / (\\\\alpha(N) + (1-\\\\alpha(N))/P)$"
+        "A_ar": "P / (1 + (P-1)alpha(N))",
+        "A_en": "P / (1 + (P-1)alpha(N))",
+        "B_ar": "alpha(N) + P(1-alpha(N))",
+        "B_en": "alpha(N) + P(1-alpha(N))",
+        "C_ar": "P / alpha(N)",
+        "C_en": "P / alpha(N)",
+        "D_ar": "1 / (alpha(N) + (1-alpha(N))/P)",
+        "D_en": "1 / (alpha(N) + (1-alpha(N))/P)"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "تشتق المحاضرة هذا كـ $S_{P,N} = \\\\alpha(N) + P(1-\\\\alpha(N))$، والذي يتم تبسيطه أيضًا إلى $P + (1-P)\\\\alpha(N)$. كلا الشكلين متكافئان ويمثلان قانون جوستافسون.",
-      "explanation_correct_en": "The lecture derives this as $S_{P,N} = \\\\alpha(N) + P(1-\\\\alpha(N))$, which is also simplified to $P + (1-P)\\\\alpha(N)$. Both forms are equivalent and represent Gustafson's Law.",
+      "explanation_correct_ar": "تشتق المحاضرة هذا كـ S_P,N = alpha(N) + P(1-alpha(N))، والذي يتم تبسيطه أيضًا إلى P + (1-P)alpha(N). كلا الشكلين متكافئان ويمثلان قانون جوستافسون.",
+      "explanation_correct_en": "The lecture derives this as S_P,N = alpha(N) + P(1-alpha(N)), which is also simplified to P + (1-P)alpha(N). Both forms are equivalent and represent Gustafson's Law.",
       "explanation_wrong_ar": {
-        "A": "هذه هي صيغة قانون أمدال، باستخدام $\\\\alpha(N)$ بدلاً من `f`.",
+        "A": "هذه هي صيغة قانون أمدال، باستخدام alpha(N) بدلاً من f.",
         "B": "الإجابة الصحيحة",
         "C": "هذه صيغة غير صحيحة.",
-        "D": "هذه هي صيغة قانون أمدال مكتوبة بشكل مختلف $1 / (f + (1-f)/P)$."
+        "D": "هذه هي صيغة قانون أمدال مكتوبة بشكل مختلف 1 / (f + (1-f)/P)."
       },
       "explanation_wrong_en": {
-        "A": "This is the formula for Amdahl's Law, just using $\\\\alpha(N)$ instead of `f`.",
+        "A": "This is the formula for Amdahl's Law, just using alpha(N) instead of f.",
         "B": "Correct answer",
         "C": "This is an incorrect formula.",
-        "D": "This is Amdahl's Law written in its other common form, $1 / (f + (1-f)/P)$."
+        "D": "This is Amdahl's Law written in its other common form, 1 / (f + (1-f)/P)."
       }
     },
     {
@@ -752,29 +752,29 @@
       "question_ar": "في مثال تكرار \"جاوس-سيدل\" (Gauss-Seidel)، لماذا لا يمكن موازاة الحلقة؟",
       "question_en": "In the Gauss-Seidel iteration example, why can the loop not be parallelized?",
       "choices": {
-        "A_ar": "لأنه يستخدم مصفوفة `diag(i)`",
-        "A_en": "Because it uses the `diag(i)` array",
-        "B_ar": "لأن حساب `soln(i)` يعتمد على `soln(i-1)`",
-        "B_en": "Because the calculation of `soln(i)` depends on `soln(i-1)`",
-        "C_ar": "لأنه لا توجد مصفوفة `snew` مؤقتة",
-        "C_en": "Because there is no temporary `snew` array",
-        "D_ar": "لأن `f(i)` دالة معقدة",
-        "D_en": "Because `f(i)` is a complex function"
+        "A_ar": "لأنه يستخدم مصفوفة diag(i)",
+        "A_en": "Because it uses the diag(i) array",
+        "B_ar": "لأن حساب soln(i) يعتمد على soln(i-1)",
+        "B_en": "Because the calculation of soln(i) depends on soln(i-1)",
+        "C_ar": "لأنه لا توجد مصفوفة snew مؤقتة",
+        "C_en": "Because there is no temporary snew array",
+        "D_ar": "لأن f(i) دالة معقدة",
+        "D_en": "Because f(i) is a complex function"
       },
       "correct_choice": "B",
-      "explanation_correct_ar": "تكرار جاوس-سيدل لديه اعتمادية محمولة عبر الحلقة. حساب `soln(i)` يستخدم `soln(i-1)` (و `soln(i+1)`). الاعتماد على `soln(i-1)` يعني أن التكرار `i` لا يمكن أن يبدأ قبل اكتمال التكرار `i-1`.",
-      "explanation_correct_en": "The Gauss-Seidel iteration has a loop-carried dependence. The calculation for `soln(i)` uses `soln(i-1)` (and `soln(i+1)`). The dependence on `soln(i-1)` means iteration `i` cannot begin until iteration `i-1` is complete.",
+      "explanation_correct_ar": "تكرار جاوس-سيدل لديه اعتمادية محمولة عبر الحلقة. حساب soln(i) يستخدم soln(i-1) (و soln(i+1)). الاعتماد على soln(i-1) يعني أن التكرار i لا يمكن أن يبدأ قبل اكتمال التكرار i-1.",
+      "explanation_correct_en": "The Gauss-Seidel iteration has a loop-carried dependence. The calculation for soln(i) uses soln(i-1) (and soln(i+1)). The dependence on soln(i-1) means iteration i cannot begin until iteration i-1 is complete.",
       "explanation_wrong_ar": {
-        "A": "استخدام مصفوفة `diag(i)` بحد ذاته لا يمنع الموازاة، طالما أننا نقرأ القيم فقط.",
+        "A": "استخدام مصفوفة diag(i) بحد ذاته لا يمنع الموازاة، طالما أننا نقرأ القيم فقط.",
         "B": "الإجابة الصحيحة",
-        "C": "عدم وجود مصفوفة `snew` هو *سبب* وجود الاعتمادية، لكن الاعتمادية نفسها (الخيار B) هي *السبب* المباشر لعدم إمكانية الموازاة.",
-        "D": "لا يوجد ما يشير إلى أن `f(i)` معقدة، وحتى لو كانت كذلك، فإن ذلك لا يمنع الموازاة ما لم تكن هناك اعتماديات."
+        "C": "عدم وجود مصفوفة snew هو *سبب* وجود الاعتمادية، لكن الاعتمادية نفسها (الخيار B) هي *السبب* المباشر لعدم إمكانية الموازاة.",
+        "D": "لا يوجد ما يشير إلى أن f(i) معقدة، وحتى لو كانت كذلك، فإن ذلك لا يمنع الموازاة ما لم تكن هناك اعتماديات."
       },
       "explanation_wrong_en": {
-        "A": "Using the `diag(i)` array does not by itself prevent parallelization, as long as we are only reading values.",
+        "A": "Using the diag(i) array does not by itself prevent parallelization, as long as we are only reading values.",
         "B": "Correct answer",
-        "C": "The *lack* of an `snew` array is the *reason* the dependence exists, but the dependence itself (Choice B) is the direct *reason* it cannot be parallelized.",
-        "D": "There is no indication `f(i)` is complex, and even if it were, that would not prevent parallelization unless there were dependencies."
+        "C": "The *lack* of an snew array is the *reason* the dependence exists, but the dependence itself (Choice B) is the direct *reason* it cannot be parallelized.",
+        "D": "There is no indication f(i) is complex, and even if it were, that would not prevent parallelization unless there were dependencies."
       }
     },
     {
@@ -783,27 +783,27 @@
       "question_ar": "كيف يحل تكرار \"جاكوبي\" (Jacobi) مشكلة الاعتمادية الموجودة في \"جاوس-سيدل\"؟",
       "question_en": "How does the Jacobi iteration solve the dependency problem found in Gauss-Seidel?",
       "choices": {
-        "A_ar": "عن طريق حساب `soln(i)` بترتيب عكسي",
-        "A_en": "By calculating `soln(i)` in reverse order",
-        "B_ar": "عن طريق إزالة `soln(i-1)` و `soln(i+1)` من الصيغة",
-        "B_en": "By removing `soln(i-1)` and `soln(i+1)` from the formula",
-        "C_ar": "عن طريق استخدام مصفوفة `snew` مؤقتة لتخزين النتائج الجديدة",
-        "C_en": "By using a temporary `snew` array to store new results",
-        "D_ar": "عن طريق تقسيم الحلقة إلى حلقتين `i=1,n/2` و `i=n/2+1,n`",
-        "D_en": "By splitting the loop into `i=1,n/2` and `i=n/2+1,n`"
+        "A_ar": "عن طريق حساب soln(i) بترتيب عكسي",
+        "A_en": "By calculating soln(i) in reverse order",
+        "B_ar": "عن طريق إزالة soln(i-1) و soln(i+1) من الصيغة",
+        "B_en": "By removing soln(i-1) and soln(i+1) from the formula",
+        "C_ar": "عن طريق استخدام مصفوفة snew مؤقتة لتخزين النتائج الجديدة",
+        "C_en": "By using a temporary snew array to store new results",
+        "D_ar": "عن طريق تقسيم الحلقة إلى حلقتين i=1,n/2 و i=n/2+1,n",
+        "D_en": "By splitting the loop into i=1,n/2 and i=n/2+1,n"
       },
       "correct_choice": "C",
-      "explanation_correct_ar": "تكرار جاكوبي يكسر الاعتمادية المحمولة عبر الحلقة. يقوم أولاً بحساب جميع القيم الجديدة في مصفوفة مؤقتة `snew(i)`، بناءً على قيم `soln` *القديمة* فقط. ثم، في حلقة منفصلة (يمكن أيضًا موازاتها)، يقوم بنسخ `snew` إلى `soln`.",
-      "explanation_correct_en": "The Jacobi iteration breaks the loop-carried dependence. It first computes all new values into a temporary array `snew(i)`, based *only* on the *old* `soln` values. Then, in a separate (also parallelizable) loop, it copies `snew` to `soln`.",
+      "explanation_correct_ar": "تكرار جاكوبي يكسر الاعتمادية المحمولة عبر الحلقة. يقوم أولاً بحساب جميع القيم الجديدة في مصفوفة مؤقتة snew(i)، بناءً على قيم soln *القديمة* فقط. ثم، في حلقة منفصلة (يمكن أيضًا موازاتها)، يقوم بنسخ snew إلى soln.",
+      "explanation_correct_en": "The Jacobi iteration breaks the loop-carried dependence. It first computes all new values into a temporary array snew(i), based *only* on the *old* soln values. Then, in a separate (also parallelizable) loop, it copies snew to soln.",
       "explanation_wrong_ar": {
-        "A": "التشغيل بترتيب عكسي لن يحل مشكلة الاعتمادية (سيصبح الاعتماد على `i+1` مشكلة).",
-        "B": "لا يزيلها؛ لا تزال الصيغة تستخدم قيم `soln` القديمة.",
+        "A": "التشغيل بترتيب عكسي لن يحل مشكلة الاعتمادية (سيصبح الاعتماد على i+1 مشكلة).",
+        "B": "لا يزيلها؛ لا تزال الصيغة تستخدم قيم soln القديمة.",
         "C": "الإجابة الصحيحة",
         "D": "تقسيم الحلقة لن ينجح إذا كانت الاعتمادية لا تزال موجودة عبر حدود التقسيم."
       },
       "explanation_wrong_en": {
-        "A": "Running in reverse order would not solve the dependency (the dependence on `i+1` would become the problem).",
-        "B": "It does not remove them; the formula still uses the old `soln` values.",
+        "A": "Running in reverse order would not solve the dependency (the dependence on i+1 would become the problem).",
+        "B": "It does not remove them; the formula still uses the old soln values.",
         "C": "Correct answer",
         "D": "Splitting the loop would not work if the dependence still existed across the split boundary."
       }
@@ -824,17 +824,17 @@
         "D_en": "Loops 2 and 3"
       },
       "correct_choice": "C",
-      "explanation_correct_ar": "الحلقتان 1 و 2 يمكن موازاتهما. في كلتا الحلقتين، كل تكرار `i` مستقل تمامًا عن أي تكرار آخر. يمكن حساب `diag(i)` و `offdiag(i)` بأي ترتيب. الحلقة 3، مع ذلك، لديها اعتمادية محمولة عبر الحلقة: `dxo` في التكرار `i` يأخذ قيمته من `dxi` في التكرار `i-1`.",
-      "explanation_correct_en": "Loops 1 and 2 can be parallelized. In both loops, each iteration `i` is completely independent of any other iteration. `diag(i)` and `offdiag(i)` can be computed in any order. Loop 3, however, has a loop-carried dependence: `dxo` in iteration `i` takes its value from `dxi` in iteration `i-1`.",
+      "explanation_correct_ar": "الحلقتان 1 و 2 يمكن موازاتهما. في كلتا الحلقتين، كل تكرار i مستقل تمامًا عن أي تكرار آخر. يمكن حساب diag(i) و offdiag(i) بأي ترتيب. الحلقة 3، مع ذلك، لديها اعتمادية محمولة عبر الحلقة: dxo في التكرار i يأخذ قيمته من dxi في التكرار i-1.",
+      "explanation_correct_en": "Loops 1 and 2 can be parallelized. In both loops, each iteration i is completely independent of any other iteration. diag(i) and offdiag(i) can be computed in any order. Loop 3, however, has a loop-carried dependence: dxo in iteration i takes its value from dxi in iteration i-1.",
       "explanation_wrong_ar": {
         "A": "الحلقة 2 يمكن أيضًا موازاتها.",
-        "B": "الحلقة 3 هي الحلقة الوحيدة التي *لا يمكن* موازاتها بسبب الاعتمادية `dxo=dxi`.",
+        "B": "الحلقة 3 هي الحلقة الوحيدة التي *لا يمكن* موازاتها بسبب الاعتمادية dxo=dxi.",
         "C": "الإجابة الصحيحة",
         "D": "الحلقة 3 لا يمكن موازاتها."
       },
       "explanation_wrong_en": {
         "A": "Loop 2 is also parallelizable.",
-        "B": "Loop 3 is the one loop that *cannot* be parallelized due to the `dxo=dxi` dependence.",
+        "B": "Loop 3 is the one loop that *cannot* be parallelized due to the dxo=dxi dependence.",
         "C": "Correct answer",
         "D": "Loop 3 cannot be parallelized."
       }
@@ -848,24 +848,24 @@
         "A_ar": "الحلقة 1",
         "A_en": "Loop 1",
         "B_ar": "الحلقة 2",
-        "A_en": "Loop 2",
+        "B_en": "Loop 2",
         "C_ar": "الحلقة 3",
         "C_en": "Loop 3",
         "D_ar": "كلهم متساوون في الكفاءة",
         "D_en": "All are equally efficient"
       },
       "correct_choice": "C",
-      "explanation_correct_ar": "تسأل الشريحة هذا السؤال. من المحتمل أن تكون الحلقة 3 هي الأكثر كفاءة *تسلسليًا* لأنها تقلل من حسابات `1.0/h(i+1)`. في الحلقتين 1 و 2، يتم حساب `1.0/h(i+1)` مرتين لكل تكرار (مرة كـ `offdiag(i)` ومرة كجزء من `diag(i)`، أو في التكرار التالي كـ `1.0/h(i)`). الحلقة 3 تعيد استخدام القيمة المحسوبة (`dxo=dxi`)، مما يقلل من العمليات الحسابية.",
-      "explanation_correct_en": "The slide asks this question. Loop 3 is likely the most *sequentially* efficient because it minimizes calculations of `1.0/h(i+1)`. In Loops 1 and 2, `1.0/h(i+1)` is calculated twice per iteration (once as `offdiag(i)` and once as part of `diag(i)`, or in the next iteration as `1.0/h(i)`). Loop 3 reuses the computed value (`dxo=dxi`), reducing arithmetic operations.",
+      "explanation_correct_ar": "تسأل الشريحة هذا السؤال. من المحتمل أن تكون الحلقة 3 هي الأكثر كفاءة *تسلسليًا* لأنها تقلل من حسابات 1.0/h(i+1). في الحلقتين 1 و 2، يتم حساب 1.0/h(i+1) مرتين لكل تكرار (مرة كـ offdiag(i) ومرة كجزء من diag(i)، أو في التكرار التالي كـ 1.0/h(i)). الحلقة 3 تعيد استخدام القيمة المحسوبة (dxo=dxi)، مما يقلل من العمليات الحسابية.",
+      "explanation_correct_en": "The slide asks this question. Loop 3 is likely the most *sequentially* efficient because it minimizes calculations of 1.0/h(i+1). In Loops 1 and 2, 1.0/h(i+1) is calculated twice per iteration (once as offdiag(i) and once as part of diag(i), or in the next iteration as 1.0/h(i)). Loop 3 reuses the computed value (dxo=dxi), reducing arithmetic operations.",
       "explanation_wrong_ar": {
-        "A": "الحلقة 1 تحسب `1.0/h(i+1)` مرتين، مرة كجزء من `diag(i)` ومرة كـ `offdiag(i)`.",
-        "B": "الحلقة 2 أفضل قليلاً ولكنها لا تزال تحسب `1.0/h` لكل `i` و `i+1` في كل تكرار.",
+        "A": "الحلقة 1 تحسب 1.0/h(i+1) مرتين، مرة كجزء من diag(i) ومرة كـ offdiag(i).",
+        "B": "الحلقة 2 أفضل قليلاً ولكنها لا تزال تحسب 1.0/h لكل i و i+1 في كل تكرار.",
         "C": "الإجابة الصحيحة",
         "D": "ليست متساوية؛ الحلقة 3 مُحسَّنة بشكل دقيق لإعادة استخدام القيم المحسوبة، وهي سمة شائعة في الكود التسلسلي الفعال."
       },
       "explanation_wrong_en": {
-        "A": "Loop 1 calculates `1.0/h(i+1)` twice, once as part of `diag(i)` and once as `offdiag(i)`.",
-        "B": "Loop 2 is slightly better but still computes `1.0/h` for both `i` and `i+1` in each iteration.",
+        "A": "Loop 1 calculates 1.0/h(i+1) twice, once as part of diag(i) and once as offdiag(i).",
+        "B": "Loop 2 is slightly better but still computes 1.0/h for both i and i+1 in each iteration.",
         "C": "Correct answer",
         "D": "They are not equal; Loop 3 is micro-optimized to reuse computed values, a common trait of efficient sequential code."
       }
@@ -929,3 +929,8 @@
         "A": "These are algorithm execution styles, not memory access patterns.",
         "B": "Correct answer",
         "C": "These are general terms that do not apply to memory locality in this context.",
+        "D": "While both data and instructions can have locality, the *types* of locality themselves are temporal and spatial."
+      }
+    }
+  ]
+}
