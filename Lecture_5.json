@@ -1,0 +1,936 @@
+{
+    "title_en": "Lecture 5",
+    "title_ar": "المحاضره الخامسه",
+    "questions": [
+        {
+            "question_number": 1,
+            "lecture_number": 5,
+            "question_ar": "أي مما يلي *ليس* من المفاهيم الأساسية للبرمجة المتوازية المذكورة في المحاضرة؟",
+            "question_en": "Which of the following is *not* a basic concept of parallel programming mentioned in the lecture?",
+            "choices": {
+                "A_ar": "التحكم (Control)",
+                "A_en": "Control",
+                "B_ar": "تسمية البيانات (Naming data)",
+                "B_en": "Naming data",
+                "C_ar": "التكلفة (Cost)",
+                "C_en": "Cost",
+                "D_ar": "المترجم (Compiler)",
+                "D_en": "Compiler"
+            },
+            "correct_choice": "D",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (D). المحاضرة (صفحة 3) تدرج المفاهيم الأساسية: التحكم (Control)، تسمية البيانات (Naming data)، العمليات على البيانات (Operations on data)، والتكلفة (Cost). المترجم (Compiler) هو أداة، وليس مفهومًا أساسيًا في هذا السياق.",
+            "explanation_correct_en": "The correct answer is (D). The lecture (Page 3) lists the basic concepts: Control, Naming data, Operations on data, and Cost. The Compiler is a tool, not a basic concept in this context.",
+            "explanation_wrong_ar": {
+                "A": "التحكم (Control) مذكور في (صفحة 3) (كيف يتم إنشاء التوازي ومزامنته).",
+                "B": "تسمية البيانات (Naming data) مذكورة في (صفحة 3) (ما هو الخاص وما هو المشترك).",
+                "C": "التكلفة (Cost) مذكورة في (صفحة 3) (كيف نحسب تكلفة تحقيق التوازي).",
+                "D": "هذه هي الإجابة الصحيحة (لم يتم ذكرها كمفهوم أساسي)."
+            },
+            "explanation_wrong_en": {
+                "A": "Control is mentioned on (Page 3) (how parallelism is created and synchronized).",
+                "B": "Naming data is mentioned on (Page 3) (what is private vs. shared).",
+                "C": "Cost is mentioned on (Page 3) (how to account for the cost of parallelism).",
+                "D": "This is the correct answer (it is not mentioned as a basic concept)."
+            }
+        },
+        {
+            "question_number": 2,
+            "lecture_number": 5,
+            "question_ar": "ما هو نموذج البرمجة الذي يتكون من \"مجموعة من المهام المستقلة، بدون اتصال أو مزامنة على مستوى البرنامج\"؟",
+            "question_en": "What programming model consists of \"A set of independent tasks, no communication or synchronization at program level\"?",
+            "choices": {
+                "A_ar": "نموذج البرمجة المتعددة (Multiprogramming model)",
+                "A_en": "Multiprogramming model",
+                "B_ar": "نموذج مساحة العنوان المشتركة (Shared address space model)",
+                "B_en": "Shared address space model",
+                "C_ar": "نموذج تمرير الرسائل (Message passing programming)",
+                "C_en": "Message passing programming",
+                "D_ar": "نموذج BSP",
+                "D_en": "BSP model"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 4) تعرف 'Multiprogramming model' (نموذج البرمجة المتعددة) بأنه \"مجموعة من المهام المستقلة، بدون اتصال أو مزامنة على مستوى البرنامج\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 4) defines the 'Multiprogramming model' as \"A set of independent tasks, no communication or synchronization at program level\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "نموذج مساحة العنوان المشتركة يتضمن \"الاتصال عبر البيانات المشتركة\" (صفحة 4).",
+                "C": "نموذج تمرير الرسائل يتضمن \"اتصال صريح من نقطة إلى نقطة\" (صفحة 4).",
+                "D": "نموذج BSP يتضمن اتصالات ومزامنة حاجز (barrier) صريحة (صفحة 33)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The shared address space model involves \"communicat[ion] via shared data\" (Page 4).",
+                "C": "The message passing model involves \"Explicit point-to-point communication\" (Page 4).",
+                "D": "The BSP model involves explicit communication and barrier synchronization (Page 33)."
+            }
+        },
+        {
+            "question_number": 3,
+            "lecture_number": 5,
+            "question_ar": "ما هو نموذج البرمجة الذي يتضمن \"اتصال صريح من نقطة إلى نقطة، مثل المكالمات الهاتفية أو البريد الإلكتروني\"؟",
+            "question_en": "What programming model involves \"Explicit point-to-point communication, like phone calls or email\"?",
+            "choices": {
+                "A_ar": "نموذج البرمجة المتعددة (Multiprogramming model)",
+                "A_en": "Multiprogramming model",
+                "B_ar": "نموذج مساحة العنوان المشتركة (Shared address space model)",
+                "B_en": "Shared address space model",
+                "C_ar": "نموذج تمرير الرسائل (Message passing programming)",
+                "C_en": "Message passing programming",
+                "D_ar": "نموذج توازي البيانات (Data parallel model)",
+                "D_en": "Data parallel model"
+            },
+            "correct_choice": "C",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (C). المحاضرة (صفحة 4) تعرف 'Message passing programming' (برمجة تمرير الرسائل) بأنها \"اتصال صريح من نقطة إلى نقطة، مثل المكالمات الهاتفية ... أو البريد الإلكتروني\".",
+            "explanation_correct_en": "The correct answer is (C). The lecture (Page 4) defines 'Message passing programming' as \"Explicit point-to-point communication, like phone calls ... or email\".",
+            "explanation_wrong_ar": {
+                "A": "نموذج البرمجة المتعددة ليس له اتصال على مستوى البرنامج (صفحة 4).",
+                "B": "نموذج مساحة العنوان المشتركة يتصل عبر بيانات مشتركة (مثل لوحة الإعلانات)، وليس تمرير رسائل صريح (صفحة 4).",
+                "C": "هذه هي الإجابة الصحيحة.",
+                "D": "نموذج توازي البيانات لديه اتصال ضمني (implicit) (صفحة 7)."
+            },
+            "explanation_wrong_en": {
+                "A": "The multiprogramming model has no communication at the program level (Page 4).",
+                "B": "The shared address space model communicates via shared data (like a bulletin board), not explicit message passing (Page 4).",
+                "C": "This is the correct answer.",
+                "D": "The data parallel model has implicit communication (Page 7)."
+            }
+        },
+        {
+            "question_number": 4,
+            "lecture_number": 5,
+            "question_ar": "في تصنيف فلين (Flynn's Taxonomy)، ما الذي يمثله 'SISD'؟",
+            "question_en": "In Flynn's Taxonomy, what does 'SISD' represent?",
+            "choices": {
+                "A_ar": "مسار تعليمات واحد، مسار بيانات واحد (Single instruction stream, single data stream)",
+                "A_en": "Single instruction stream, single data stream",
+                "B_ar": "مسار تعليمات واحد، مسارات بيانات متعددة (Single instruction stream, multiple data streams)",
+                "B_en": "Single instruction stream, multiple data streams",
+                "C_ar": "مسارات تعليمات متعددة، مسار بيانات واحد (Multiple instruction streams, single data stream)",
+                "C_en": "Multiple instruction streams, single data stream",
+                "D_ar": "مسارات تعليمات متعددة، مسارات بيانات متعددة (Multiple instruction streams, multiple data streams)",
+                "D_en": "Multiple instruction streams, multiple data streams"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 5) تعرف 'SISD' بأنه 'Single instruction stream, single data stream' (مسار تعليمات واحد، مسار بيانات واحد).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 5) defines 'SISD' as 'Single instruction stream, single data stream'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو 'SIMD' (صفحة 5).",
+                "C": "هذا هو 'MISD' (صفحة 5).",
+                "D": "هذا هو 'MIMD' (صفحة 5)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is 'SIMD' (Page 5).",
+                "C": "This is 'MISD' (Page 5).",
+                "D": "This is 'MIMD' (Page 5)."
+            }
+        },
+        {
+            "question_number": 5,
+            "lecture_number": 5,
+            "question_ar": "في تصنيف فلين (Flynn's Taxonomy)، ما الذي يمثله 'SIMD'؟",
+            "question_en": "In Flynn's Taxonomy, what does 'SIMD' represent?",
+            "choices": {
+                "A_ar": "مسار تعليمات واحد، مسار بيانات واحد",
+                "A_en": "Single instruction stream, single data stream",
+                "B_ar": "مسار تعليمات واحد، مسارات بيانات متعددة",
+                "B_en": "Single instruction stream, multiple data streams",
+                "C_ar": "مسارات تعليمات متعددة، مسار بيانات واحد",
+                "C_en": "Multiple instruction streams, single data stream",
+                "D_ar": "مسارات تعليمات متعددة، مسارات بيانات متعددة",
+                "D_en": "Multiple instruction streams, multiple data streams"
+            },
+            "correct_choice": "B",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 5) تعرف 'SIMD' بأنه 'Single instruction stream, multiple data stream' (مسار تعليمات واحد، مسارات بيانات متعددة).",
+            "explanation_correct_en": "The correct answer is (B). The lecture (Page 5) defines 'SIMD' as 'Single instruction stream, multiple data stream'.",
+            "explanation_wrong_ar": {
+                "A": "هذا هو 'SISD' (صفحة 5).",
+                "B": "هذه هي الإجابة الصحيحة.",
+                "C": "هذا هو 'MISD' (صفحة 5).",
+                "D": "هذا هو 'MIMD' (صفحة 5)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is 'SISD' (Page 5).",
+                "B": "This is the correct answer.",
+                "C": "This is 'MISD' (Page 5).",
+                "D": "This is 'MIMD' (Page 5)."
+            }
+        },
+        {
+            "question_number": 6,
+            "lecture_number": 5,
+            "question_ar": "في تصنيف فلين (Flynn's Taxonomy)، ما الذي يمثله 'MIMD'؟",
+            "question_en": "In Flynn's Taxonomy, what does 'MIMD' represent?",
+            "choices": {
+                "A_ar": "مسار تعليمات واحد، مسار بيانات واحد",
+                "A_en": "Single instruction stream, single data stream",
+                "B_ar": "مسار تعليمات واحد، مسارات بيانات متعددة",
+                "B_en": "Single instruction stream, multiple data streams",
+                "C_ar": "مسارات تعليمات متعددة، مسار بيانات واحد",
+                "C_en": "Multiple instruction streams, single data stream",
+                "D_ar": "مسارات تعليمات متعددة، مسارات بيانات متعددة",
+                "D_en": "Multiple instruction streams, multiple data streams"
+            },
+            "correct_choice": "D",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (D). المحاضرة (صفحة 5) تعرف 'MIMD' بأنه 'Multiple instruction stream, multiple data stream' (مسارات تعليمات متعددة، مسارات بيانات متعددة).",
+            "explanation_correct_en": "The correct answer is (D). The lecture (Page 5) defines 'MIMD' as 'Multiple instruction stream, multiple data stream'.",
+            "explanation_wrong_ar": {
+                "A": "هذا هو 'SISD' (صفحة 5).",
+                "B": "هذا هو 'SIMD' (صفحة 5).",
+                "C": "هذا هو 'MISD' (صفحة 5).",
+                "D": "هذه هي الإجابة الصحيحة."
+            },
+            "explanation_wrong_en": {
+                "A": "This is 'SISD' (Page 5).",
+                "B": "This is 'SIMD' (Page 5).",
+                "C": "This is 'MISD' (Page 5).",
+                "D": "This is the correct answer."
+            }
+        },
+        {
+            "question_number": 7,
+            "lecture_number": 5,
+            "question_ar": "المعالجات الأحادية (Uniprocessors) هي مثال على أي تصنيف لفلين (Flynn's Taxonomy)؟",
+            "question_en": "Uniprocessors are an example of which Flynn's Taxonomy classification?",
+            "choices": {
+                "A_ar": "SISD",
+                "A_en": "SISD",
+                "B_ar": "SIMD",
+                "B_en": "SIMD",
+                "C_ar": "MISD",
+                "C_en": "MISD",
+                "D_ar": "MIMD",
+                "D_en": "MIMD"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 5) تدرج 'Uniprocessors' (المعالجات الأحادية) تحت تصنيف 'SISD'.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 5) lists 'Uniprocessors' under the 'SISD' classification.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "SIMD يتضمن 'Vector Processor' (معالج المتجهات) (صفحة 5).",
+                "C": "MISD يتضمن 'pipelined computers' (الحواسيب ذات خطوط الأنابيب) (صفحة 5).",
+                "D": "MIMD يتضمن 'Multi-computers' (الحواسيب المتعددة) (صفحة 5)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "SIMD includes 'Vector Processor' (Page 5).",
+                "C": "MISD includes 'pipelined computers' (Page 5).",
+                "D": "MIMD includes 'Multi-computers' (Page 5)."
+            }
+        },
+        {
+            "question_number": 8,
+            "lecture_number": 5,
+            "question_ar": "الحواسيب المتعددة (Multi-computers) والمعالجات المتعددة (Multi-processors) هي أمثلة على أي تصنيف لفلين (Flynn's Taxonomy)؟",
+            "question_en": "Multi-computers and Multi-processors are examples of which Flynn's Taxonomy classification?",
+            "choices": {
+                "A_ar": "SISD",
+                "A_en": "SISD",
+                "B_ar": "SIMD",
+                "B_en": "SIMD",
+                "C_ar": "MISD",
+                "C_en": "MISD",
+                "D_ar": "MIMD",
+                "D_en": "MIMD"
+            },
+            "correct_choice": "D",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (D). المحاضرة (صفحة 5) تدرج 'Multi-computers' و 'Multi-processors' تحت تصنيف 'MIMD'.",
+            "explanation_correct_en": "The correct answer is (D). The lecture (Page 5) lists 'Multi-computers' and 'Multi-processors' under the 'MIMD' classification.",
+            "explanation_wrong_ar": {
+                "A": "SISD هو 'Uniprocessors' (المعالجات الأحادية) (صفحة 5).",
+                "B": "SIMD هو 'Vector Processor' (معالج المتجهات) (صفحة 5).",
+                "C": "MISD هو 'pipelined computers' (الحواسيب ذات خطوط الأنابيب) (صفحة 5).",
+                "D": "هذه هي الإجابة الصحيحة."
+            },
+            "explanation_wrong_en": {
+                "A": "SISD is 'Uniprocessors' (Page 5).",
+                "B": "SIMD is 'Vector Processor' (Page 5).",
+                "C": "MISD is 'pipelined computers' (Page 5).",
+                "D": "This is the correct answer."
+            }
+        },
+        {
+            "question_number": 9,
+            "lecture_number": 5,
+            "question_ar": "الاختصار 'SPMD' (برنامج واحد، بيانات متعددة) هو نمط برمجة شائع لأي تصنيف لفلين (Flynn's Taxonomy)؟",
+            "question_en": "The 'SPMD' (Single program, multiple data) acronym is a common programming style for which Flynn's Taxonomy classification?",
+            "choices": {
+                "A_ar": "SISD",
+                "A_en": "SISD",
+                "B_ar": "SIMD",
+                "B_en": "SIMD",
+                "C_ar": "MISD",
+                "C_en": "MISD",
+                "D_ar": "MIMD",
+                "D_en": "MIMD"
+            },
+            "correct_choice": "D",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (D). المحاضرة (صفحة 5) تذكر 'SPMD' (برنامج واحد، بيانات متعددة) كنمط برمجة شائع تحت تصنيف 'MIMD'.",
+            "explanation_correct_en": "The correct answer is (D). The lecture (Page 5) mentions 'SPMD' (Single program, multiple data) as a common programming style under the 'MIMD' classification.",
+            "explanation_wrong_ar": {
+                "A": "SPMD يتطلب معالجات متعددة، وهو ليس SISD.",
+                "B": "SIMD لديه تعليمة *واحدة*، بينما SPMD هو برنامج *واحد* (والذي يمكن أن يكون له تعليمات مختلفة تتفرع).",
+                "C": "MISD نادر جدًا وليس هو النموذج لـ SPMD.",
+                "D": "هذه هي الإجابة الصحيحة."
+            },
+            "explanation_wrong_en": {
+                "A": "SPMD requires multiple processors, which SISD is not.",
+                "B": "SIMD is a single *instruction*, whereas SPMD is a single *program* (which can branch to different instructions).",
+                "C": "MISD is very rare and not the model for SPMD.",
+                "D": "This is the correct answer."
+            }
+        },
+        {
+            "question_number": 10,
+            "lecture_number": 5,
+            "question_ar": "أي نموذج برمجة يصف \"تمايز المهام، مثل الطباخ والنادل وموظف الاستقبال\"؟",
+            "question_en": "Which programming model describes \"Task differentiation, like restaurant cook, waiter, and receptionist\"?",
+            "choices": {
+                "A_ar": "توازي المهام (Task parallel)",
+                "A_en": "Task parallel",
+                "B_ar": "توازي البيانات (Data parallel)",
+                "B_en": "Data parallel",
+                "C_ar": "SIMD",
+                "C_en": "SIMD",
+                "D_ar": "SISD",
+                "D_en": "SISD"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 7) تعرف 'Task parallel' (توازي المهام) بأنه يتضمن \"تمايز المهام، مثل الطباخ والنادل وموظف الاستقبال في مطعم\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 7) defines 'Task parallel' as involving \"Task differentiation, like restaurant cook, waiter, and receptionist\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "توازي البيانات (Data parallel) يتضمن \"إجراءات عالمية على البيانات\" حيث تنفذ المهام \"نفس الكود\" (صفحة 7)، وهو عكس تمايز المهام.",
+                "C": "SIMD هو معمارية آلة، وهو الأساس لـ 'توازي البيانات' (صفحة 7).",
+                "D": "SISD هو معالج أحادي وليس متوازيًا (صفحة 5)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Data parallel involves \"Global actions on data\" where tasks execute \"the same code\" (Page 7), the opposite of task differentiation.",
+                "C": "SIMD is a machine architecture, and is the basis for 'Data parallel' (Page 7).",
+                "D": "SISD is a uniprocessor and not parallel (Page 5)."
+            }
+        },
+        {
+            "question_number": 11,
+            "lecture_number": 5,
+            "question_ar": "في نموذج 'توازي البيانات' (Data parallel)، كيف تكون المزامنة (synchronization) عادةً؟",
+            "question_en": "In the 'Data parallel' model, how is synchronization typically handled?",
+            "choices": {
+                "A_ar": "ضمنية (Implicit)",
+                "A_en": "Implicit",
+                "B_ar": "صريحة (Explicit)",
+                "B_en": "Explicit",
+                "C_ar": "عبر تمرير الرسائل (Via message passing)",
+                "C_en": "Via message passing",
+                "D_ar": "غير موجودة (Non-existent)",
+                "D_en": "Non-existent"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 7) تذكر أنه في نموذج 'Data parallel'، \"المزامنة ضمنية (lock-step execution)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 7) states that in the 'Data parallel' model, \"Synchronization is implicit (lock-step execution)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "المزامنة الصريحة (Explicit) (باستخدام الأقفال والحواجز) هي سمة لنموذج 'Task parallel' (توازي المهام) (صفحة 7).",
+                "C": "تمرير الرسائل هو آلية *اتصال*، وليس وصفًا لطبيعة المزامنة (ضمنية مقابل صريحة).",
+                "D": "المزامنة ضرورية في البرمجة المتوازية؛ في 'توازي البيانات'، هي فقط ضمنية."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Explicit synchronization (using locks and barriers) is a feature of the 'Task parallel' model (Page 7).",
+                "C": "Message passing is a *communication* mechanism, not a description of the nature of synchronization (implicit vs. explicit).",
+                "D": "Synchronization is necessary in parallel programming; in data parallel, it's just implicit."
+            }
+        },
+        {
+            "question_number": 12,
+            "lecture_number": 5,
+            "question_ar": "في نموذج 'توازي المهام' (Task parallel)، كيف تكون المزامنة (synchronization) عادةً؟",
+            "question_en": "In the 'Task parallel' model, how is synchronization typically handled?",
+            "choices": {
+                "A_ar": "ضمنية (Implicit)",
+                "A_en": "Implicit",
+                "B_ar": "صريحة (Explicit)",
+                "B_en": "Explicit",
+                "C_ar": "عبر تعليمات SIMD",
+                "C_en": "Via SIMD instructions",
+                "D_ar": "غير ضرورية (Not needed)",
+                "D_en": "Not needed"
+            },
+            "correct_choice": "B",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (B). المحاضرة (صفحة 7) تذكر أنه في نموذج 'Task parallel'، \"المزامنة صريحة (عبر الأقفال والحواجز)\".",
+            "explanation_correct_en": "The correct answer is (B). The lecture (Page 7) states that in the 'Task parallel' model, \"Synchronization is explicit (via locks and barriers)\".",
+            "explanation_wrong_ar": {
+                "A": "المزامنة الضمنية (Implicit) هي سمة لنموذج 'Data parallel' (توازي البيانات) (صفحة 7).",
+                "B": "هذه هي الإجابة الصحيحة.",
+                "C": "تعليمات SIMD مرتبطة بـ 'Data parallel'، وليس 'Task parallel' (صفحة 6-7).",
+                "D": "المزامنة الصريحة ضرورية لتنسيق المهام المختلفة (صفحة 7)."
+            },
+            "explanation_wrong_en": {
+                "A": "Implicit synchronization is a feature of the 'Data parallel' model (Page 7).",
+                "B": "This is the correct answer.",
+                "C": "SIMD instructions are related to 'Data parallel', not 'Task parallel' (Pages 6-7).",
+                "D": "Explicit synchronization is necessary to coordinate the different tasks (Page 7)."
+            }
+        },
+        {
+            "question_number": 13,
+            "lecture_number": 5,
+            "question_ar": "في نموذج برمجة 'مساحة العنوان المشتركة' (Shared address space)، كيف يتم تنسيق الخيوط (threads)؟",
+            "question_en": "In the 'Shared address space' programming model, how do threads coordinate?",
+            "choices": {
+                "A_ar": "بشكل صريح عن طريق عمليات المزامنة على المتغيرات المشتركة",
+                "A_en": "Explicitly by synchronization operations on shared variables",
+                "B_ar": "بشكل ضمني عن طريق تنفيذ خطوة بقفل (lock-step execution)",
+                "B_en": "Implicitly by lock-step execution",
+                "C_ar": "عن طريق إرسال واستقبال رسائل صريحة",
+                "C_en": "By sending and receiving explicit messages",
+                "D_ar": "لا يوجد تنسيق مطلوب",
+                "D_en": "No coordination is needed"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 9) تصف أن الخيوط (Threads) في هذا النموذج \"تنسق بشكل صريح عن طريق عمليات المزامنة على المتغيرات المشتركة\"، مثل الأقفال (locks) والحواجز (barriers).",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 9) describes that Threads in this model \"coordinate explicitly by synchronization operations on shared variables\", such as locks and barriers.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "التنفيذ بخطوة بقفل (lock-step) هو سمة لنموذج 'Data parallel' (صفحة 7).",
+                "C": "إرسال/استقبال الرسائل هو سمة لنموذج 'Message passing' (صفحة 24).",
+                "D": "التنسيق (المزامنة) مطلوب لمنع حالات مثل 'race conditions' (صفحة 16)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Lock-step execution is a feature of the 'Data parallel' model (Page 7).",
+                "C": "Sending/receiving messages is a feature of the 'Message passing' model (Page 24).",
+                "D": "Coordination (synchronization) is required to prevent issues like race conditions (Page 16)."
+            }
+        },
+        {
+            "question_number": 14,
+            "lecture_number": 5,
+            "question_ar": "ما هو الفرق الرئيسي بين آلة UMA وآلة NUMA؟",
+            "question_en": "What is the key difference between a UMA machine and a NUMA machine?",
+            "choices": {
+                "A_ar": "UMA لديها وصول موحد للذاكرة، بينما NUMA لديها وصول غير موحد للذاكرة",
+                "A_en": "UMA has uniform memory access, while NUMA has nonuniform memory access",
+                "B_ar": "UMA تستخدم تمرير الرسائل، بينما NUMA تستخدم ذاكرة مشتركة",
+                "B_en": "UMA uses message passing, while NUMA uses shared memory",
+                "C_ar": "UMA ليس لديها ذاكرة مخبئية (cache)، بينما NUMA لديها ذاكرة مخبئية",
+                "C_en": "UMA has no cache, while NUMA has cache",
+                "D_ar": "UMA هي MIMD، بينما NUMA هي SIMD",
+                "D_en": "UMA is MIMD, while NUMA is SIMD"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تعرف UMA (الوصول الموحد للذاكرة) بأن \"كل معالج لديه وصول موحد للذاكرة\". (صفحة 11) تعرف NUMA (الوصول غير الموحد للذاكرة) بأن \"وقت الوصول للذاكرة يعتمد على موقع البيانات\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) defines UMA (Uniform memory access) as \"Each processor has uniform access to memory\". (Page 11) defines NUMA (Nonuniform memory access) as \"Memory access time depends on location of data\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "كلاهما (UMA و NUMA) هما نوعان من أنظمة *الذاكرة المشتركة* (صفحة 10-11). تمرير الرسائل هو نموذج مختلف (صفحة 24).",
+                "C": "كلا النموذجين (UMA و NUMA) الموضحين في الرسوم البيانية (صفحة 10-11) يحتويان على ذاكرة مخبئية (cache) لكل وحدة معالجة مركزية (CPU).",
+                "D": "كلاهما (UMA و NUMA) هما معماريات MIMD (متعددة التعليمات، متعددة البيانات)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Both UMA and NUMA are types of *shared memory* systems (Pages 10-11). Message passing is a different model (Page 24).",
+                "C": "Both the UMA and NUMA models shown in the diagrams (Pages 10-11) include caches for each CPU.",
+                "D": "Both UMA and NUMA are MIMD architectures."
+            }
+        },
+        {
+            "question_number": 15,
+            "lecture_number": 5,
+            "question_ar": "في آلة UMA (مثل SMP)، أين يتم وضع المتغيرات الخاصة (private variables) للخيط؟",
+            "question_en": "In a UMA machine (like an SMP), where are a thread's private variables placed?",
+            "choices": {
+                "A_ar": "في الذاكرة المشتركة (Shared memory)",
+                "A_en": "In shared memory",
+                "B_ar": "في ذاكرة محلية خاصة (Private local memory)",
+                "B_en": "In private local memory",
+                "C_ar": "على القرص (On disk)",
+                "C_en": "On disk",
+                "D_ar": "في معالج آخر (In another processor)",
+                "D_en": "In another processor"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 10) تذكر أنه في آلة UMA، \"لا توجد ذاكرة محلية/خاصة، يتم وضع المتغيرات الخاصة في الذاكرة المشتركة\". الذاكرة المخبئية (cache) تجعل هذا الوصول يبدو \"محليًا\" وسريعًا.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 10) states that in a UMA machine, \"No local/private memory, private variables are put in shared memory\". The cache makes this access seem 'local' and fast.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "آلات UMA و NUMA (صفحة 10-11) الموضحة \"ليس لديها ذاكرة محلية/خاصة\".",
+                "C": "القرص بطيء جدًا ولا يُستخدم للمتغيرات الخاصة (مثل مكدس وقت التشغيل).",
+                "D": "المتغيرات الخاصة تكون خاصة بالخيط الحالي، ولا يتم وضعها في معالج آخر."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The UMA and NUMA machines shown (Pages 10-11) have \"No local/private memory\".",
+                "C": "The disk is far too slow and is not used for private variables (like the runtime stack).",
+                "D": "Private variables are private to the current thread, not placed in another processor."
+            }
+        },
+        {
+            "question_number": 16,
+            "lecture_number": 5,
+            "question_ar": "ما الذي يمكن أن يحدث خطأ في الكود (صفحة 16) حيث يقوم كلا الخيطين (threads) بتنفيذ 'A := A + A[i]'؟",
+            "question_en": "What can go wrong in the code (Page 16) where both threads execute 'A := A + A[i]'?",
+            "choices": {
+                "A_ar": "حالة سباق (Race condition)",
+                "A_en": "Race condition",
+                "B_ar": "جمود (Deadlock)",
+                "B_en": "Deadlock",
+                "C_ar": "مشاركة كاذبة (False sharing)",
+                "C_en": "False sharing",
+                "D_ar": "خطأ تقسيم (Segmentation fault)",
+                "D_en": "Segmentation fault"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 16) تشخص المشكلة بأنها \"حالة سباق\" (Race condition). هذا يحدث لأن التعليمات (تحميل A، إضافة، تخزين A) من الخيوط المختلفة \"يمكن أن تتداخل بشكل عشوائي\"، مما يؤدي إلى فقدان تحديث أحد الخيوط.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 16) diagnoses the problem as a \"Race condition\". This occurs because the instructions (load A, add, store A) from different threads \"can be interleaved arbitrarily\", leading to one of the updates being lost.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الجمود (Deadlock) يحدث عندما ينتظر خيطان بعضهما البعض (مثل استخدام الأقفال بترتيب خاطئ)، وهو ما لا يحدث هنا (صفحة 31).",
+                "C": "المشاركة الكاذبة (False sharing) هي مشكلة أداء في الذاكرة المخبئية (cache)، وليست خطأ في الصحة (correctness) مثل هذا.",
+                "D": "لا يوجد سبب للاعتقاد بأن هذا الكود سيؤدي إلى خطأ تقسيم (الوصول إلى ذاكرة غير صالحة)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A deadlock is when two threads wait for each other (e.g., using locks in the wrong order), which is not what is happening here (Page 31).",
+                "C": "False sharing is a cache performance problem, not a correctness bug like this.",
+                "D": "There is no reason to believe this code would cause a segmentation fault (accessing invalid memory)."
+            }
+        },
+        {
+            "question_number": 17,
+            "lecture_number": 5,
+            "question_ar": "ما هي إحدى طرق حل \"حالة السباق\" (Race condition) الموضحة في المحاضرة (صفحة 17)؟",
+            "question_en": "What is one solution shown in the lecture (Page 17) to fix the race condition?",
+            "choices": {
+                "A_ar": "استخدام العمليات الذرية (atomic operations)",
+                "A_en": "Using atomic operations",
+                "B_ar": "استخدام متغيرات خاصة (private variables) فقط",
+                "B_en": "Using only private variables",
+                "C_ar": "استخدام تمرير الرسائل (message passing)",
+                "C_en": "Using message passing",
+                "D_ar": "إزالة الحلقات (Removing the loops)",
+                "D_en": "Removing the loops"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 17) تعرض \"الحل باستخدام العمليات الذرية (atomic operations) لمنع حالة السباق\"، عن طريق تغيير 'A := A + A[i]' إلى 'atomic A := A + A[i]'.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 17) shows the \"Solution with atomic operations to prevent race condition\", by changing 'A := A + A[i]' to 'atomic A := A + A[i]'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "استخدام متغيرات خاصة فقط (كما في صفحة 19) يحل مشكلة السباق على A، ولكنه يتطلب خطوة مزامنة أخرى.",
+                "C": "تمرير الرسائل هو نموذج برمجة مختلف تمامًا (صفحة 24).",
+                "D": "إزالة الحلقات سيغير منطق البرنامج."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Using only private variables (as in Page 19) solves the race on A, but requires another synchronization step.",
+                "C": "Message passing is a completely different programming model (Page 24).",
+                "D": "Removing the loops would change the program's logic."
+            }
+        },
+        {
+            "question_number": 18,
+            "lecture_number": 5,
+            "question_ar": "ما هي الآلية المستخدمة في (صفحة 18) لضمان \"الاستبعاد المتبادل\" (mutual exclusion) حول القسم الحرج (critical section)؟",
+            "question_en": "What mechanism is used on (Page 18) to ensure 'mutual exclusion' around the critical section?",
+            "choices": {
+                "A_ar": "الأقفال (Locks)",
+                "A_en": "Locks",
+                "B_ar": "الحواجز (Barriers)",
+                "B_en": "Barriers",
+                "C_ar": "العمليات الذرية (Atomic operations)",
+                "C_en": "Atomic operations",
+                "D_ar": "تمرير الرسائل (Message passing)",
+                "D_en": "Message passing"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 18) تعرض \"الحل باستخدام الأقفال (locks) لضمان الاستبعاد المتبادل\"، عن طريق إحاطة 'A := A + A[i]' بـ 'lock' و 'unlock'.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 18) shows the \"Solution with locks to ensure mutual exclusion\", by surrounding 'A := A + A[i]' with 'lock' and 'unlock'.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الحواجز (Barriers) (صفحة 21) تجعل جميع الخيوط تنتظر، لكنها لا تضمن الاستبعاد المتبادل لقسم حرج.",
+                "C": "العمليات الذرية (Atomic operations) (صفحة 17) هي حل بديل، لكن (صفحة 18) تستخدم الأقفال (locks) صراحة.",
+                "D": "تمرير الرسائل (Message passing) هو نموذج مختلف تمامًا (صفحة 24)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Barriers (Page 21) make all threads wait, but don't ensure mutual exclusion for a critical section.",
+                "C": "Atomic operations (Page 17) are an alternative solution, but (Page 18) explicitly uses locks.",
+                "D": "Message passing is a different model entirely (Page 24)."
+            }
+        },
+        {
+            "question_number": 19,
+            "lecture_number": 5,
+            "question_ar": "في الكود الموجود في (صفحة 20)، لماذا لا يزال من الممكن أن تسوء الأمور حتى مع وجود الأقفال (locks)؟",
+            "question_en": "In the code on (Page 20), why can things still go wrong even with locks?",
+            "choices": {
+                "A_ar": "خيط واحد قد يقرأ 'A' قبل أن ينتهي الخيط الآخر من التحديث",
+                "A_en": "One thread might read 'A' before the other thread has finished updating it",
+                "B_ar": "قد يحدث جمود (deadlock) بسبب الأقفال",
+                "B_en": "A deadlock might occur because of the locks",
+                "C_ar": "الأقفال تسبب مشاركة كاذبة (false sharing)",
+                "C_en": "The locks cause false sharing",
+                "D_ar": "المتغير 'Aj' لا يزال مشتركًا",
+                "D_en": "The 'Aj' variable is still shared"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 20) تطرح السؤال \"ما الذي يمكن أن يحدث خطأ؟\" مشيرة إلى قراءة 'A' (السطر '... := A'). المشكلة هي أنه لا يوجد ما يضمن أن كلا الخيطين قد أكملا أقسامهما الحرجة قبل قراءة القيمة النهائية لـ 'A'. خيط واحد قد يقرأ 'A' بعد أن يضيف لنفسه فقط، ولكن قبل أن يضيف الخيط الثاني قيمته.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 20) asks \"What could go wrong?\" pointing to the read of 'A' (the '... := A' line). The problem is that there is no guarantee that both threads have completed their critical sections before 'A' is read for its final value. One thread might read 'A' after only it has added to it, but before the second thread has added its value.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "لا يوجد جمود (deadlock) هنا لأن كلا الخيطين يحصلان على نفس القفل الوحيد؛ سيتسلسلون (serialize) ولكن لن يتجمدوا.",
+                "C": "الأقفال قد تسبب نزاعًا (contention)، لكنها لا تسبب *بالضرورة* مشاركة كاذبة.",
+                "D": "في هذا المثال (صفحة 20)، أصبح 'Aj' خاصًا (private)، مما يحل مشكلة سابقة (كما هو مذكور في صفحة 19)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "There is no deadlock here as both threads acquire the same single lock; they will serialize but not deadlock.",
+                "C": "Locks may cause contention, but not necessarily false sharing.",
+                "D": "In this example (Page 20), 'Aj' has been made private, solving a previous problem (as noted on Page 19)."
+            }
+        },
+        {
+            "question_number": 20,
+            "lecture_number": 5,
+            "question_ar": "ما هي آلية المزامنة التي تم إضافتها في (صفحة 21) لحل مشكلة قراءة 'A' مبكرًا جدًا؟",
+            "question_en": "What synchronization mechanism was added on (Page 21) to solve the problem of reading 'A' too early?",
+            "choices": {
+                "A_ar": "حاجز (Barrier)",
+                "A_en": "Barrier",
+                "B_ar": "قفل (Lock)",
+                "B_en": "Lock",
+                "C_ar": "عملية ذرية (Atomic operation)",
+                "C_en": "Atomic operation",
+                "D_ar": "إرسال/استقبال (Send/Recv)",
+                "D_en": "Send/Recv"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 21) تعرض إضافة 'barrier' (حاجز) قبل السطر '... := A'. هذا يضمن أن \"جميع المعالجات (procs) تتزامن\" وأن كلاهما قد أكمل تحديث 'A' قبل أن يحاول أي منهما قراءة القيمة النهائية.",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 21) shows the addition of a 'barrier' before the '... := A' line. This ensures that \"All procs synchronize\" and that both have completed their update to 'A' before either one tries to read the final value.",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الأقفال (Locks) كانت موجودة بالفعل في (صفحة 20) ولم تحل هذه المشكلة المحددة (قراءة النتيجة النهائية).",
+                "C": "العمليات الذرية (Atomic operations) هي بديل للأقفال (صفحة 17)، وليست حلاً لمشكلة مزامنة القراءة النهائية هذه.",
+                "D": "إرسال/استقبال (Send/Recv) هو لنموذج تمرير الرسائل (صفحة 24)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Locks were already present on (Page 20) and did not solve this specific problem (reading the final result).",
+                "C": "Atomic operations are an alternative to locks (Page 17), not a solution for this final read synchronization problem.",
+                "D": "Send/Recv is for the message passing model (Page 24)."
+            }
+        },
+        {
+            "question_number": 21,
+            "lecture_number": 5,
+            "question_ar": "في نموذج 'توازي البيانات' (Data parallel) (صفحة 22)، كيف يتم تحقيق الاتصال والمزامنة؟",
+            "question_en": "In the 'Data parallel' model (Page 22), how are communication and synchronization achieved?",
+            "choices": {
+                "A_ar": "بشكل ضمني (Implicitly)",
+                "A_en": "Implicitly",
+                "B_ar": "بشكل صريح (Explicitly)",
+                "B_en": "Explicitly",
+                "C_ar": "عبر الأقفال والحواجز (Via locks and barriers)",
+                "C_en": "Via locks and barriers",
+                "D_ar": "عبر تمرير الرسائل (Via message passing)",
+                "D_en": "Via message passing"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 22) تذكر أنه في نموذج 'توازي البيانات'، \"الاتصال ضمني\" و \"المزامنة ضمنية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 22) states that in the 'Data parallel' model, \"Communication is implicit\" and \"Synchronization is implicit\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "الاتصال والمزامنة الصريحة هي سمة لنموذج 'توازي المهام' (Task parallel) (صفحة 7).",
+                "C": "الأقفال والحواجز هي آليات *صريحة* تُستخدم في 'توازي المهام' (صفحة 7).",
+                "D": "تمرير الرسائل هو نموذج برمجة *صريح* ومختلف (صفحة 24)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "Explicit communication and synchronization are features of the 'Task parallel' model (Page 7).",
+                "C": "Locks and barriers are *explicit* mechanisms used in 'Task parallel' (Page 7).",
+                "D": "Message passing is an *explicit* and different programming model (Page 24)."
+            }
+        },
+        {
+            "question_number": 22,
+            "lecture_number": 5,
+            "question_ar": "في نموذج 'تمرير الرسائل' (Message passing)، ما هي المكونات الأساسية للبرنامج؟",
+            "question_en": "In the 'Message passing' model, what are the basic components of a program?",
+            "choices": {
+                "A_ar": "مجموعة من العمليات (processes) المسماة ذات ذاكرة محلية",
+                "A_en": "A set of named processes with local memory",
+                "B_ar": "مجموعة من الخيوط (threads) التي تعمل على بيانات مشتركة",
+                "B_en": "A set of threads operating on shared data",
+                "C_ar": "خيط تحكم واحد (single thread) مع عمليات متوازية",
+                "C_en": "A single thread of control with parallel operations",
+                "D_ar": "مجموعة من المهام المستقلة بدون اتصال",
+                "D_en": "A set of independent tasks with no communication"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 24) تعرف برنامج 'تمرير الرسائل' بأنه \"مجموعة من العمليات (processes) المسماة\"، وكل عملية لديها \"خيط تحكم وذاكرة محلية مع مساحة عنوان محلية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 24) defines a 'Message passing' program as \"A set of named processes\", where each process \"has thread of control and local memory with local address space\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا يصف نموذج 'مساحة العنوان المشتركة' (Shared address space) (صفحة 9).",
+                "C": "هذا يصف نموذج 'توازي البيانات' (Data parallel) (صفحة 22).",
+                "D": "هذا يصف نموذج 'البرمجة المتعددة' (Multiprogramming) (صفحة 4)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This describes the 'Shared address space' model (Page 9).",
+                "C": "This describes the 'Data parallel' model (Page 22).",
+                "D": "This describes the 'Multiprogramming' model (Page 4)."
+            }
+        },
+        {
+            "question_number": 23,
+            "lecture_number": 5,
+            "question_ar": "في نموذج 'تمرير الرسائل' (Message passing)، كيف يتم تقسيم البيانات المشتركة منطقيًا؟",
+            "question_en": "In the 'Message passing' model, how is logically shared data partitioned?",
+            "choices": {
+                "A_ar": "يتم تقسيمها بشكل صريح (explicitly) على الذواكر المحلية",
+                "A_en": "It is explicitly partitioned over local memories",
+                "B_ar": "يتم تخزينها في مساحة عنوان عالمية (global address space) واحدة",
+                "B_en": "It is stored in a single global address space",
+                "C_ar": "يتم التعامل معها تلقائيًا بواسطة الأجهزة (hardware)",
+                "C_en": "It is handled automatically by hardware",
+                "D_ar": "لا توجد بيانات مشتركة منطقيًا",
+                "D_en": "There is no logically shared data"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 24) تذكر أنه في 'تمرير الرسائل'، \"البيانات المشتركة منطقيًا يتم تقسيمها بشكل صريح (explicitly partitioned) على الذواكر المحلية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 24) states that in 'Message passing', \"Logically shared data is explicitly partitioned over local memories\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "مساحة العنوان العالمية هي سمة لنموذج 'الذاكرة المشتركة' (Shared memory) (صفحة 9) أو DSM (صفحة 12).",
+                "C": "التعامل التلقائي بواسطة الأجهزة هو سمة لـ DSM (صفحة 12) أو تماسك الذاكرة المخبئية (cache coherence) (صفحة 8).",
+                "D": "المثال (صفحة 8 وصفحة 29) يوضح أن المصفوفة 'a' مشتركة منطقيًا، حتى لو تم تقسيمها فعليًا."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "A global address space is a feature of the 'Shared memory' model (Page 9) or DSM (Page 12).",
+                "C": "Automatic handling by hardware is a feature of DSM (Page 12) or cache coherence (Page 8).",
+                "D": "The example (Page 8 and Page 29) shows that the array 'a' is logically shared, even if physically partitioned."
+            }
+        },
+        {
+            "question_number": 24,
+            "lecture_number": 5,
+            "question_ar": "كيف يمكن تنفيذ برمجة 'تمرير الرسائل' (Message passing) على آلة 'ذاكرة مشتركة' (shared memory)؟",
+            "question_en": "How can 'Message passing' programming be implemented on a 'shared memory' machine?",
+            "choices": {
+                "A_ar": "عن طريق مكتبة تمرير رسائل تنسخ البيانات داخل الذاكرة المشتركة",
+                "A_en": "By a message passing library that copies data within the shared memory",
+                "B_ar": "لا يمكن تنفيذها؛ يجب أن تستخدم آلة ذاكرة موزعة",
+                "B_en": "It cannot be implemented; it must use a distributed memory machine",
+                "C_ar": "عن طريق تحويل الذاكرة المشتركة إلى ذاكرة موزعة",
+                "C_en": "By converting the shared memory into distributed memory",
+                "D_ar": "عن طريق استخدام نموذج 'توازي البيانات' (data parallel) بدلاً من ذلك",
+                "D_en": "By using the 'data parallel' model instead"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 28) تشرح أن 'تمرير الرسائل على آلة ذاكرة مشتركة' يتم عن طريق \"مكتبة تمرير رسائل تنسخ البيانات (الرسائل) في الذاكرة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 28) explains 'Message passing on a shared memory machine' is done by a \"Message passing library [that] copies data (messages) in memory\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا غير صحيح. (صفحة 28) توضح أنه ممكن، على الرغم من أنه \"أقل كفاءة ولكن محمول\".",
+                "C": "هذا غير منطقي. يتم استخدام الذاكرة المشتركة لمحاكاة تمرير الرسائل.",
+                "D": "توازي البيانات هو نموذج مختلف، وليس طريقة لتنفيذ تمرير الرسائل."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is incorrect. (Page 28) shows it is possible, though \"less efficient ... but portable\".",
+                "C": "This doesn't make sense. The shared memory is used to *emulate* message passing.",
+                "D": "Data parallel is a different model, not an implementation of message passing."
+            }
+        },
+        {
+            "question_number": 25,
+            "lecture_number": 5,
+            "question_ar": "في مثال تمرير الرسائل (صفحة 30)، لماذا يمكن أن يحدث 'جمود' (Deadlock)؟",
+            "question_en": "In the message passing example on (Page 30), why can a 'Deadlock' occur?",
+            "choices": {
+                "A_ar": "كلا المعالجين يستخدمان 'إرسال متزامن مع حجب' (synchronous blocking send)",
+                "A_en": "Both processors use a 'synchronous blocking send'",
+                "B_ar": "كلا المعالجين يحاولان القراءة من بعضهما البعض أولاً",
+                "B_en": "Both processors try to receive from each other first",
+                "C_ar": "أحدهما يرسل والآخر يستقبل (send/recv) بترتيب خاطئ",
+                "C_en": "One sends and one receives in the wrong order",
+                "D_ar": "الشبكة (Network) بطيئة جدًا",
+                "D_en": "The network is too slow"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 31) تشرح أن \"الجمود (Deadlock) مع عمليات إرسال متزامن مع حجب (synchronous blocking send)\" يحدث لأن \"كلا المعالجين ينتظران إرسال البيانات إلى مستقبل غير مستعد لقبول الرسالة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 31) explains that \"Deadlock with synchronous blocking send operations\" occurs because \"both processors wait for data to be send to a receiver that is not ready to accept the message\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "في الكود (صفحة 30)، كلاهما يحاول *الإرسال* (send) أولاً.",
+                "C": "في الكود (صفحة 29)، الترتيب (P1: recv, P2: send) صحيح، ولكن الكود في (صفحة 30) (P1: send, P2: send) هو الذي يسبب الجمود.",
+                "D": "بطء الشبكة يسبب أداءً سيئًا، ولكنه لا يسبب جمودًا منطقيًا."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "In the code (Page 30), both processors try to *send* first.",
+                "C": "In the code on (Page 29), the ordering (P1: recv, P2: send) is correct, but the code on (Page 30) (P1: send, P2: send) is what deadlocks.",
+                "D": "A slow network causes bad performance, but not a logical deadlock."
+            }
+        },
+        {
+            "question_number": 26,
+            "lecture_number": 5,
+            "question_ar": "الأنظمة الهجينة (Hybrid systems) مثل 'عناقيد من SMPs' (clusters of SMPs) تستخدم عادةً أي نموذجي برمجة؟",
+            "question_en": "Hybrid systems like 'clusters of SMPs' typically use which two programming models?",
+            "choices": {
+                "A_ar": "ذاكرة مشتركة داخل SMP، وتمرير رسائل خارج (بين) SMPs",
+                "A_en": "Shared memory within an SMP, and message passing outside (between) SMPs",
+                "B_ar": "تمرير رسائل داخل SMP، وذاكرة مشتركة بين SMPs",
+                "B_en": "Message passing within an SMP, and shared memory between SMPs",
+                "C_ar": "نموذج BSP فقط",
+                "C_en": "Only the BSP model",
+                "D_ar": "نموذج SIMD فقط",
+                "D_en": "Only the SIMD model"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 32) تصف الأنظمة الهجينة بأنها تستخدم \"ذاكرة مشتركة داخل SMP، وتمرير رسائل خارج\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 32) describes hybrid systems as using \"Shared memory within SMP, message passing outside\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا هو العكس. الذاكرة المشتركة تكون *داخل* العقدة (SMP)، وتمرير الرسائل يكون *بين* العقد (صفحة 32).",
+                "C": "BSP هو نموذج مختلف، وليس بالضرورة للأنظمة الهجينة (صفحة 33).",
+                "D": "SIMD هو مستوى أدنى من التوازي (صفحة 32، الخيار 3)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the reverse. Shared memory is *within* the node (SMP), and message passing is *between* the nodes (Page 32).",
+                "C": "BSP is a different model, not necessarily for hybrid systems (Page 33).",
+                "D": "SIMD is a lower level of parallelism (Page 32, choice 3)."
+            }
+        },
+        {
+            "question_number": 27,
+            "lecture_number": 5,
+            "question_ar": "ما هي ميزة برمجة نظام هجين (hybrid) \"في طبقتين\" (ذاكرة مشتركة + تمرير رسائل)؟",
+            "question_en": "What is the advantage of programming a hybrid system \"in two layers\" (shared memory + message passing)?",
+            "choices": {
+                "A_ar": "أداء أفضل (عن طريق استخدام UMA/NUMA بذكاء)",
+                "A_en": "Better performance (by using UMA/NUMA intelligently)",
+                "B_ar": "سهولة البرمجة وقابلية النقل (Portability)",
+                "B_en": "Ease of programming and portability",
+                "C_ar": "يتطلب فقط مترجم (compiler) يدعم SIMD",
+                "C_en": "It only requires a SIMD-aware compiler",
+                "D_ar": "يمنع الجمود (Deadlocks) تلقائيًا",
+                "D_en": "It prevents deadlocks automatically"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 32)، عند مناقشة البرمجة في طبقتين، تذكر أن \"الميزة: أداء أفضل (استخدام UMA/NUMA بذكاء)\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 32), when discussing programming in two layers, states the \"Advantage: better performance (use UMA/NUMA intelligently)\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذه هي ميزة التعامل مع النظام كـ \"مسطح\" (flat) واستخدام تمرير الرسائل فقط (صفحة 32). البرمجة في طبقتين \"أصعب\" (صفحة 32).",
+                "C": "SIMD هو الطبقة *الثالثة* (صفحة 32)، وليس مطلوبًا للبرمجة في طبقتين.",
+                "D": "البرمجة في طبقتين \"أصعب\" ومن المرجح أن تزيد من تعقيد المزامنة، وليس منع الجمود."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This is the advantage of treating the system as 'flat' and using only message passing (Page 32). Two-layer programming is \"harder\" (Page 32).",
+                "C": "SIMD is the *third* layer (Page 32), not required for two-layer programming.",
+                "D": "Two-layer programming is 'harder' and likely increases synchronization complexity, it doesn't prevent deadlocks."
+            }
+        },
+        {
+            "question_number": 28,
+            "lecture_number": 5,
+            "question_ar": "ما هو عيب برمجة نظام هجين (hybrid) \"في طبقتين\" (ذاكرة مشتركة + تمرير رسائل)؟",
+            "question_en": "What is the disadvantage of programming a hybrid system \"in two layers\" (shared memory + message passing)?",
+            "choices": {
+                "A_ar": "أصعب (وأبشع!) في البرمجة",
+                "A_en": "Harder (and ugly!) to program",
+                "B_ar": "أداء أسوأ",
+                "B_en": "Worse performance",
+                "C_ar": "يتجاهل تسلسل هرمي الذاكرة (memory hierarchy)",
+                "C_en": "Ignores the SMP memory hierarchy",
+                "D_ar": "أسهل في البرمجة ولكنه غير محمول (portable)",
+                "D_en": "Easier to program but not portable"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 32)، عند مناقشة البرمجة في طبقتين، تذكر أن \"العيب: أصعب (وأبشع!) في البرمجة\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 32), when discussing programming in two layers, states the \"Disadvantage: harder (and ugly!) to program\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا النموذج يهدف إلى أداء *أفضل* (صفحة 32).",
+                "C": "هذا هو عيب التعامل مع النظام كـ \"مسطح\" (flat) (صفحة 32). نموذج الطبقتين *يستغل* التسلسل الهرمي للذاكرة.",
+                "D": "هو *أصعب*، وليس أسهل (صفحة 32)."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This model aims for *better* performance (Page 32).",
+                "C": "This is the disadvantage of treating the system as 'flat' (Page 32). The two-layer model *exploits* the memory hierarchy.",
+                "D": "It is *harder*, not easier (Page 32)."
+            }
+        },
+        {
+            "question_number": 29,
+            "lecture_number": 5,
+            "question_ar": "ما هي المراحل الثلاث لـ 'الخطوة الفائقة' (superstep) في نموذج 'BSP' (المعالجة المتزامنة بالجملة)؟",
+            "question_en": "What are the three phases of a 'superstep' in the 'BSP' (Bulk Synchronous Processing) model?",
+            "choices": {
+                "A_ar": "حساب (Compute)، اتصال (Communication)، مزامنة حاجز (Barrier synchronization)",
+                "A_en": "Compute, Communication, Barrier synchronization",
+                "B_ar": "قفل (Lock)، حساب (Compute)، تحرير (Unlock)",
+                "B_en": "Lock, Compute, Unlock",
+                "C_ar": "إرسال (Send)، استقبال (Receive)، حاجز (Barrier)",
+                "C_en": "Send, Receive, Barrier",
+                "D_ar": "تهيئة (Initialize)، تنفيذ (Execute)، إنهاء (Finalize)",
+                "D_en": "Initialize, Execute, Finalize"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 33) تدرج المراحل الثلاث لـ BSP superstep كـ: \"1. مرحلة الحساب\"، \"2. مرحلة الاتصال\"، \"3. مزامنة الحاجز\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 33) lists the three phases of a BSP superstep as: \"1. Compute phase\", \"2. Communication phase\", \"3. Barrier synchronization\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "هذا يصف قسمًا حرجًا (critical section) (صفحة 18)، وليس BSP.",
+                "C": "إرسال/استقبال جزء من مرحلة الاتصال، لكن BSP يفصل الحساب عن الاتصال بشكل صريح.",
+                "D": "هذه مراحل عامة للبرنامج، وليست مراحل BSP superstep."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "This describes a critical section (Page 18), not BSP.",
+                "C": "Send/Receive are part of the communication phase, but BSP explicitly separates computation from communication.",
+                "D": "These are general program phases, not the phases of a BSP superstep."
+            }
+        },
+        {
+            "question_number": 30,
+            "lecture_number": 5,
+            "question_ar": "ما هو الغرض من 'مزامنة الحاجز' (Barrier synchronization) في نموذج BSP؟",
+            "question_en": "What is the purpose of the 'Barrier synchronization' in the BSP model?",
+            "choices": {
+                "A_ar": "لضمان اكتمال مراحل الحساب والاتصال قبل الخطوة الفائقة (superstep) التالية",
+                "A_en": "To ensure compute and communication phases are completed before the next superstep",
+                "B_ar": "لمنع الجمود (deadlocks) أثناء الاتصال",
+                "B_en": "To prevent deadlocks during communication",
+                "C_ar": "لضمان الاستبعاد المتبادل (mutual exclusion) للبيانات المشتركة",
+                "C_en": "To ensure mutual exclusion for shared data",
+                "D_ar": "لبدء مرحلة الحساب (compute phase)",
+                "D_en": "To begin the compute phase"
+            },
+            "correct_choice": "A",
+            "explanation_correct_ar": "الإجابة الصحيحة هي (A). المحاضرة (صفحة 33) تذكر أن البرنامج المكون من supersteps \"يضمن اكتمال مراحل الحساب والاتصال قبل الخطوة الفائقة التالية\".",
+            "explanation_correct_en": "The correct answer is (A). The lecture (Page 33) states that a program composed of supersteps \"Ensures that computation and communication phases are completed before the next superstep\".",
+            "explanation_wrong_ar": {
+                "A": "هذه هي الإجابة الصحيحة.",
+                "B": "نموذج BSP يتجنب الجمود عن طريق فصل الاتصال عن الحساب، لكن الحاجز نفسه هو للمزامنة بين الخطوات الفائقة.",
+                "C": "الاستبعاد المتبادل (Mutual exclusion) يتم التعامل معه عادةً عن طريق تصميم الخوارزمية (بما أن الحساب محلي)، وليس الحاجز.",
+                "D": "الحاجز *ينهي* الخطوة الفائقة الحالية، مما يسمح ببدء الخطوة التالية."
+            },
+            "explanation_wrong_en": {
+                "A": "This is the correct answer.",
+                "B": "The BSP model avoids deadlocks by separating communication from computation, but the barrier itself is for synchronizing *between* supersteps.",
+                "C": "Mutual exclusion is typically handled by the algorithm design (since computation is local), not the barrier.",
+                "D": "The barrier *ends* the current superstep, allowing the next one to begin."
+            }
+        }
+    ]
+}
