@@ -1038,8 +1038,7 @@ class QuizApp {
             }
         });
 
-        results.percentage = this.currentLecture.totalQuestions > 0 ? Math.round((results.correct / this.total) * 100) : 0;
-
+        results.percentage = results.total > 0 ? Math.round((results.correct / results.total) * 100) : 0;
         this.currentResults = results;
     }
 
@@ -1180,74 +1179,95 @@ class QuizApp {
     }
 
     startReviewMode(type, viewOnly) {
-        // Origin is already set by showReviewModal
-        const questions = type === 'errors' ?
-            this.getIncorrectQuestions() : this.getFavoriteQuestions();
+    // Origin is already set by showReviewModal
+    const questions = type === 'errors' ?
+        this.getIncorrectQuestions() : this.getFavoriteQuestions();
 
-        if (questions.length === 0) {
-            const message = type === 'errors' ?
-                (this.sessionData.currentLanguage === 'en' ? 'No incorrect answers to review!' : 'لا توجد إجابات خاطئة للمراجعة!') :
-                (this.sessionData.currentLanguage === 'en' ? 'No favorite questions to review!' : 'لا توجد أسئلة مفضلة للمراجعة!');
-            alert(message);
-            return;
-        }
-
-        this.reviewMode = type;
-        this.reviewQuestions = questions;
-        this.currentQuestionIndex = 0;
-        this.viewOnlyMode = viewOnly;
-        this.answerSubmitted = viewOnly; // If viewOnly, treat as submitted
-
-        this.showView('quiz');
-        this.renderQuestion();
+    if (questions.length === 0) {
+        const message = type === 'errors' ?
+            (this.sessionData.currentLanguage === 'en' ? 'No incorrect answers to review!' : 'لا توجد إجابات خاطئة للمراجعة!') :
+            (this.sessionData.currentLanguage === 'en' ? 'No favorite questions to review!' : 'لا توجد أسئلة مفضلة للمراجعة!');
+        alert(message);
+        return;
     }
+
+    // --- تعديل: حذف الإجابات القديمة إذا كان وضع "إعادة المحاولة" ---
+    if (!viewOnly) { // This means we are in "Retry" mode
+        questions.forEach(question => {
+            // (استخدم رقم المحاضرة الأصلي من السؤال)
+            const lectureNum = question.lectureNumber || this.currentLecture.number; 
+            const questionKey = `${lectureNum}-${question.question_number}`;
+            this.sessionData.answers.delete(questionKey);
+        });
+    }
+    // --- نهاية التعديل ---
+
+    this.reviewMode = type;
+    this.reviewQuestions = questions;
+    this.currentQuestionIndex = 0;
+    this.viewOnlyMode = viewOnly;
+    this.answerSubmitted = viewOnly; // If viewOnly, treat as submitted
+
+    this.showView('quiz');
+    this.renderQuestion();
+}
 
     startGlobalFavoritesReview(viewOnly) {
-        // Origin is already set by showGlobalFavoritesModal
-        const allFavoriteQuestions = [];
+    // Origin is already set by showGlobalFavoritesModal
+    const allFavoriteQuestions = [];
 
-        this.lectures.forEach(lecture => {
-            lecture.questions.forEach(question => {
-                const questionKey = `${lecture.number}-${question.question_number}`;
-                if (this.sessionData.favorites.has(questionKey)) {
-                    allFavoriteQuestions.push({
-                        ...question,
-                        lectureNumber: lecture.number,
-                        // --- الكود الجديد: نحفظ العنوان الأصلي ---
-                        originalTitle_en: lecture.title_en,
-                        originalTitle_ar: lecture.title_ar
-                        // ------------------------------------
-                    });
-                }
-            });
+    this.lectures.forEach(lecture => {
+        lecture.questions.forEach(question => {
+            const questionKey = `${lecture.number}-${question.question_number}`;
+            if (this.sessionData.favorites.has(questionKey)) {
+                allFavoriteQuestions.push({
+                    ...question,
+                    lectureNumber: lecture.number,
+                    // --- الكود الجديد: نحفظ العنوان الأصلي ---
+                    originalTitle_en: lecture.title_en,
+                    originalTitle_ar: lecture.title_ar
+                    // ------------------------------------
+                });
+            }
         });
+    });
 
-        if (allFavoriteQuestions.length === 0) {
-            const message = this.sessionData.currentLanguage === 'en' ?
-                'No favorite questions found!' : 'لم يتم العثور على أسئلة مفضلة!';
-            alert(message);
-            return;
-        }
-
-        // Create a virtual lecture with all favorite questions
-        this.originalLecture = this.currentLecture; // Save original lecture context
-        this.currentLecture = {
-            number: 'favorites',
-            title_en: 'All Favorites', // عنوان مخصص
-            title_ar: 'كل المفضلة',  // عنوان مخصص
-            questions: allFavoriteQuestions,
-            totalQuestions: allFavoriteQuestions.length
-        };
-
-        this.reviewMode = 'global-favorites';
-        this.reviewQuestions = allFavoriteQuestions;
-        this.currentQuestionIndex = 0;
-        this.viewOnlyMode = viewOnly;
-        this.answerSubmitted = viewOnly; // If viewOnly, treat as submitted
-
-        this.showView('quiz');
-        this.renderQuestion();
+    if (allFavoriteQuestions.length === 0) {
+        const message = this.sessionData.currentLanguage === 'en' ?
+            'No favorite questions found!' : 'لم يتم العثور على أسئلة مفضلة!';
+        alert(message);
+        return;
     }
+
+    // --- تعديل: حذف الإجابات القديمة إذا كان وضع "إعادة المحاولة" ---
+    if (!viewOnly) { // This means we are in "Retry" mode
+        allFavoriteQuestions.forEach(question => {
+            // (السؤال هنا يحتوي بالتأكيد على رقم المحاضرة)
+            const questionKey = `${question.lectureNumber}-${question.question_number}`;
+            this.sessionData.answers.delete(questionKey);
+        });
+    }
+    // --- نهاية التعديل ---
+
+    // Create a virtual lecture with all favorite questions
+    this.originalLecture = this.currentLecture; // Save original lecture context
+    this.currentLecture = {
+        number: 'favorites',
+        title_en: 'All Favorites', // عنوان مخصص
+        title_ar: 'كل المفضلة',  // عنوان مخصص
+        questions: allFavoriteQuestions,
+        totalQuestions: allFavoriteQuestions.length
+    };
+
+    this.reviewMode = 'global-favorites';
+    this.reviewQuestions = allFavoriteQuestions;
+    this.currentQuestionIndex = 0;
+    this.viewOnlyMode = viewOnly;
+    this.answerSubmitted = viewOnly; // If viewOnly, treat as submitted
+
+    this.showView('quiz');
+    this.renderQuestion();
+}
 
     getIncorrectQuestions() {
         return this.currentLecture.questions.filter(question => {
